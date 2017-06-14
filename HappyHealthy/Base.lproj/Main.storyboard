@@ -658,24 +658,6 @@
             </objects>
             <point key="canvasLocation" x="463.768115942029" y="-533.1521739130435"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="HWh-oQ-bIb">
-            <objects>
-                <viewController id="r9n-fm-xVM" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="rE7-cG-YJO"/>
-                        <viewControllerLayoutGuide type="bottom" id="M23-m5-Wcb"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="SdJ-U4-Oai">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ApX-qn-QWq" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1319" y="-511"/>
-        </scene>
         <!--หน้าหลัก-->
         <scene sceneID="CeB-Yg-pfD">
             <objects>
@@ -721,14 +703,23 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NC2-gc-DlG">
                                 <rect key="frame" x="0.0" y="313" width="414" height="127"/>
                                 <state key="normal" title="Button" image="diiii"/>
+                                <connections>
+                                    <segue destination="XAO-Ys-IaU" kind="showDetail" id="tcD-mB-9xQ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KTz-uh-leA">
                                 <rect key="frame" x="0.0" y="440" width="414" height="127"/>
                                 <state key="normal" title="Button" image="diiiii"/>
+                                <connections>
+                                    <segue destination="nS4-Tv-lzw" kind="showDetail" id="euT-pb-cB5"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1RZ-ns-ghB">
                                 <rect key="frame" x="0.0" y="560" width="414" height="127"/>
                                 <state key="normal" title="Button" image="diiiiii"/>
+                                <connections>
+                                    <segue destination="Qzg-4y-Hg1" kind="showDetail" id="z81-2n-aYY"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1180,6 +1171,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="1" green="0.3454276832" blue="0.28050541289999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" red="1" green="0.3454276832" blue="0.28050541289999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="oyd-O9-vxd" kind="relationship" relationship="viewControllers" id="M49-Ur-xhP"/>
@@ -1191,7 +1184,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A71-SY-arv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="447" y="-1307"/>
+            <point key="canvasLocation" x="413" y="-1476"/>
         </scene>
         <!--เบาหวาน-->
         <scene sceneID="2Z8-A1-sp6">
@@ -1210,6 +1203,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="2b9-Vi-D3N"/>
                                 </constraints>
+                                <color key="tintColor" red="0.99907074129999995" green="0.94414956569999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="barTintColor" red="0.88708903539889772" green="0.69257565522916997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <textAttributes key="titleTextAttributes">
                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -1218,9 +1212,15 @@
                                     <navigationItem title="เบาหวาน" id="RmX-M0-sc3">
                                         <barButtonItem key="leftBarButtonItem" image="arowback" id="t8D-Mb-yFl">
                                             <inset key="imageInsets" minX="0.0" minY="25" maxX="35" maxY="20"/>
+                                            <connections>
+                                                <segue destination="L4M-Nk-7Fy" kind="showDetail" id="0Xa-Fy-TD7"/>
+                                            </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" image="listhistory" id="oUY-oc-wFf">
                                             <inset key="imageInsets" minX="20" minY="15" maxX="15" maxY="15"/>
+                                            <connections>
+                                                <segue destination="QtC-zT-4AY" kind="showDetail" id="dh4-9D-Yyt"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -1288,18 +1288,24 @@
                                                     <constraint firstAttribute="width" constant="100" id="NzT-Lq-1PQ"/>
                                                 </constraints>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="buttonsavediba" translatesAutoresizingMaskIntoConstraints="NO" id="U2r-bp-gGp">
-                                                <rect key="frame" x="5" y="81" width="341" height="54"/>
-                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nre-uY-Sju">
+                                                <rect key="frame" x="5" y="88" width="341" height="47"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="47" id="Jjz-0p-SCJ"/>
+                                                </constraints>
+                                                <state key="normal" image="buttonsavediba"/>
+                                                <connections>
+                                                    <segue destination="Pox-vi-83I" kind="showDetail" id="plJ-Wv-gmD"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="nou-Jw-Ksb" firstAttribute="top" secondItem="a3O-I5-tlQ" secondAttribute="bottom" constant="6" id="D82-e2-hB6"/>
-                                            <constraint firstItem="U2r-bp-gGp" firstAttribute="leading" secondItem="pja-aQ-eX1" secondAttribute="leading" constant="5" id="VUr-Ff-Bt2"/>
-                                            <constraint firstItem="U2r-bp-gGp" firstAttribute="top" secondItem="nou-Jw-Ksb" secondAttribute="bottom" constant="10" id="c2g-i6-ZIp"/>
-                                            <constraint firstAttribute="trailing" secondItem="U2r-bp-gGp" secondAttribute="trailing" constant="5" id="eSW-Lt-4YQ"/>
+                                            <constraint firstItem="nre-uY-Sju" firstAttribute="leading" secondItem="pja-aQ-eX1" secondAttribute="leading" constant="5" id="Nwz-6N-iFn"/>
+                                            <constraint firstAttribute="bottom" secondItem="nre-uY-Sju" secondAttribute="bottom" constant="5" id="VuK-Jt-V02"/>
+                                            <constraint firstAttribute="trailing" secondItem="nre-uY-Sju" secondAttribute="trailing" constant="5" id="XO0-lM-6yS"/>
                                             <constraint firstItem="a3O-I5-tlQ" firstAttribute="centerX" secondItem="pja-aQ-eX1" secondAttribute="centerX" id="jXY-oS-Ruc"/>
                                             <constraint firstItem="nou-Jw-Ksb" firstAttribute="centerX" secondItem="pja-aQ-eX1" secondAttribute="centerX" id="spJ-oo-duT"/>
-                                            <constraint firstAttribute="bottom" secondItem="U2r-bp-gGp" secondAttribute="bottom" constant="5" id="vUc-MK-Mkh"/>
                                             <constraint firstItem="a3O-I5-tlQ" firstAttribute="top" secondItem="pja-aQ-eX1" secondAttribute="top" id="xgd-nV-gek"/>
                                         </constraints>
                                     </view>
@@ -1334,7 +1340,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cNy-QY-UeH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1699" y="-1869"/>
+            <point key="canvasLocation" x="1177" y="-2032"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Pvn-j3-6zr">
@@ -1498,6 +1504,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="TPl-OO-jLB"/>
                                 </constraints>
+                                <color key="tintColor" red="0.95312339067459106" green="0.98260229825973511" blue="0.98369759321212769" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="barTintColor" red="0.75918075359210557" green="0.89085043814125409" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <textAttributes key="titleTextAttributes">
                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -1506,9 +1513,15 @@
                                     <navigationItem title="ไต" id="aCS-oa-d30">
                                         <barButtonItem key="leftBarButtonItem" image="arowback" id="Tq4-Ku-qgz">
                                             <inset key="imageInsets" minX="0.0" minY="25" maxX="35" maxY="20"/>
+                                            <connections>
+                                                <segue destination="L4M-Nk-7Fy" kind="showDetail" id="s80-o6-d37"/>
+                                            </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" image="listhistory" id="zM3-Fu-cmm">
                                             <inset key="imageInsets" minX="20" minY="15" maxX="15" maxY="15"/>
+                                            <connections>
+                                                <segue destination="tEo-TV-tR9" kind="showDetail" id="EYi-Oq-6HX"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -1536,19 +1549,22 @@
                                                     <constraint firstAttribute="width" constant="150" id="byk-y7-LSq"/>
                                                 </constraints>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="buttonsavekid" translatesAutoresizingMaskIntoConstraints="NO" id="hmE-h5-mRV">
-                                                <rect key="frame" x="5" y="90" width="342" height="55"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Gg-p2-09l">
+                                                <rect key="frame" x="5" y="98" width="342" height="47"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="55" id="IxR-F1-6dO"/>
+                                                    <constraint firstAttribute="height" constant="47" id="o08-ed-rR4"/>
                                                 </constraints>
-                                            </imageView>
+                                                <state key="normal" image="buttonsavekid"/>
+                                                <connections>
+                                                    <segue destination="aaU-Fy-uiB" kind="showDetail" id="mVv-Gt-qRE"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="hmE-h5-mRV" firstAttribute="top" secondItem="oYT-JK-8ve" secondAttribute="bottom" constant="20" id="G3M-Wn-85M"/>
-                                            <constraint firstAttribute="trailing" secondItem="hmE-h5-mRV" secondAttribute="trailing" constant="5" id="Kpy-Dz-Om3"/>
-                                            <constraint firstItem="hmE-h5-mRV" firstAttribute="leading" secondItem="a3r-Pv-gog" secondAttribute="leading" constant="5" id="Y9v-sI-AzN"/>
+                                            <constraint firstAttribute="bottom" secondItem="8Gg-p2-09l" secondAttribute="bottom" constant="5" id="Ln9-jk-hCP"/>
+                                            <constraint firstItem="8Gg-p2-09l" firstAttribute="leading" secondItem="a3r-Pv-gog" secondAttribute="leading" constant="5" id="Qjq-AC-D1W"/>
                                             <constraint firstItem="TA3-8m-WDn" firstAttribute="top" secondItem="a3r-Pv-gog" secondAttribute="top" id="Zdf-XT-zYg"/>
-                                            <constraint firstAttribute="bottom" secondItem="hmE-h5-mRV" secondAttribute="bottom" constant="5" id="dAk-G5-xA8"/>
+                                            <constraint firstAttribute="trailing" secondItem="8Gg-p2-09l" secondAttribute="trailing" constant="5" id="k7F-ci-uUJ"/>
                                             <constraint firstItem="TA3-8m-WDn" firstAttribute="centerX" secondItem="a3r-Pv-gog" secondAttribute="centerX" id="tZs-iY-BLz"/>
                                             <constraint firstItem="oYT-JK-8ve" firstAttribute="centerX" secondItem="a3r-Pv-gog" secondAttribute="centerX" id="wlc-BJ-P47"/>
                                             <constraint firstItem="oYT-JK-8ve" firstAttribute="top" secondItem="TA3-8m-WDn" secondAttribute="bottom" constant="5" id="ygq-Jj-cZU"/>
@@ -1613,7 +1629,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vee-hG-ZQj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2368" y="-1869"/>
+            <point key="canvasLocation" x="2094" y="-2032"/>
         </scene>
         <!--ความดันโลหิต-->
         <scene sceneID="iKN-fA-ZR7">
@@ -1632,6 +1648,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="P6c-d6-IMj"/>
                                 </constraints>
+                                <color key="tintColor" red="0.99907074129999995" green="0.94414956569999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="barTintColor" red="0.93648630380630493" green="0.67601234369765451" blue="0.67160313181992715" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <textAttributes key="titleTextAttributes">
                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -1640,42 +1657,194 @@
                                     <navigationItem title="ความดันโลหิต" id="cAW-Ib-eL6">
                                         <barButtonItem key="leftBarButtonItem" image="arowback" id="fA6-Ty-5pf">
                                             <inset key="imageInsets" minX="0.0" minY="25" maxX="35" maxY="20"/>
+                                            <connections>
+                                                <segue destination="L4M-Nk-7Fy" kind="showDetail" id="xqh-Rd-FfP"/>
+                                            </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" image="listhistory" id="ZL1-oP-YIL">
                                             <inset key="imageInsets" minX="20" minY="15" maxX="15" maxY="15"/>
+                                            <connections>
+                                                <segue destination="adI-hF-9Sr" kind="showDetail" id="ZnG-BV-CRN"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sqj-9m-9Lm">
-                                <rect key="frame" x="31" y="103" width="352" height="549"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sqj-9m-9Lm">
+                                <rect key="frame" x="25" y="110" width="364" height="450"/>
                                 <subviews>
-                                    <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="naH-rh-8qw">
-                                        <rect key="frame" x="25" y="8" width="302" height="60"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="naH-rh-8qw">
+                                        <rect key="frame" x="25" y="8" width="314" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="aSM-Ty-OqY"/>
+                                        </constraints>
                                         <date key="date" timeIntervalSinceReferenceDate="519104526.86652702">
                                             <!--2017-06-14 03:42:06 +0000-->
                                         </date>
                                         <locale key="locale" localeIdentifier="th"/>
                                     </datePicker>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ejl-it-Kvo">
-                                        <rect key="frame" x="0.0" y="76" width="352" height="237"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.97549861670000004" green="0.74072360989999997" blue="0.64130747320000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ejl-it-Kvo">
+                                        <rect key="frame" x="0.0" y="61" width="364" height="190"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f0R-GV-gsr">
+                                                <rect key="frame" x="48" y="103" width="268" height="30"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="down2" translatesAutoresizingMaskIntoConstraints="NO" id="QRd-Pq-WF5">
+                                                        <rect key="frame" x="0.0" y="0.0" width="58" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="58" id="GGd-zD-jr1"/>
+                                                            <constraint firstAttribute="height" constant="30" id="iSL-L9-Ayx"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Per-Cv-m6j">
+                                                        <rect key="frame" x="58" y="0.0" width="140" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="140" id="FMV-4W-CQO"/>
+                                                            <constraint firstAttribute="height" constant="30" id="pzv-lC-Fah"/>
+                                                        </constraints>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mlpre" translatesAutoresizingMaskIntoConstraints="NO" id="cdo-kL-L8B">
+                                                        <rect key="frame" x="198" y="0.0" width="70" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="30" id="qy2-ir-wrE"/>
+                                                            <constraint firstAttribute="width" constant="70" id="yao-9a-8KJ"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="268" id="DJ8-9k-gdQ"/>
+                                                    <constraint firstAttribute="height" constant="30" id="NiU-UC-t5g"/>
+                                                </constraints>
+                                            </stackView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="txtpretop" translatesAutoresizingMaskIntoConstraints="NO" id="ae3-Vw-A0x">
+                                                <rect key="frame" x="61" y="8" width="242" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="GfR-0m-3pD"/>
+                                                    <constraint firstAttribute="width" constant="242" id="qpj-IM-PL2"/>
+                                                </constraints>
+                                            </imageView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eIo-n7-ctz">
+                                                <rect key="frame" x="48" y="40" width="268" height="30"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="top2" translatesAutoresizingMaskIntoConstraints="NO" id="lEy-ND-Jx4">
+                                                        <rect key="frame" x="0.0" y="0.0" width="58" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="58" id="BD4-qV-6KB"/>
+                                                            <constraint firstAttribute="height" constant="30" id="wDS-Mj-Lba"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PWs-2E-cuM">
+                                                        <rect key="frame" x="58" y="0.0" width="140" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="140" id="TpL-mt-e8M"/>
+                                                            <constraint firstAttribute="height" constant="30" id="sBc-iD-dzB"/>
+                                                        </constraints>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mlpre" translatesAutoresizingMaskIntoConstraints="NO" id="ZTa-V6-OIf">
+                                                        <rect key="frame" x="198" y="0.0" width="70" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="70" id="5iz-Yp-Ffo"/>
+                                                            <constraint firstAttribute="height" constant="30" id="DF0-80-FBX"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="268" id="8bx-1l-wH9"/>
+                                                    <constraint firstAttribute="height" constant="30" id="iqJ-Uq-O25"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="eIo-n7-ctz" firstAttribute="centerX" secondItem="ejl-it-Kvo" secondAttribute="centerX" id="F51-rQ-GVa"/>
+                                            <constraint firstItem="eIo-n7-ctz" firstAttribute="top" secondItem="ae3-Vw-A0x" secondAttribute="bottom" constant="2" id="HE9-OP-W5z"/>
+                                            <constraint firstItem="f0R-GV-gsr" firstAttribute="top" secondItem="eIo-n7-ctz" secondAttribute="bottom" constant="33" id="Pon-ke-pTM"/>
+                                            <constraint firstAttribute="height" constant="190" id="Ut1-7t-gNX"/>
+                                            <constraint firstItem="ae3-Vw-A0x" firstAttribute="top" secondItem="ejl-it-Kvo" secondAttribute="top" constant="8" id="pKr-Hi-l3z"/>
+                                            <constraint firstItem="ae3-Vw-A0x" firstAttribute="centerX" secondItem="ejl-it-Kvo" secondAttribute="centerX" id="sIF-jr-OzW"/>
+                                            <constraint firstItem="f0R-GV-gsr" firstAttribute="centerX" secondItem="ejl-it-Kvo" secondAttribute="centerX" id="xKT-m4-VkE"/>
+                                        </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cGz-da-f1Y">
-                                        <rect key="frame" x="0.0" y="311" width="352" height="238"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.48864366100074641" green="0.97549861670000004" blue="0.30651309297600154" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cGz-da-f1Y">
+                                        <rect key="frame" x="0.0" y="252" width="364" height="190"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="textheart" translatesAutoresizingMaskIntoConstraints="NO" id="s1W-xu-Mi9">
+                                                <rect key="frame" x="61" y="6" width="242" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="T9l-FY-CLY"/>
+                                                    <constraint firstAttribute="width" constant="242" id="yLj-kQ-oZP"/>
+                                                </constraints>
+                                            </imageView>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="umF-wS-b4h">
+                                                <rect key="frame" x="112" y="44" width="140" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="455-CV-HD2"/>
+                                                    <constraint firstAttribute="width" constant="140" id="evc-O1-sCA"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mlh" translatesAutoresizingMaskIntoConstraints="NO" id="LeF-bN-rfx">
+                                                <rect key="frame" x="144.66666666666666" y="90" width="75" height="22"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="22" id="IEU-Uc-nXN"/>
+                                                    <constraint firstAttribute="width" constant="75" id="SiT-bd-lvi"/>
+                                                </constraints>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8EM-Gz-4W6">
+                                                <rect key="frame" x="5" y="138" width="354" height="47"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="47" id="0dw-TS-i1g"/>
+                                                </constraints>
+                                                <state key="normal" image="buttonsave"/>
+                                                <connections>
+                                                    <segue destination="8Go-j4-kGQ" kind="showDetail" id="pmp-3l-r7r"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="LeF-bN-rfx" firstAttribute="top" secondItem="umF-wS-b4h" secondAttribute="bottom" constant="16" id="5iO-0k-Idn"/>
+                                            <constraint firstItem="umF-wS-b4h" firstAttribute="top" secondItem="s1W-xu-Mi9" secondAttribute="bottom" constant="8" id="A4E-hN-0GO"/>
+                                            <constraint firstItem="s1W-xu-Mi9" firstAttribute="top" secondItem="cGz-da-f1Y" secondAttribute="top" constant="6" id="TC4-GN-p6l"/>
+                                            <constraint firstItem="umF-wS-b4h" firstAttribute="centerX" secondItem="cGz-da-f1Y" secondAttribute="centerX" id="ZK5-YL-lSG"/>
+                                            <constraint firstItem="8EM-Gz-4W6" firstAttribute="leading" secondItem="cGz-da-f1Y" secondAttribute="leading" constant="5" id="ZlK-Ha-IFo"/>
+                                            <constraint firstItem="LeF-bN-rfx" firstAttribute="centerX" secondItem="cGz-da-f1Y" secondAttribute="centerX" id="avP-nz-WBy"/>
+                                            <constraint firstAttribute="bottom" secondItem="8EM-Gz-4W6" secondAttribute="bottom" constant="5" id="dja-Ze-4z8"/>
+                                            <constraint firstItem="s1W-xu-Mi9" firstAttribute="centerX" secondItem="cGz-da-f1Y" secondAttribute="centerX" id="fXG-Po-xe9"/>
+                                            <constraint firstAttribute="trailing" secondItem="8EM-Gz-4W6" secondAttribute="trailing" constant="5" id="j0u-lf-aU9"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.9067702316994648" blue="0.92749097396991909" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="ejl-it-Kvo" secondAttribute="trailing" id="1c8-lL-Jwa"/>
+                                    <constraint firstItem="naH-rh-8qw" firstAttribute="top" secondItem="sqj-9m-9Lm" secondAttribute="top" constant="8" id="3GK-P7-lqF"/>
+                                    <constraint firstItem="ejl-it-Kvo" firstAttribute="leading" secondItem="sqj-9m-9Lm" secondAttribute="leading" id="3xb-5I-dGx"/>
+                                    <constraint firstAttribute="bottom" secondItem="cGz-da-f1Y" secondAttribute="bottom" constant="8" id="CP4-sZ-Y0r"/>
+                                    <constraint firstAttribute="height" constant="450" id="GvY-2G-riu"/>
+                                    <constraint firstAttribute="trailing" secondItem="cGz-da-f1Y" secondAttribute="trailing" id="LK2-Vi-mMf"/>
+                                    <constraint firstItem="naH-rh-8qw" firstAttribute="leading" secondItem="sqj-9m-9Lm" secondAttribute="leading" constant="25" id="b41-76-0qu"/>
+                                    <constraint firstItem="ejl-it-Kvo" firstAttribute="top" secondItem="sqj-9m-9Lm" secondAttribute="top" constant="61" id="cC4-2V-Faz"/>
+                                    <constraint firstItem="cGz-da-f1Y" firstAttribute="top" secondItem="ejl-it-Kvo" secondAttribute="bottom" constant="1" id="cYk-Mv-wPi"/>
+                                    <constraint firstItem="ejl-it-Kvo" firstAttribute="width" secondItem="cGz-da-f1Y" secondAttribute="width" id="cec-0E-7bF"/>
+                                    <constraint firstAttribute="trailing" secondItem="naH-rh-8qw" secondAttribute="trailing" constant="25" id="gBu-rZ-LxA"/>
+                                    <constraint firstItem="ejl-it-Kvo" firstAttribute="height" secondItem="cGz-da-f1Y" secondAttribute="height" id="lWS-8M-naw"/>
+                                    <constraint firstItem="cGz-da-f1Y" firstAttribute="leading" secondItem="sqj-9m-9Lm" secondAttribute="leading" id="z5k-Yk-NYS"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.99907074129999995" green="0.94414956569999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="qIE-aL-Qzk" firstAttribute="leading" secondItem="XFZ-k6-EfU" secondAttribute="leading" id="3XS-Ww-cFY"/>
+                            <constraint firstItem="sqj-9m-9Lm" firstAttribute="leading" secondItem="XFZ-k6-EfU" secondAttribute="leadingMargin" constant="5" id="Tfy-tq-mY0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="sqj-9m-9Lm" secondAttribute="trailing" constant="5" id="WY8-Rr-QSS"/>
+                            <constraint firstItem="sqj-9m-9Lm" firstAttribute="top" secondItem="XFZ-k6-EfU" secondAttribute="topMargin" constant="110" id="jyF-oo-1EP"/>
                             <constraint firstItem="qIE-aL-Qzk" firstAttribute="top" secondItem="lrm-w5-hqS" secondAttribute="bottom" id="npR-Ec-cZB"/>
                             <constraint firstAttribute="trailing" secondItem="qIE-aL-Qzk" secondAttribute="trailing" id="tY7-OD-rUy"/>
                         </constraints>
@@ -1683,7 +1852,678 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BPg-nc-rFy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3047.826086956522" y="-1869.2934782608697"/>
+            <point key="canvasLocation" x="2942" y="-1617"/>
+        </scene>
+        <!--อาหาร-->
+        <scene sceneID="Ukb-X3-22F">
+            <objects>
+                <viewController title="อาหาร" id="nS4-Tv-lzw" customClass="diabetesViewController" customModule="HappyHealthy" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QRi-Xx-13g"/>
+                        <viewControllerLayoutGuide type="bottom" id="r3w-Ty-sE2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mXj-Ry-j2s">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V6f-Pv-LgD">
+                                <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="WFe-JA-KwW"/>
+                                </constraints>
+                                <color key="tintColor" red="0.99907074129999995" green="0.94414956569999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="barTintColor" red="0.93648630379999998" green="0.6512032112311672" blue="0.5384854671986804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="อาหาร" id="icR-cg-UHq">
+                                        <barButtonItem key="leftBarButtonItem" image="arowback" id="RjE-52-awt">
+                                            <inset key="imageInsets" minX="0.0" minY="25" maxX="35" maxY="20"/>
+                                            <connections>
+                                                <segue destination="L4M-Nk-7Fy" kind="showDetail" id="aD3-MV-Fpa"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" image="buttonadd" id="DIn-u5-l7H">
+                                            <inset key="imageInsets" minX="30" minY="20" maxX="15" maxY="20"/>
+                                            <connections>
+                                                <segue destination="REb-fO-Lcw" kind="showDetail" id="gvb-du-6YU"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.97485377670315598" blue="0.9305234490284392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="V6f-Pv-LgD" secondAttribute="trailing" id="bw5-zu-Y1J"/>
+                            <constraint firstItem="V6f-Pv-LgD" firstAttribute="leading" secondItem="mXj-Ry-j2s" secondAttribute="leading" id="kiq-so-VfJ"/>
+                            <constraint firstItem="V6f-Pv-LgD" firstAttribute="top" secondItem="QRi-Xx-13g" secondAttribute="bottom" id="r3V-J2-9QO"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9bc-9H-Nes" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2806" y="-872"/>
+        </scene>
+        <!--ออกกำลังกาย-->
+        <scene sceneID="xOj-Aq-br7">
+            <objects>
+                <viewController title="ออกกำลังกาย" id="Qzg-4y-Hg1" customClass="diabetesViewController" customModule="HappyHealthy" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EOl-ps-7Zz"/>
+                        <viewControllerLayoutGuide type="bottom" id="Fzd-aZ-uB4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4dC-29-xdN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Pb-C0-YmR">
+                                <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="gu1-1P-ae8"/>
+                                </constraints>
+                                <color key="tintColor" red="0.99907074129999995" green="0.94414956569999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="barTintColor" red="0.59139513259102106" green="0.93648630379999998" blue="0.71904916282585973" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="ออกกำลังกาย" id="Uge-eA-p8v">
+                                        <barButtonItem key="leftBarButtonItem" image="arowback" id="DkB-lI-MlZ">
+                                            <inset key="imageInsets" minX="0.0" minY="25" maxX="35" maxY="20"/>
+                                            <connections>
+                                                <segue destination="L4M-Nk-7Fy" kind="showDetail" id="s2z-DR-DvN"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" image="buttonadd" id="ljg-pM-QrR">
+                                            <inset key="imageInsets" minX="30" minY="20" maxX="15" maxY="20"/>
+                                            <connections>
+                                                <segue destination="18J-c4-zQJ" kind="showDetail" id="pio-wO-H2h"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93933180240467162" green="1" blue="0.94692285630261408" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="4Pb-C0-YmR" firstAttribute="leading" secondItem="4dC-29-xdN" secondAttribute="leading" id="HAE-MR-buu"/>
+                            <constraint firstItem="4Pb-C0-YmR" firstAttribute="top" secondItem="EOl-ps-7Zz" secondAttribute="bottom" id="UhP-nv-Xb4"/>
+                            <constraint firstAttribute="trailing" secondItem="4Pb-C0-YmR" secondAttribute="trailing" id="cn7-qG-5fA"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DZc-nu-820" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1758" y="-163"/>
+        </scene>
+        <!--แสดงข้อมูลเบาหวาน-->
+        <scene sceneID="BcB-bS-JJ3">
+            <objects>
+                <viewController title="แสดงข้อมูลเบาหวาน" id="Pox-vi-83I" customClass="diabetesViewController" customModule="HappyHealthy" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fKZ-Wd-VLD"/>
+                        <viewControllerLayoutGuide type="bottom" id="6Hj-v5-bsx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Pzd-8s-N24">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uOE-CY-Nkm">
+                                <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="s6r-TO-fhA"/>
+                                </constraints>
+                                <color key="tintColor" red="0.99907074129999995" green="0.94414956569999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="barTintColor" red="0.88708903539999995" green="0.69257565519999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="ข้อมูลเบาหวาน" id="X7e-xr-5bt">
+                                        <barButtonItem key="leftBarButtonItem" image="arowback" id="Gg3-5O-Qm5">
+                                            <inset key="imageInsets" minX="0.0" minY="25" maxX="35" maxY="20"/>
+                                            <connections>
+                                                <segue destination="2SL-D9-DPF" kind="showDetail" id="Xtw-EU-rHq"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" image="listhistory" id="WqD-Gm-6UT">
+                                            <inset key="imageInsets" minX="20" minY="15" maxX="15" maxY="15"/>
+                                            <connections>
+                                                <segue destination="QtC-zT-4AY" kind="showDetail" id="MAr-ff-iH9"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15/06/2017  16:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OtG-Le-LaQ">
+                                <rect key="frame" x="25" y="108" width="365" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="dNw-lk-TlQ"/>
+                                    <constraint firstAttribute="width" constant="365" id="rjW-8b-x6G"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tstsugarbefore" translatesAutoresizingMaskIntoConstraints="NO" id="4PF-fX-o3o">
+                                <rect key="frame" x="87" y="167" width="240" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="3tT-eR-Ek5"/>
+                                    <constraint firstAttribute="width" constant="240" id="ZiM-6o-NZd"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ivE-7T-pHt">
+                                <rect key="frame" x="101" y="250" width="148" height="21"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="U8f-n2-Bmr"/>
+                                    <constraint firstAttribute="width" constant="148" id="i6m-Og-VDF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <color key="textColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="textleveldi1" translatesAutoresizingMaskIntoConstraints="NO" id="xNV-vX-Y7e">
+                                <rect key="frame" x="62" y="304" width="290" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="AHz-vJ-CuA"/>
+                                    <constraint firstAttribute="width" constant="290" id="MTE-fb-vOc"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dia1" translatesAutoresizingMaskIntoConstraints="NO" id="rBX-P8-1hn">
+                                <rect key="frame" x="33" y="396" width="348" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="72C-jh-TEA"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ml2" translatesAutoresizingMaskIntoConstraints="NO" id="lh3-v0-Eiv">
+                                <rect key="frame" x="267" y="246" width="80" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="JTe-vA-fIg"/>
+                                    <constraint firstAttribute="width" constant="80" id="xyX-RK-tTE"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99907074129999995" green="0.94414956569999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="rBX-P8-1hn" firstAttribute="leading" secondItem="Pzd-8s-N24" secondAttribute="leadingMargin" constant="13" id="14q-fj-nll"/>
+                            <constraint firstItem="uOE-CY-Nkm" firstAttribute="leading" secondItem="Pzd-8s-N24" secondAttribute="leading" id="DXA-Ve-ms5"/>
+                            <constraint firstItem="lh3-v0-Eiv" firstAttribute="leading" secondItem="ivE-7T-pHt" secondAttribute="trailing" constant="18" id="EoB-2g-c5N"/>
+                            <constraint firstItem="xNV-vX-Y7e" firstAttribute="top" secondItem="lh3-v0-Eiv" secondAttribute="bottom" constant="23" id="FNo-y0-zE6"/>
+                            <constraint firstAttribute="trailing" secondItem="uOE-CY-Nkm" secondAttribute="trailing" id="FSE-aW-M6E"/>
+                            <constraint firstItem="rBX-P8-1hn" firstAttribute="top" secondItem="xNV-vX-Y7e" secondAttribute="bottom" constant="32" id="Hzh-2x-eKm"/>
+                            <constraint firstItem="ivE-7T-pHt" firstAttribute="top" secondItem="4PF-fX-o3o" secondAttribute="bottom" constant="38" id="J7s-yu-kNR"/>
+                            <constraint firstItem="ivE-7T-pHt" firstAttribute="centerX" secondItem="Pzd-8s-N24" secondAttribute="centerX" constant="-32" id="Of8-up-Yor"/>
+                            <constraint firstItem="xNV-vX-Y7e" firstAttribute="centerX" secondItem="Pzd-8s-N24" secondAttribute="centerX" id="SpY-Dk-B5G"/>
+                            <constraint firstItem="lh3-v0-Eiv" firstAttribute="top" secondItem="4PF-fX-o3o" secondAttribute="bottom" constant="34" id="Wtp-HE-rxs"/>
+                            <constraint firstItem="OtG-Le-LaQ" firstAttribute="top" secondItem="uOE-CY-Nkm" secondAttribute="bottom" constant="44" id="YSm-vW-nFV"/>
+                            <constraint firstItem="OtG-Le-LaQ" firstAttribute="centerX" secondItem="Pzd-8s-N24" secondAttribute="centerX" id="ele-x3-vTB"/>
+                            <constraint firstItem="4PF-fX-o3o" firstAttribute="top" secondItem="OtG-Le-LaQ" secondAttribute="bottom" constant="19" id="sSf-Qq-L5B"/>
+                            <constraint firstItem="4PF-fX-o3o" firstAttribute="centerX" secondItem="Pzd-8s-N24" secondAttribute="centerX" id="uyb-5f-8cg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rBX-P8-1hn" secondAttribute="trailing" constant="13" id="wpx-Ym-SLN"/>
+                            <constraint firstItem="uOE-CY-Nkm" firstAttribute="top" secondItem="fKZ-Wd-VLD" secondAttribute="bottom" id="zud-L8-L6W"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I1I-RG-2GT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tstsugarbefore" translatesAutoresizingMaskIntoConstraints="NO" id="o8Q-tT-bcY">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="Axp-gF-VJH"/>
+                        <constraint firstAttribute="width" constant="240" id="zBH-Az-1wq"/>
+                    </constraints>
+                </imageView>
+            </objects>
+            <point key="canvasLocation" x="1095.6521739130435" y="-2769.29347826087"/>
+        </scene>
+        <!--แสดงข้อมูลโรคไต-->
+        <scene sceneID="Ky4-Ng-Gri">
+            <objects>
+                <viewController title="แสดงข้อมูลโรคไต" id="aaU-Fy-uiB" customClass="diabetesViewController" customModule="HappyHealthy" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zfB-xf-0r2"/>
+                        <viewControllerLayoutGuide type="bottom" id="r2n-Dr-tVv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lWf-4Q-yC1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XdK-9D-1GN">
+                                <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="5uI-AQ-tKU"/>
+                                </constraints>
+                                <color key="tintColor" red="0.95312339067459106" green="0.98260229825973511" blue="0.98369759321212769" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="barTintColor" red="0.75918075360000004" green="0.89085043809999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="ไต" id="KIV-F2-6c4">
+                                        <barButtonItem key="leftBarButtonItem" image="arowback" id="ci9-cC-DbS">
+                                            <inset key="imageInsets" minX="0.0" minY="25" maxX="35" maxY="20"/>
+                                            <connections>
+                                                <segue destination="Q5x-Lt-wGk" kind="showDetail" id="xxb-Ly-6S8"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" image="listhistory" id="M6G-je-Jbu">
+                                            <inset key="imageInsets" minX="20" minY="15" maxX="15" maxY="15"/>
+                                            <connections>
+                                                <segue destination="tEo-TV-tR9" kind="showDetail" id="Zmr-TH-fgj"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" red="0.95312339067459106" green="0.98260229825973511" blue="0.98369759321212769" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="XdK-9D-1GN" secondAttribute="trailing" id="1IY-Ys-VwE"/>
+                            <constraint firstItem="XdK-9D-1GN" firstAttribute="top" secondItem="zfB-xf-0r2" secondAttribute="bottom" id="JZz-xm-yRw"/>
+                            <constraint firstItem="XdK-9D-1GN" firstAttribute="leading" secondItem="lWf-4Q-yC1" secondAttribute="leading" id="qdr-aX-Vdx"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IPT-SS-7a7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2029" y="-2769"/>
+        </scene>
+        <!--ความดันโลหิต-->
+        <scene sceneID="tXQ-ie-G35">
+            <objects>
+                <viewController title="ความดันโลหิต" id="8Go-j4-kGQ" customClass="diabetesViewController" customModule="HappyHealthy" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fvi-Bb-Z30"/>
+                        <viewControllerLayoutGuide type="bottom" id="42K-WZ-DgF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gnP-9T-TQa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="24B-LA-aiM">
+                                <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="SFR-Rz-rvB"/>
+                                </constraints>
+                                <color key="tintColor" red="0.99907074129999995" green="0.94414956569999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="barTintColor" red="0.93648630379999998" green="0.67601234369999996" blue="0.67160313179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="ความดันโลหิต" id="LKg-nY-ZVw">
+                                        <barButtonItem key="leftBarButtonItem" image="arowback" id="Npk-xe-94t">
+                                            <inset key="imageInsets" minX="0.0" minY="25" maxX="35" maxY="20"/>
+                                            <connections>
+                                                <segue destination="XAO-Ys-IaU" kind="showDetail" id="Np0-6S-CLH"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" image="listhistory" id="7K5-qI-mto">
+                                            <inset key="imageInsets" minX="20" minY="15" maxX="15" maxY="15"/>
+                                            <connections>
+                                                <segue destination="adI-hF-9Sr" kind="showDetail" id="NYJ-dp-WM2"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99907074129999995" green="0.94414956569999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="24B-LA-aiM" firstAttribute="leading" secondItem="gnP-9T-TQa" secondAttribute="leading" id="3FV-UF-ruV"/>
+                            <constraint firstAttribute="trailing" secondItem="24B-LA-aiM" secondAttribute="trailing" id="NEj-dS-69M"/>
+                            <constraint firstItem="24B-LA-aiM" firstAttribute="top" secondItem="fvi-Bb-Z30" secondAttribute="bottom" id="vmL-VE-FeB"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Eok-TX-dHf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3712" y="-2403"/>
+        </scene>
+        <!--ประวัติบันทึกเบาหวาน-->
+        <scene sceneID="d6B-Nd-lg1">
+            <objects>
+                <viewController title="ประวัติบันทึกเบาหวาน" id="QtC-zT-4AY" customClass="diabetesViewController" customModule="HappyHealthy" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GxP-bd-4Zb"/>
+                        <viewControllerLayoutGuide type="bottom" id="TV9-W7-ykX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="A4C-W0-gzn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bHH-Py-SBg">
+                                <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="79S-Ru-uyE"/>
+                                </constraints>
+                                <color key="tintColor" red="0.99907074129999995" green="0.94414956569999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="barTintColor" red="0.88708903539999995" green="0.69257565519999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="ประวัติเบาหวาน" id="PNX-Wh-hfu">
+                                        <barButtonItem key="leftBarButtonItem" image="arowback" id="zXn-b3-1oa">
+                                            <inset key="imageInsets" minX="0.0" minY="25" maxX="35" maxY="20"/>
+                                            <connections>
+                                                <segue destination="Pox-vi-83I" kind="showDetail" id="gas-c9-dN5"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" image="buttonadd" id="WH2-YD-L1Q">
+                                            <inset key="imageInsets" minX="30" minY="20" maxX="15" maxY="20"/>
+                                            <connections>
+                                                <segue destination="2SL-D9-DPF" kind="showDetail" id="KYg-4b-pR0"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99907074129999995" green="0.94414956569999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="bHH-Py-SBg" secondAttribute="trailing" id="8x1-im-Vfo"/>
+                            <constraint firstItem="bHH-Py-SBg" firstAttribute="top" secondItem="GxP-bd-4Zb" secondAttribute="bottom" id="8xG-mz-9KJ"/>
+                            <constraint firstItem="bHH-Py-SBg" firstAttribute="leading" secondItem="A4C-W0-gzn" secondAttribute="leading" id="ku0-Xd-JGH"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a3K-dN-qVn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="43" y="-2424"/>
+        </scene>
+        <!--ประวัติไต-->
+        <scene sceneID="c3j-5o-Exz">
+            <objects>
+                <viewController title="ประวัติไต" id="tEo-TV-tR9" customClass="diabetesViewController" customModule="HappyHealthy" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3hp-5x-nJt"/>
+                        <viewControllerLayoutGuide type="bottom" id="Hrj-qR-2M6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="22y-jT-Z2P">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AI0-jB-yKE">
+                                <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="euc-Wg-bVf"/>
+                                </constraints>
+                                <color key="tintColor" red="0.95312339067459106" green="0.98260229825973511" blue="0.98369759321212769" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="barTintColor" red="0.75918075360000004" green="0.89085043809999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="ประวัติไต" id="mcL-Mp-fnB">
+                                        <barButtonItem key="leftBarButtonItem" image="arowback" id="N90-Qt-Qgc">
+                                            <inset key="imageInsets" minX="0.0" minY="25" maxX="35" maxY="20"/>
+                                            <connections>
+                                                <segue destination="aaU-Fy-uiB" kind="showDetail" id="rrE-DJ-7Ul"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" image="buttonadd" id="6bu-Pq-ewh">
+                                            <inset key="imageInsets" minX="30" minY="20" maxX="15" maxY="20"/>
+                                            <connections>
+                                                <segue destination="Q5x-Lt-wGk" kind="showDetail" id="8E9-aM-tZi"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" red="0.95312339067459106" green="0.98260229825973511" blue="0.98369759321212769" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="AI0-jB-yKE" secondAttribute="trailing" id="4Lb-JC-azv"/>
+                            <constraint firstItem="AI0-jB-yKE" firstAttribute="leading" secondItem="22y-jT-Z2P" secondAttribute="leading" id="PwZ-gm-arZ"/>
+                            <constraint firstItem="AI0-jB-yKE" firstAttribute="top" secondItem="3hp-5x-nJt" secondAttribute="bottom" id="zmg-Dj-gon"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fxP-7q-2oA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2807" y="-2520"/>
+        </scene>
+        <!--ประวัติความดันโลหิต-->
+        <scene sceneID="fCG-rb-bz7">
+            <objects>
+                <viewController title="ประวัติความดันโลหิต" id="adI-hF-9Sr" customClass="diabetesViewController" customModule="HappyHealthy" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Kh6-kx-nKg"/>
+                        <viewControllerLayoutGuide type="bottom" id="8E6-ME-nBh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5Gx-RD-Npb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GI5-Po-5P4">
+                                <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="4Cn-TS-Zhj"/>
+                                </constraints>
+                                <color key="tintColor" red="0.99907074129999995" green="0.94414956569999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="barTintColor" red="0.93648630379999998" green="0.67601234369999996" blue="0.67160313179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="ประวัติความดันโลหิต" id="NAS-G8-gUg">
+                                        <barButtonItem key="leftBarButtonItem" image="arowback" id="r36-BD-4Zv">
+                                            <inset key="imageInsets" minX="0.0" minY="25" maxX="35" maxY="20"/>
+                                            <connections>
+                                                <segue destination="8Go-j4-kGQ" kind="showDetail" id="QL6-Xz-8SH"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" image="buttonadd" id="shp-yj-Kb6">
+                                            <inset key="imageInsets" minX="30" minY="20" maxX="15" maxY="20"/>
+                                            <connections>
+                                                <segue destination="XAO-Ys-IaU" kind="showDetail" id="Svw-Pq-rIZ"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99907074129999995" green="0.94414956569999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="GI5-Po-5P4" secondAttribute="trailing" id="ZfX-Gp-dO1"/>
+                            <constraint firstItem="GI5-Po-5P4" firstAttribute="leading" secondItem="5Gx-RD-Npb" secondAttribute="leading" id="hCC-14-93a"/>
+                            <constraint firstItem="GI5-Po-5P4" firstAttribute="top" secondItem="Kh6-kx-nKg" secondAttribute="bottom" id="q99-57-RQ2"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LaY-iJ-lJn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3712" y="-1753"/>
+        </scene>
+        <!--เพิ่มข้อมูลอาหาร-->
+        <scene sceneID="24Q-jE-tJN">
+            <objects>
+                <viewController title="เพิ่มข้อมูลอาหาร" id="REb-fO-Lcw" customClass="diabetesViewController" customModule="HappyHealthy" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dHh-Wd-8gK"/>
+                        <viewControllerLayoutGuide type="bottom" id="Gqf-TP-ssE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FEl-eQ-VVW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ra1-gS-oOl">
+                                <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="zKv-GY-QZa"/>
+                                </constraints>
+                                <color key="tintColor" red="0.99907074129999995" green="0.94414956569999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="barTintColor" red="0.93648630379999998" green="0.65120321120000002" blue="0.53848546720000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="เพิ่มข้อมูลอาหาร" id="z2n-XN-vRH">
+                                        <barButtonItem key="leftBarButtonItem" image="arowback" id="zsC-7w-5Vj">
+                                            <inset key="imageInsets" minX="0.0" minY="25" maxX="35" maxY="20"/>
+                                            <connections>
+                                                <segue destination="nS4-Tv-lzw" kind="showDetail" id="o9R-4F-BPX"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.97485377669999995" blue="0.93052344899999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ra1-gS-oOl" firstAttribute="top" secondItem="dHh-Wd-8gK" secondAttribute="bottom" id="Kjt-9C-8kH"/>
+                            <constraint firstItem="Ra1-gS-oOl" firstAttribute="leading" secondItem="FEl-eQ-VVW" secondAttribute="leading" id="Qjz-3Y-d8n"/>
+                            <constraint firstAttribute="trailing" secondItem="Ra1-gS-oOl" secondAttribute="trailing" id="YLA-ZA-iJi"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Igd-L3-Rh5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3712" y="-872"/>
+        </scene>
+        <!--บันทึกอาหาร-->
+        <scene sceneID="5e6-w9-N23">
+            <objects>
+                <viewController title="บันทึกอาหาร" id="po5-Um-8Vn" customClass="diabetesViewController" customModule="HappyHealthy" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KxJ-AO-w5H"/>
+                        <viewControllerLayoutGuide type="bottom" id="UJU-Ht-uRr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aPz-Mk-U1u">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZGd-N1-tOe">
+                                <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="tFL-eI-cYh"/>
+                                </constraints>
+                                <color key="tintColor" red="0.99907074129999995" green="0.94414956569999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="barTintColor" red="0.93648630379999998" green="0.65120321120000002" blue="0.53848546720000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="บันทึกอาหาร" id="NsR-2k-zrs">
+                                        <barButtonItem key="leftBarButtonItem" image="arowback" id="wi0-N4-KLX">
+                                            <inset key="imageInsets" minX="0.0" minY="25" maxX="35" maxY="20"/>
+                                            <connections>
+                                                <segue destination="nS4-Tv-lzw" kind="showDetail" id="nsA-mf-OQP"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.97485377669999995" blue="0.93052344899999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ZGd-N1-tOe" firstAttribute="top" secondItem="KxJ-AO-w5H" secondAttribute="bottom" id="R7w-GQ-VKs"/>
+                            <constraint firstAttribute="trailing" secondItem="ZGd-N1-tOe" secondAttribute="trailing" id="jnT-4F-zi9"/>
+                            <constraint firstItem="ZGd-N1-tOe" firstAttribute="leading" secondItem="aPz-Mk-U1u" secondAttribute="leading" id="pTK-SC-l7H"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h0e-2R-ied" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3467" y="-205"/>
+        </scene>
+        <!--เพิ่มข้อมูลออกกำลังกาย-->
+        <scene sceneID="R8h-SV-kE1">
+            <objects>
+                <viewController title="เพิ่มข้อมูลออกกำลังกาย" id="18J-c4-zQJ" customClass="diabetesViewController" customModule="HappyHealthy" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Cg0-Mf-GY6"/>
+                        <viewControllerLayoutGuide type="bottom" id="Edr-Lq-C6b"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Mbq-BN-EuV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O82-vP-UTh">
+                                <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="DPF-ra-AHg"/>
+                                </constraints>
+                                <color key="tintColor" red="0.99907074129999995" green="0.94414956569999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="barTintColor" red="0.59139513259999998" green="0.93648630379999998" blue="0.71904916279999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="เพิ่มข้อมูลออกกำลังกาย" id="6Pj-3u-oHm">
+                                        <barButtonItem key="leftBarButtonItem" image="arowback" id="J5P-8l-H7D">
+                                            <inset key="imageInsets" minX="0.0" minY="25" maxX="35" maxY="20"/>
+                                            <connections>
+                                                <segue destination="Qzg-4y-Hg1" kind="showDetail" id="YKQ-Mo-Udm"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93933180240000003" green="1" blue="0.94692285629999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="O82-vP-UTh" secondAttribute="trailing" id="A4K-iY-Icl"/>
+                            <constraint firstItem="O82-vP-UTh" firstAttribute="top" secondItem="Cg0-Mf-GY6" secondAttribute="bottom" id="PMW-oj-W7s"/>
+                            <constraint firstItem="O82-vP-UTh" firstAttribute="leading" secondItem="Mbq-BN-EuV" secondAttribute="leading" id="cY0-3W-OrT"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uuz-hy-2B5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2571" y="-134"/>
+        </scene>
+        <!--บันทึกออกกำลังกาย-->
+        <scene sceneID="LLr-83-Xbz">
+            <objects>
+                <viewController title="บันทึกออกกำลังกาย" id="Jh3-be-Ps1" customClass="diabetesViewController" customModule="HappyHealthy" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TFq-tl-4RK"/>
+                        <viewControllerLayoutGuide type="bottom" id="1Ih-LS-3Pk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Z88-ry-OPF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cF1-09-APr">
+                                <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="HI2-5M-3I9"/>
+                                </constraints>
+                                <color key="tintColor" red="0.99907074129999995" green="0.94414956569999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="barTintColor" red="0.59139513259999998" green="0.93648630379999998" blue="0.71904916279999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="บันทึกออกกำลังกาย" id="HmH-WZ-R1c">
+                                        <barButtonItem key="leftBarButtonItem" image="arowback" id="Yti-0Y-PZx">
+                                            <inset key="imageInsets" minX="0.0" minY="25" maxX="35" maxY="20"/>
+                                            <connections>
+                                                <segue destination="Qzg-4y-Hg1" kind="showDetail" id="msy-k8-tgG"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" image="buttonadd" id="v78-Ay-jGL">
+                                            <inset key="imageInsets" minX="30" minY="20" maxX="15" maxY="20"/>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93933180240000003" green="1" blue="0.94692285629999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="cF1-09-APr" secondAttribute="trailing" id="18K-A7-gLr"/>
+                            <constraint firstItem="cF1-09-APr" firstAttribute="leading" secondItem="Z88-ry-OPF" secondAttribute="leading" id="vl9-Zq-Bxs"/>
+                            <constraint firstItem="cF1-09-APr" firstAttribute="top" secondItem="TFq-tl-4RK" secondAttribute="bottom" id="wmG-zk-58g"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lr9-jN-u9X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1981" y="509"/>
         </scene>
     </scenes>
     <resources>
@@ -1697,6 +2537,8 @@
         <image name="bmi" width="75" height="40"/>
         <image name="bmi1" width="560" height="95"/>
         <image name="bmr" width="85" height="40"/>
+        <image name="buttonadd" width="90" height="80"/>
+        <image name="buttonsave" width="420" height="70"/>
         <image name="buttonsavediba" width="420" height="70"/>
         <image name="buttonsavekid" width="420" height="70"/>
         <image name="calexe" width="270" height="30"/>
@@ -1708,12 +2550,14 @@
         <image name="da7" width="80" height="40"/>
         <image name="da8" width="102" height="40"/>
         <image name="da9" width="102" height="40"/>
+        <image name="dia1" width="700" height="110"/>
         <image name="dii" width="1200" height="300"/>
         <image name="diii" width="1200" height="300"/>
         <image name="diiii" width="1200" height="300"/>
         <image name="diiiii" width="1200" height="300"/>
         <image name="diiiiii" width="1200" height="300"/>
         <image name="disbmr" width="200" height="30"/>
+        <image name="down2" width="70" height="45"/>
         <image name="iconheart" width="40" height="40"/>
         <image name="iconhome" width="20" height="20"/>
         <image name="iconintro" width="20" height="20"/>
@@ -1725,14 +2569,34 @@
         <image name="listrf2" width="120" height="40"/>
         <image name="ml2" width="100" height="45"/>
         <image name="mlgf" width="200" height="45"/>
+        <image name="mlh" width="90" height="30"/>
+        <image name="mlpre" width="100" height="45"/>
         <image name="protin" width="650" height="100"/>
         <image name="sodium" width="650" height="100"/>
         <image name="sugar" width="650" height="100"/>
         <image name="sumtotal" width="420" height="110"/>
+        <image name="textheart" width="340" height="50"/>
+        <image name="textleveldi1" width="420" height="75"/>
+        <image name="top2" width="70" height="45"/>
         <image name="tstsugarbefore" width="420" height="75"/>
         <image name="txtgfr" width="340" height="50"/>
+        <image name="txtpretop" width="340" height="50"/>
         <image name="unitcalexe" width="80" height="25"/>
         <image name="unitcalfood" width="80" height="25"/>
         <image name="year" width="50" height="45"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="euT-pb-cB5"/>
+        <segue reference="0Xa-Fy-TD7"/>
+        <segue reference="Xtw-EU-rHq"/>
+        <segue reference="plJ-Wv-gmD"/>
+        <segue reference="MAr-ff-iH9"/>
+        <segue reference="tcD-mB-9xQ"/>
+        <segue reference="xZr-WF-clY"/>
+        <segue reference="QL6-Xz-8SH"/>
+        <segue reference="NYJ-dp-WM2"/>
+        <segue reference="YKQ-Mo-Udm"/>
+        <segue reference="rrE-DJ-7Ul"/>
+        <segue reference="Zmr-TH-fgj"/>
+    </inferredMetricsTieBreakers>
 </document>
