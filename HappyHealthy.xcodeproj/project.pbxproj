@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC2BE1E81EF0E5D100CBF9FE /* diabetesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2BE1E71EF0E5D100CBF9FE /* diabetesViewController.swift */; };
+		FC2BE1EA1EF0E63500CBF9FE /* homeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2BE1E91EF0E63500CBF9FE /* homeViewController.swift */; };
 		FC7E62721EEE35DA0065F6C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7E62711EEE35DA0065F6C2 /* AppDelegate.swift */; };
 		FC7E62771EEE35DA0065F6C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC7E62751EEE35DA0065F6C2 /* Main.storyboard */; };
 		FC7E62791EEE35DA0065F6C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC7E62781EEE35DA0065F6C2 /* Assets.xcassets */; };
@@ -38,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FC2BE1E71EF0E5D100CBF9FE /* diabetesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = diabetesViewController.swift; sourceTree = "<group>"; };
+		FC2BE1E91EF0E63500CBF9FE /* homeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = homeViewController.swift; sourceTree = "<group>"; };
 		FC7E626E1EEE35DA0065F6C2 /* HappyHealthy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HappyHealthy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC7E62711EEE35DA0065F6C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC7E62761EEE35DA0065F6C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -115,6 +119,8 @@
 				FC7E627A1EEE35DA0065F6C2 /* LaunchScreen.storyboard */,
 				FC7E627D1EEE35DA0065F6C2 /* Info.plist */,
 				FC7E62C71EEE89DF0065F6C2 /* IntroViewController.swift */,
+				FC2BE1E71EF0E5D100CBF9FE /* diabetesViewController.swift */,
+				FC2BE1E91EF0E63500CBF9FE /* homeViewController.swift */,
 			);
 			path = HappyHealthy;
 			sourceTree = "<group>";
@@ -280,6 +286,8 @@
 			files = (
 				FC7E62721EEE35DA0065F6C2 /* AppDelegate.swift in Sources */,
 				FC7E62C81EEE89DF0065F6C2 /* IntroViewController.swift in Sources */,
+				FC2BE1E81EF0E5D100CBF9FE /* diabetesViewController.swift in Sources */,
+				FC2BE1EA1EF0E63500CBF9FE /* homeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -532,6 +540,7 @@
 				FC7E62981EEE35DA0065F6C2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FC7E62991EEE35DA0065F6C2 /* Build configuration list for PBXNativeTarget "HappyHealthyTests" */ = {
 			isa = XCConfigurationList;
@@ -540,6 +549,7 @@
 				FC7E629B1EEE35DA0065F6C2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FC7E629C1EEE35DA0065F6C2 /* Build configuration list for PBXNativeTarget "HappyHealthyUITests" */ = {
 			isa = XCConfigurationList;
@@ -548,6 +558,7 @@
 				FC7E629E1EEE35DA0065F6C2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
