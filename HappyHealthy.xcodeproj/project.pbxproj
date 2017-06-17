@@ -15,17 +15,17 @@
 		FC5231AC1EF511800067E0C0 /* exerciseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5231A61EF511800067E0C0 /* exerciseModel.swift */; };
 		FC5231AF1EF5149D0067E0C0 /* exerciseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5231AE1EF5149D0067E0C0 /* exerciseTableViewCell.swift */; };
 		FC5231CF1EF51EF90067E0C0 /* showDetailExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5231CE1EF51EF90067E0C0 /* showDetailExerciseViewController.swift */; };
+		FC5231D11EF530430067E0C0 /* foodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5231D01EF530430067E0C0 /* foodModel.swift */; };
+		FC5231D31EF53D000067E0C0 /* foodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5231D21EF53D000067E0C0 /* foodViewController.swift */; };
+		FC5231D61EF53E230067E0C0 /* foodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5231D51EF53E230067E0C0 /* foodTableViewCell.swift */; };
+		FC5231D81EF53E420067E0C0 /* showDetailFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5231D71EF53E420067E0C0 /* showDetailFoodViewController.swift */; };
 		FC7E62721EEE35DA0065F6C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7E62711EEE35DA0065F6C2 /* AppDelegate.swift */; };
 		FC7E62771EEE35DA0065F6C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC7E62751EEE35DA0065F6C2 /* Main.storyboard */; };
 		FC7E62791EEE35DA0065F6C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC7E62781EEE35DA0065F6C2 /* Assets.xcassets */; };
 		FC7E627C1EEE35DA0065F6C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC7E627A1EEE35DA0065F6C2 /* LaunchScreen.storyboard */; };
 		FC7E62871EEE35DA0065F6C2 /* HappyHealthyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7E62861EEE35DA0065F6C2 /* HappyHealthyTests.swift */; };
 		FC7E62921EEE35DA0065F6C2 /* HappyHealthyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7E62911EEE35DA0065F6C2 /* HappyHealthyUITests.swift */; };
-		FC7E62A01EEE453E0065F6C2 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = FC7E629F1EEE453E0065F6C2 /* bg.png */; };
-		FC7E62A61EEE4B280065F6C2 /* fisrt2.png in Resources */ = {isa = PBXBuildFile; fileRef = FC7E62A51EEE4B280065F6C2 /* fisrt2.png */; };
-		FC7E62AD1EEE4DFB0065F6C2 /* fisrt.png in Resources */ = {isa = PBXBuildFile; fileRef = FC7E62AB1EEE4DFB0065F6C2 /* fisrt.png */; };
-		FC7E62AE1EEE4DFB0065F6C2 /* fisrt1.png in Resources */ = {isa = PBXBuildFile; fileRef = FC7E62AC1EEE4DFB0065F6C2 /* fisrt1.png */; };
-		FC7E62C81EEE89DF0065F6C2 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7E62C71EEE89DF0065F6C2 /* IntroViewController.swift */; };
+		FC7E62C81EEE89DF0065F6C2 /* InstructionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7E62C71EEE89DF0065F6C2 /* InstructionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -180,13 +180,17 @@
 /* Begin PBXFileReference section */
 		FC2BE1E91EF0E63500CBF9FE /* homeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = homeViewController.swift; sourceTree = "<group>"; };
 		FC5231641EF511710067E0C0 /* GRDB.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GRDB.xcodeproj; path = "GRDB.swift-master/GRDB.xcodeproj"; sourceTree = "<group>"; };
-		FC52319E1EF511800067E0C0 /* exerciseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = exerciseViewController.swift; sourceTree = "<group>"; };
+		FC52319E1EF511800067E0C0 /* exerciseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = exerciseViewController.swift; path = ../Controller/exerciseViewController.swift; sourceTree = "<group>"; };
 		FC5231A01EF511800067E0C0 /* DatabaseHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseHelper.swift; sourceTree = "<group>"; };
 		FC5231A31EF511800067E0C0 /* HappyHealthy_Sqlite.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = HappyHealthy_Sqlite.db; sourceTree = "<group>"; };
 		FC5231A51EF511800067E0C0 /* exerciseHistoryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = exerciseHistoryModel.swift; sourceTree = "<group>"; };
 		FC5231A61EF511800067E0C0 /* exerciseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = exerciseModel.swift; sourceTree = "<group>"; };
 		FC5231AE1EF5149D0067E0C0 /* exerciseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = exerciseTableViewCell.swift; sourceTree = "<group>"; };
-		FC5231CE1EF51EF90067E0C0 /* showDetailExerciseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = showDetailExerciseViewController.swift; sourceTree = "<group>"; };
+		FC5231CE1EF51EF90067E0C0 /* showDetailExerciseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = showDetailExerciseViewController.swift; path = ../Controller/showDetailExerciseViewController.swift; sourceTree = "<group>"; };
+		FC5231D01EF530430067E0C0 /* foodModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = foodModel.swift; sourceTree = "<group>"; };
+		FC5231D21EF53D000067E0C0 /* foodViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = foodViewController.swift; path = View/foodViewController.swift; sourceTree = "<group>"; };
+		FC5231D51EF53E230067E0C0 /* foodTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = foodTableViewCell.swift; sourceTree = "<group>"; };
+		FC5231D71EF53E420067E0C0 /* showDetailFoodViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = showDetailFoodViewController.swift; sourceTree = "<group>"; };
 		FC7E626E1EEE35DA0065F6C2 /* HappyHealthy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HappyHealthy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC7E62711EEE35DA0065F6C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC7E62761EEE35DA0065F6C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -199,11 +203,7 @@
 		FC7E628D1EEE35DA0065F6C2 /* HappyHealthyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HappyHealthyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC7E62911EEE35DA0065F6C2 /* HappyHealthyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappyHealthyUITests.swift; sourceTree = "<group>"; };
 		FC7E62931EEE35DA0065F6C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FC7E629F1EEE453E0065F6C2 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
-		FC7E62A51EEE4B280065F6C2 /* fisrt2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fisrt2.png; sourceTree = "<group>"; };
-		FC7E62AB1EEE4DFB0065F6C2 /* fisrt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fisrt.png; sourceTree = "<group>"; };
-		FC7E62AC1EEE4DFB0065F6C2 /* fisrt1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fisrt1.png; sourceTree = "<group>"; };
-		FC7E62C71EEE89DF0065F6C2 /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
+		FC7E62C71EEE89DF0065F6C2 /* InstructionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstructionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -255,15 +255,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		FC52319D1EF511800067E0C0 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				FC52319E1EF511800067E0C0 /* exerciseViewController.swift */,
-				FC5231CE1EF51EF90067E0C0 /* showDetailExerciseViewController.swift */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
 		FC52319F1EF511800067E0C0 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
@@ -277,24 +268,38 @@
 			children = (
 				FC5231A51EF511800067E0C0 /* exerciseHistoryModel.swift */,
 				FC5231A61EF511800067E0C0 /* exerciseModel.swift */,
+				FC5231D01EF530430067E0C0 /* foodModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		FC5231AD1EF5149D0067E0C0 /* View */ = {
+		FC5231AD1EF5149D0067E0C0 /* Exercise */ = {
 			isa = PBXGroup;
 			children = (
 				FC5231AE1EF5149D0067E0C0 /* exerciseTableViewCell.swift */,
+				FC52319E1EF511800067E0C0 /* exerciseViewController.swift */,
+				FC5231CE1EF51EF90067E0C0 /* showDetailExerciseViewController.swift */,
 			);
+			name = Exercise;
 			path = View;
+			sourceTree = "<group>";
+		};
+		FC5231D41EF53D140067E0C0 /* Food */ = {
+			isa = PBXGroup;
+			children = (
+				FC5231D21EF53D000067E0C0 /* foodViewController.swift */,
+				FC5231D51EF53E230067E0C0 /* foodTableViewCell.swift */,
+				FC5231D71EF53E420067E0C0 /* showDetailFoodViewController.swift */,
+			);
+			name = Food;
 			sourceTree = "<group>";
 		};
 		FC7E62651EEE35DA0065F6C2 = {
 			isa = PBXGroup;
 			children = (
 				FC5231A31EF511800067E0C0 /* HappyHealthy_Sqlite.db */,
-				FC5231AD1EF5149D0067E0C0 /* View */,
-				FC52319D1EF511800067E0C0 /* Controller */,
+				FC5231D41EF53D140067E0C0 /* Food */,
+				FC5231AD1EF5149D0067E0C0 /* Exercise */,
 				FC52319F1EF511800067E0C0 /* Helper */,
 				FC5231A41EF511800067E0C0 /* Model */,
 				FC5231641EF511710067E0C0 /* GRDB.xcodeproj */,
@@ -319,15 +324,11 @@
 			isa = PBXGroup;
 			children = (
 				FC7E62711EEE35DA0065F6C2 /* AppDelegate.swift */,
-				FC7E629F1EEE453E0065F6C2 /* bg.png */,
-				FC7E62A51EEE4B280065F6C2 /* fisrt2.png */,
-				FC7E62AB1EEE4DFB0065F6C2 /* fisrt.png */,
-				FC7E62AC1EEE4DFB0065F6C2 /* fisrt1.png */,
 				FC7E62751EEE35DA0065F6C2 /* Main.storyboard */,
 				FC7E62781EEE35DA0065F6C2 /* Assets.xcassets */,
 				FC7E627A1EEE35DA0065F6C2 /* LaunchScreen.storyboard */,
 				FC7E627D1EEE35DA0065F6C2 /* Info.plist */,
-				FC7E62C71EEE89DF0065F6C2 /* IntroViewController.swift */,
+				FC7E62C71EEE89DF0065F6C2 /* InstructionViewController.swift */,
 				FC2BE1E91EF0E63500CBF9FE /* homeViewController.swift */,
 			);
 			path = HappyHealthy;
@@ -590,13 +591,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC7E62AD1EEE4DFB0065F6C2 /* fisrt.png in Resources */,
 				FC7E627C1EEE35DA0065F6C2 /* LaunchScreen.storyboard in Resources */,
-				FC7E62A61EEE4B280065F6C2 /* fisrt2.png in Resources */,
-				FC7E62AE1EEE4DFB0065F6C2 /* fisrt1.png in Resources */,
 				FC5231AA1EF511800067E0C0 /* HappyHealthy_Sqlite.db in Resources */,
 				FC7E62791EEE35DA0065F6C2 /* Assets.xcassets in Resources */,
-				FC7E62A01EEE453E0065F6C2 /* bg.png in Resources */,
 				FC7E62771EEE35DA0065F6C2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -625,12 +622,16 @@
 				FC7E62721EEE35DA0065F6C2 /* AppDelegate.swift in Sources */,
 				FC5231AF1EF5149D0067E0C0 /* exerciseTableViewCell.swift in Sources */,
 				FC5231A81EF511800067E0C0 /* DatabaseHelper.swift in Sources */,
+				FC5231D11EF530430067E0C0 /* foodModel.swift in Sources */,
+				FC5231D31EF53D000067E0C0 /* foodViewController.swift in Sources */,
 				FC5231CF1EF51EF90067E0C0 /* showDetailExerciseViewController.swift in Sources */,
-				FC7E62C81EEE89DF0065F6C2 /* IntroViewController.swift in Sources */,
+				FC7E62C81EEE89DF0065F6C2 /* InstructionViewController.swift in Sources */,
 				FC5231A71EF511800067E0C0 /* exerciseViewController.swift in Sources */,
 				FC5231AB1EF511800067E0C0 /* exerciseHistoryModel.swift in Sources */,
+				FC5231D61EF53E230067E0C0 /* foodTableViewCell.swift in Sources */,
 				FC2BE1EA1EF0E63500CBF9FE /* homeViewController.swift in Sources */,
 				FC5231AC1EF511800067E0C0 /* exerciseModel.swift in Sources */,
+				FC5231D81EF53E420067E0C0 /* showDetailFoodViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

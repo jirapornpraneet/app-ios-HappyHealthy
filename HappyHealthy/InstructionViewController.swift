@@ -8,15 +8,15 @@
 
 import UIKit
 
-class IntroViewController: UIPageViewController, UIPageViewControllerDataSource,UIPageViewControllerDelegate {
+class InstructionViewController: UIPageViewController, UIPageViewControllerDataSource,UIPageViewControllerDelegate {
 
     lazy var VCArr:[UIViewController] = {
-        return [self.VCInstance(name: "Intro1"),
-                self.VCInstance(name: "Intro2"),
-                self.VCInstance(name: "Intro3"),
-                self.VCInstance(name: "Intro4"),
-                self.VCInstance(name: "Intro5"),
-                self.VCInstance(name: "Intro6")
+        return [self.VCInstance(name: "InstructionDiabetes"),
+                self.VCInstance(name: "InstructionDiabetes2"),
+                self.VCInstance(name: "InstructionBloodPressure"),
+                self.VCInstance(name: "InstructionKidney"),
+                self.VCInstance(name: "InstructionDrink"),
+                self.VCInstance(name: "InstructionEat")
                 ]
     }()
     

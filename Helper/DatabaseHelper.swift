@@ -43,6 +43,37 @@ class DatabaseHelper {
         }
         return getExerciseModel
     }
+    
+    func getAllFood() -> [foodModel]{
+        var getFoodModel = [foodModel]()
+        dbQueue.inDatabase { db in
+            do {
+                for row in try Row.fetchAll(db, "select * from food "){
+                    let rowFoodModel = foodModel()
+                    rowFoodModel.Food_Id = row.value(named: "Food_Id") as Int
+                    rowFoodModel.Food_Name = row.value(named: "Food_Name") as String
+                    rowFoodModel.Food_Calories = row.value(named: "Food_Calories") as Double
+                    rowFoodModel.Food_Unit = row.value(named: "Food_Unit") as String
+                    rowFoodModel.Food_Netweight = row.value(named: "Food_Netweight") as Double
+                    rowFoodModel.Food_NetUnit  = row.value(named: "Food_NetUnit") as String
+                    rowFoodModel.Food_Protein = row.value(named: "Food_Protein") as Double
+                    rowFoodModel.Food_Fat = row.value(named: "Food_Fat") as Double
+                    rowFoodModel.Food_Carbohydrate = row.value(named: "Food_Carbohydrate") as Double
+                    rowFoodModel.Food_Sugars = row.value(named: "Food_Sugars") as Double
+                    rowFoodModel.Food_Sodium = row.value(named: "Food_Sodium") as Double
+                    rowFoodModel.Food_Detail  = row.value(named: "Food_Detail") as String
+              
+                    getFoodModel .append(rowFoodModel)
+                }
+            }
+            catch {
+                print("Get All Exercise Fail!!")
+            }
+        }
+        return getFoodModel
+    }
+
+    
     //Join
     /*func getAllHistoryExercise(Exercise_Id: Int) -> [exerciseHistoryModel] {
         var listHistoryExercise = [exerciseHistoryModel]()

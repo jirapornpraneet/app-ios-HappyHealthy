@@ -10,7 +10,7 @@ import UIKit
 
 class exerciseViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
-    @IBOutlet var table: UITableView!
+    @IBOutlet var tableExercis: UITableView!
     var getExerciseModel = [exerciseModel]()
     var dbHelper = DatabaseHelper()
     var dataExerciseModel: exerciseModel?
@@ -30,8 +30,8 @@ class exerciseViewController: UIViewController,UITableViewDelegate,UITableViewDa
 
     func loadAllExercise(){
         getExerciseModel = dbHelper.getAllExercise()
-        table.dataSource = self
-        table.delegate = self
+        tableExercis.dataSource = self
+        tableExercis.delegate = self
     }
        
     func numberOfSections(in tableView: UITableView) -> Int {
