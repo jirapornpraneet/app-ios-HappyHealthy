@@ -7,8 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FC2BE1E81EF0E5D100CBF9FE /* diabetesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2BE1E71EF0E5D100CBF9FE /* diabetesViewController.swift */; };
 		FC2BE1EA1EF0E63500CBF9FE /* homeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2BE1E91EF0E63500CBF9FE /* homeViewController.swift */; };
+		FC5231A71EF511800067E0C0 /* exerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC52319E1EF511800067E0C0 /* exerciseViewController.swift */; };
+		FC5231A81EF511800067E0C0 /* DatabaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5231A01EF511800067E0C0 /* DatabaseHelper.swift */; };
+		FC5231AA1EF511800067E0C0 /* HappyHealthy_Sqlite.db in Resources */ = {isa = PBXBuildFile; fileRef = FC5231A31EF511800067E0C0 /* HappyHealthy_Sqlite.db */; };
+		FC5231AB1EF511800067E0C0 /* exerciseHistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5231A51EF511800067E0C0 /* exerciseHistoryModel.swift */; };
+		FC5231AC1EF511800067E0C0 /* exerciseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5231A61EF511800067E0C0 /* exerciseModel.swift */; };
+		FC5231AF1EF5149D0067E0C0 /* exerciseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5231AE1EF5149D0067E0C0 /* exerciseTableViewCell.swift */; };
+		FC5231CF1EF51EF90067E0C0 /* showDetailExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5231CE1EF51EF90067E0C0 /* showDetailExerciseViewController.swift */; };
 		FC7E62721EEE35DA0065F6C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7E62711EEE35DA0065F6C2 /* AppDelegate.swift */; };
 		FC7E62771EEE35DA0065F6C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC7E62751EEE35DA0065F6C2 /* Main.storyboard */; };
 		FC7E62791EEE35DA0065F6C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC7E62781EEE35DA0065F6C2 /* Assets.xcassets */; };
@@ -23,6 +29,125 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		FC52317B1EF511720067E0C0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC5231641EF511710067E0C0 /* GRDB.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DC3773F319C8CBB3004FCF85;
+			remoteInfo = GRDBOSX;
+		};
+		FC52317D1EF511720067E0C0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC5231641EF511710067E0C0 /* GRDB.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 56E5D7F91B4D422D00430942;
+			remoteInfo = GRDBOSXTests;
+		};
+		FC52317F1EF511720067E0C0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC5231641EF511710067E0C0 /* GRDB.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 560C981A1C0E22D300BF8471;
+			remoteInfo = GRDBOSXPerformanceTests;
+		};
+		FC5231811EF511720067E0C0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC5231641EF511710067E0C0 /* GRDB.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 56553C181C3E906C00522B5C;
+			remoteInfo = GRDBOSXCrashTests;
+		};
+		FC5231831EF511720067E0C0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC5231641EF511710067E0C0 /* GRDB.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 560FC54D1CB003810014AA8E;
+			remoteInfo = GRDBCipherOSX;
+		};
+		FC5231851EF511720067E0C0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC5231641EF511710067E0C0 /* GRDB.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 560FC5B01CB00B880014AA8E;
+			remoteInfo = GRDBCipherOSXTests;
+		};
+		FC5231871EF511720067E0C0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC5231641EF511710067E0C0 /* GRDB.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5671566C1CB16729007DC145;
+			remoteInfo = GRDBCipherOSXEncryptedTests;
+		};
+		FC5231891EF511720067E0C0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC5231641EF511710067E0C0 /* GRDB.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F3BA805A1CFB2BB2003DC1BA;
+			remoteInfo = GRDBCustomSQLiteOSX;
+		};
+		FC52318B1EF511720067E0C0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC5231641EF511710067E0C0 /* GRDB.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F3BA809B1CFB2F6F003DC1BA;
+			remoteInfo = GRDBCustomSQLiteOSXTests;
+		};
+		FC52318D1EF511720067E0C0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC5231641EF511710067E0C0 /* GRDB.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 56E5D7CA1B4D3FED00430942;
+			remoteInfo = GRDBiOS;
+		};
+		FC52318F1EF511720067E0C0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC5231641EF511710067E0C0 /* GRDB.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 56E5D7D31B4D3FEE00430942;
+			remoteInfo = GRDBiOSTests;
+		};
+		FC5231911EF511720067E0C0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC5231641EF511710067E0C0 /* GRDB.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 56AFCA231CB1A8BB00F48B96;
+			remoteInfo = GRDBCipheriOS;
+		};
+		FC5231931EF511720067E0C0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC5231641EF511710067E0C0 /* GRDB.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 56AFCA7F1CB1AA9900F48B96;
+			remoteInfo = GRDBCipheriOSTests;
+		};
+		FC5231951EF511720067E0C0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC5231641EF511710067E0C0 /* GRDB.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 56AFCAD71CB1ABC800F48B96;
+			remoteInfo = GRDBCipheriOSEncryptedTests;
+		};
+		FC5231971EF511720067E0C0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC5231641EF511710067E0C0 /* GRDB.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F3BA7FFE1CFB25E4003DC1BA;
+			remoteInfo = GRDBCustomSQLiteiOS;
+		};
+		FC5231991EF511720067E0C0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC5231641EF511710067E0C0 /* GRDB.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F3BA80411CFB2AD7003DC1BA;
+			remoteInfo = GRDBCustomSQLiteiOSTests;
+		};
+		FC52319B1EF511720067E0C0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC5231641EF511710067E0C0 /* GRDB.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 565490A01D5A4798005622CB;
+			remoteInfo = GRDBWatchOS;
+		};
 		FC7E62831EEE35DA0065F6C2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FC7E62661EEE35DA0065F6C2 /* Project object */;
@@ -39,9 +164,29 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		FCD9F7731EF3F37C0067BBFF /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		FC2BE1E71EF0E5D100CBF9FE /* diabetesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = diabetesViewController.swift; sourceTree = "<group>"; };
 		FC2BE1E91EF0E63500CBF9FE /* homeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = homeViewController.swift; sourceTree = "<group>"; };
+		FC5231641EF511710067E0C0 /* GRDB.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GRDB.xcodeproj; path = "GRDB.swift-master/GRDB.xcodeproj"; sourceTree = "<group>"; };
+		FC52319E1EF511800067E0C0 /* exerciseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = exerciseViewController.swift; sourceTree = "<group>"; };
+		FC5231A01EF511800067E0C0 /* DatabaseHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseHelper.swift; sourceTree = "<group>"; };
+		FC5231A31EF511800067E0C0 /* HappyHealthy_Sqlite.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = HappyHealthy_Sqlite.db; sourceTree = "<group>"; };
+		FC5231A51EF511800067E0C0 /* exerciseHistoryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = exerciseHistoryModel.swift; sourceTree = "<group>"; };
+		FC5231A61EF511800067E0C0 /* exerciseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = exerciseModel.swift; sourceTree = "<group>"; };
+		FC5231AE1EF5149D0067E0C0 /* exerciseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = exerciseTableViewCell.swift; sourceTree = "<group>"; };
+		FC5231CE1EF51EF90067E0C0 /* showDetailExerciseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = showDetailExerciseViewController.swift; sourceTree = "<group>"; };
 		FC7E626E1EEE35DA0065F6C2 /* HappyHealthy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HappyHealthy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC7E62711EEE35DA0065F6C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC7E62761EEE35DA0065F6C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -86,9 +231,73 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FC5231651EF511710067E0C0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FC52317C1EF511720067E0C0 /* GRDB.framework */,
+				FC52317E1EF511720067E0C0 /* GRDBOSXTests.xctest */,
+				FC5231801EF511720067E0C0 /* GRDBOSXPerformanceTests.xctest */,
+				FC5231821EF511720067E0C0 /* GRDBOSXCrashTests.xctest */,
+				FC5231841EF511720067E0C0 /* GRDBCipher.framework */,
+				FC5231861EF511720067E0C0 /* GRDBCipherOSXTests.xctest */,
+				FC5231881EF511720067E0C0 /* GRDBCipherOSXEncryptedTests.xctest */,
+				FC52318A1EF511720067E0C0 /* GRDBCustomSQLite.framework */,
+				FC52318C1EF511720067E0C0 /* GRDBCustomSQLiteOSXTests.xctest */,
+				FC52318E1EF511720067E0C0 /* GRDB.framework */,
+				FC5231901EF511720067E0C0 /* GRDBiOSTests.xctest */,
+				FC5231921EF511720067E0C0 /* GRDBCipher.framework */,
+				FC5231941EF511720067E0C0 /* GRDBCipheriOSTests.xctest */,
+				FC5231961EF511720067E0C0 /* GRDBCipheriOSEncryptedTests.xctest */,
+				FC5231981EF511720067E0C0 /* GRDBCustomSQLite.framework */,
+				FC52319A1EF511720067E0C0 /* GRDBCustomSQLiteiOSTests.xctest */,
+				FC52319C1EF511720067E0C0 /* GRDB.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FC52319D1EF511800067E0C0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FC52319E1EF511800067E0C0 /* exerciseViewController.swift */,
+				FC5231CE1EF51EF90067E0C0 /* showDetailExerciseViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FC52319F1EF511800067E0C0 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				FC5231A01EF511800067E0C0 /* DatabaseHelper.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		FC5231A41EF511800067E0C0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FC5231A51EF511800067E0C0 /* exerciseHistoryModel.swift */,
+				FC5231A61EF511800067E0C0 /* exerciseModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FC5231AD1EF5149D0067E0C0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FC5231AE1EF5149D0067E0C0 /* exerciseTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		FC7E62651EEE35DA0065F6C2 = {
 			isa = PBXGroup;
 			children = (
+				FC5231A31EF511800067E0C0 /* HappyHealthy_Sqlite.db */,
+				FC5231AD1EF5149D0067E0C0 /* View */,
+				FC52319D1EF511800067E0C0 /* Controller */,
+				FC52319F1EF511800067E0C0 /* Helper */,
+				FC5231A41EF511800067E0C0 /* Model */,
+				FC5231641EF511710067E0C0 /* GRDB.xcodeproj */,
 				FC7E62701EEE35DA0065F6C2 /* HappyHealthy */,
 				FC7E62851EEE35DA0065F6C2 /* HappyHealthyTests */,
 				FC7E62901EEE35DA0065F6C2 /* HappyHealthyUITests */,
@@ -119,7 +328,6 @@
 				FC7E627A1EEE35DA0065F6C2 /* LaunchScreen.storyboard */,
 				FC7E627D1EEE35DA0065F6C2 /* Info.plist */,
 				FC7E62C71EEE89DF0065F6C2 /* IntroViewController.swift */,
-				FC2BE1E71EF0E5D100CBF9FE /* diabetesViewController.swift */,
 				FC2BE1E91EF0E63500CBF9FE /* homeViewController.swift */,
 			);
 			path = HappyHealthy;
@@ -153,6 +361,7 @@
 				FC7E626A1EEE35DA0065F6C2 /* Sources */,
 				FC7E626B1EEE35DA0065F6C2 /* Frameworks */,
 				FC7E626C1EEE35DA0065F6C2 /* Resources */,
+				FCD9F7731EF3F37C0067BBFF /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -239,6 +448,12 @@
 			mainGroup = FC7E62651EEE35DA0065F6C2;
 			productRefGroup = FC7E626F1EEE35DA0065F6C2 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = FC5231651EF511710067E0C0 /* Products */;
+					ProjectRef = FC5231641EF511710067E0C0 /* GRDB.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				FC7E626D1EEE35DA0065F6C2 /* HappyHealthy */,
@@ -247,6 +462,128 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		FC52317C1EF511720067E0C0 /* GRDB.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = GRDB.framework;
+			remoteRef = FC52317B1EF511720067E0C0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FC52317E1EF511720067E0C0 /* GRDBOSXTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = GRDBOSXTests.xctest;
+			remoteRef = FC52317D1EF511720067E0C0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FC5231801EF511720067E0C0 /* GRDBOSXPerformanceTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = GRDBOSXPerformanceTests.xctest;
+			remoteRef = FC52317F1EF511720067E0C0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FC5231821EF511720067E0C0 /* GRDBOSXCrashTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = GRDBOSXCrashTests.xctest;
+			remoteRef = FC5231811EF511720067E0C0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FC5231841EF511720067E0C0 /* GRDBCipher.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = GRDBCipher.framework;
+			remoteRef = FC5231831EF511720067E0C0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FC5231861EF511720067E0C0 /* GRDBCipherOSXTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = GRDBCipherOSXTests.xctest;
+			remoteRef = FC5231851EF511720067E0C0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FC5231881EF511720067E0C0 /* GRDBCipherOSXEncryptedTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = GRDBCipherOSXEncryptedTests.xctest;
+			remoteRef = FC5231871EF511720067E0C0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FC52318A1EF511720067E0C0 /* GRDBCustomSQLite.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = GRDBCustomSQLite.framework;
+			remoteRef = FC5231891EF511720067E0C0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FC52318C1EF511720067E0C0 /* GRDBCustomSQLiteOSXTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = GRDBCustomSQLiteOSXTests.xctest;
+			remoteRef = FC52318B1EF511720067E0C0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FC52318E1EF511720067E0C0 /* GRDB.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = GRDB.framework;
+			remoteRef = FC52318D1EF511720067E0C0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FC5231901EF511720067E0C0 /* GRDBiOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = GRDBiOSTests.xctest;
+			remoteRef = FC52318F1EF511720067E0C0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FC5231921EF511720067E0C0 /* GRDBCipher.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = GRDBCipher.framework;
+			remoteRef = FC5231911EF511720067E0C0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FC5231941EF511720067E0C0 /* GRDBCipheriOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = GRDBCipheriOSTests.xctest;
+			remoteRef = FC5231931EF511720067E0C0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FC5231961EF511720067E0C0 /* GRDBCipheriOSEncryptedTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = GRDBCipheriOSEncryptedTests.xctest;
+			remoteRef = FC5231951EF511720067E0C0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FC5231981EF511720067E0C0 /* GRDBCustomSQLite.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = GRDBCustomSQLite.framework;
+			remoteRef = FC5231971EF511720067E0C0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FC52319A1EF511720067E0C0 /* GRDBCustomSQLiteiOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = GRDBCustomSQLiteiOSTests.xctest;
+			remoteRef = FC5231991EF511720067E0C0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FC52319C1EF511720067E0C0 /* GRDB.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = GRDB.framework;
+			remoteRef = FC52319B1EF511720067E0C0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		FC7E626C1EEE35DA0065F6C2 /* Resources */ = {
@@ -257,6 +594,7 @@
 				FC7E627C1EEE35DA0065F6C2 /* LaunchScreen.storyboard in Resources */,
 				FC7E62A61EEE4B280065F6C2 /* fisrt2.png in Resources */,
 				FC7E62AE1EEE4DFB0065F6C2 /* fisrt1.png in Resources */,
+				FC5231AA1EF511800067E0C0 /* HappyHealthy_Sqlite.db in Resources */,
 				FC7E62791EEE35DA0065F6C2 /* Assets.xcassets in Resources */,
 				FC7E62A01EEE453E0065F6C2 /* bg.png in Resources */,
 				FC7E62771EEE35DA0065F6C2 /* Main.storyboard in Resources */,
@@ -285,9 +623,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC7E62721EEE35DA0065F6C2 /* AppDelegate.swift in Sources */,
+				FC5231AF1EF5149D0067E0C0 /* exerciseTableViewCell.swift in Sources */,
+				FC5231A81EF511800067E0C0 /* DatabaseHelper.swift in Sources */,
+				FC5231CF1EF51EF90067E0C0 /* showDetailExerciseViewController.swift in Sources */,
 				FC7E62C81EEE89DF0065F6C2 /* IntroViewController.swift in Sources */,
-				FC2BE1E81EF0E5D100CBF9FE /* diabetesViewController.swift in Sources */,
+				FC5231A71EF511800067E0C0 /* exerciseViewController.swift in Sources */,
+				FC5231AB1EF511800067E0C0 /* exerciseHistoryModel.swift in Sources */,
 				FC2BE1EA1EF0E63500CBF9FE /* homeViewController.swift in Sources */,
+				FC5231AC1EF511800067E0C0 /* exerciseModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,6 +783,7 @@
 		FC7E62971EEE35DA0065F6C2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = TAG5S52MXM;
 				INFOPLIST_FILE = HappyHealthy/Info.plist;
@@ -453,6 +797,7 @@
 		FC7E62981EEE35DA0065F6C2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = TAG5S52MXM;
 				INFOPLIST_FILE = HappyHealthy/Info.plist;
