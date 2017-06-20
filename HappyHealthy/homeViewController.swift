@@ -13,7 +13,6 @@ class homeViewController: UIViewController {
     var dbHelper = DatabaseHelper()
     override func viewDidLoad() {
         super.viewDidLoad()
-         dbHelper.getAllExercise()
         // Do any additional setup after loading the view.
     }
 

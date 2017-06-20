@@ -16,6 +16,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let fileManager = FileManager.default
+        
+        let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first! as NSString
+        let databasePath = documentsPath.appendingPathComponent("HappyHealthy_Sqlite.db")
+        
+//        // Delete 'hello.swift' file
+//        
+//        do {
+//            try fileManager.removeItem(atPath: databasePath)
+//        }
+//        catch let error as NSError {
+//            print("Ooops! Something went wrong: \(error)")
+//        }
+//        
+//        print(" xx = %@", try? fileManager.contentsOfDirectory(atPath: documentsPath as String))
+
+        
+        CheckFileisExistOrNot(strPath: databasePath as String)
+        
         return true
     }
 
@@ -40,6 +60,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+    
+    func CheckFileisExistOrNot(strPath:String) {
+        let filemgr = FileManager.default
+        if !filemgr.fileExists(atPath: strPath) {
+            let resorcePath = Bundle.main.path(forResource: "HappyHealthy_Sqlite", ofType: "db")
+            do {
+                try filemgr.copyItem(atPath: resorcePath!, toPath: strPath)
+            }catch{
+                print("Error for file write")
+            }
+        }
+    }
+
 
 
 }

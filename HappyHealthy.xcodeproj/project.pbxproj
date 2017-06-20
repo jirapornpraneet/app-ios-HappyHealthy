@@ -7,18 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D7157CB9367F23D3C3930B42 /* Pods_HappyHealthy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66708A232800003B100801A5 /* Pods_HappyHealthy.framework */; };
 		FC2BE1EA1EF0E63500CBF9FE /* homeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2BE1E91EF0E63500CBF9FE /* homeViewController.swift */; };
-		FC5231A71EF511800067E0C0 /* exerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC52319E1EF511800067E0C0 /* exerciseViewController.swift */; };
+		FC5231A71EF511800067E0C0 /* ExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC52319E1EF511800067E0C0 /* ExerciseViewController.swift */; };
 		FC5231A81EF511800067E0C0 /* DatabaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5231A01EF511800067E0C0 /* DatabaseHelper.swift */; };
-		FC5231AA1EF511800067E0C0 /* HappyHealthy_Sqlite.db in Resources */ = {isa = PBXBuildFile; fileRef = FC5231A31EF511800067E0C0 /* HappyHealthy_Sqlite.db */; };
-		FC5231AB1EF511800067E0C0 /* exerciseHistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5231A51EF511800067E0C0 /* exerciseHistoryModel.swift */; };
-		FC5231AC1EF511800067E0C0 /* exerciseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5231A61EF511800067E0C0 /* exerciseModel.swift */; };
-		FC5231AF1EF5149D0067E0C0 /* exerciseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5231AE1EF5149D0067E0C0 /* exerciseTableViewCell.swift */; };
-		FC5231CF1EF51EF90067E0C0 /* showDetailExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5231CE1EF51EF90067E0C0 /* showDetailExerciseViewController.swift */; };
-		FC5231D11EF530430067E0C0 /* foodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5231D01EF530430067E0C0 /* foodModel.swift */; };
-		FC5231D31EF53D000067E0C0 /* foodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5231D21EF53D000067E0C0 /* foodViewController.swift */; };
-		FC5231D61EF53E230067E0C0 /* foodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5231D51EF53E230067E0C0 /* foodTableViewCell.swift */; };
-		FC5231D81EF53E420067E0C0 /* showDetailFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5231D71EF53E420067E0C0 /* showDetailFoodViewController.swift */; };
+		FC5231AB1EF511800067E0C0 /* ExerciseHistoryTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5231A51EF511800067E0C0 /* ExerciseHistoryTable.swift */; };
+		FC5231AC1EF511800067E0C0 /* ExerciseTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5231A61EF511800067E0C0 /* ExerciseTable.swift */; };
+		FC5231AF1EF5149D0067E0C0 /* ExerciseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5231AE1EF5149D0067E0C0 /* ExerciseTableViewCell.swift */; };
+		FC5231CF1EF51EF90067E0C0 /* ShowDetailExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5231CE1EF51EF90067E0C0 /* ShowDetailExerciseViewController.swift */; };
+		FC5231D11EF530430067E0C0 /* FoodTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5231D01EF530430067E0C0 /* FoodTable.swift */; };
+		FC5231D31EF53D000067E0C0 /* FoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5231D21EF53D000067E0C0 /* FoodViewController.swift */; };
+		FC5231D61EF53E230067E0C0 /* FoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5231D51EF53E230067E0C0 /* FoodTableViewCell.swift */; };
+		FC5231D81EF53E420067E0C0 /* ShowDetailFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5231D71EF53E420067E0C0 /* ShowDetailFoodViewController.swift */; };
+		FC5231DC1EF551310067E0C0 /* FoodHistoryTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5231DB1EF551310067E0C0 /* FoodHistoryTable.swift */; };
+		FC5231DE1EF553B60067E0C0 /* KidneyTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5231DD1EF553B60067E0C0 /* KidneyTable.swift */; };
+		FC5231E01EF5541A0067E0C0 /* PressureTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5231DF1EF5541A0067E0C0 /* PressureTable.swift */; };
+		FC5231E41EF5552D0067E0C0 /* UserTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5231E31EF5552D0067E0C0 /* UserTable.swift */; };
+		FC5231E81EF563560067E0C0 /* DiabetesTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5231E71EF563560067E0C0 /* DiabetesTable.swift */; };
+		FC666B431EF75E4F0019E1CF /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC666B411EF75E4F0019E1CF /* UserViewController.swift */; };
+		FC793F701EF8DF4200DCFAF1 /* HappyHealthy_Sqlite.db in Resources */ = {isa = PBXBuildFile; fileRef = FC63C1681EF63FC6006ED946 /* HappyHealthy_Sqlite.db */; };
 		FC7E62721EEE35DA0065F6C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7E62711EEE35DA0065F6C2 /* AppDelegate.swift */; };
 		FC7E62771EEE35DA0065F6C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC7E62751EEE35DA0065F6C2 /* Main.storyboard */; };
 		FC7E62791EEE35DA0065F6C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC7E62781EEE35DA0065F6C2 /* Assets.xcassets */; };
@@ -29,125 +36,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		FC52317B1EF511720067E0C0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FC5231641EF511710067E0C0 /* GRDB.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = DC3773F319C8CBB3004FCF85;
-			remoteInfo = GRDBOSX;
-		};
-		FC52317D1EF511720067E0C0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FC5231641EF511710067E0C0 /* GRDB.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 56E5D7F91B4D422D00430942;
-			remoteInfo = GRDBOSXTests;
-		};
-		FC52317F1EF511720067E0C0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FC5231641EF511710067E0C0 /* GRDB.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 560C981A1C0E22D300BF8471;
-			remoteInfo = GRDBOSXPerformanceTests;
-		};
-		FC5231811EF511720067E0C0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FC5231641EF511710067E0C0 /* GRDB.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 56553C181C3E906C00522B5C;
-			remoteInfo = GRDBOSXCrashTests;
-		};
-		FC5231831EF511720067E0C0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FC5231641EF511710067E0C0 /* GRDB.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 560FC54D1CB003810014AA8E;
-			remoteInfo = GRDBCipherOSX;
-		};
-		FC5231851EF511720067E0C0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FC5231641EF511710067E0C0 /* GRDB.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 560FC5B01CB00B880014AA8E;
-			remoteInfo = GRDBCipherOSXTests;
-		};
-		FC5231871EF511720067E0C0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FC5231641EF511710067E0C0 /* GRDB.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 5671566C1CB16729007DC145;
-			remoteInfo = GRDBCipherOSXEncryptedTests;
-		};
-		FC5231891EF511720067E0C0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FC5231641EF511710067E0C0 /* GRDB.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F3BA805A1CFB2BB2003DC1BA;
-			remoteInfo = GRDBCustomSQLiteOSX;
-		};
-		FC52318B1EF511720067E0C0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FC5231641EF511710067E0C0 /* GRDB.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F3BA809B1CFB2F6F003DC1BA;
-			remoteInfo = GRDBCustomSQLiteOSXTests;
-		};
-		FC52318D1EF511720067E0C0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FC5231641EF511710067E0C0 /* GRDB.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 56E5D7CA1B4D3FED00430942;
-			remoteInfo = GRDBiOS;
-		};
-		FC52318F1EF511720067E0C0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FC5231641EF511710067E0C0 /* GRDB.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 56E5D7D31B4D3FEE00430942;
-			remoteInfo = GRDBiOSTests;
-		};
-		FC5231911EF511720067E0C0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FC5231641EF511710067E0C0 /* GRDB.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 56AFCA231CB1A8BB00F48B96;
-			remoteInfo = GRDBCipheriOS;
-		};
-		FC5231931EF511720067E0C0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FC5231641EF511710067E0C0 /* GRDB.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 56AFCA7F1CB1AA9900F48B96;
-			remoteInfo = GRDBCipheriOSTests;
-		};
-		FC5231951EF511720067E0C0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FC5231641EF511710067E0C0 /* GRDB.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 56AFCAD71CB1ABC800F48B96;
-			remoteInfo = GRDBCipheriOSEncryptedTests;
-		};
-		FC5231971EF511720067E0C0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FC5231641EF511710067E0C0 /* GRDB.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F3BA7FFE1CFB25E4003DC1BA;
-			remoteInfo = GRDBCustomSQLiteiOS;
-		};
-		FC5231991EF511720067E0C0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FC5231641EF511710067E0C0 /* GRDB.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F3BA80411CFB2AD7003DC1BA;
-			remoteInfo = GRDBCustomSQLiteiOSTests;
-		};
-		FC52319B1EF511720067E0C0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FC5231641EF511710067E0C0 /* GRDB.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 565490A01D5A4798005622CB;
-			remoteInfo = GRDBWatchOS;
-		};
 		FC7E62831EEE35DA0065F6C2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FC7E62661EEE35DA0065F6C2 /* Project object */;
@@ -178,19 +66,27 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		66708A232800003B100801A5 /* Pods_HappyHealthy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HappyHealthy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C20B913DE92550432902952 /* Pods-HappyHealthy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HappyHealthy.release.xcconfig"; path = "Pods/Target Support Files/Pods-HappyHealthy/Pods-HappyHealthy.release.xcconfig"; sourceTree = "<group>"; };
+		8F8188C3D3AE417086977A70 /* Pods-HappyHealthy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HappyHealthy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HappyHealthy/Pods-HappyHealthy.debug.xcconfig"; sourceTree = "<group>"; };
 		FC2BE1E91EF0E63500CBF9FE /* homeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = homeViewController.swift; sourceTree = "<group>"; };
-		FC5231641EF511710067E0C0 /* GRDB.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GRDB.xcodeproj; path = "GRDB.swift-master/GRDB.xcodeproj"; sourceTree = "<group>"; };
-		FC52319E1EF511800067E0C0 /* exerciseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = exerciseViewController.swift; path = ../Controller/exerciseViewController.swift; sourceTree = "<group>"; };
+		FC52319E1EF511800067E0C0 /* ExerciseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExerciseViewController.swift; path = ../Controller/ExerciseViewController.swift; sourceTree = "<group>"; };
 		FC5231A01EF511800067E0C0 /* DatabaseHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseHelper.swift; sourceTree = "<group>"; };
-		FC5231A31EF511800067E0C0 /* HappyHealthy_Sqlite.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = HappyHealthy_Sqlite.db; sourceTree = "<group>"; };
-		FC5231A51EF511800067E0C0 /* exerciseHistoryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = exerciseHistoryModel.swift; sourceTree = "<group>"; };
-		FC5231A61EF511800067E0C0 /* exerciseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = exerciseModel.swift; sourceTree = "<group>"; };
-		FC5231AE1EF5149D0067E0C0 /* exerciseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = exerciseTableViewCell.swift; sourceTree = "<group>"; };
-		FC5231CE1EF51EF90067E0C0 /* showDetailExerciseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = showDetailExerciseViewController.swift; path = ../Controller/showDetailExerciseViewController.swift; sourceTree = "<group>"; };
-		FC5231D01EF530430067E0C0 /* foodModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = foodModel.swift; sourceTree = "<group>"; };
-		FC5231D21EF53D000067E0C0 /* foodViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = foodViewController.swift; path = View/foodViewController.swift; sourceTree = "<group>"; };
-		FC5231D51EF53E230067E0C0 /* foodTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = foodTableViewCell.swift; sourceTree = "<group>"; };
-		FC5231D71EF53E420067E0C0 /* showDetailFoodViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = showDetailFoodViewController.swift; sourceTree = "<group>"; };
+		FC5231A51EF511800067E0C0 /* ExerciseHistoryTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseHistoryTable.swift; sourceTree = "<group>"; };
+		FC5231A61EF511800067E0C0 /* ExerciseTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseTable.swift; sourceTree = "<group>"; };
+		FC5231AE1EF5149D0067E0C0 /* ExerciseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseTableViewCell.swift; sourceTree = "<group>"; };
+		FC5231CE1EF51EF90067E0C0 /* ShowDetailExerciseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShowDetailExerciseViewController.swift; path = ../Controller/ShowDetailExerciseViewController.swift; sourceTree = "<group>"; };
+		FC5231D01EF530430067E0C0 /* FoodTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodTable.swift; sourceTree = "<group>"; };
+		FC5231D21EF53D000067E0C0 /* FoodViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FoodViewController.swift; path = View/FoodViewController.swift; sourceTree = "<group>"; };
+		FC5231D51EF53E230067E0C0 /* FoodTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodTableViewCell.swift; sourceTree = "<group>"; };
+		FC5231D71EF53E420067E0C0 /* ShowDetailFoodViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowDetailFoodViewController.swift; sourceTree = "<group>"; };
+		FC5231DB1EF551310067E0C0 /* FoodHistoryTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodHistoryTable.swift; sourceTree = "<group>"; };
+		FC5231DD1EF553B60067E0C0 /* KidneyTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KidneyTable.swift; sourceTree = "<group>"; };
+		FC5231DF1EF5541A0067E0C0 /* PressureTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PressureTable.swift; sourceTree = "<group>"; };
+		FC5231E31EF5552D0067E0C0 /* UserTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTable.swift; sourceTree = "<group>"; };
+		FC5231E71EF563560067E0C0 /* DiabetesTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiabetesTable.swift; sourceTree = "<group>"; };
+		FC63C1681EF63FC6006ED946 /* HappyHealthy_Sqlite.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = HappyHealthy_Sqlite.db; sourceTree = "<group>"; };
+		FC666B411EF75E4F0019E1CF /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserViewController.swift; path = Controller/UserViewController.swift; sourceTree = "<group>"; };
 		FC7E626E1EEE35DA0065F6C2 /* HappyHealthy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HappyHealthy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC7E62711EEE35DA0065F6C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC7E62761EEE35DA0065F6C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -211,6 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7157CB9367F23D3C3930B42 /* Pods_HappyHealthy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,28 +128,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		FC5231651EF511710067E0C0 /* Products */ = {
+		3E4EAC6169EC6901F87ABEB3 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				FC52317C1EF511720067E0C0 /* GRDB.framework */,
-				FC52317E1EF511720067E0C0 /* GRDBOSXTests.xctest */,
-				FC5231801EF511720067E0C0 /* GRDBOSXPerformanceTests.xctest */,
-				FC5231821EF511720067E0C0 /* GRDBOSXCrashTests.xctest */,
-				FC5231841EF511720067E0C0 /* GRDBCipher.framework */,
-				FC5231861EF511720067E0C0 /* GRDBCipherOSXTests.xctest */,
-				FC5231881EF511720067E0C0 /* GRDBCipherOSXEncryptedTests.xctest */,
-				FC52318A1EF511720067E0C0 /* GRDBCustomSQLite.framework */,
-				FC52318C1EF511720067E0C0 /* GRDBCustomSQLiteOSXTests.xctest */,
-				FC52318E1EF511720067E0C0 /* GRDB.framework */,
-				FC5231901EF511720067E0C0 /* GRDBiOSTests.xctest */,
-				FC5231921EF511720067E0C0 /* GRDBCipher.framework */,
-				FC5231941EF511720067E0C0 /* GRDBCipheriOSTests.xctest */,
-				FC5231961EF511720067E0C0 /* GRDBCipheriOSEncryptedTests.xctest */,
-				FC5231981EF511720067E0C0 /* GRDBCustomSQLite.framework */,
-				FC52319A1EF511720067E0C0 /* GRDBCustomSQLiteiOSTests.xctest */,
-				FC52319C1EF511720067E0C0 /* GRDB.framework */,
+				8F8188C3D3AE417086977A70 /* Pods-HappyHealthy.debug.xcconfig */,
+				8C20B913DE92550432902952 /* Pods-HappyHealthy.release.xcconfig */,
 			);
-			name = Products;
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		448826CC4A83B916E60D9B59 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				66708A232800003B100801A5 /* Pods_HappyHealthy.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		FC52319F1EF511800067E0C0 /* Helper */ = {
@@ -263,22 +153,28 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
-		FC5231A41EF511800067E0C0 /* Model */ = {
+		FC5231A41EF511800067E0C0 /* Table */ = {
 			isa = PBXGroup;
 			children = (
-				FC5231A51EF511800067E0C0 /* exerciseHistoryModel.swift */,
-				FC5231A61EF511800067E0C0 /* exerciseModel.swift */,
-				FC5231D01EF530430067E0C0 /* foodModel.swift */,
+				FC5231A51EF511800067E0C0 /* ExerciseHistoryTable.swift */,
+				FC5231A61EF511800067E0C0 /* ExerciseTable.swift */,
+				FC5231D01EF530430067E0C0 /* FoodTable.swift */,
+				FC5231DB1EF551310067E0C0 /* FoodHistoryTable.swift */,
+				FC5231DD1EF553B60067E0C0 /* KidneyTable.swift */,
+				FC5231DF1EF5541A0067E0C0 /* PressureTable.swift */,
+				FC5231E31EF5552D0067E0C0 /* UserTable.swift */,
+				FC5231E71EF563560067E0C0 /* DiabetesTable.swift */,
 			);
+			name = Table;
 			path = Model;
 			sourceTree = "<group>";
 		};
 		FC5231AD1EF5149D0067E0C0 /* Exercise */ = {
 			isa = PBXGroup;
 			children = (
-				FC5231AE1EF5149D0067E0C0 /* exerciseTableViewCell.swift */,
-				FC52319E1EF511800067E0C0 /* exerciseViewController.swift */,
-				FC5231CE1EF51EF90067E0C0 /* showDetailExerciseViewController.swift */,
+				FC5231AE1EF5149D0067E0C0 /* ExerciseTableViewCell.swift */,
+				FC52319E1EF511800067E0C0 /* ExerciseViewController.swift */,
+				FC5231CE1EF51EF90067E0C0 /* ShowDetailExerciseViewController.swift */,
 			);
 			name = Exercise;
 			path = View;
@@ -287,26 +183,36 @@
 		FC5231D41EF53D140067E0C0 /* Food */ = {
 			isa = PBXGroup;
 			children = (
-				FC5231D21EF53D000067E0C0 /* foodViewController.swift */,
-				FC5231D51EF53E230067E0C0 /* foodTableViewCell.swift */,
-				FC5231D71EF53E420067E0C0 /* showDetailFoodViewController.swift */,
+				FC5231D21EF53D000067E0C0 /* FoodViewController.swift */,
+				FC5231D51EF53E230067E0C0 /* FoodTableViewCell.swift */,
+				FC5231D71EF53E420067E0C0 /* ShowDetailFoodViewController.swift */,
 			);
 			name = Food;
+			sourceTree = "<group>";
+		};
+		FC666B4D1EF774C40019E1CF /* User */ = {
+			isa = PBXGroup;
+			children = (
+				FC666B411EF75E4F0019E1CF /* UserViewController.swift */,
+			);
+			name = User;
 			sourceTree = "<group>";
 		};
 		FC7E62651EEE35DA0065F6C2 = {
 			isa = PBXGroup;
 			children = (
-				FC5231A31EF511800067E0C0 /* HappyHealthy_Sqlite.db */,
+				FC63C1681EF63FC6006ED946 /* HappyHealthy_Sqlite.db */,
+				FC666B4D1EF774C40019E1CF /* User */,
 				FC5231D41EF53D140067E0C0 /* Food */,
 				FC5231AD1EF5149D0067E0C0 /* Exercise */,
 				FC52319F1EF511800067E0C0 /* Helper */,
-				FC5231A41EF511800067E0C0 /* Model */,
-				FC5231641EF511710067E0C0 /* GRDB.xcodeproj */,
+				FC5231A41EF511800067E0C0 /* Table */,
 				FC7E62701EEE35DA0065F6C2 /* HappyHealthy */,
 				FC7E62851EEE35DA0065F6C2 /* HappyHealthyTests */,
 				FC7E62901EEE35DA0065F6C2 /* HappyHealthyUITests */,
 				FC7E626F1EEE35DA0065F6C2 /* Products */,
+				3E4EAC6169EC6901F87ABEB3 /* Pods */,
+				448826CC4A83B916E60D9B59 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -359,10 +265,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FC7E62961EEE35DA0065F6C2 /* Build configuration list for PBXNativeTarget "HappyHealthy" */;
 			buildPhases = (
+				553E15EB27A079DA773B9D68 /* [CP] Check Pods Manifest.lock */,
 				FC7E626A1EEE35DA0065F6C2 /* Sources */,
 				FC7E626B1EEE35DA0065F6C2 /* Frameworks */,
 				FC7E626C1EEE35DA0065F6C2 /* Resources */,
 				FCD9F7731EF3F37C0067BBFF /* Embed Frameworks */,
+				48CC94FCA9D5D959BB3B753B /* [CP] Embed Pods Frameworks */,
+				879F7976E799D242FB52AD3F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -449,12 +358,6 @@
 			mainGroup = FC7E62651EEE35DA0065F6C2;
 			productRefGroup = FC7E626F1EEE35DA0065F6C2 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = FC5231651EF511710067E0C0 /* Products */;
-					ProjectRef = FC5231641EF511710067E0C0 /* GRDB.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				FC7E626D1EEE35DA0065F6C2 /* HappyHealthy */,
@@ -464,135 +367,13 @@
 		};
 /* End PBXProject section */
 
-/* Begin PBXReferenceProxy section */
-		FC52317C1EF511720067E0C0 /* GRDB.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = GRDB.framework;
-			remoteRef = FC52317B1EF511720067E0C0 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FC52317E1EF511720067E0C0 /* GRDBOSXTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = GRDBOSXTests.xctest;
-			remoteRef = FC52317D1EF511720067E0C0 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FC5231801EF511720067E0C0 /* GRDBOSXPerformanceTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = GRDBOSXPerformanceTests.xctest;
-			remoteRef = FC52317F1EF511720067E0C0 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FC5231821EF511720067E0C0 /* GRDBOSXCrashTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = GRDBOSXCrashTests.xctest;
-			remoteRef = FC5231811EF511720067E0C0 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FC5231841EF511720067E0C0 /* GRDBCipher.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = GRDBCipher.framework;
-			remoteRef = FC5231831EF511720067E0C0 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FC5231861EF511720067E0C0 /* GRDBCipherOSXTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = GRDBCipherOSXTests.xctest;
-			remoteRef = FC5231851EF511720067E0C0 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FC5231881EF511720067E0C0 /* GRDBCipherOSXEncryptedTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = GRDBCipherOSXEncryptedTests.xctest;
-			remoteRef = FC5231871EF511720067E0C0 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FC52318A1EF511720067E0C0 /* GRDBCustomSQLite.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = GRDBCustomSQLite.framework;
-			remoteRef = FC5231891EF511720067E0C0 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FC52318C1EF511720067E0C0 /* GRDBCustomSQLiteOSXTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = GRDBCustomSQLiteOSXTests.xctest;
-			remoteRef = FC52318B1EF511720067E0C0 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FC52318E1EF511720067E0C0 /* GRDB.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = GRDB.framework;
-			remoteRef = FC52318D1EF511720067E0C0 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FC5231901EF511720067E0C0 /* GRDBiOSTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = GRDBiOSTests.xctest;
-			remoteRef = FC52318F1EF511720067E0C0 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FC5231921EF511720067E0C0 /* GRDBCipher.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = GRDBCipher.framework;
-			remoteRef = FC5231911EF511720067E0C0 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FC5231941EF511720067E0C0 /* GRDBCipheriOSTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = GRDBCipheriOSTests.xctest;
-			remoteRef = FC5231931EF511720067E0C0 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FC5231961EF511720067E0C0 /* GRDBCipheriOSEncryptedTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = GRDBCipheriOSEncryptedTests.xctest;
-			remoteRef = FC5231951EF511720067E0C0 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FC5231981EF511720067E0C0 /* GRDBCustomSQLite.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = GRDBCustomSQLite.framework;
-			remoteRef = FC5231971EF511720067E0C0 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FC52319A1EF511720067E0C0 /* GRDBCustomSQLiteiOSTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = GRDBCustomSQLiteiOSTests.xctest;
-			remoteRef = FC5231991EF511720067E0C0 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FC52319C1EF511720067E0C0 /* GRDB.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = GRDB.framework;
-			remoteRef = FC52319B1EF511720067E0C0 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
-
 /* Begin PBXResourcesBuildPhase section */
 		FC7E626C1EEE35DA0065F6C2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC793F701EF8DF4200DCFAF1 /* HappyHealthy_Sqlite.db in Resources */,
 				FC7E627C1EEE35DA0065F6C2 /* LaunchScreen.storyboard in Resources */,
-				FC5231AA1EF511800067E0C0 /* HappyHealthy_Sqlite.db in Resources */,
 				FC7E62791EEE35DA0065F6C2 /* Assets.xcassets in Resources */,
 				FC7E62771EEE35DA0065F6C2 /* Main.storyboard in Resources */,
 			);
@@ -614,24 +395,78 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		48CC94FCA9D5D959BB3B753B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HappyHealthy/Pods-HappyHealthy-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		553E15EB27A079DA773B9D68 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		879F7976E799D242FB52AD3F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HappyHealthy/Pods-HappyHealthy-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FC7E626A1EEE35DA0065F6C2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				FC7E62721EEE35DA0065F6C2 /* AppDelegate.swift in Sources */,
-				FC5231AF1EF5149D0067E0C0 /* exerciseTableViewCell.swift in Sources */,
+				FC5231E41EF5552D0067E0C0 /* UserTable.swift in Sources */,
+				FC5231AF1EF5149D0067E0C0 /* ExerciseTableViewCell.swift in Sources */,
 				FC5231A81EF511800067E0C0 /* DatabaseHelper.swift in Sources */,
-				FC5231D11EF530430067E0C0 /* foodModel.swift in Sources */,
-				FC5231D31EF53D000067E0C0 /* foodViewController.swift in Sources */,
-				FC5231CF1EF51EF90067E0C0 /* showDetailExerciseViewController.swift in Sources */,
+				FC5231D11EF530430067E0C0 /* FoodTable.swift in Sources */,
+				FC5231D31EF53D000067E0C0 /* FoodViewController.swift in Sources */,
+				FC5231CF1EF51EF90067E0C0 /* ShowDetailExerciseViewController.swift in Sources */,
+				FC5231E01EF5541A0067E0C0 /* PressureTable.swift in Sources */,
 				FC7E62C81EEE89DF0065F6C2 /* InstructionViewController.swift in Sources */,
-				FC5231A71EF511800067E0C0 /* exerciseViewController.swift in Sources */,
-				FC5231AB1EF511800067E0C0 /* exerciseHistoryModel.swift in Sources */,
-				FC5231D61EF53E230067E0C0 /* foodTableViewCell.swift in Sources */,
+				FC666B431EF75E4F0019E1CF /* UserViewController.swift in Sources */,
+				FC5231DC1EF551310067E0C0 /* FoodHistoryTable.swift in Sources */,
+				FC5231E81EF563560067E0C0 /* DiabetesTable.swift in Sources */,
+				FC5231DE1EF553B60067E0C0 /* KidneyTable.swift in Sources */,
+				FC5231A71EF511800067E0C0 /* ExerciseViewController.swift in Sources */,
+				FC5231AB1EF511800067E0C0 /* ExerciseHistoryTable.swift in Sources */,
+				FC5231D61EF53E230067E0C0 /* FoodTableViewCell.swift in Sources */,
 				FC2BE1EA1EF0E63500CBF9FE /* homeViewController.swift in Sources */,
-				FC5231AC1EF511800067E0C0 /* exerciseModel.swift in Sources */,
-				FC5231D81EF53E420067E0C0 /* showDetailFoodViewController.swift in Sources */,
+				FC5231AC1EF511800067E0C0 /* ExerciseTable.swift in Sources */,
+				FC5231D81EF53E420067E0C0 /* ShowDetailFoodViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -783,11 +618,13 @@
 		};
 		FC7E62971EEE35DA0065F6C2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F8188C3D3AE417086977A70 /* Pods-HappyHealthy.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = TAG5S52MXM;
 				INFOPLIST_FILE = HappyHealthy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.HappyHealthy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -797,11 +634,13 @@
 		};
 		FC7E62981EEE35DA0065F6C2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C20B913DE92550432902952 /* Pods-HappyHealthy.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = TAG5S52MXM;
 				INFOPLIST_FILE = HappyHealthy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.HappyHealthy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
