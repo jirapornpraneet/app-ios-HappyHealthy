@@ -207,7 +207,7 @@ class DatabaseHelper {
         var getUserTable = [UserTable]()
         try! dbQueue.inDatabase { db in
             do {
-                for row in try Row.fetchAll(db, "select * from User"){
+                for row in try Row.fetchAll(db, "SELECT * ,MAX (User_Id) FROM User"){
                     let rowUserTable = UserTable()
                     rowUserTable.User_Id = row.value(named: "User_Id") as Int
                     rowUserTable.User_Name = row.value(named: "User_Name") as String
