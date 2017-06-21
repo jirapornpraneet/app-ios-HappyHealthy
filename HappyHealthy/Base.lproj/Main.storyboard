@@ -2750,37 +2750,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ชื่อออกกำลังกาย" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="px6-kr-Vq1">
-                                <rect key="frame" x="69" y="85" width="199" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ชื่อออกกำลังกาย" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="px6-kr-Vq1">
+                                <rect key="frame" x="60.5" y="85" width="199" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="0w7-dU-LJC"/>
+                                    <constraint firstAttribute="width" constant="199" id="S87-LN-lRG"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <color key="textColor" red="0.65866281019999995" green="0.89810546869999996" blue="0.66894121920000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ออกกำลังกาย 30 นาที / 1 เซท" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="91h-FV-k2Q">
-                                <rect key="frame" x="78" y="133" width="180" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ออกกำลังกาย 30 นาที / 1 เซท" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="91h-FV-k2Q">
+                                <rect key="frame" x="70" y="143" width="180" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="8kH-P0-h3k"/>
+                                    <constraint firstAttribute="height" constant="21" id="zVL-Sj-5Lz"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="เหมาะสำหรับผู้เป็นโรคอะไร" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rnm-Ef-SkV">
-                                <rect key="frame" x="41" y="289" width="238" height="46"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="เหมาะสำหรับผู้เป็นโรคอะไร" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rnm-Ef-SkV">
+                                <rect key="frame" x="41" y="289" width="238" height="19.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="19.5" id="UBM-zc-fEK"/>
+                                    <constraint firstAttribute="width" constant="238" id="k00-Lh-ErO"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                 <color key="textColor" red="0.65189027789999998" green="0.89034324880000004" blue="0.66284531349999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="คำอธิบายออกกำลังกาย" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k2B-OV-iYc">
-                                <rect key="frame" x="25" y="343" width="276" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="คำอธิบายออกกำลังกาย" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k2B-OV-iYc">
+                                <rect key="frame" x="22" y="343" width="276" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="276" id="21Y-lK-epM"/>
+                                    <constraint firstAttribute="height" constant="21" id="orZ-ku-Icz"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ruP-lL-Sc4">
-                                <rect key="frame" x="170" y="179" width="125" height="66"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ruP-lL-Sc4">
+                                <rect key="frame" x="173" y="196" width="125" height="66"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ค่าแคลอรี่" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UgD-4a-hlC">
                                         <rect key="frame" x="8" y="8" width="109" height="26"/>
@@ -2798,10 +2809,13 @@
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.65866281019999995" green="0.89810546869999996" blue="0.66894121920000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="125" id="BgP-NE-uzg"/>
+                                    <constraint firstAttribute="height" constant="66" id="st9-hQ-ft0"/>
+                                </constraints>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U2L-CK-3rt">
-                                <rect key="frame" x="25" y="179" width="125" height="66"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U2L-CK-3rt">
+                                <rect key="frame" x="33" y="196" width="125" height="66"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bsq-LX-n4x">
                                         <rect key="frame" x="14" y="8" width="97" height="30"/>
@@ -2819,11 +2833,18 @@
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.65866281019999995" green="0.89810546869999996" blue="0.66894121920000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="W10-fN-ZQy"/>
+                                    <constraint firstAttribute="width" constant="125" id="oTK-SC-ef7"/>
+                                </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0zP-YH-yD3">
-                                <rect key="frame" x="25" y="448" width="270" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0zP-YH-yD3">
+                                <rect key="frame" x="25" y="455" width="270" height="37"/>
                                 <color key="backgroundColor" red="0.55311674829759894" green="0.85007812500000002" blue="0.57556422179849986" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="270" id="1xu-wa-VYj"/>
+                                    <constraint firstAttribute="height" constant="37" id="HsH-eV-YXw"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <state key="normal" title="บันทึก">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -2831,6 +2852,22 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="rnm-Ef-SkV" firstAttribute="top" secondItem="ruP-lL-Sc4" secondAttribute="bottom" constant="27" id="8a5-iF-5Oc"/>
+                            <constraint firstItem="U2L-CK-3rt" firstAttribute="centerX" secondItem="Z88-ry-OPF" secondAttribute="centerX" constant="-64.5" id="CSx-WC-AKA"/>
+                            <constraint firstItem="ruP-lL-Sc4" firstAttribute="baseline" secondItem="U2L-CK-3rt" secondAttribute="baseline" id="KK6-xp-CC7"/>
+                            <constraint firstItem="k2B-OV-iYc" firstAttribute="top" secondItem="rnm-Ef-SkV" secondAttribute="bottom" constant="34.5" id="W6U-fm-Lh8"/>
+                            <constraint firstItem="ruP-lL-Sc4" firstAttribute="leading" secondItem="U2L-CK-3rt" secondAttribute="trailing" constant="15" id="a1b-sV-z6I"/>
+                            <constraint firstItem="91h-FV-k2Q" firstAttribute="centerX" secondItem="Z88-ry-OPF" secondAttribute="centerX" id="beH-ne-8Zm"/>
+                            <constraint firstItem="px6-kr-Vq1" firstAttribute="top" secondItem="TFq-tl-4RK" secondAttribute="bottom" constant="21" id="dUx-Du-054"/>
+                            <constraint firstItem="U2L-CK-3rt" firstAttribute="top" secondItem="91h-FV-k2Q" secondAttribute="bottom" constant="32" id="gx2-up-wMd"/>
+                            <constraint firstItem="0zP-YH-yD3" firstAttribute="centerX" secondItem="Z88-ry-OPF" secondAttribute="centerX" id="hQ5-cW-0PJ"/>
+                            <constraint firstItem="rnm-Ef-SkV" firstAttribute="centerX" secondItem="Z88-ry-OPF" secondAttribute="centerX" id="ljU-Aj-dMy"/>
+                            <constraint firstItem="k2B-OV-iYc" firstAttribute="centerX" secondItem="Z88-ry-OPF" secondAttribute="centerX" id="qEE-Vn-rg8"/>
+                            <constraint firstItem="91h-FV-k2Q" firstAttribute="top" secondItem="px6-kr-Vq1" secondAttribute="bottom" constant="8" id="rkX-iF-MB7"/>
+                            <constraint firstItem="px6-kr-Vq1" firstAttribute="centerX" secondItem="Z88-ry-OPF" secondAttribute="centerX" id="wDr-ao-vDq"/>
+                            <constraint firstItem="0zP-YH-yD3" firstAttribute="top" secondItem="k2B-OV-iYc" secondAttribute="bottom" constant="91" id="zb7-rN-fjQ"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="IJx-Cm-IT5"/>
                     <connections>
