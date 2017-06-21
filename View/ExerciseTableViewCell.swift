@@ -17,7 +17,7 @@ class ExerciseTableViewCell: UITableViewCell {
     var  ExerciseTableViewCell:ExerciseTable?{
         didSet{
             nameExerciseLabel.text = ExerciseTableViewCell?.Exercise_Name
-            kcalExerciseLabel.text = String(format: "%f", (ExerciseTableViewCell?.Exercise_Calories)!)
+            kcalExerciseLabel.text = String(format: "%.2f", (ExerciseTableViewCell?.Exercise_Calories)!)
             detailExerciseLabel.text = ExerciseTableViewCell?.Exercise_Detail
         }
     }

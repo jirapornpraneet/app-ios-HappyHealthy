@@ -19,7 +19,7 @@ class FoodTableViewCell: UITableViewCell {
     var  FoodTableViewCell:FoodTable?{
         didSet{
             nameFoodLabel.text = FoodTableViewCell?.Food_Name
-            kcalFoodLabel.text = String(format: "%f", (FoodTableViewCell?.Food_Calories)!)
+            kcalFoodLabel.text = String(format: "%.2f", (FoodTableViewCell?.Food_Calories)!)
             detailFoodLabel.text = FoodTableViewCell?.Food_Detail
             unitFoodLabel.text = FoodTableViewCell?.Food_Unit
         }
