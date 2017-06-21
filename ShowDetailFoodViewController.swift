@@ -28,15 +28,15 @@ class ShowDetailFoodViewController: UIViewController {
     override func viewDidLoad() {
       super.viewDidLoad()
        nameFoodLabel.text = getFoodTable?.Food_Name
-       kcalFoodLabel.text = String(format: "%f",(getFoodTable?.Food_Calories)!)
+       kcalFoodLabel.text = String(format: "%.2f",(getFoodTable?.Food_Calories)!)
        unitFoodLabel.text = getFoodTable?.Food_Unit
-       netWeightFoodLabel.text = String(format: "%f",(getFoodTable?.Food_Netweight)!)
+       netWeightFoodLabel.text = String(format: "%.2f",(getFoodTable?.Food_Netweight)!)
        netUnitFoodLabel.text = getFoodTable?.Food_NetUnit
-       proteinFoodLabel.text = String(format: "%f",(getFoodTable?.Food_Protein)!)
-       fatFoodLabel.text = String(format: "%f",(getFoodTable?.Food_Fat)!)
-       carbohydrateFoodLabel.text = String(format: "%f",(getFoodTable?.Food_Carbohydrate)!)
-       sugarsFoodLabel.text = String(format: "%f",(getFoodTable?.Food_Sugars)!)
-       sodiumFoodLabel.text = String(format: "%f",(getFoodTable?.Food_Sodium)!)
+       proteinFoodLabel.text = String(format: "%.2f",(getFoodTable?.Food_Protein)!)
+       fatFoodLabel.text = String(format: "%.2f",(getFoodTable?.Food_Fat)!)
+       carbohydrateFoodLabel.text = String(format: "%.2f",(getFoodTable?.Food_Carbohydrate)!)
+       sugarsFoodLabel.text = String(format: "%.2f",(getFoodTable?.Food_Sugars)!)
+       sodiumFoodLabel.text = String(format: "%.2f",(getFoodTable?.Food_Sodium)!)
        detailFoodLabel.text = getFoodTable?.Food_Detail
     }
 }

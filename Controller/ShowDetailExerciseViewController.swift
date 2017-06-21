@@ -22,7 +22,7 @@ class ShowDetailExerciseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         nameExerciseLabel.text = getExerciseTable?.Exercise_Name
-        kcalExerciseLabel.text = String(format: "%f",(getExerciseTable?.Exercise_Calories)!)
+        kcalExerciseLabel.text = String(format: "%.2f",(getExerciseTable?.Exercise_Calories)!)
         desExerciseLabel.text = getExerciseTable?.Exercise_Description
         disExerciseLabel.text = getExerciseTable?.Exercise_Disease
         detailExerciseLabel.text = getExerciseTable?.Exercise_Detail
