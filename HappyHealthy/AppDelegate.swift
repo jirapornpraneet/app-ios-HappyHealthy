@@ -12,18 +12,14 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
         let fileManager = FileManager.default
-        
         let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first! as NSString
         let databasePath = documentsPath.appendingPathComponent("HappyHealthy_Sqlite.db")
+        // Delete 'hello.swift' file
         
-//        // Delete 'hello.swift' file
-//        
 //        do {
 //            try fileManager.removeItem(atPath: databasePath)
 //        }

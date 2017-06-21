@@ -202,12 +202,12 @@ class DatabaseHelper {
         }
         return getPressureTable
     }
-
+    
     func getUser() -> [UserTable]{
         var getUserTable = [UserTable]()
         try! dbQueue.inDatabase { db in
             do {
-                for row in try Row.fetchAll(db, "SELECT * ,MAX (User_Id) FROM User"){
+                for row in try Row.fetchAll(db, "SELECT * FROM User"){
                     let rowUserTable = UserTable()
                     rowUserTable.User_Id = row.value(named: "User_Id") as Int
                     rowUserTable.User_Name = row.value(named: "User_Name") as String
@@ -221,21 +221,83 @@ class DatabaseHelper {
                 }
             }
             catch let error as DatabaseError {
-            
+                
+                // The SQLite error code: 19 (SQLITE_CONSTRAINT)
+                error.resultCode
+                
+                // The extended error code: 787 (SQLITE_CONSTRAINT_FOREIGNKEY)
+                error.extendedResultCode
+                
+                // The eventual SQLite message: FOREIGN KEY constraint failed
+                error.message
+                
+                // The eventual erroneous SQL query
+                // "INSERT INTO pets (masterId, name) VALUES (?, ?)"
+                error.sql
+                
+                // Full error description:
+                // "SQLite error 787 with statement `INSERT INTO pets (masterId, name)
+                //  VALUES (?, ?)` arguments [1, "Bobby"]: FOREIGN KEY constraint failed""
+
+                
                 print("Get All User Fail!!")
             }
         }
         return getUserTable
+    }
+
+    func getUserRowMax() -> [UserTable]{
+        var getUserRowMaxTable = [UserTable]()
+        try! dbQueue.inDatabase { db in
+            do {
+                for row in try Row.fetchAll(db, "SELECT * ,MAX (User_Id) FROM User"){
+                    let rowUserTable = UserTable()
+                    rowUserTable.User_Id = row.value(named: "User_Id") as Int
+                    rowUserTable.User_Name = row.value(named: "User_Name") as String
+                    rowUserTable.User_Gender = row.value(named: "User_Gender" ) as String
+                    rowUserTable.User_Age = row.value(named: "User_Age") as String
+                    rowUserTable.User_Weight = row.value(named: "User_Weight" ) as Double
+                    rowUserTable.User_Height = row.value(named: "User_Height") as Int
+                    rowUserTable.User_BMI = row.value(named: "User_BMI") as Double
+                    rowUserTable.User_BMR = row.value(named: "User_BMR") as Double
+                    getUserRowMaxTable.append(rowUserTable)
+                }
+            }
+            catch let error as DatabaseError {
+                
+                // The SQLite error code: 19 (SQLITE_CONSTRAINT)
+                error.resultCode
+                
+                // The extended error code: 787 (SQLITE_CONSTRAINT_FOREIGNKEY)
+                error.extendedResultCode
+                
+                // The eventual SQLite message: FOREIGN KEY constraint failed
+                error.message
+                
+                // The eventual erroneous SQL query
+                // "INSERT INTO pets (masterId, name) VALUES (?, ?)"
+                error.sql
+                
+                // Full error description:
+                // "SQLite error 787 with statement `INSERT INTO pets (masterId, name)
+                //  VALUES (?, ?)` arguments [1, "Bobby"]: FOREIGN KEY constraint failed""
+
+            
+                print("Get All User Fail!!")
+            }
+        }
+        return getUserRowMaxTable
     }
     
     func insertUserTable(dataRowUserTable: UserTable) {
         try! dbQueue.inDatabase { db in
             do {
                 try db.execute("INSERT INTO User (User_Name,User_Gender,User_Age,User_Weight,User_Height,User_BMI,User_BMR) VALUES (:User_Name,:User_Gender,:User_Age,:User_Weight,:User_Height,:User_BMI,:User_BMR)",
-                               arguments: ["User_Name": dataRowUserTable.User_Name,"User_Gender": dataRowUserTable.User_Gender,"User_Age": dataRowUserTable.User_Age,"User_Weight":dataRowUserTable.User_Height,"User_Height": dataRowUserTable.User_Height,"User_BMI": dataRowUserTable.User_BMI,"User_BMR": dataRowUserTable.User_BMR])
+                               arguments: ["User_Name": dataRowUserTable.User_Name,"User_Gender": dataRowUserTable.User_Gender,"User_Age": dataRowUserTable.User_Age,"User_Weight":dataRowUserTable.User_Weight,"User_Height": dataRowUserTable.User_Height,"User_BMI": dataRowUserTable.User_BMI,"User_BMR": dataRowUserTable.User_BMR])
                 print("Insert value")
             } catch let error as DatabaseError {
-                print("Insert User Fail!!")
+                
+            print("Insert User Fail!!")
             }
         }
         

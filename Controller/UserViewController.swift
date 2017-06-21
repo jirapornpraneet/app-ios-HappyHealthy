@@ -10,18 +10,20 @@ import UIKit
 
 class UserViewController: UIViewController,UITextFieldDelegate {
     var getUserTable = [UserTable]()
+    var getUserRowMaxTable = [UserTable]()
     var insertDataUser = [UserTable]()
     var dbHelper = DatabaseHelper()
+    var genderList: [String] = ["Male", "Female"]
+    var genderName: String = ""
+    
     @IBOutlet var nameUserTextField: UITextField!
     @IBOutlet var ageUserTextField: UITextField!
     @IBOutlet var weightUserTextField: UITextField!
     @IBOutlet var heightUserTextField: UITextField!
-     @IBOutlet var genderUserTextField: UITextField!
+    @IBOutlet var genderSegmentedControl: UISegmentedControl!
      @IBOutlet var bmiUserTextField: UITextField!
      @IBOutlet var bmrUserTextField: UITextField!
  
-
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.nameUserTextField.text = ""
@@ -30,7 +32,6 @@ class UserViewController: UIViewController,UITextFieldDelegate {
         self.heightUserTextField.text = ""
         self.bmiUserTextField.text = ""
         self.bmrUserTextField.text = ""
-        self.genderUserTextField.text = ""
         //set the delegate
         self.nameUserTextField.delegate = self
         self.ageUserTextField.delegate = self
@@ -38,25 +39,26 @@ class UserViewController: UIViewController,UITextFieldDelegate {
         self.heightUserTextField.delegate = self
         self.bmiUserTextField.delegate = self
         self.bmrUserTextField.delegate = self
-        self.genderUserTextField.delegate = self
         loadAllUser()
         // Do any additional setup after loading the view.
     }
     
     func  loadAllUser(){
         getUserTable = dbHelper.getUser()
+        getUserRowMaxTable = dbHelper.getUserRowMax()
         if getUserTable.count == 0 {
             return
         }
-        nameUserTextField.text = getUserTable[0].User_Name
-        ageUserTextField.text = getUserTable[0].User_Age
-        weightUserTextField.text = String(format: "%f", (getUserTable[0].User_Weight)!)
-        heightUserTextField.text = String(format: "%i", (getUserTable[0].User_Height)!)
-        bmiUserTextField.text = String(format: "%f", (getUserTable[0].User_BMI)!)
-        bmrUserTextField.text = String(format: "%f", (getUserTable[0].User_BMR)!)
-        genderUserTextField.text = getUserTable[0].User_Gender
+        
+        nameUserTextField.text = getUserRowMaxTable[0].User_Name
+        ageUserTextField.text = getUserRowMaxTable[0].User_Age
+        weightUserTextField.text = String(format: "%.2f",(getUserRowMaxTable[0].User_Weight)!)
+        heightUserTextField.text = String(format: "%i", (getUserRowMaxTable[0].User_Height)!)
+        bmiUserTextField.text = String(format: "%.2f", (getUserRowMaxTable[0].User_BMI)!)
+        bmrUserTextField.text = String(format: "%.2f", (getUserRowMaxTable[0].User_BMR)!)
+        
     }
-    
+
     @IBAction func saveDataUserButton(_ sender: Any) {
         let userResource = UserTable()
         userResource.User_Name = nameUserTextField.text
@@ -65,11 +67,16 @@ class UserViewController: UIViewController,UITextFieldDelegate {
         userResource.User_Height = Int(heightUserTextField.text!)
         userResource.User_BMI = Double(bmiUserTextField.text!)
         userResource.User_BMR = Double(bmrUserTextField.text!)
-        userResource.User_Gender = genderUserTextField.text
+        userResource.User_Gender = genderName
         dbHelper.insertUserTable(dataRowUserTable: userResource)
     }
     
-    override func didReceiveMemoryWarning() {
+    @IBAction func selectGenderSegmented(_ sender: Any) {
+        let genderSelect: String = self.genderList[self.genderSegmentedControl.selectedSegmentIndex]
+        genderName = genderSelect
+    }
+    
+        override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
@@ -85,7 +92,6 @@ class UserViewController: UIViewController,UITextFieldDelegate {
         heightUserTextField.resignFirstResponder()
         bmiUserTextField.resignFirstResponder()
         bmrUserTextField.resignFirstResponder()
-        genderUserTextField.resignFirstResponder()
         return true
     }
 
