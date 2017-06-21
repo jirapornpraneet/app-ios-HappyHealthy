@@ -21,9 +21,9 @@ class UserViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet var weightUserTextField: UITextField!
     @IBOutlet var heightUserTextField: UITextField!
     @IBOutlet var genderSegmentedControl: UISegmentedControl!
-     @IBOutlet var bmiUserTextField: UITextField!
-     @IBOutlet var bmrUserTextField: UITextField!
- 
+    @IBOutlet var bmiUserTextField: UITextField!
+    @IBOutlet var bmrUserTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.nameUserTextField.text = ""
@@ -56,9 +56,13 @@ class UserViewController: UIViewController,UITextFieldDelegate {
         heightUserTextField.text = String(format: "%i", (getUserRowMaxTable[0].User_Height)!)
         bmiUserTextField.text = String(format: "%.2f", (getUserRowMaxTable[0].User_BMI)!)
         bmrUserTextField.text = String(format: "%.2f", (getUserRowMaxTable[0].User_BMR)!)
-        
+        if getUserRowMaxTable[0].User_Gender == "Male"{
+            genderSegmentedControl.selectedSegmentIndex = 0
+        } else {
+            genderSegmentedControl.selectedSegmentIndex = 1
+        }
     }
-
+    
     @IBAction func saveDataUserButton(_ sender: Any) {
         let userResource = UserTable()
         userResource.User_Name = nameUserTextField.text
@@ -72,11 +76,20 @@ class UserViewController: UIViewController,UITextFieldDelegate {
     }
     
     @IBAction func selectGenderSegmented(_ sender: Any) {
+        switch genderSegmentedControl.selectedSegmentIndex {
+        case 0:
+            genderName = "Male"
+        case 1:
+            genderName = "Female"
+        default:
+            break;
+        }
+        
         let genderSelect: String = self.genderList[self.genderSegmentedControl.selectedSegmentIndex]
         genderName = genderSelect
     }
     
-        override func didReceiveMemoryWarning() {
+    override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
@@ -94,7 +107,7 @@ class UserViewController: UIViewController,UITextFieldDelegate {
         bmrUserTextField.resignFirstResponder()
         return true
     }
-
+    
 }
 
 

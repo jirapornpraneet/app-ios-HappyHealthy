@@ -922,12 +922,11 @@
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="BfN-fr-3WQ">
                                         <rect key="frame" x="132" y="21" width="121" height="29"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="1" green="0.48813878848769798" blue="0.56102057581993758" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <segments>
-                                            <segment title="man"/>
-                                            <segment title="woman"/>
+                                            <segment title="male"/>
+                                            <segment title="female"/>
                                         </segments>
-                                        <color key="tintColor" red="1" green="0.9663784460213688" blue="0.99438943453968598" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" red="1" green="0.48813878849999998" blue="0.56102057579999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <action selector="selectGenderSegmented:" destination="qEZ-y9-PiU" eventType="valueChanged" id="396-gZ-EuX"/>
                                         </connections>
