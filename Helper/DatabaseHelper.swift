@@ -158,6 +158,20 @@ class DatabaseHelper {
         return getDiabetesTable
     }
     
+    func insertDiabetesTable(dataRowDiabetesTable: DiabetesTable) {
+        try! dbQueue.inDatabase { db in
+            do {
+                try db.execute("INSERT INTO Diabetes (D_DateTime,D_CostSugar,D_Level,D_Status,D_People) VALUES (:D_DateTime,:D_CostSugar,:D_Level,:D_Status,:D_People)",
+                               arguments: ["D_DateTime":dataRowDiabetesTable.D_DateTime,"D_CostSugar":dataRowDiabetesTable.D_CostSugar,"D_Level":dataRowDiabetesTable.D_Level,"D_Status":dataRowDiabetesTable.D_Status,"D_People":dataRowDiabetesTable.D_People])
+                
+                print("Insert Diabetes value")
+            } catch let error as DatabaseError {
+                
+                print("Insert Diabetes Fail!!")
+            }
+        }
+    }
+
     func getKidney() -> [KidneyTable]{
         var getKidneyTable = [KidneyTable]()
         dbQueue.inDatabase { db in
@@ -267,6 +281,10 @@ class DatabaseHelper {
         
 
     }
+    
+    
+    
+    
         
     //Join
     /*func getAllHistoryExercise(Exercise_Id: Int) -> [exerciseHistoryModel] {

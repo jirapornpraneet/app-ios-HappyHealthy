@@ -2,4 +2,70 @@
 <Bucket
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Helper/DatabaseHelper.swift"
+            timestampString = "519813493.649008"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "164"
+            endingLineNumber = "164"
+            landmarkName = "insertDiabetesTable(dataRowDiabetesTable:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Helper/DatabaseHelper.swift"
+            timestampString = "519813496.765344"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "162"
+            endingLineNumber = "162"
+            landmarkName = "insertDiabetesTable(dataRowDiabetesTable:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HappyHealthy.DatabaseHelper.insertDiabetesTable (dataRowDiabetesTable : HappyHealthy.DiabetesTable) -&gt; ()"
+                  moduleName = "HappyHealthy"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eofficeair/Documents/Test/HappyHealthy/Helper/DatabaseHelper.swift"
+                  timestampString = "519813817.70635"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "162"
+                  endingLineNumber = "162"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HappyHealthy.DatabaseHelper.(insertDiabetesTable (dataRowDiabetesTable : HappyHealthy.DiabetesTable) -&gt; ()).(closure #1)"
+                  moduleName = "HappyHealthy"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eofficeair/Documents/Test/HappyHealthy/Helper/DatabaseHelper.swift"
+                  timestampString = "519813817.708333"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "164"
+                  endingLineNumber = "164"
+                  offsetFromSymbolStart = "28">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
