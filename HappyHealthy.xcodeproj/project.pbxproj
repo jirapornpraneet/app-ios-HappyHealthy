@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		D7157CB9367F23D3C3930B42 /* Pods_HappyHealthy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66708A232800003B100801A5 /* Pods_HappyHealthy.framework */; };
-		FC0127E11EF90BC6004E4BFF /* SegmentedControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0127E01EF90BC6004E4BFF /* SegmentedControlViewController.swift */; };
 		FC2BE1EA1EF0E63500CBF9FE /* homeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2BE1E91EF0E63500CBF9FE /* homeViewController.swift */; };
 		FC5231A71EF511800067E0C0 /* ExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC52319E1EF511800067E0C0 /* ExerciseViewController.swift */; };
 		FC5231A81EF511800067E0C0 /* DatabaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5231A01EF511800067E0C0 /* DatabaseHelper.swift */; };
@@ -26,6 +25,7 @@
 		FC5231E41EF5552D0067E0C0 /* UserTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5231E31EF5552D0067E0C0 /* UserTable.swift */; };
 		FC5231E81EF563560067E0C0 /* DiabetesTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5231E71EF563560067E0C0 /* DiabetesTable.swift */; };
 		FC666B431EF75E4F0019E1CF /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC666B411EF75E4F0019E1CF /* UserViewController.swift */; };
+		FC78D98A1EFA77F0007A9060 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC78D9891EFA77F0007A9060 /* TestViewController.swift */; };
 		FC793F701EF8DF4200DCFAF1 /* HappyHealthy_Sqlite.db in Resources */ = {isa = PBXBuildFile; fileRef = FC63C1681EF63FC6006ED946 /* HappyHealthy_Sqlite.db */; };
 		FC7E62721EEE35DA0065F6C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7E62711EEE35DA0065F6C2 /* AppDelegate.swift */; };
 		FC7E62771EEE35DA0065F6C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC7E62751EEE35DA0065F6C2 /* Main.storyboard */; };
@@ -70,7 +70,6 @@
 		66708A232800003B100801A5 /* Pods_HappyHealthy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HappyHealthy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C20B913DE92550432902952 /* Pods-HappyHealthy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HappyHealthy.release.xcconfig"; path = "Pods/Target Support Files/Pods-HappyHealthy/Pods-HappyHealthy.release.xcconfig"; sourceTree = "<group>"; };
 		8F8188C3D3AE417086977A70 /* Pods-HappyHealthy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HappyHealthy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HappyHealthy/Pods-HappyHealthy.debug.xcconfig"; sourceTree = "<group>"; };
-		FC0127E01EF90BC6004E4BFF /* SegmentedControlViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentedControlViewController.swift; sourceTree = "<group>"; };
 		FC2BE1E91EF0E63500CBF9FE /* homeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = homeViewController.swift; sourceTree = "<group>"; };
 		FC52319E1EF511800067E0C0 /* ExerciseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExerciseViewController.swift; path = ../Controller/ExerciseViewController.swift; sourceTree = "<group>"; };
 		FC5231A01EF511800067E0C0 /* DatabaseHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseHelper.swift; sourceTree = "<group>"; };
@@ -89,6 +88,7 @@
 		FC5231E71EF563560067E0C0 /* DiabetesTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiabetesTable.swift; sourceTree = "<group>"; };
 		FC63C1681EF63FC6006ED946 /* HappyHealthy_Sqlite.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = HappyHealthy_Sqlite.db; sourceTree = "<group>"; };
 		FC666B411EF75E4F0019E1CF /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserViewController.swift; path = Controller/UserViewController.swift; sourceTree = "<group>"; };
+		FC78D9891EFA77F0007A9060 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		FC7E626E1EEE35DA0065F6C2 /* HappyHealthy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HappyHealthy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC7E62711EEE35DA0065F6C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC7E62761EEE35DA0065F6C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -196,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				FC666B411EF75E4F0019E1CF /* UserViewController.swift */,
+				FC78D9891EFA77F0007A9060 /* TestViewController.swift */,
 			);
 			name = User;
 			sourceTree = "<group>";
@@ -204,7 +205,6 @@
 			isa = PBXGroup;
 			children = (
 				FC63C1681EF63FC6006ED946 /* HappyHealthy_Sqlite.db */,
-				FC0127E01EF90BC6004E4BFF /* SegmentedControlViewController.swift */,
 				FC666B4D1EF774C40019E1CF /* User */,
 				FC5231D41EF53D140067E0C0 /* Food */,
 				FC5231AD1EF5149D0067E0C0 /* Exercise */,
@@ -454,10 +454,10 @@
 				FC7E62721EEE35DA0065F6C2 /* AppDelegate.swift in Sources */,
 				FC5231E41EF5552D0067E0C0 /* UserTable.swift in Sources */,
 				FC5231AF1EF5149D0067E0C0 /* ExerciseTableViewCell.swift in Sources */,
-				FC0127E11EF90BC6004E4BFF /* SegmentedControlViewController.swift in Sources */,
 				FC5231A81EF511800067E0C0 /* DatabaseHelper.swift in Sources */,
 				FC5231D11EF530430067E0C0 /* FoodTable.swift in Sources */,
 				FC5231D31EF53D000067E0C0 /* FoodViewController.swift in Sources */,
+				FC78D98A1EFA77F0007A9060 /* TestViewController.swift in Sources */,
 				FC5231CF1EF51EF90067E0C0 /* ShowDetailExerciseViewController.swift in Sources */,
 				FC5231E01EF5541A0067E0C0 /* PressureTable.swift in Sources */,
 				FC7E62C81EEE89DF0065F6C2 /* InstructionViewController.swift in Sources */,

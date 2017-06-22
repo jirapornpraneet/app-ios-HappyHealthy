@@ -12,7 +12,7 @@ class UserTable: NSObject{
     var User_Id:Int?
     var User_Name:String?
     var User_Gender:String?
-    var User_Age:String?
+    var User_Age:Int?
     var User_Weight:Double?
     var User_Height:Int?
     var User_BMI:Double?
