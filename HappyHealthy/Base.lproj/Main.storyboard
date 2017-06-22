@@ -882,7 +882,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bmi1" translatesAutoresizingMaskIntoConstraints="NO" id="3sF-QE-WjE">
-                                        <rect key="frame" x="21" y="0.0" width="372" height="62"/>
+                                        <rect key="frame" x="21" y="0.0" width="291" height="51"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                 </subviews>
@@ -892,7 +892,14 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a8W-uw-bDl">
-                                        <rect key="frame" x="105" y="22" width="134" height="21"/>
+                                        <rect key="frame" x="184" y="22" width="99" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="น้ำหนักอยู่ในเกณฑ์ที่ :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rwe-cU-H9E">
+                                        <rect key="frame" x="43" y="21" width="161" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -936,6 +943,7 @@
                         <outlet property="heightUserTextField" destination="dqc-Qx-USv" id="Sud-SL-Aio"/>
                         <outlet property="nameUserTextField" destination="4WQ-av-HCc" id="bvX-F3-Rcd"/>
                         <outlet property="showBmiUserLabel" destination="a8W-uw-bDl" id="woH-kd-uir"/>
+                        <outlet property="showImageBmi" destination="3sF-QE-WjE" id="NaT-iD-Qw8"/>
                         <outlet property="weightUserTextField" destination="ZOy-dq-Jif" id="mIi-qg-n35"/>
                     </connections>
                 </viewController>

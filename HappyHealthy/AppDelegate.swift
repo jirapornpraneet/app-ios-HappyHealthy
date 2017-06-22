@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first! as NSString
         let databasePath = documentsPath.appendingPathComponent("HappyHealthy_Sqlite.db")
         // Delete 'hello.swift' file
-        
+//        
 //        do {
 //            try fileManager.removeItem(atPath: databasePath)
 //        }

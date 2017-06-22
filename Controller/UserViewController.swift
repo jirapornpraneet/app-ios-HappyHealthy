@@ -22,6 +22,7 @@ class UserViewController: UIViewController,UITextFieldDelegate {
     var heightUser: Double?
     var ageUser:Double?
     var showBmi:String?
+    var showImageViewBmi: UIImage?
     
     @IBOutlet var nameUserTextField: UITextField!
     @IBOutlet var ageUserTextField: UITextField!
@@ -31,6 +32,7 @@ class UserViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet var bmiUserLabel: UILabel!
     @IBOutlet var bmrUserLabel: UILabel!
     @IBOutlet var showBmiUserLabel: UILabel!
+    @IBOutlet var showImageBmi: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,9 +46,6 @@ class UserViewController: UIViewController,UITextFieldDelegate {
         self.weightUserTextField.delegate = self
         self.heightUserTextField.delegate = self
         loadAllUser()
-        
-
-               // Do any additional setup after loading the view.
     }
     
     func  loadAllUser(){
@@ -62,14 +61,19 @@ class UserViewController: UIViewController,UITextFieldDelegate {
         
         if (Double(getBmiUser!) <= 18.5){
             showBmi = "ผอม"
-        }else if (Double(getBmiUser!) > 22.9){
+            showImageViewBmi = UIImage(named: "bmi1.png")
+        }else if (Double(getBmiUser!) < 22.9){
             showBmi = "ปกติ"
+            showImageViewBmi = UIImage(named: "bmi2.png")
         }else if (Double(getBmiUser!) < 24.9){
             showBmi = "ท้วม"
+             showImageViewBmi = UIImage(named: "bmi3.png")
         }else if (Double(getBmiUser!)  < 29.9){
             showBmi = "อ้วนปานกลาง"
+            showImageViewBmi = UIImage(named: "bmi4.png")
         }else {
             showBmi = "อ้วน"
+            showImageViewBmi = UIImage(named: "bmi5.png")
         }
 
     
@@ -80,6 +84,7 @@ class UserViewController: UIViewController,UITextFieldDelegate {
         bmiUserLabel.text = String(format: "%.02f", (getUserTable[0].User_BMI)!)
         bmrUserLabel.text = String(format: "%.02f", (getUserTable[0].User_BMR)!)
         showBmiUserLabel.text = showBmi
+        showImageBmi.image = showImageViewBmi
         if getUserTable[0].User_Gender == "Male"{
             genderSegmentedControl.selectedSegmentIndex = 0
         } else {
