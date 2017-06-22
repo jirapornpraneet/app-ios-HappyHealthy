@@ -15,12 +15,13 @@ class UserViewController: UIViewController,UITextFieldDelegate {
     var dbHelper = DatabaseHelper()
     var genderList: [String] = ["Male", "Female"]
     var genderName: String = ""
-    var bmiUserArray: [String] = ["อ้วน","อ้วนปานกลาง","ท้วม","ปกติ","ผอม"]
+    //var bmiUserArray: [String] = ["อ้วน","อ้วนปานกลาง","ท้วม","ปกติ","ผอม"]
     var bmrUser:Double?
     var bmiUser:Double?
     var weigthUser: Double?
     var heightUser: Double?
     var ageUser:Double?
+    var showBmi:String?
     
     @IBOutlet var nameUserTextField: UITextField!
     @IBOutlet var ageUserTextField: UITextField!
@@ -29,6 +30,7 @@ class UserViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet var genderSegmentedControl: UISegmentedControl!
     @IBOutlet var bmiUserLabel: UILabel!
     @IBOutlet var bmrUserLabel: UILabel!
+    @IBOutlet var showBmiUserLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,7 +44,9 @@ class UserViewController: UIViewController,UITextFieldDelegate {
         self.weightUserTextField.delegate = self
         self.heightUserTextField.delegate = self
         loadAllUser()
-        // Do any additional setup after loading the view.
+        
+
+               // Do any additional setup after loading the view.
     }
     
     func  loadAllUser(){
@@ -52,21 +56,41 @@ class UserViewController: UIViewController,UITextFieldDelegate {
             return
         }
         
+        let getBmiUser:Double? = (getUserTable[0].User_Weight!)
+        
+        //bmiUser = ((weigthUser)! / (((heightUser)!/100)*2))
+        
+        if (Double(getBmiUser!) <= 18.5){
+            showBmi = "ผอม"
+        }else if (Double(getBmiUser!) > 22.9){
+            showBmi = "ปกติ"
+        }else if (Double(getBmiUser!) < 24.9){
+            showBmi = "ท้วม"
+        }else if (Double(getBmiUser!)  < 29.9){
+            showBmi = "อ้วนปานกลาง"
+        }else {
+            showBmi = "อ้วน"
+        }
+
+    
         nameUserTextField.text = getUserTable[0].User_Name
         ageUserTextField.text = String(format: "%i",(getUserTable[0].User_Age)!)
         weightUserTextField.text = String(format: "%.02f",(getUserTable[0].User_Weight)!)
         heightUserTextField.text = String(format: "%i", (getUserTable[0].User_Height)!)
         bmiUserLabel.text = String(format: "%.02f", (getUserTable[0].User_BMI)!)
         bmrUserLabel.text = String(format: "%.02f", (getUserTable[0].User_BMR)!)
+        showBmiUserLabel.text = showBmi
         if getUserTable[0].User_Gender == "Male"{
             genderSegmentedControl.selectedSegmentIndex = 0
         } else {
             genderSegmentedControl.selectedSegmentIndex = 1
         }
-    }
+
+        }
+
+    
     
     @IBAction func saveDataUserButton(_ sender: Any) {
-        
         weigthUser = Double(weightUserTextField.text!)!
         heightUser = Double(heightUserTextField.text!)!
         bmiUser = ((weigthUser)! / (((heightUser)!/100)*2))
@@ -103,8 +127,6 @@ class UserViewController: UIViewController,UITextFieldDelegate {
         genderName = genderSelect
     }
     
-
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
