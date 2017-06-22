@@ -57,8 +57,6 @@ class UserViewController: UIViewController,UITextFieldDelegate {
         
         let getBmiUser:Double? = (getUserTable[0].User_Weight!)
         
-        //bmiUser = ((weigthUser)! / (((heightUser)!/100)*2))
-        
         if (Double(getBmiUser!) <= 18.5){
             showBmi = "ผอม"
             showImageViewBmi = UIImage(named: "bmi1.png")

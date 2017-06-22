@@ -27,6 +27,7 @@
 		FC666B431EF75E4F0019E1CF /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC666B411EF75E4F0019E1CF /* UserViewController.swift */; };
 		FC793F701EF8DF4200DCFAF1 /* HappyHealthy_Sqlite.db in Resources */ = {isa = PBXBuildFile; fileRef = FC63C1681EF63FC6006ED946 /* HappyHealthy_Sqlite.db */; };
 		FC7E40771EFBA546006D45CD /* DiabetesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7E40761EFBA546006D45CD /* DiabetesViewController.swift */; };
+		FC7E40791EFBBC7F006D45CD /* ShowDiabetesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7E40781EFBBC7F006D45CD /* ShowDiabetesViewController.swift */; };
 		FC7E62721EEE35DA0065F6C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7E62711EEE35DA0065F6C2 /* AppDelegate.swift */; };
 		FC7E62771EEE35DA0065F6C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC7E62751EEE35DA0065F6C2 /* Main.storyboard */; };
 		FC7E62791EEE35DA0065F6C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC7E62781EEE35DA0065F6C2 /* Assets.xcassets */; };
@@ -89,6 +90,7 @@
 		FC63C1681EF63FC6006ED946 /* HappyHealthy_Sqlite.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = HappyHealthy_Sqlite.db; sourceTree = "<group>"; };
 		FC666B411EF75E4F0019E1CF /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserViewController.swift; path = Controller/UserViewController.swift; sourceTree = "<group>"; };
 		FC7E40761EFBA546006D45CD /* DiabetesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiabetesViewController.swift; sourceTree = "<group>"; };
+		FC7E40781EFBBC7F006D45CD /* ShowDiabetesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowDiabetesViewController.swift; sourceTree = "<group>"; };
 		FC7E626E1EEE35DA0065F6C2 /* HappyHealthy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HappyHealthy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC7E62711EEE35DA0065F6C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC7E62761EEE35DA0065F6C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				FC7E40761EFBA546006D45CD /* DiabetesViewController.swift */,
+				FC7E40781EFBBC7F006D45CD /* ShowDiabetesViewController.swift */,
 			);
 			name = Diabetes;
 			sourceTree = "<group>";
@@ -463,6 +466,7 @@
 				FC5231E41EF5552D0067E0C0 /* UserTable.swift in Sources */,
 				FC5231AF1EF5149D0067E0C0 /* ExerciseTableViewCell.swift in Sources */,
 				FC7E40771EFBA546006D45CD /* DiabetesViewController.swift in Sources */,
+				FC7E40791EFBBC7F006D45CD /* ShowDiabetesViewController.swift in Sources */,
 				FC5231A81EF511800067E0C0 /* DatabaseHelper.swift in Sources */,
 				FC5231D11EF530430067E0C0 /* FoodTable.swift in Sources */,
 				FC5231D31EF53D000067E0C0 /* FoodViewController.swift in Sources */,

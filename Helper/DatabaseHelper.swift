@@ -142,7 +142,6 @@ class DatabaseHelper {
             do {
                 for row in try Row.fetchAll(db, "select * from Diabetes"){
                     let rowDiabetesTable = DiabetesTable()
-                    rowDiabetesTable.D_Id = row.value(named: "D_Id") as Int
                     rowDiabetesTable.D_DateTime = row.value(named: "D_DateTime") as String
                     rowDiabetesTable.D_CostSugar = row.value(named: "D_CostSugar") as Int
                     rowDiabetesTable.D_Level = row.value(named: "D_Level") as String
