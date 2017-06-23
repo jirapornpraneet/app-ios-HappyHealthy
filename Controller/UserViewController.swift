@@ -36,6 +36,8 @@ class UserViewController: UIViewController,UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+       
         self.nameUserTextField.text = ""
         self.ageUserTextField.text = ""
         self.weightUserTextField.text = ""
