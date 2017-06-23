@@ -34,6 +34,11 @@ class PressureViewController: UIViewController,UITextFieldDelegate {
         self.costHeartTextField.delegate = self
         self.costPressureDownTextField.delegate = self
         self.costPressureTopTextField.delegate = self
+        //insertDate
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat =  "dd-MM-yyyy HH:mm"
+        let  setDate = dateFormatter.string(from: dateInputPressurePicker.date)
+        saveDatePressure = setDate
     }
 
     override func didReceiveMemoryWarning() {

@@ -36,8 +36,6 @@ class UserViewController: UIViewController,UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-       
         self.nameUserTextField.text = ""
         self.ageUserTextField.text = ""
         self.weightUserTextField.text = ""
@@ -48,6 +46,9 @@ class UserViewController: UIViewController,UITextFieldDelegate {
         self.weightUserTextField.delegate = self
         self.heightUserTextField.delegate = self
         loadAllUser()
+        //genderUser
+        let genderSelect: String = self.genderList[self.genderSegmentedControl.selectedSegmentIndex]
+        genderName = genderSelect
     }
     
     func  loadAllUser(){
@@ -85,6 +86,7 @@ class UserViewController: UIViewController,UITextFieldDelegate {
         bmrUserLabel.text = String(format: "%.02f", (getUserTable[0].User_BMR)!)
         showBmiUserLabel.text = showBmi
         showImageBmi.image = showImageViewBmi
+        
         if getUserTable[0].User_Gender == "Male"{
             genderSegmentedControl.selectedSegmentIndex = 0
         } else {
@@ -93,8 +95,6 @@ class UserViewController: UIViewController,UITextFieldDelegate {
 
         }
 
-    
-    
     @IBAction func saveDataUserButton(_ sender: Any) {
         weigthUser = Double(weightUserTextField.text!)!
         heightUser = Double(heightUserTextField.text!)!

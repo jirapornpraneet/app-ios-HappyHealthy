@@ -140,7 +140,7 @@ class DatabaseHelper {
         var getDiabetesTable = [DiabetesTable]()
         dbQueue.inDatabase { db in
             do {
-                for row in try Row.fetchAll(db, "select * from Diabetes"){
+                for row in try Row.fetchAll(db, "SELECT * ,MAX (D_Id) FROM Diabetes"){
                     let rowDiabetesTable = DiabetesTable()
                     rowDiabetesTable.D_Id = row.value(named: "D_Id") as Int
                     rowDiabetesTable.D_DateTime = row.value(named: "D_DateTime") as String
@@ -176,7 +176,7 @@ class DatabaseHelper {
         var getKidneyTable = [KidneyTable]()
         dbQueue.inDatabase { db in
             do {
-                for row in try Row.fetchAll(db, "select * from Kidney"){
+                for row in try Row.fetchAll(db, "SELECT * ,MAX (K_Id) FROM Kidney"){
                     let rowKidneyTable = KidneyTable()
                     rowKidneyTable.K_Id = row.value(named: "K_Id") as Int
                     rowKidneyTable.K_DateTime = row.value(named: "K_DateTime") as String
@@ -211,7 +211,7 @@ class DatabaseHelper {
         var getPressureTable = [PressureTable]()
         dbQueue.inDatabase { db in
             do {
-                for row in try Row.fetchAll(db, "select * from Pressure"){
+                for row in try Row.fetchAll(db, "SELECT * ,MAX (P_Id) FROM Pressure"){
                     let rowPressureTable = PressureTable()
                     rowPressureTable.P_Id = row.value(named:"P_Id") as Int
                     rowPressureTable.P_DateTime = row.value(named:"P_DateTime") as String

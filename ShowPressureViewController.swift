@@ -27,7 +27,6 @@ class ShowPressureViewController: UIViewController {
     @IBOutlet var showDatetimeLabel: UILabel!
     @IBOutlet var costPressureTopLabel: UILabel!
     @IBOutlet var costPressureDownLabel: UILabel!
-
     @IBOutlet var alertLevelPressureImage: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,9 +34,6 @@ class ShowPressureViewController: UIViewController {
       // Do any additional setup after loading the view.
     }
     
-    
-    
-
     func loadAllDataPressure(){
         getPressureTable = dbHelper.getPressure()
         
@@ -95,7 +91,7 @@ class ShowPressureViewController: UIViewController {
         }else if getPressureDown! >= 60 && getPressureDown! < 80 {
             costDown  = 5
         }else{
-            costTop  = 0
+            costDown  = 0
         }
         
         if costTop! < costDown! {
@@ -116,21 +112,9 @@ class ShowPressureViewController: UIViewController {
         lineAlertLevelHeartImage.image = showLineHeartLevelImage
     }
 
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

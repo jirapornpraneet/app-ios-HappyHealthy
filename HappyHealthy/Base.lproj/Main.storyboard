@@ -289,7 +289,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MvV-kc-V3N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-894" y="-698"/>
+            <point key="canvasLocation" x="-891" y="-646"/>
         </scene>
         <!--รายงาน-->
         <scene sceneID="NMj-kZ-q4T">
@@ -1094,7 +1094,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5BT-DV-u87" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-236.25" y="583.09859154929575"/>
+            <point key="canvasLocation" x="-949" y="768"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="v7d-s0-N7j">
@@ -1283,6 +1283,15 @@
                             <constraint firstAttribute="trailingMargin" secondItem="Cjy-MZ-bRa" secondAttribute="trailing" constant="11" id="zYe-eT-KJO"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="เบาหวาน" id="Io8-hQ-o06">
+                        <barButtonItem key="rightBarButtonItem" image="listhistory" id="XYl-RY-6x0">
+                            <inset key="imageInsets" minX="40" minY="20" maxX="5" maxY="15"/>
+                            <color key="tintColor" red="0.73334293100000003" green="0.58502760499999995" blue="0.87873046870000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="QtC-zT-4AY" kind="show" id="DpI-k7-bDz"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="dateInputDiabetesPicker" destination="IB2-zF-oDj" id="xCf-sn-U7L"/>
                         <outlet property="inputCostSugarTextField" destination="a3O-I5-tlQ" id="SlY-vF-Fgt"/>
@@ -1529,6 +1538,15 @@
                             <constraint firstItem="aMr-Sl-lBc" firstAttribute="top" secondItem="Fgo-NF-86H" secondAttribute="bottom" constant="57" id="tBQ-mm-HLs"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="ไต" id="G2Y-QX-tzr">
+                        <barButtonItem key="rightBarButtonItem" image="listhistory" id="N6Q-If-Spe">
+                            <inset key="imageInsets" minX="40" minY="20" maxX="5" maxY="15"/>
+                            <color key="tintColor" red="0.53337152862025872" green="0.72856527099957735" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="tEo-TV-tR9" kind="show" id="chi-Wk-MDk"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="dateInputKidneyPicker" destination="Idi-C6-2um" id="Clw-mX-xXg"/>
                         <outlet property="inputCostGFRTextField" destination="TA3-8m-WDn" id="GOH-Mq-mZb"/>
@@ -1696,10 +1714,19 @@
                             <constraint firstAttribute="trailingMargin" secondItem="sqj-9m-9Lm" secondAttribute="trailing" constant="5" id="qzG-v4-kce"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="ความดันโลหิต" id="Mlu-Bx-O1H">
+                        <barButtonItem key="rightBarButtonItem" image="listhistory" id="2sZ-rc-w8d">
+                            <inset key="imageInsets" minX="40" minY="20" maxX="5" maxY="15"/>
+                            <color key="tintColor" red="1" green="0.48813878849999998" blue="0.56102057579999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="adI-hF-9Sr" kind="show" id="hZu-bF-sau"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="costHeartTextField" destination="umF-wS-b4h" id="htZ-lY-cud"/>
-                        <outlet property="costPressureDownTextField" destination="Per-Cv-m6j" id="DTs-ux-bh2"/>
-                        <outlet property="costPressureTopTextField" destination="PWs-2E-cuM" id="Ty6-sp-DKF"/>
+                        <outlet property="costPressureDownTextField" destination="PWs-2E-cuM" id="lzh-sP-gjF"/>
+                        <outlet property="costPressureTopTextField" destination="Per-Cv-m6j" id="yzr-XW-PtY"/>
                         <outlet property="dateInputPressurePicker" destination="naH-rh-8qw" id="jL7-Jj-eDc"/>
                     </connections>
                 </viewController>
@@ -2038,6 +2065,15 @@
                             <constraint firstItem="h2q-bM-YDv" firstAttribute="leading" secondItem="Pzd-8s-N24" secondAttribute="leadingMargin" constant="5" id="UdH-Dz-XvX"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="ข้อมูลเบาหวาน" id="o8L-RO-wMd">
+                        <barButtonItem key="rightBarButtonItem" image="listhistory" id="AaW-Vv-xIz">
+                            <inset key="imageInsets" minX="40" minY="20" maxX="5" maxY="15"/>
+                            <color key="tintColor" red="0.73334293100000003" green="0.58502760499999995" blue="0.87873046870000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="QtC-zT-4AY" kind="show" id="Hdr-ah-W2Y"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="alertLevelDiabetesImage" destination="xNV-vX-Y7e" id="QaE-hf-8qZ"/>
                         <outlet property="costSugarLabel" destination="ivE-7T-pHt" id="A47-80-u74"/>
@@ -2145,6 +2181,15 @@
                             <constraint firstItem="EZH-Xs-Gp3" firstAttribute="top" secondItem="zfB-xf-0r2" secondAttribute="bottom" constant="35" id="phF-FW-EBj"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="ข้อมูลไต" id="8Jd-af-yg7">
+                        <barButtonItem key="rightBarButtonItem" image="listhistory" id="j7E-Rg-tU3">
+                            <inset key="imageInsets" minX="40" minY="20" maxX="5" maxY="15"/>
+                            <color key="tintColor" red="0.53337152860000003" green="0.72856527100000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="tEo-TV-tR9" kind="show" id="Ktf-Jr-dMH"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="alertLevelGFRImage" destination="aVo-gX-q4k" id="1JH-Fp-bVu"/>
                         <outlet property="costGFRLabel" destination="crY-go-jl5" id="hmO-SY-wXb"/>
@@ -2323,6 +2368,15 @@
                             <constraint firstItem="Sj2-6j-jpe" firstAttribute="top" secondItem="Vm5-MU-NK2" secondAttribute="bottom" constant="8" id="zg1-E9-jDQ"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="ข้อมูลความดันโลหิต" id="N7g-bz-S4Z">
+                        <barButtonItem key="rightBarButtonItem" image="listhistory" id="7iB-xq-uY4">
+                            <inset key="imageInsets" minX="40" minY="20" maxX="5" maxY="15"/>
+                            <color key="tintColor" red="1" green="0.48813878849999998" blue="0.56102057579999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="adI-hF-9Sr" kind="show" id="w1Y-5d-cnC"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="alertLevelHeartImage" destination="iYZ-gr-l7h" id="She-LQ-hr6"/>
                         <outlet property="alertLevelPressureImage" destination="Nr7-BT-9L0" id="Hh8-ay-LnH"/>
@@ -2349,35 +2403,7 @@
                     <view key="view" contentMode="scaleToFill" id="A4C-W0-gzn">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bHH-Py-SBg">
-                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="79S-Ru-uyE"/>
-                                </constraints>
-                                <color key="tintColor" red="0.99907074129999995" green="0.94414956569999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="barTintColor" red="0.88708903539999995" green="0.69257565519999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="ประวัติเบาหวาน" id="PNX-Wh-hfu">
-                                        <barButtonItem key="leftBarButtonItem" image="arowback" id="zXn-b3-1oa">
-                                            <inset key="imageInsets" minX="0.0" minY="25" maxX="35" maxY="20"/>
-                                        </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" image="buttonadd" id="WH2-YD-L1Q">
-                                            <inset key="imageInsets" minX="30" minY="20" maxX="15" maxY="20"/>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                        </subviews>
                         <color key="backgroundColor" red="0.99907074129999995" green="0.94414956569999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="bHH-Py-SBg" secondAttribute="trailing" id="8x1-im-Vfo"/>
-                            <constraint firstItem="bHH-Py-SBg" firstAttribute="top" secondItem="GxP-bd-4Zb" secondAttribute="bottom" id="8xG-mz-9KJ"/>
-                            <constraint firstItem="bHH-Py-SBg" firstAttribute="leading" secondItem="A4C-W0-gzn" secondAttribute="leading" id="ku0-Xd-JGH"/>
-                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a3K-dN-qVn" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2395,35 +2421,7 @@
                     <view key="view" contentMode="scaleToFill" id="22y-jT-Z2P">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AI0-jB-yKE">
-                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="euc-Wg-bVf"/>
-                                </constraints>
-                                <color key="tintColor" red="0.95312339067459106" green="0.98260229825973511" blue="0.98369759321212769" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="barTintColor" red="0.75918075360000004" green="0.89085043809999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="ประวัติไต" id="mcL-Mp-fnB">
-                                        <barButtonItem key="leftBarButtonItem" image="arowback" id="N90-Qt-Qgc">
-                                            <inset key="imageInsets" minX="0.0" minY="25" maxX="35" maxY="20"/>
-                                        </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" image="buttonadd" id="6bu-Pq-ewh">
-                                            <inset key="imageInsets" minX="30" minY="20" maxX="15" maxY="20"/>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                        </subviews>
                         <color key="backgroundColor" red="0.95312339067459106" green="0.98260229825973511" blue="0.98369759321212769" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="AI0-jB-yKE" secondAttribute="trailing" id="4Lb-JC-azv"/>
-                            <constraint firstItem="AI0-jB-yKE" firstAttribute="leading" secondItem="22y-jT-Z2P" secondAttribute="leading" id="PwZ-gm-arZ"/>
-                            <constraint firstItem="AI0-jB-yKE" firstAttribute="top" secondItem="3hp-5x-nJt" secondAttribute="bottom" id="zmg-Dj-gon"/>
-                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fxP-7q-2oA" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2441,35 +2439,7 @@
                     <view key="view" contentMode="scaleToFill" id="5Gx-RD-Npb">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GI5-Po-5P4">
-                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="4Cn-TS-Zhj"/>
-                                </constraints>
-                                <color key="tintColor" red="0.99907074129999995" green="0.94414956569999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="barTintColor" red="0.93648630379999998" green="0.67601234369999996" blue="0.67160313179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="ประวัติความดันโลหิต" id="NAS-G8-gUg">
-                                        <barButtonItem key="leftBarButtonItem" image="arowback" id="r36-BD-4Zv">
-                                            <inset key="imageInsets" minX="0.0" minY="25" maxX="35" maxY="20"/>
-                                        </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" image="buttonadd" id="shp-yj-Kb6">
-                                            <inset key="imageInsets" minX="30" minY="20" maxX="15" maxY="20"/>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                        </subviews>
                         <color key="backgroundColor" red="0.99907074129999995" green="0.94414956569999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="GI5-Po-5P4" secondAttribute="trailing" id="ZfX-Gp-dO1"/>
-                            <constraint firstItem="GI5-Po-5P4" firstAttribute="leading" secondItem="5Gx-RD-Npb" secondAttribute="leading" id="hCC-14-93a"/>
-                            <constraint firstItem="GI5-Po-5P4" firstAttribute="top" secondItem="Kh6-kx-nKg" secondAttribute="bottom" id="q99-57-RQ2"/>
-                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LaY-iJ-lJn" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -3302,11 +3272,9 @@
         <image name="InstructionDrink" width="2480" height="3508"/>
         <image name="InstructionEat" width="2480" height="3508"/>
         <image name="InstructionKidney" width="2480" height="3508"/>
-        <image name="arowback" width="60" height="80"/>
         <image name="bmi" width="75" height="40"/>
         <image name="bmi1" width="560" height="95"/>
         <image name="bmr" width="85" height="40"/>
-        <image name="buttonadd" width="90" height="80"/>
         <image name="buttonsave" width="420" height="70"/>
         <image name="buttonsavediba" width="420" height="70"/>
         <image name="buttonsavekid" width="420" height="70"/>
@@ -3335,6 +3303,7 @@
         <image name="iconreport" width="20" height="20"/>
         <image name="iconuser" width="20" height="20"/>
         <image name="kk" width="50" height="45"/>
+        <image name="listhistory" width="80" height="60"/>
         <image name="listrf" width="120" height="40"/>
         <image name="listrf2" width="120" height="40"/>
         <image name="ml2" width="100" height="45"/>
@@ -3357,4 +3326,9 @@
         <image name="unitcalfood" width="80" height="25"/>
         <image name="year" width="50" height="45"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="hZu-bF-sau"/>
+        <segue reference="Hdr-ah-W2Y"/>
+        <segue reference="Ktf-Jr-dMH"/>
+    </inferredMetricsTieBreakers>
 </document>

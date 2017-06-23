@@ -22,7 +22,11 @@ class KidneyViewController: UIViewController,UITextFieldDelegate {
         super.viewDidLoad()
         self.inputCostGFRTextField.text = ""
         self.inputCostGFRTextField.delegate = self
-        // Do any additional setup after loading the view.
+         //insertDate
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat =  "dd-MM-yyyy HH:mm"
+        let  setDate = dateFormatter.string(from: dateInputKidneyPicker.date)
+        saveDateKidney = setDate
     }
 
     override func didReceiveMemoryWarning() {

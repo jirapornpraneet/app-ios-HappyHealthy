@@ -21,7 +21,6 @@ class DiabetesViewController: UIViewController,UITextFieldDelegate {
     var costSugar:Int?
     
     @IBOutlet var peopleDiabetesSegmented: UISegmentedControl!
-    
     @IBOutlet var inputCostSugarTextField: UITextField!
     @IBOutlet var statusDiabetesSegmented: UISegmentedControl!
     @IBOutlet var dateInputDiabetesPicker: UIDatePicker!
@@ -29,9 +28,18 @@ class DiabetesViewController: UIViewController,UITextFieldDelegate {
         super.viewDidLoad()
         self.inputCostSugarTextField.text = ""
         self.inputCostSugarTextField.delegate = self
-
+         //insertDate
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat =  "dd-MM-yyyy HH:mm"
+        let  setDate = dateFormatter.string(from: dateInputDiabetesPicker.date)
+        saveDateDiabetes = setDate
+        //DiabetesStatus
+        let statusDiabetesSelect: String = self.diabetesStatusList[self.statusDiabetesSegmented.selectedSegmentIndex]
+        diabetesStatusName = statusDiabetesSelect
+        //DiabetesPeople
+        let peopleDiabetesSelect: String = self.diabetesPeopleList[self.peopleDiabetesSegmented.selectedSegmentIndex]
+        diabetesPeopleName = peopleDiabetesSelect
     }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
