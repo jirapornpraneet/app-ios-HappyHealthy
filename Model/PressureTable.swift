@@ -13,8 +13,7 @@ class PressureTable: NSObject{
     var P_DateTime:String?
     var P_CostPressureTop:Int?
     var P_CostPressureDown:Int?
-    var P_Cost_Level_Down:String?
-    var P_Cost_Level_Top:String?
+    var P_Pressure_Level:String?
     var P_HeartRate:Int?
     var P_HeartRate_Level:String?
 }

@@ -28,6 +28,8 @@
 		FC793F701EF8DF4200DCFAF1 /* HappyHealthy_Sqlite.db in Resources */ = {isa = PBXBuildFile; fileRef = FC63C1681EF63FC6006ED946 /* HappyHealthy_Sqlite.db */; };
 		FC7D39871EFCB84100F037C9 /* KidneyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7D39861EFCB84100F037C9 /* KidneyViewController.swift */; };
 		FC7D39891EFCBE2200F037C9 /* ShowKidneyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7D39881EFCBE2200F037C9 /* ShowKidneyViewController.swift */; };
+		FC7D398B1EFCC65E00F037C9 /* PressureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7D398A1EFCC65E00F037C9 /* PressureViewController.swift */; };
+		FC7D398E1EFCC67D00F037C9 /* ShowPressureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7D398D1EFCC67D00F037C9 /* ShowPressureViewController.swift */; };
 		FC7E40771EFBA546006D45CD /* DiabetesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7E40761EFBA546006D45CD /* DiabetesViewController.swift */; };
 		FC7E40791EFBBC7F006D45CD /* ShowDiabetesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7E40781EFBBC7F006D45CD /* ShowDiabetesViewController.swift */; };
 		FC7E62721EEE35DA0065F6C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7E62711EEE35DA0065F6C2 /* AppDelegate.swift */; };
@@ -93,6 +95,8 @@
 		FC666B411EF75E4F0019E1CF /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserViewController.swift; path = Controller/UserViewController.swift; sourceTree = "<group>"; };
 		FC7D39861EFCB84100F037C9 /* KidneyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KidneyViewController.swift; sourceTree = "<group>"; };
 		FC7D39881EFCBE2200F037C9 /* ShowKidneyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowKidneyViewController.swift; sourceTree = "<group>"; };
+		FC7D398A1EFCC65E00F037C9 /* PressureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PressureViewController.swift; sourceTree = "<group>"; };
+		FC7D398D1EFCC67D00F037C9 /* ShowPressureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowPressureViewController.swift; sourceTree = "<group>"; };
 		FC7E40761EFBA546006D45CD /* DiabetesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiabetesViewController.swift; sourceTree = "<group>"; };
 		FC7E40781EFBBC7F006D45CD /* ShowDiabetesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowDiabetesViewController.swift; sourceTree = "<group>"; };
 		FC7E626E1EEE35DA0065F6C2 /* HappyHealthy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HappyHealthy.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -215,6 +219,15 @@
 			name = Kidney;
 			sourceTree = "<group>";
 		};
+		FC7D398C1EFCC66600F037C9 /* Pressure */ = {
+			isa = PBXGroup;
+			children = (
+				FC7D398A1EFCC65E00F037C9 /* PressureViewController.swift */,
+				FC7D398D1EFCC67D00F037C9 /* ShowPressureViewController.swift */,
+			);
+			name = Pressure;
+			sourceTree = "<group>";
+		};
 		FC7E40751EFBA527006D45CD /* Diabetes */ = {
 			isa = PBXGroup;
 			children = (
@@ -228,6 +241,7 @@
 			isa = PBXGroup;
 			children = (
 				FC63C1681EF63FC6006ED946 /* HappyHealthy_Sqlite.db */,
+				FC7D398C1EFCC66600F037C9 /* Pressure */,
 				FC7D39851EFCB82A00F037C9 /* Kidney */,
 				FC7E40751EFBA527006D45CD /* Diabetes */,
 				FC666B4D1EF774C40019E1CF /* User */,
@@ -480,6 +494,7 @@
 				FC5231E41EF5552D0067E0C0 /* UserTable.swift in Sources */,
 				FC5231AF1EF5149D0067E0C0 /* ExerciseTableViewCell.swift in Sources */,
 				FC7E40771EFBA546006D45CD /* DiabetesViewController.swift in Sources */,
+				FC7D398E1EFCC67D00F037C9 /* ShowPressureViewController.swift in Sources */,
 				FC7E40791EFBBC7F006D45CD /* ShowDiabetesViewController.swift in Sources */,
 				FC5231A81EF511800067E0C0 /* DatabaseHelper.swift in Sources */,
 				FC7D39871EFCB84100F037C9 /* KidneyViewController.swift in Sources */,
@@ -499,6 +514,7 @@
 				FC2BE1EA1EF0E63500CBF9FE /* homeViewController.swift in Sources */,
 				FC5231AC1EF511800067E0C0 /* ExerciseTable.swift in Sources */,
 				FC5231D81EF53E420067E0C0 /* ShowDetailFoodViewController.swift in Sources */,
+				FC7D398B1EFCC65E00F037C9 /* PressureViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

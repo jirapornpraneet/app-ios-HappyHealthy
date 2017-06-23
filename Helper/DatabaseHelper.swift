@@ -183,7 +183,6 @@ class DatabaseHelper {
                     rowKidneyTable.K_CostGFR = row.value(named: "K_CostGFR") as Int
                     rowKidneyTable.K_LevelCostGFR = row.value(named: "K_LevelCostGFR") as String
                     getKidneyTable.append(rowKidneyTable)
-                    
                 }
             }
             catch {
@@ -218,8 +217,7 @@ class DatabaseHelper {
                     rowPressureTable.P_DateTime = row.value(named: "P_DateTime") as String
                     rowPressureTable.P_CostPressureTop = row.value(named: "P_CostPressureTop") as Int
                     rowPressureTable.P_CostPressureDown = row.value(named: "P_CostPressureDown") as Int
-                    rowPressureTable.P_Cost_Level_Down = row.value(named: "P_Cost_Level_Down") as String
-                    rowPressureTable.P_Cost_Level_Top = row.value(named: "P_Cost_Level_Top") as String
+                    rowPressureTable.P_Pressure_Level = row.value(named: "P_Pressure_Level") as String
                     rowPressureTable.P_HeartRate = row.value(named: "P_HeartRate") as Int
                     rowPressureTable.P_HeartRate_Level = row.value(named: "P_HeartRate_Level") as String
                     getPressureTable.append(rowPressureTable)
@@ -231,7 +229,20 @@ class DatabaseHelper {
         }
         return getPressureTable
     }
-    
+    func insertPressureTable(dataRowPressureTable: PressureTable) {
+        try! dbQueue.inDatabase { db in
+            do {
+                try db.execute("INSERT INTO Pressure (P_DateTime,P_CostPressureTop,P_CostPressureDown,P_Pressure_Level,P_HeartRate,P_HeartRate_Level) VALUES (:P_DateTime,:P_CostPressureTop,:P_CostPressureDown,P_Pressure_Level,:P_HeartRate,:P_HeartRate_Level)",
+                               arguments: ["P_DateTime":dataRowPressureTable.P_DateTime,"P_CostPressureTop":dataRowPressureTable.P_CostPressureTop,"P_CostPressureDown":dataRowPressureTable.P_CostPressureDown,"P_Pressure_Level":dataRowPressureTable.P_Pressure_Level,"P_HeartRate":dataRowPressureTable.P_HeartRate,"P_HeartRate_Level":dataRowPressureTable.P_HeartRate_Level])
+                
+                print("Insert Pressure value")
+            } catch let error as DatabaseError {
+                
+                print("Insert Pressure Fail!!")
+            }
+        }
+    }
+
     func getUser() -> [UserTable]{
         var getUserTable = [UserTable]()
         try! dbQueue.inDatabase { db in
@@ -297,10 +308,6 @@ class DatabaseHelper {
 
     }
     
-    
-    
-    
-        
     //Join
     /*func getAllHistoryExercise(Exercise_Id: Int) -> [exerciseHistoryModel] {
         var listHistoryExercise = [exerciseHistoryModel]()
