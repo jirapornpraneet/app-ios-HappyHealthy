@@ -13,7 +13,7 @@ class PressureViewController: UIViewController,UITextFieldDelegate {
     var insertDataPressure = [PressureTable]()
     var dbHelper = DatabaseHelper()
     var saveDatePressure:String = ""
-    var pressureLevel:String?
+    var pressureLevel:String = ""
     var heartLevel: String = ""
     var costPressureTop:Int?
     var costPressureDown:Int?
@@ -65,7 +65,7 @@ class PressureViewController: UIViewController,UITextFieldDelegate {
         }else if costPressureTop! >= 90 && costPressureTop! < 120 {
             costTop  = 5
         }else{
-             costTop  = 0
+            costTop  = 0
         }
         
         if costPressureDown! >= 110 {
@@ -81,15 +81,16 @@ class PressureViewController: UIViewController,UITextFieldDelegate {
         }else if costPressureDown! >= 60 && costPressureDown! < 80 {
             costDown  = 5
         }else{
-            costTop  = 0
+            costDown  = 0
         }
+        
         
         if costTop! < costDown! {
             pressureLevel = pressureLevelName[costTop!]
         }else{
             pressureLevel = pressureLevelName[costDown!]
         }
-        return pressureLevel!
+        return pressureLevel
 
     }
     
@@ -110,6 +111,7 @@ class PressureViewController: UIViewController,UITextFieldDelegate {
             heartLevel  = "ผิดปกติ"
         }
         return heartLevel
+     
     }
 
     @IBAction func saveDataPressure(_ sender: Any) {

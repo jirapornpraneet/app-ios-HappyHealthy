@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ShowDiabetesViewController.swift"
-            timestampString = "519817838.612299"
+            filePath = "Helper/DatabaseHelper.swift"
+            timestampString = "519893232.602519"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
-            landmarkName = "viewDidLoad()"
+            startingLineNumber = "167"
+            endingLineNumber = "167"
+            landmarkName = "insertDiabetesTable(dataRowDiabetesTable:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,13 +25,45 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "PressureViewController.swift"
-            timestampString = "519886612.041216"
+            filePath = "Helper/DatabaseHelper.swift"
+            timestampString = "519893236.752298"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "92"
-            endingLineNumber = "92"
-            landmarkName = "LevelPressure()"
+            startingLineNumber = "201"
+            endingLineNumber = "201"
+            landmarkName = "insertKidneyTable(dataRowKidneyTable:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Helper/DatabaseHelper.swift"
+            timestampString = "519893314.007315"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "164"
+            endingLineNumber = "164"
+            landmarkName = "insertDiabetesTable(dataRowDiabetesTable:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Helper/DatabaseHelper.swift"
+            timestampString = "519894885.132772"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "238"
+            endingLineNumber = "238"
+            landmarkName = "insertPressureTable(dataRowPressureTable:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

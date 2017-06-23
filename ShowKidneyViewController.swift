@@ -25,17 +25,17 @@ class ShowKidneyViewController: UIViewController {
         let getCostGFR:Int? = (getKidneyTable[0].K_CostGFR!)
         
         if getCostGFR! >= 90 {
-                    showKidneyLevelImage = UIImage(named: "textlevelkid1.png")
-                    showLineKidneyLevelImage = UIImage(named: "prokid1.png")
+            showKidneyLevelImage = UIImage(named: "textlevelkid1.png")
+            showLineKidneyLevelImage = UIImage(named: "prokid1.png")
         }else if getCostGFR! >= 60 && getCostGFR! < 90 {
-                showKidneyLevelImage = UIImage(named: "textlevelkid2.png")
-                showLineKidneyLevelImage = UIImage(named: "prokid2.png")
+            showKidneyLevelImage = UIImage(named: "textlevelkid2.png")
+            showLineKidneyLevelImage = UIImage(named: "prokid2.png")
         }else if getCostGFR! >= 60 && getCostGFR! < 90 {
-                showKidneyLevelImage = UIImage(named: "textlevelkid3.png")
-                showLineKidneyLevelImage = UIImage(named: "prokid3.png")
+            showKidneyLevelImage = UIImage(named: "textlevelkid3.png")
+            showLineKidneyLevelImage = UIImage(named: "prokid3.png")
         }else if getCostGFR! >= 60 && getCostGFR! < 90 {
-                showKidneyLevelImage = UIImage(named: "textlevelkid4.png")
-                showLineKidneyLevelImage = UIImage(named: "prokid4.png")
+            showKidneyLevelImage = UIImage(named: "textlevelkid4.png")
+            showLineKidneyLevelImage = UIImage(named: "prokid4.png")
         }else{
             showKidneyLevelImage = UIImage(named: "textlevelkid5.png")
             showLineKidneyLevelImage = UIImage(named: "prokid5.png")

@@ -148,7 +148,7 @@ class DiabetesViewController: UIViewController,UITextFieldDelegate {
                 diabetesLevel = NormalAfter()
             }
         }else if diabetesPeopleName == "ผู้เป็นเบาหวาน" {
-            if diabetesStatusName == "หลังอาหาร"{
+            if diabetesStatusName == "ก่อนอาหาร"{
                 diabetesLevel = DiabetesBefore()
             }else{
                 diabetesLevel = DiabetesAfter()

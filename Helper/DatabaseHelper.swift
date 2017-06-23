@@ -213,10 +213,10 @@ class DatabaseHelper {
             do {
                 for row in try Row.fetchAll(db, "select * from Pressure"){
                     let rowPressureTable = PressureTable()
-                    rowPressureTable.P_Id = row.value(named: "P_Id") as Int
-                    rowPressureTable.P_DateTime = row.value(named: "P_DateTime") as String
-                    rowPressureTable.P_CostPressureTop = row.value(named: "P_CostPressureTop") as Int
-                    rowPressureTable.P_CostPressureDown = row.value(named: "P_CostPressureDown") as Int
+                    rowPressureTable.P_Id = row.value(named:"P_Id") as Int
+                    rowPressureTable.P_DateTime = row.value(named:"P_DateTime") as String
+                    rowPressureTable.P_CostPressureTop = row.value(named:"P_CostPressureTop") as Int
+                    rowPressureTable.P_CostPressureDown = row.value(named:"P_CostPressureDown") as Int
                     rowPressureTable.P_Pressure_Level = row.value(named: "P_Pressure_Level") as String
                     rowPressureTable.P_HeartRate = row.value(named: "P_HeartRate") as Int
                     rowPressureTable.P_HeartRate_Level = row.value(named: "P_HeartRate_Level") as String
@@ -232,13 +232,30 @@ class DatabaseHelper {
     func insertPressureTable(dataRowPressureTable: PressureTable) {
         try! dbQueue.inDatabase { db in
             do {
-                try db.execute("INSERT INTO Pressure (P_DateTime,P_CostPressureTop,P_CostPressureDown,P_Pressure_Level,P_HeartRate,P_HeartRate_Level) VALUES (:P_DateTime,:P_CostPressureTop,:P_CostPressureDown,P_Pressure_Level,:P_HeartRate,:P_HeartRate_Level)",
+                try db.execute("INSERT INTO Pressure (P_DateTime,P_CostPressureTop,P_CostPressureDown,P_Pressure_Level,P_HeartRate,P_HeartRate_Level) VALUES (:P_DateTime,:P_CostPressureTop,:P_CostPressureDown,:P_Pressure_Level,:P_HeartRate,:P_HeartRate_Level)",
                                arguments: ["P_DateTime":dataRowPressureTable.P_DateTime,"P_CostPressureTop":dataRowPressureTable.P_CostPressureTop,"P_CostPressureDown":dataRowPressureTable.P_CostPressureDown,"P_Pressure_Level":dataRowPressureTable.P_Pressure_Level,"P_HeartRate":dataRowPressureTable.P_HeartRate,"P_HeartRate_Level":dataRowPressureTable.P_HeartRate_Level])
                 
                 print("Insert Pressure value")
             } catch let error as DatabaseError {
+                // The SQLite error code: 19 (SQLITE_CONSTRAINT)
+                error.resultCode
+                
+                // The extended error code: 787 (SQLITE_CONSTRAINT_FOREIGNKEY)
+                error.extendedResultCode
+                
+                // The eventual SQLite message: FOREIGN KEY constraint failed
+                error.message
+                
+                // The eventual erroneous SQL query
+                // "INSERT INTO pets (masterId, name) VALUES (?, ?)"
+                error.sql
+                
+                // Full error description:
+                // "SQLite error 787 with statement `INSERT INTO pets (masterId, name)
+                //  VALUES (?, ?)` arguments [1, "Bobby"]: FOREIGN KEY constraint failed"
                 
                 print("Insert Pressure Fail!!")
+                print(error)
             }
         }
     }
