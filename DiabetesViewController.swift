@@ -46,31 +46,6 @@ class DiabetesViewController: UIViewController,UITextFieldDelegate {
         return true
     }
 
-    @IBAction func saveDataDiabetes(_ sender: Any) {
-        
-       if diabetesPeopleName == "คนปกติ" {
-        if diabetesStatusName == "ก่อนอาหาร" {
-            diabetesLevel = NormalBefore()
-        }else{
-            diabetesLevel = NormalAfter()
-            }
-        }else if diabetesPeopleName == "ผู้เป็นเบาหวาน" {
-            if diabetesStatusName == "หลังอาหาร"{
-                diabetesLevel = DiabetesBefore()
-            }else{
-                diabetesLevel = DiabetesAfter()
-            }
-        }
-        let diabetesUserResource = DiabetesTable()
-        diabetesUserResource.D_DateTime = saveDateDiabetes
-        diabetesUserResource.D_CostSugar = Int(inputCostSugarTextField.text!)
-        diabetesUserResource.D_Status = diabetesStatusName
-        diabetesUserResource.D_People = diabetesPeopleName
-        diabetesUserResource.D_Level = diabetesLevel 
-        dbHelper.insertDiabetesTable(dataRowDiabetesTable: diabetesUserResource)
-    }
-        
-    
     func NormalBefore() -> String{
         costSugar = Int(inputCostSugarTextField.text!)!
         if costSugar! >= 126 {
@@ -128,7 +103,6 @@ class DiabetesViewController: UIViewController,UITextFieldDelegate {
         
     }
 
-    
     @IBAction func selectDatePicker(_ sender: Any) {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat =  "dd-MM-yyyy HH:mm"
@@ -150,7 +124,7 @@ class DiabetesViewController: UIViewController,UITextFieldDelegate {
         diabetesStatusName = statusDiabetesSelect
 
     }
-    
+
     @IBAction func selectPeopleDiabetesSegmented(_ sender: Any) {
         switch statusDiabetesSegmented.selectedSegmentIndex {
         case 0:
@@ -165,4 +139,31 @@ class DiabetesViewController: UIViewController,UITextFieldDelegate {
         diabetesPeopleName = peopleDiabetesSelect
     }
     
+    @IBAction func saveDataDiabetes(_ sender: Any) {
+        
+        if diabetesPeopleName == "คนปกติ" {
+            if diabetesStatusName == "ก่อนอาหาร" {
+                diabetesLevel = NormalBefore()
+            }else{
+                diabetesLevel = NormalAfter()
+            }
+        }else if diabetesPeopleName == "ผู้เป็นเบาหวาน" {
+            if diabetesStatusName == "หลังอาหาร"{
+                diabetesLevel = DiabetesBefore()
+            }else{
+                diabetesLevel = DiabetesAfter()
+            }
+        }
+        let diabetesUserResource = DiabetesTable()
+        diabetesUserResource.D_DateTime = saveDateDiabetes
+        diabetesUserResource.D_CostSugar = Int(inputCostSugarTextField.text!)
+        diabetesUserResource.D_Status = diabetesStatusName
+        diabetesUserResource.D_People = diabetesPeopleName
+        diabetesUserResource.D_Level = diabetesLevel
+        dbHelper.insertDiabetesTable(dataRowDiabetesTable: diabetesUserResource)
+    }
+
+    
 }
+
+

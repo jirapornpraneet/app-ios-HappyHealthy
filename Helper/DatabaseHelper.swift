@@ -142,6 +142,7 @@ class DatabaseHelper {
             do {
                 for row in try Row.fetchAll(db, "select * from Diabetes"){
                     let rowDiabetesTable = DiabetesTable()
+                    rowDiabetesTable.D_Id = row.value(named: "D_Id") as Int
                     rowDiabetesTable.D_DateTime = row.value(named: "D_DateTime") as String
                     rowDiabetesTable.D_CostSugar = row.value(named: "D_CostSugar") as Int
                     rowDiabetesTable.D_Level = row.value(named: "D_Level") as String
@@ -191,6 +192,21 @@ class DatabaseHelper {
         }
         return getKidneyTable
     }
+    
+    func insertKidneyTable(dataRowKidneyTable: KidneyTable) {
+        try! dbQueue.inDatabase { db in
+            do {
+                try db.execute("INSERT INTO Kidney (K_DateTime,K_CostGFR,K_LevelCostGFR) VALUES (:K_DateTime,:K_CostGFR,:K_LevelCostGFR)",
+                               arguments: ["K_DateTime":dataRowKidneyTable.K_DateTime,"K_CostGFR":dataRowKidneyTable.K_CostGFR,"K_LevelCostGFR":dataRowKidneyTable.K_LevelCostGFR])
+                
+                print("Insert Kidney value")
+            } catch let error as DatabaseError {
+                
+                print("Insert Kidney Fail!!")
+            }
+        }
+    }
+
  
     func getPressure() -> [PressureTable]{
         var getPressureTable = [PressureTable]()
