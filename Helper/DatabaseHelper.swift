@@ -249,6 +249,30 @@ class DatabaseHelper {
         }
         return getPressureTable
     }
+    
+    func getHistoryPressure() -> [PressureTable]{
+        var getHistoryPressureTable = [PressureTable]()
+        dbQueue.inDatabase { db in
+            do {
+                for row in try Row.fetchAll(db, "SELECT *  FROM Pressure"){
+                    let rowPressureTable = PressureTable()
+                    rowPressureTable.P_Id = row.value(named:"P_Id") as Int
+                    rowPressureTable.P_DateTime = row.value(named:"P_DateTime") as String
+                    rowPressureTable.P_CostPressureTop = row.value(named:"P_CostPressureTop") as Int
+                    rowPressureTable.P_CostPressureDown = row.value(named:"P_CostPressureDown") as Int
+                    rowPressureTable.P_Pressure_Level = row.value(named: "P_Pressure_Level") as String
+                    rowPressureTable.P_HeartRate = row.value(named: "P_HeartRate") as Int
+                    rowPressureTable.P_HeartRate_Level = row.value(named: "P_HeartRate_Level") as String
+                    getHistoryPressureTable.append(rowPressureTable)
+                }
+            }
+            catch {
+                print("Get All Exercise Fail!!")
+            }
+        }
+        return getHistoryPressureTable
+    }
+
     func insertPressureTable(dataRowPressureTable: PressureTable) {
         try! dbQueue.inDatabase { db in
             do {
