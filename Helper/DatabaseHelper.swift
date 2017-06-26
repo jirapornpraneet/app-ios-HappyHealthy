@@ -205,6 +205,26 @@ class DatabaseHelper {
             }
         }
     }
+    
+    func getHistoryKidney() -> [KidneyTable]{
+        var getHistoryKidneyTable = [KidneyTable]()
+        dbQueue.inDatabase { db in
+            do {
+                for row in try Row.fetchAll(db, "SELECT * FROM Kidney"){
+                    let rowKidneyTable = KidneyTable()
+                    rowKidneyTable.K_Id = row.value(named: "K_Id") as Int
+                    rowKidneyTable.K_DateTime = row.value(named: "K_DateTime") as String
+                    rowKidneyTable.K_CostGFR = row.value(named: "K_CostGFR") as Int
+                    rowKidneyTable.K_LevelCostGFR = row.value(named: "K_LevelCostGFR") as String
+                    getHistoryKidneyTable.append(rowKidneyTable)
+                }
+            }
+            catch {
+                print("Get All Exercise Fail!!")
+            }
+        }
+        return getHistoryKidneyTable
+    }
 
  
     func getPressure() -> [PressureTable]{
@@ -264,7 +284,7 @@ class DatabaseHelper {
         var getUserTable = [UserTable]()
         try! dbQueue.inDatabase { db in
             do {
-                for row in try Row.fetchAll(db, "SELECT * FROM User"){
+                for row in try Row.fetchAll(db, "SELECT * ,MAX (User_Id)  FROM User"){
                     let rowUserTable = UserTable()
                     rowUserTable.User_Id = row.value(named: "User_Id") as Int
                     rowUserTable.User_Name = row.value(named: "User_Name") as String
@@ -278,11 +298,31 @@ class DatabaseHelper {
                 }
             }
             catch let error as DatabaseError {
+                // The SQLite error code: 19 (SQLITE_CONSTRAINT)
+                error.resultCode
+                
+                // The extended error code: 787 (SQLITE_CONSTRAINT_FOREIGNKEY)
+                error.extendedResultCode
+                
+                // The eventual SQLite message: FOREIGN KEY constraint failed
+                error.message
+                
+                // The eventual erroneous SQL query
+                // "INSERT INTO pets (masterId, name) VALUES (?, ?)"
+                error.sql
+                
+                // Full error description:
+                // "SQLite error 787 with statement `INSERT INTO pets (masterId, name)
+                //  VALUES (?, ?)` arguments [1, "Bobby"]: FOREIGN KEY constraint failed"
+                print(error)
                 print("Get All User Fail!!")
+                
             }
         }
         return getUserTable
     }
+    
+    
 
 //    func getUserRowMax() -> [UserTable]{
 //        var getUserRowMaxTable = [UserTable]()

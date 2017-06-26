@@ -39,6 +39,8 @@
 		FC7E62871EEE35DA0065F6C2 /* HappyHealthyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7E62861EEE35DA0065F6C2 /* HappyHealthyTests.swift */; };
 		FC7E62921EEE35DA0065F6C2 /* HappyHealthyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7E62911EEE35DA0065F6C2 /* HappyHealthyUITests.swift */; };
 		FC7E62C81EEE89DF0065F6C2 /* InstructionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7E62C71EEE89DF0065F6C2 /* InstructionViewController.swift */; };
+		FC9924001F00AC3000CBF363 /* HistoryKidneyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9923FF1F00AC3000CBF363 /* HistoryKidneyViewController.swift */; };
+		FC9924021F00AC4200CBF363 /* HistoryKidneyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9924011F00AC4200CBF363 /* HistoryKidneyTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +114,8 @@
 		FC7E62911EEE35DA0065F6C2 /* HappyHealthyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappyHealthyUITests.swift; sourceTree = "<group>"; };
 		FC7E62931EEE35DA0065F6C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC7E62C71EEE89DF0065F6C2 /* InstructionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstructionViewController.swift; sourceTree = "<group>"; };
+		FC9923FF1F00AC3000CBF363 /* HistoryKidneyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryKidneyViewController.swift; sourceTree = "<group>"; };
+		FC9924011F00AC4200CBF363 /* HistoryKidneyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryKidneyTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +219,8 @@
 			children = (
 				FC7D39861EFCB84100F037C9 /* KidneyViewController.swift */,
 				FC7D39881EFCBE2200F037C9 /* ShowKidneyViewController.swift */,
+				FC9923FF1F00AC3000CBF363 /* HistoryKidneyViewController.swift */,
+				FC9924011F00AC4200CBF363 /* HistoryKidneyTableViewCell.swift */,
 			);
 			name = Kidney;
 			sourceTree = "<group>";
@@ -501,12 +507,14 @@
 				FC5231D11EF530430067E0C0 /* FoodTable.swift in Sources */,
 				FC5231D31EF53D000067E0C0 /* FoodViewController.swift in Sources */,
 				FC5231CF1EF51EF90067E0C0 /* ShowDetailExerciseViewController.swift in Sources */,
+				FC9924021F00AC4200CBF363 /* HistoryKidneyTableViewCell.swift in Sources */,
 				FC5231E01EF5541A0067E0C0 /* PressureTable.swift in Sources */,
 				FC7E62C81EEE89DF0065F6C2 /* InstructionViewController.swift in Sources */,
 				FC666B431EF75E4F0019E1CF /* UserViewController.swift in Sources */,
 				FC5231DC1EF551310067E0C0 /* FoodHistoryTable.swift in Sources */,
 				FC5231E81EF563560067E0C0 /* DiabetesTable.swift in Sources */,
 				FC5231DE1EF553B60067E0C0 /* KidneyTable.swift in Sources */,
+				FC9924001F00AC3000CBF363 /* HistoryKidneyViewController.swift in Sources */,
 				FC7D39891EFCBE2200F037C9 /* ShowKidneyViewController.swift in Sources */,
 				FC5231A71EF511800067E0C0 /* ExerciseViewController.swift in Sources */,
 				FC5231AB1EF511800067E0C0 /* ExerciseHistoryTable.swift in Sources */,

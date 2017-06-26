@@ -84,6 +84,11 @@ class InstructionViewController: UIPageViewController, UIPageViewControllerDataS
                 return 0
         }
         return firstViewControllerIndex
-        
 }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tabBarController?.navigationItem.title = "คำแนะนำสุขภาพ"
+    }
+
 }

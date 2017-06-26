@@ -8,14 +8,13 @@
 
 import UIKit
 
-class UserViewController: UIViewController,UITextFieldDelegate {
+class UserViewController: UIViewController,UITextFieldDelegate{
     var getUserTable = [UserTable]()
     var getUserRowMaxTable = [UserTable]()
     var insertDataUser = [UserTable]()
     var dbHelper = DatabaseHelper()
     var genderList: [String] = ["Male", "Female"]
     var genderName: String = ""
-    //var bmiUserArray: [String] = ["อ้วน","อ้วนปานกลาง","ท้วม","ปกติ","ผอม"]
     var bmrUser:Double?
     var bmiUser:Double?
     var weigthUser: Double?
@@ -24,6 +23,7 @@ class UserViewController: UIViewController,UITextFieldDelegate {
     var showBmi:String?
     var showImageViewBmi: UIImage?
     
+    @IBOutlet var saveData: UIBarButtonItem!
     @IBOutlet var nameUserTextField: UITextField!
     @IBOutlet var ageUserTextField: UITextField!
     @IBOutlet var weightUserTextField: UITextField!
@@ -45,12 +45,17 @@ class UserViewController: UIViewController,UITextFieldDelegate {
         self.ageUserTextField.delegate = self
         self.weightUserTextField.delegate = self
         self.heightUserTextField.delegate = self
-        loadAllUser()
         //genderUser
         let genderSelect: String = self.genderList[self.genderSegmentedControl.selectedSegmentIndex]
         genderName = genderSelect
+
     }
     
+    
+    override func viewDidAppear(_ animated: Bool) {
+        loadAllUser()
+    }
+
     func  loadAllUser(){
         getUserTable = dbHelper.getUser()
        // getUserRowMaxTable = dbHelper.getUserRowMax()
@@ -96,6 +101,7 @@ class UserViewController: UIViewController,UITextFieldDelegate {
         }
 
     @IBAction func saveDataUserButton(_ sender: Any) {
+
         weigthUser = Double(weightUserTextField.text!)!
         heightUser = Double(heightUserTextField.text!)!
         bmiUser = ((weigthUser)! / (((heightUser)!/100)*2))
@@ -116,6 +122,8 @@ class UserViewController: UIViewController,UITextFieldDelegate {
         userResource.User_BMR = Double(bmrUser!)
         userResource.User_Gender = genderName
         dbHelper.insertUserTable(dataRowUserTable: userResource)
+        
+        
     }
     
     @IBAction func selectGenderSegmented(_ sender: Any) {
@@ -147,6 +155,12 @@ class UserViewController: UIViewController,UITextFieldDelegate {
         weightUserTextField.resignFirstResponder()
         heightUserTextField.resignFirstResponder()
         return true
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tabBarController?.navigationItem.title = "ข้อมูลผู้ใช้งาน"
+        self.tabBarController?.navigationItem.rightBarButtonItem = saveData //This is the IBOutlet variable that you previously added
     }
     
 }
