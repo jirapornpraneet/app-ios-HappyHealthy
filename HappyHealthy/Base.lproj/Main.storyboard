@@ -2412,64 +2412,64 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="83" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="EJl-hI-Exh">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="EJl-hI-Exh">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CellHistoryKidney" rowHeight="83" id="RPP-Ww-tuF" customClass="HistoryKidneyTableViewCell" customModule="HappyHealthy" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="1" width="320" height="83"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CellHistoryKidney" rowHeight="70" id="RPP-Ww-tuF" customClass="HistoryKidneyTableViewCell" customModule="HappyHealthy" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="1" width="320" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RPP-Ww-tuF" id="Nrd-MX-duh">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="83"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="69.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calender" translatesAutoresizingMaskIntoConstraints="NO" id="U9D-Qn-VHN">
+                                                    <rect key="frame" x="16" y="14" width="43" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="43" id="IWB-kU-UJD"/>
+                                                    </constraints>
+                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ecH-2H-yLu">
-                                                    <rect key="frame" x="75" y="18" width="213" height="21"/>
+                                                    <rect key="frame" x="76" y="8" width="213" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                                     <color key="textColor" red="0.4133079749796813" green="0.70014036920545608" blue="0.98595613241195679" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ค่าการทำงานไต (GFR) :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lpj-xf-YQR">
-                                                    <rect key="frame" x="75" y="39" width="118" height="13.5"/>
+                                                    <rect key="frame" x="76" y="29" width="118" height="13.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <color key="textColor" red="0.41330797499999999" green="0.7001403692" blue="0.98595613240000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2f9-iK-YJb">
-                                                    <rect key="frame" x="194" y="35" width="85" height="21"/>
+                                                    <rect key="frame" x="195" y="25" width="85" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
                                                     <color key="textColor" red="0.41330797499999999" green="0.7001403692" blue="0.98595613240000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="อยู่ในระดับ :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N57-RN-usT">
-                                                    <rect key="frame" x="75" y="55" width="67" height="14"/>
+                                                    <rect key="frame" x="76" y="45" width="67" height="14"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <color key="textColor" red="0.41330797499999999" green="0.7001403692" blue="0.98595613240000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Res-H5-MyS">
-                                                    <rect key="frame" x="139" y="51" width="161" height="21"/>
+                                                    <rect key="frame" x="140" y="41" width="161" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
                                                     <color key="textColor" red="0.41330797499999999" green="0.7001403692" blue="0.98595613240000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calender" translatesAutoresizingMaskIntoConstraints="NO" id="U9D-Qn-VHN">
-                                                    <rect key="frame" x="14" y="22" width="45" height="46"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="45" id="IWB-kU-UJD"/>
-                                                    </constraints>
-                                                </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="U9D-Qn-VHN" firstAttribute="leading" secondItem="Nrd-MX-duh" secondAttribute="leadingMargin" constant="6" id="f9S-eh-PrE"/>
+                                                <constraint firstItem="U9D-Qn-VHN" firstAttribute="leading" secondItem="Nrd-MX-duh" secondAttribute="leadingMargin" constant="8" id="f9S-eh-PrE"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="U9D-Qn-VHN" secondAttribute="bottom" constant="7" id="r4d-xy-knP"/>
-                                                <constraint firstItem="U9D-Qn-VHN" firstAttribute="top" secondItem="Nrd-MX-duh" secondAttribute="topMargin" constant="14" id="sYu-m5-Fyz"/>
+                                                <constraint firstItem="U9D-Qn-VHN" firstAttribute="top" secondItem="Nrd-MX-duh" secondAttribute="topMargin" constant="6" id="sYu-m5-Fyz"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.95318347215652466" green="0.98595613241195679" blue="0.98291522264480591" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2491,6 +2491,7 @@
                             <constraint firstAttribute="trailing" secondItem="EJl-hI-Exh" secondAttribute="trailing" id="l4B-MO-g4e"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="ประวัติบันทึก" id="frH-zz-Vw8"/>
                     <connections>
                         <outlet property="HistoryKidneyTableView" destination="EJl-hI-Exh" id="Qd5-E6-p5B"/>
                     </connections>
