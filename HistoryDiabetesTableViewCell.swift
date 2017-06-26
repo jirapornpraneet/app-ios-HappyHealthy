@@ -1,0 +1,39 @@
+//
+//  HistoryDiabetesTableViewCell.swift
+//  HappyHealthy
+//
+//  Created by eofficeair on 6/26/2560 BE.
+//  Copyright © 2560 bigdata. All rights reserved.
+//
+
+import UIKit
+
+class HistoryDiabetesTableViewCell: UITableViewCell {
+
+    @IBOutlet var dateHistoryLabel: UILabel!
+    @IBOutlet var costSugarLabel: UILabel!
+    @IBOutlet var levelDiabetesLabel: UILabel!
+    @IBOutlet var statusDiabetesLabel: UILabel!
+    @IBOutlet var peopleDiabetesLabel: UILabel!
+    @IBOutlet var iconHistoryImage: UIImageView!
+    
+    var  HistoryDiabetesTableViewCell:DiabetesTable?{
+        didSet{
+            dateHistoryLabel.text = HistoryDiabetesTableViewCell?.D_DateTime
+            costSugarLabel.text = String(format: "%i",(HistoryDiabetesTableViewCell?.D_CostSugar)!)
+            levelDiabetesLabel.text = HistoryDiabetesTableViewCell?.D_Level
+            statusDiabetesLabel.text = HistoryDiabetesTableViewCell?.D_Status
+            peopleDiabetesLabel.text = HistoryDiabetesTableViewCell?.D_People
+        }
+    }
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+    }
+    
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+        
+        // Configure the view for the selected state
+    }
+}

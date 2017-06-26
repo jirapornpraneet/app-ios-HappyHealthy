@@ -171,6 +171,29 @@ class DatabaseHelper {
             }
         }
     }
+    
+    func getHistoryDiabetes() -> [DiabetesTable]{
+        var getHistoryDiabetesTable = [DiabetesTable]()
+        dbQueue.inDatabase { db in
+            do {
+                for row in try Row.fetchAll(db, "SELECT * FROM Diabetes"){
+                    let rowDiabetesTable = DiabetesTable()
+                    rowDiabetesTable.D_Id = row.value(named: "D_Id") as Int
+                    rowDiabetesTable.D_DateTime = row.value(named: "D_DateTime") as String
+                    rowDiabetesTable.D_CostSugar = row.value(named: "D_CostSugar") as Int
+                    rowDiabetesTable.D_Level = row.value(named: "D_Level") as String
+                    rowDiabetesTable.D_Status = row.value(named: "D_Status") as String
+                    rowDiabetesTable.D_People = row.value(named: "D_People") as String
+                    getHistoryDiabetesTable.append(rowDiabetesTable)
+                }
+            }
+            catch {
+                print("Get All Diabetes Fail!!")
+            }
+        }
+        return getHistoryDiabetesTable
+    }
+
 
     func getKidney() -> [KidneyTable]{
         var getKidneyTable = [KidneyTable]()
@@ -186,7 +209,7 @@ class DatabaseHelper {
                 }
             }
             catch {
-                print("Get All Exercise Fail!!")
+                print("Get All Kidney Fail!!")
             }
         }
         return getKidneyTable
@@ -220,7 +243,7 @@ class DatabaseHelper {
                 }
             }
             catch {
-                print("Get All Exercise Fail!!")
+                print("Get All Kidney Fail!!")
             }
         }
         return getHistoryKidneyTable
@@ -244,7 +267,7 @@ class DatabaseHelper {
                 }
             }
             catch {
-                print("Get All Exercise Fail!!")
+                print("Get All Pressure Fail!!")
             }
         }
         return getPressureTable
@@ -267,7 +290,7 @@ class DatabaseHelper {
                 }
             }
             catch {
-                print("Get All Exercise Fail!!")
+                print("Get All Pressure Fail!!")
             }
         }
         return getHistoryPressureTable

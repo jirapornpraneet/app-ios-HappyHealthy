@@ -43,6 +43,8 @@
 		FC9924021F00AC4200CBF363 /* HistoryKidneyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9924011F00AC4200CBF363 /* HistoryKidneyTableViewCell.swift */; };
 		FC9924041F00B92F00CBF363 /* HistoryPressureTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9924031F00B92F00CBF363 /* HistoryPressureTableViewCell.swift */; };
 		FC9924061F00B94D00CBF363 /* HistoryPressureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9924051F00B94D00CBF363 /* HistoryPressureViewController.swift */; };
+		FC9924081F00C19C00CBF363 /* HistoryDiabetesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9924071F00C19C00CBF363 /* HistoryDiabetesViewController.swift */; };
+		FC99240A1F00C1B400CBF363 /* HistoryDiabetesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9924091F00C1B400CBF363 /* HistoryDiabetesTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,6 +122,8 @@
 		FC9924011F00AC4200CBF363 /* HistoryKidneyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryKidneyTableViewCell.swift; sourceTree = "<group>"; };
 		FC9924031F00B92F00CBF363 /* HistoryPressureTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryPressureTableViewCell.swift; sourceTree = "<group>"; };
 		FC9924051F00B94D00CBF363 /* HistoryPressureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryPressureViewController.swift; sourceTree = "<group>"; };
+		FC9924071F00C19C00CBF363 /* HistoryDiabetesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryDiabetesViewController.swift; sourceTree = "<group>"; };
+		FC9924091F00C1B400CBF363 /* HistoryDiabetesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryDiabetesTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -245,6 +249,8 @@
 			children = (
 				FC7E40761EFBA546006D45CD /* DiabetesViewController.swift */,
 				FC7E40781EFBBC7F006D45CD /* ShowDiabetesViewController.swift */,
+				FC9924071F00C19C00CBF363 /* HistoryDiabetesViewController.swift */,
+				FC9924091F00C1B400CBF363 /* HistoryDiabetesTableViewCell.swift */,
 			);
 			name = Diabetes;
 			sourceTree = "<group>";
@@ -502,6 +508,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC9924081F00C19C00CBF363 /* HistoryDiabetesViewController.swift in Sources */,
 				FC7E62721EEE35DA0065F6C2 /* AppDelegate.swift in Sources */,
 				FC5231E41EF5552D0067E0C0 /* UserTable.swift in Sources */,
 				FC5231AF1EF5149D0067E0C0 /* ExerciseTableViewCell.swift in Sources */,
@@ -523,6 +530,7 @@
 				FC5231DE1EF553B60067E0C0 /* KidneyTable.swift in Sources */,
 				FC9924001F00AC3000CBF363 /* HistoryKidneyViewController.swift in Sources */,
 				FC7D39891EFCBE2200F037C9 /* ShowKidneyViewController.swift in Sources */,
+				FC99240A1F00C1B400CBF363 /* HistoryDiabetesTableViewCell.swift in Sources */,
 				FC5231A71EF511800067E0C0 /* ExerciseViewController.swift in Sources */,
 				FC5231AB1EF511800067E0C0 /* ExerciseHistoryTable.swift in Sources */,
 				FC5231D61EF53E230067E0C0 /* FoodTableViewCell.swift in Sources */,
