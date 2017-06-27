@@ -12,6 +12,7 @@ class FoodTable: NSObject{
     var Food_Id:Int?
     var Food_Name:String?
     var Food_Calories:Double?
+    var Food_Amount:Int?
     var Food_Unit:String?
     var Food_Netweight:Double?
     var Food_NetUnit:String?

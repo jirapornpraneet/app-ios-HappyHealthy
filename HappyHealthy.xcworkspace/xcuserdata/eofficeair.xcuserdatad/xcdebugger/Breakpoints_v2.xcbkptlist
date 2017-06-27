@@ -26,59 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Helper/DatabaseHelper.swift"
-            timestampString = "520143770.488624"
+            timestampString = "520226761.440635"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "300"
-            endingLineNumber = "300"
-            landmarkName = "insertPressureTable(dataRowPressureTable:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "HappyHealthy.DatabaseHelper.insertPressureTable (dataRowPressureTable : HappyHealthy.PressureTable) -&gt; ()"
-                  moduleName = "HappyHealthy"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/eofficeair/Documents/Test/HappyHealthy/Helper/DatabaseHelper.swift"
-                  timestampString = "519907507.519497"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "233"
-                  endingLineNumber = "233"
-                  offsetFromSymbolStart = "28">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "HappyHealthy.DatabaseHelper.(insertPressureTable (dataRowPressureTable : HappyHealthy.PressureTable) -&gt; ()).(closure #1)"
-                  moduleName = "HappyHealthy"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/eofficeair/Documents/Test/HappyHealthy/Helper/DatabaseHelper.swift"
-                  timestampString = "519907507.521231"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "235"
-                  endingLineNumber = "235"
-                  offsetFromSymbolStart = "28">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Helper/DatabaseHelper.swift"
-            timestampString = "519903873.436719"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "167"
-            endingLineNumber = "167"
+            startingLineNumber = "183"
+            endingLineNumber = "183"
             landmarkName = "insertDiabetesTable(dataRowDiabetesTable:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -90,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Helper/DatabaseHelper.swift"
-            timestampString = "519903874.860953"
+            timestampString = "520226761.440635"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "164"
-            endingLineNumber = "164"
+            startingLineNumber = "180"
+            endingLineNumber = "180"
             landmarkName = "insertDiabetesTable(dataRowDiabetesTable:)"
             landmarkType = "7">
          </BreakpointContent>

@@ -8,16 +8,20 @@
 
 import UIKit
 
-class FoodViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class FoodViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,UISearchBarDelegate{
 
+    @IBOutlet var foodSearchBar: UISearchBar!
     @IBOutlet var tableFood: UITableView!
     var getFoodTable = [FoodTable]()
     var dbHelper = DatabaseHelper()
     var dataFoodTable: FoodTable?
+    var FilteredFood = [String]()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       loadAllFood()
+        loadAllFood()
+
     }
     
     override func didReceiveMemoryWarning() {
@@ -28,6 +32,7 @@ class FoodViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         getFoodTable = dbHelper.getAllFood()
         tableFood.dataSource = self
         tableFood.delegate = self
+        foodSearchBar.delegate = self
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -35,12 +40,14 @@ class FoodViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return getFoodTable.count
+              return getFoodTable.count
+    
+    
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let  cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! FoodTableViewCell
-        cell.FoodTableViewCell = getFoodTable[indexPath.row]
+           cell.FoodTableViewCell = getFoodTable[indexPath.row]
         return cell
     }
     

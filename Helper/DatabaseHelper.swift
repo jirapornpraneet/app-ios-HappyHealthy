@@ -109,11 +109,27 @@ class DatabaseHelper {
                     getFoodTable .append(rowFoodTable)
                 }
             }
-            catch {
+            catch  {
                 print("Get All Exercise Fail!!")
             }
         }
         return getFoodTable 
+    }
+    
+    func insertFoodTable(dataRowFoodTable: FoodTable) {
+        try! dbQueue.inDatabase { db in
+            do {
+                try db.execute("INSERT INTO Food (Food_Name,Food_Calories,Food_Amount,Food_Unit,Food_Netweight,Food_NetUnit,Food_Protein,Food_Fat,Food_Carbohydrate,Food_Sugars,Food_Sodium,Food_Detail) VALUES (:Food_Name,:Food_Calories,:Food_Amount,:Food_Unit,:Food_Netweight,:Food_NetUnit,:Food_Protein,:Food_Fat,:Food_Carbohydrate,:Food_Sugars,:Food_Sodium,:Food_Detail)",
+                               arguments: ["Food_Name":dataRowFoodTable.Food_Name,"Food_Calories":dataRowFoodTable.Food_Calories,"Food_Amount":dataRowFoodTable.Food_Amount,"Food_Unit":dataRowFoodTable.Food_Unit,"Food_Netweight":dataRowFoodTable.Food_Netweight,"Food_NetUnit":dataRowFoodTable.Food_NetUnit,"Food_Protein":dataRowFoodTable.Food_Protein,"Food_Fat":dataRowFoodTable.Food_Fat,"Food_Carbohydrate":dataRowFoodTable.Food_Carbohydrate,"Food_Sugars":dataRowFoodTable.Food_Sugars,"Food_Sodium":dataRowFoodTable.Food_Sodium,"Food_Detail":dataRowFoodTable.Food_Detail])
+                print("Insert Food value")
+            } catch let error as DatabaseError {
+                
+                print("Insert Food Fail!!")
+                print(error)
+            }
+        }
+        
+        
     }
 
     func getFoodHistory() -> [FoodHistoryTable]{
@@ -295,7 +311,8 @@ class DatabaseHelper {
         }
         return getHistoryPressureTable
     }
-
+    
+    
     func insertPressureTable(dataRowPressureTable: PressureTable) {
         try! dbQueue.inDatabase { db in
             do {
@@ -369,34 +386,7 @@ class DatabaseHelper {
         return getUserTable
     }
     
-    
 
-//    func getUserRowMax() -> [UserTable]{
-//        var getUserRowMaxTable = [UserTable]()
-//        try! dbQueue.inDatabase { db in
-//            do {
-//                for row in try Row.fetchAll(db, "SELECT * ,MAX (User_Id) FROM User"){
-//                    let rowUserTable = UserTable()
-//                    rowUserTable.User_Id = row.value(named: "User_Id") as Int
-//                    rowUserTable.User_Name = row.value(named: "User_Name") as String
-//                    rowUserTable.User_Gender = row.value(named: "User_Gender" ) as String
-//                    rowUserTable.User_Age = row.value(named: "User_Age") as String
-//                    rowUserTable.User_Weight = row.value(named: "User_Weight" ) as Double
-//                    rowUserTable.User_Height = row.value(named: "User_Height") as Int
-//                    rowUserTable.User_BMI = row.value(named: "User_BMI") as Double
-//                    rowUserTable.User_BMR = row.value(named: "User_BMR") as Double
-//                    getUserRowMaxTable.append(rowUserTable)
-//                }
-//            }
-//            catch let error as DatabaseError {
-//                
-//    
-//                print("Get All User Fail!!")
-//            }
-//        }
-//        return getUserRowMaxTable
-//    }
-    
     func insertUserTable(dataRowUserTable: UserTable) {
         try! dbQueue.inDatabase { db in
             do {
