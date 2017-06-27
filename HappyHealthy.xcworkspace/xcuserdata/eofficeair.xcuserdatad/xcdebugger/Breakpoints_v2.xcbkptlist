@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Helper/DatabaseHelper.swift"
-            timestampString = "520226761.440635"
+            timestampString = "520230111.987856"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "183"
-            endingLineNumber = "183"
+            startingLineNumber = "198"
+            endingLineNumber = "198"
             landmarkName = "insertDiabetesTable(dataRowDiabetesTable:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Helper/DatabaseHelper.swift"
-            timestampString = "520226761.440635"
+            timestampString = "520230111.987856"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "180"
-            endingLineNumber = "180"
+            startingLineNumber = "195"
+            endingLineNumber = "195"
             landmarkName = "insertDiabetesTable(dataRowDiabetesTable:)"
             landmarkType = "7">
          </BreakpointContent>

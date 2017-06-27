@@ -39,7 +39,6 @@ class DatabaseHelper {
                       rowExerciseTable.Exercise_Disease = row.value(named: "Exercise_Disease") as String
                       rowExerciseTable.Exercise_Detail  = row.value(named: "Exercise_Detail") as String
                       rowExerciseTable.Exercise_Description = row.value(named: "Exercise_Description") as String
-                    
                     getExerciseTable.append(rowExerciseTable)
                 }
             } catch let error as DatabaseError {
@@ -66,6 +65,22 @@ class DatabaseHelper {
         return getExerciseTable
     }
     
+    func insertExerciseTable(dataRowExerciseTable: ExerciseTable) {
+        try! dbQueue.inDatabase { db in
+            do {
+                try db.execute("INSERT INTO Exercise(Exercise_Name,Exercise_Calories,Exercise_Duration,Exercise_Disease,Exercise_Detail,Exercise_Description) VALUES (:Exercise_Name,:Exercise_Calories,:Exercise_Duration,:Exercise_Disease,:Exercise_Detail,:Exercise_Description)",
+                               arguments: ["Exercise_Name":dataRowExerciseTable.Exercise_Name,"Exercise_Calories":dataRowExerciseTable.Exercise_Calories,"Exercise_Duration":dataRowExerciseTable.Exercise_Duration,"Exercise_Disease":dataRowExerciseTable.Exercise_Disease,"Exercise_Detail":dataRowExerciseTable.Exercise_Detail,"Exercise_Description":dataRowExerciseTable.Exercise_Description])
+                print("Insert Exercise value")
+            } catch let error as DatabaseError {
+                
+                print("Insert Exercise Fail!!")
+                print(error)
+            }
+        }
+        
+        
+    }
+
     func getExerciseHistory() -> [ExerciseHistoryTable]{
         var getExerciseHistoryTable = [ExerciseHistoryTable]()
         dbQueue.inDatabase { db in
