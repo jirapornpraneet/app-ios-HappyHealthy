@@ -43,6 +43,29 @@ class AddExerciseViewController: UIViewController,UITextFieldDelegate {
     }
     
     @IBAction func saveExercise(_ sender: Any) {
+        //ShowAlertController
+        let alertShow = UIAlertController (title: "ยืนยันการบันทึก", message:"คุณแน่ใจใช่ไหม" , preferredStyle: UIAlertControllerStyle.alert)
+        alertShow.addAction(UIAlertAction(title: "Yes" , style: UIAlertActionStyle.default, handler: { (action) in
+            alertShow.dismiss(animated: true, completion: nil)
+              self.insertDataFood()
+              self.alertSaveData()
+        }))
+        
+        alertShow.addAction(UIAlertAction(title: "No" , style: UIAlertActionStyle.default, handler: { (action) in
+            alertShow.dismiss(animated: true, completion: nil)
+            
+        }))
+        self.present(alertShow,animated: true,completion: nil)
+
+    }
+    func alertSaveData(){
+        //ShowAlertController
+        let alertShowSave = UIAlertController (title: "บันทึกข้อมูลออกกำลังกาย", message:" คุณได้บันทึกข้อมูลสำเร็จ" , preferredStyle: UIAlertControllerStyle.alert)
+        alertShowSave.addAction(UIAlertAction(title: "OK" , style: UIAlertActionStyle.default, handler:nil))
+        self.present(alertShowSave, animated: true, completion: nil)
+     }
+
+    func insertDataFood() {
         let exerciseResource = ExerciseTable()
         exerciseResource.Exercise_Name = nameExerciseTextField.text
         exerciseResource.Exercise_Calories = Double(kcalExerciseTextField.text!)
@@ -52,7 +75,6 @@ class AddExerciseViewController: UIViewController,UITextFieldDelegate {
         exerciseResource.Exercise_Disease = diseaseExerciseTextField.text
         dbHelper.insertExerciseTable(dataRowExerciseTable: exerciseResource)
     }
-    
     //Hide KeyBoard when user touches outside keyBoard
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
