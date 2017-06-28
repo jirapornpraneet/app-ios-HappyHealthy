@@ -2995,7 +2995,7 @@
                                     <constraint firstAttribute="width" constant="288" id="0sc-GG-1hw"/>
                                     <constraint firstAttribute="height" constant="21" id="v52-NQ-Uks"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                 <color key="textColor" red="1" green="0.63347493690000001" blue="0.50137492250000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -3094,7 +3094,7 @@
                                     <constraint firstAttribute="height" constant="19.5" id="UBM-zc-fEK"/>
                                     <constraint firstAttribute="width" constant="238" id="k00-Lh-ErO"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                                 <color key="textColor" red="0.65189027789999998" green="0.89034324880000004" blue="0.66284531349999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -3135,12 +3135,15 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U2L-CK-3rt">
                                 <rect key="frame" x="33" y="196" width="125" height="66"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bsq-LX-n4x">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bsq-LX-n4x">
                                         <rect key="frame" x="14" y="8" width="97" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
+                                        <connections>
+                                            <action selector="textExerciseDidChanged:" destination="Jh3-be-Ps1" eventType="editingChanged" id="UcI-WV-NyU"/>
+                                        </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="เซท" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6bT-7g-rIp">
                                         <rect key="frame" x="51" y="37" width="42" height="21"/>
@@ -3179,6 +3182,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="amountExerciseTextField" destination="Bsq-LX-n4x" id="RO9-ar-TJG"/>
                         <outlet property="desExerciseLabel" destination="91h-FV-k2Q" id="jfA-ag-W3J"/>
                         <outlet property="detailExerciseLabel" destination="k2B-OV-iYc" id="Z6a-e6-L2e"/>
                         <outlet property="disExerciseLabel" destination="rnm-Ef-SkV" id="Eat-bf-sPp"/>

@@ -73,14 +73,6 @@ class ShowDetailFoodViewController: UIViewController,UITextFieldDelegate {
         self.view.endEditing(true)
     }
     
-    func textFieldDidBeginEditing(_ textField: UITextField) {    //delegate method
-        
-    }
-    
-    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {  //delegate method
-        return false
-    }
-    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {   //delegate method
         amountFoodTextField.resignFirstResponder()
         return true

@@ -8,8 +8,7 @@
 
 import UIKit
 
-class ShowDetailExerciseViewController: UIViewController {
-
+class ShowDetailExerciseViewController: UIViewController,UITextFieldDelegate {
     var getExerciseTable: ExerciseTable?
     var dbHelper = DatabaseHelper()
     
@@ -18,15 +17,46 @@ class ShowDetailExerciseViewController: UIViewController {
     @IBOutlet var kcalExerciseLabel: UILabel!
     @IBOutlet var detailExerciseLabel: UILabel!
     @IBOutlet var disExerciseLabel: UILabel!
-    
+    @IBOutlet var amountExerciseTextField: UITextField!
+    var totalDuration:Double?
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.amountExerciseTextField.delegate = self
+        self.amountExerciseTextField.text = ""
+        totalDuration = 1.0
         nameExerciseLabel.text = getExerciseTable?.Exercise_Name
-        kcalExerciseLabel.text = String(format: "%.2f",(getExerciseTable?.Exercise_Calories)!)
+        kcalExerciseLabel.text = String(format: "%.02f",(getExerciseTable?.Exercise_Calories)!)
         desExerciseLabel.text = getExerciseTable?.Exercise_Description
         disExerciseLabel.text = getExerciseTable?.Exercise_Disease
         detailExerciseLabel.text = getExerciseTable?.Exercise_Detail
-        // Do any additional setup after loading the view.
+        //setAddDurationExercise(total: totalDuration!)
     }
     
+    @IBAction func textExerciseDidChanged(_ sender: Any) {
+        if amountExerciseTextField.text == "" {
+            return
+        }
+        totalDuration = 1.0
+        totalDuration = Double(amountExerciseTextField.text!)
+        setAddDurationExercise(total: totalDuration!)
+    }
+    
+    func setAddDurationExercise(total:Double) {
+        nameExerciseLabel.text = getExerciseTable?.Exercise_Name
+        kcalExerciseLabel.text = (String(format: "%.02f",(getExerciseTable?.Exercise_Calories)! * total))
+        desExerciseLabel.text = getExerciseTable?.Exercise_Description
+        disExerciseLabel.text = getExerciseTable?.Exercise_Disease
+        detailExerciseLabel.text = getExerciseTable?.Exercise_Detail
+    }
+    //Hide KeyBoard when user touches outside keyBoard
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {   //delegate method
+        amountExerciseTextField.resignFirstResponder()
+        return true
+    }
+
+
 }
