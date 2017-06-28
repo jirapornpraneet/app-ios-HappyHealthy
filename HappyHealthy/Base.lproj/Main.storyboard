@@ -1913,7 +1913,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ต่อ 30 นาที" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Cn-7g-QVt">
-                                                    <rect key="frame" x="259" y="27" width="53" height="23"/>
+                                                    <rect key="frame" x="259" y="27" width="53" height="24"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <nil key="textColor"/>
@@ -3035,6 +3035,9 @@
                     <navigationItem key="navigationItem" title="บันทึกอาหาร" id="xsN-jl-lEI">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="RdI-ic-r7k">
                             <color key="tintColor" red="1" green="0.63347493690000001" blue="0.50137492250000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="saveDataHistoryFood:" destination="po5-Um-8Vn" id="6o6-YY-Tvb"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>

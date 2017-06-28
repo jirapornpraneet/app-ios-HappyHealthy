@@ -10,6 +10,7 @@ import UIKit
 
 class ShowDetailFoodViewController: UIViewController,UITextFieldDelegate {
     var getFoodTable: FoodTable?
+    var insertHistoryFood = [FoodTable]()
     var dbHelper = DatabaseHelper()
     
     @IBOutlet var nameFoodLabel: UILabel!
@@ -68,6 +69,19 @@ class ShowDetailFoodViewController: UIViewController,UITextFieldDelegate {
         sodiumFoodLabel.text = (String(format: "%.02f",(getFoodTable?.Food_Sodium)! * total))
         detailFoodLabel.text = getFoodTable?.Food_Detail
     }
+    
+    @IBAction func saveDataHistoryFood(_ sender: Any) {
+        let date = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd.MM.yyyy"
+        let result = formatter.string(from: date)
+        let foodHistoryResource = FoodHistoryTable()
+        foodHistoryResource.History_Food_Date = result
+        foodHistoryResource.Food_Id = Int((getFoodTable?.Food_Id)!)
+        foodHistoryResource.Food_TotalAmount = Double(amountFoodTextField.text!)
+        dbHelper.insertFoodHistory(dataRowFoodHistoryTable: foodHistoryResource)
+    }
+    
     //Hide KeyBoard when user touches outside keyBoard
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)

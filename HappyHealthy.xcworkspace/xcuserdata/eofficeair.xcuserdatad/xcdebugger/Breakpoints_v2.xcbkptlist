@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Helper/DatabaseHelper.swift"
-            timestampString = "520331218.935723"
+            timestampString = "520335662.807104"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "344"
-            endingLineNumber = "344"
+            startingLineNumber = "343"
+            endingLineNumber = "343"
             landmarkName = "getReportHealth(datedisease:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Helper/DatabaseHelper.swift"
-            timestampString = "520331218.935723"
+            timestampString = "520335662.807104"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "347"
-            endingLineNumber = "347"
+            startingLineNumber = "346"
+            endingLineNumber = "346"
             landmarkName = "getReportHealth(datedisease:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Helper/DatabaseHelper.swift"
-            timestampString = "520331218.935723"
+            timestampString = "520335662.807104"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "325"
-            endingLineNumber = "325"
+            startingLineNumber = "324"
+            endingLineNumber = "324"
             landmarkName = "getReportHealth(datedisease:)"
             landmarkType = "7">
             <Locations>
@@ -74,11 +74,11 @@
                   moduleName = "HappyHealthy"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/eofficeair/Documents/Test/HappyHealthy/Helper/DatabaseHelper.swift"
-                  timestampString = "520334821.908395"
+                  timestampString = "520335664.105898"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "325"
-                  endingLineNumber = "325"
+                  startingLineNumber = "324"
+                  endingLineNumber = "324"
                   offsetFromSymbolStart = "704">
                </Location>
                <Location
@@ -89,11 +89,11 @@
                   moduleName = "HappyHealthy"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/eofficeair/Documents/Test/HappyHealthy/Helper/DatabaseHelper.swift"
-                  timestampString = "520334821.910561"
+                  timestampString = "520335664.108568"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "325"
-                  endingLineNumber = "325"
+                  startingLineNumber = "324"
+                  endingLineNumber = "324"
                   offsetFromSymbolStart = "1444">
                </Location>
             </Locations>
@@ -106,11 +106,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Helper/DatabaseHelper.swift"
-            timestampString = "520331218.935723"
+            timestampString = "520335662.807104"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "318"
-            endingLineNumber = "318"
+            startingLineNumber = "317"
+            endingLineNumber = "317"
             landmarkName = "getReportHealth(datedisease:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -122,12 +122,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Helper/DatabaseHelper.swift"
-            timestampString = "520334812.262258"
+            timestampString = "520335629.880741"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "110"
-            endingLineNumber = "110"
-            landmarkName = "insertExerciseHistory(dataRowExerciseHistoryTable:)"
+            startingLineNumber = "185"
+            endingLineNumber = "185"
+            landmarkName = "insertFoodHistory(dataRowFoodHistoryTable:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -138,12 +138,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Helper/DatabaseHelper.swift"
-            timestampString = "520334813.106186"
+            timestampString = "520335631.563497"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "113"
-            endingLineNumber = "113"
-            landmarkName = "insertExerciseHistory(dataRowExerciseHistoryTable:)"
+            startingLineNumber = "188"
+            endingLineNumber = "188"
+            landmarkName = "insertFoodHistory(dataRowFoodHistoryTable:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

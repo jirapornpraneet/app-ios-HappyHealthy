@@ -55,7 +55,6 @@ class ShowDetailExerciseViewController: UIViewController,UITextFieldDelegate {
         let formatter = DateFormatter()
         formatter.dateFormat = "dd.MM.yyyy"
         let result = formatter.string(from: date)
-        //print(result)
         let exerciseHistoryResource = ExerciseHistoryTable()
         exerciseHistoryResource.History_Exercise_Date = result
         exerciseHistoryResource.Exercise_Id = Int((getExerciseTable?.Exercise_Id)!)

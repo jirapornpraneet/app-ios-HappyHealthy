@@ -109,7 +109,6 @@ class DatabaseHelper {
                                arguments: ["History_Exercise_Date":dataRowExerciseHistoryTable.History_Exercise_Date,"Exercise_Id":dataRowExerciseHistoryTable.Exercise_Id,"Exercise_TotalDuration":dataRowExerciseHistoryTable.Exercise_TotalDuration])
                 print("Insert Exercise_History value")
             } catch let error as DatabaseError {
-                
                 print("Insert Exercise_History Fail!!")
             }
         }
