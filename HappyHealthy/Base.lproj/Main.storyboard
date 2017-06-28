@@ -3179,6 +3179,9 @@
                     <navigationItem key="navigationItem" title="บันทึกออกกำลังกาย" id="IJx-Cm-IT5">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="a1E-rW-bl1">
                             <color key="tintColor" red="0.65337723560000005" green="0.89089843749999997" blue="0.66357316340000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="saveDataExercise:" destination="Jh3-be-Ps1" id="GOD-JA-hTe"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>

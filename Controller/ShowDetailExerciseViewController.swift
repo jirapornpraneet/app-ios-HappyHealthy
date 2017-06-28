@@ -10,6 +10,7 @@ import UIKit
 
 class ShowDetailExerciseViewController: UIViewController,UITextFieldDelegate {
     var getExerciseTable: ExerciseTable?
+    var insertHistoryExercise = [ExerciseTable]()
     var dbHelper = DatabaseHelper()
     
     @IBOutlet var nameExerciseLabel: UILabel!
@@ -48,6 +49,20 @@ class ShowDetailExerciseViewController: UIViewController,UITextFieldDelegate {
         disExerciseLabel.text = getExerciseTable?.Exercise_Disease
         detailExerciseLabel.text = getExerciseTable?.Exercise_Detail
     }
+    
+    @IBAction func saveDataExercise(_ sender: Any) {
+        let date = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd.MM.yyyy"
+        let result = formatter.string(from: date)
+        //print(result)
+        let exerciseHistoryResource = ExerciseHistoryTable()
+        exerciseHistoryResource.History_Exercise_Date = result
+        exerciseHistoryResource.Exercise_Id = Int((getExerciseTable?.Exercise_Id)!)
+        exerciseHistoryResource.Exercise_TotalDuration = Double(amountExerciseTextField.text!)
+        dbHelper.insertExerciseHistory(dataRowExerciseHistoryTable: exerciseHistoryResource)
+    }
+    
     //Hide KeyBoard when user touches outside keyBoard
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)

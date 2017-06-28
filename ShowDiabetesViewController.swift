@@ -88,16 +88,11 @@ class ShowDiabetesViewController: UIViewController {
 
             }
         }
-    
-        
         showDatatimeLabel.text = getDiabetesTable[0].D_DateTime
         costSugarLabel.text = String(format: "%i",(getDiabetesTable[0].D_CostSugar)!)
         alertLevelDiabetesImage.image = showDiabetesLevelImage
         lineAlertLevelDiabetesImage.image = showLineDiabetesLevelImage
-     
-        
 
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {

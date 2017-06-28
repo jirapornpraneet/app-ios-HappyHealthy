@@ -102,6 +102,19 @@ class DatabaseHelper {
         return getExerciseHistoryTable
     }
     
+    func insertExerciseHistory(dataRowExerciseHistoryTable: ExerciseHistoryTable) {
+        try! dbQueue.inDatabase { db in
+            do {
+                try db.execute("INSERT INTO Exercise_History (History_Exercise_Date,Exercise_Id,Exercise_TotalDuration) VALUES (:History_Exercise_Date,:Exercise_Id,:Exercise_TotalDuration)",
+                               arguments: ["History_Exercise_Date":dataRowExerciseHistoryTable.History_Exercise_Date,"Exercise_Id":dataRowExerciseHistoryTable.Exercise_Id,"Exercise_TotalDuration":dataRowExerciseHistoryTable.Exercise_TotalDuration])
+                print("Insert Exercise_History value")
+            } catch let error as DatabaseError {
+                
+                print("Insert Exercise_History Fail!!")
+            }
+        }
+    }
+    
     func getAllFood() -> [FoodTable]{
         var getFoodTable = [FoodTable]()
         dbQueue.inDatabase { db in
@@ -167,6 +180,21 @@ class DatabaseHelper {
         return getFoodHistoryTable
     }
 
+    func insertFoodHistory(dataRowFoodHistoryTable: FoodHistoryTable) {
+        try! dbQueue.inDatabase { db in
+            do {
+                try db.execute("INSERT INTO Food_History (History_Food_Date,Food_Id,Food_TotalAmount) VALUES (:History_Food_Date,:Food_Id,:Food_TotalAmount)",
+                               arguments: ["History_Food_Date":dataRowFoodHistoryTable.History_Food_Date,"Food_Id":dataRowFoodHistoryTable.Food_Id,"Food_TotalAmount":dataRowFoodHistoryTable.Food_TotalAmount])
+                
+                print("Insert FoodHistory value")
+            } catch let error as DatabaseError {
+                
+                print("Insert FoodHistory Fail!!")
+            }
+        }
+    }
+
+    
     func getDiabetes() -> [DiabetesTable]{
         var getDiabetesTable = [DiabetesTable]()
         dbQueue.inDatabase { db in
