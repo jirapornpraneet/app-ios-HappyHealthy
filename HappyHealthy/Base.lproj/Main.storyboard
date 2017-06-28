@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Report Health View Controller-->
         <scene sceneID="VdW-WN-dmi">
             <objects>
-                <viewController id="6Y7-sD-JEH" sceneMemberID="viewController">
+                <viewController id="6Y7-sD-JEH" customClass="ReportHealthViewController" customModule="HappyHealthy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1V0-KK-dIO"/>
                         <viewControllerLayoutGuide type="bottom" id="RAN-a8-WbS"/>
@@ -37,6 +37,9 @@
                                                 <date key="date" timeIntervalSinceReferenceDate="518952264.92203897">
                                                     <!--2017-06-12 09:24:24 +0000-->
                                                 </date>
+                                                <connections>
+                                                    <action selector="selectDatePicker:" destination="6Y7-sD-JEH" eventType="valueChanged" id="mSo-OC-hL3"/>
+                                                </connections>
                                             </datePicker>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T4c-SF-Uae">
                                                 <rect key="frame" x="10" y="349" width="300" height="210"/>
@@ -293,6 +296,11 @@
                     <tabBarItem key="tabBarItem" title="" image="iconheart" id="AC0-Mf-SCR"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="690"/>
+                    <connections>
+                        <outlet property="costSugarLabel" destination="KZx-5l-wDj" id="Un8-eJ-1n2"/>
+                        <outlet property="dateDiabetesLabel" destination="WbF-Iy-6f4" id="Cvo-Oq-KQT"/>
+                        <outlet property="datePicker" destination="33O-gv-rKg" id="6Gg-HX-9Tb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MvV-kc-V3N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1905,7 +1913,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ต่อ 30 นาที" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Cn-7g-QVt">
-                                                    <rect key="frame" x="259" y="26" width="53" height="23"/>
+                                                    <rect key="frame" x="259" y="27" width="53" height="23"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <nil key="textColor"/>
@@ -2817,12 +2825,15 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oJQ-7p-FOf">
                                 <rect key="frame" x="26" y="154" width="122" height="65"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8PF-yZ-glA">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8PF-yZ-glA">
                                         <rect key="frame" x="13" y="8" width="97" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
+                                        <connections>
+                                            <action selector="textDidChanged:" destination="po5-Um-8Vn" eventType="editingChanged" id="SeL-cS-aEQ"/>
+                                        </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="หน่วยอาหาร" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="est-lF-Dv6">
                                         <rect key="frame" x="24" y="44" width="74" height="21"/>
@@ -3027,6 +3038,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="amountFoodTextField" destination="8PF-yZ-glA" id="VzQ-pO-7MZ"/>
                         <outlet property="carbohydrateFoodLabel" destination="H56-XJ-0XJ" id="qqW-mJ-gQg"/>
                         <outlet property="detailFoodLabel" destination="p7u-vf-0im" id="54e-9W-nCR"/>
                         <outlet property="fatFoodLabel" destination="LSQ-MV-uuR" id="0fg-Br-btk"/>

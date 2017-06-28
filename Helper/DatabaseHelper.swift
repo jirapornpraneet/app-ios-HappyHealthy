@@ -196,7 +196,8 @@ class DatabaseHelper {
                                arguments: ["D_DateTime":dataRowDiabetesTable.D_DateTime,"D_CostSugar":dataRowDiabetesTable.D_CostSugar,"D_Level":dataRowDiabetesTable.D_Level,"D_Status":dataRowDiabetesTable.D_Status,"D_People":dataRowDiabetesTable.D_People])
                 
                 print("Insert Diabetes value")
-            } catch let error as DatabaseError {
+            } catch {
+                
                 
                 print("Insert Diabetes Fail!!")
             }
@@ -279,6 +280,45 @@ class DatabaseHelper {
         }
         return getHistoryKidneyTable
     }
+
+    
+    //"select * from (select MAX (D_Id),* from Diabetes where  D_DateTime LIKE '27-06-2560 15:23')"
+    func getReportHealth(datedisease:String) -> [DiabetesTable]{
+        var  getReportHealth = [DiabetesTable]()
+        try! dbQueue.inDatabase { db in
+            do {
+                for row in try Row.fetchAll(db, "select * from (select MAX (D_Id),* from Diabetes where D_DateTime LIKE 'datedisease')"){
+                    let rowDiabetesTable = DiabetesTable()
+                    rowDiabetesTable.D_DateTime = row.value(named: "D_DateTime") as String
+                    rowDiabetesTable.D_CostSugar = row.value(named: "D_CostSugar") as Int
+                    getReportHealth.append(rowDiabetesTable)
+                }
+            }
+            catch let error as DatabaseError{
+                // The SQLite error code: 19 (SQLITE_CONSTRAINT)
+                error.resultCode
+                
+                // The extended error code: 787 (SQLITE_CONSTRAINT_FOREIGNKEY)
+                error.extendedResultCode
+                
+                // The eventual SQLite message: FOREIGN KEY constraint failed
+                error.message
+                
+                // The eventual erroneous SQL query
+                // "INSERT INTO pets (masterId, name) VALUES (?, ?)"
+                error.sql
+                
+                // Full error description:
+                // "SQLite error 787 with statement `INSERT INTO pets (masterId, name)
+                //  VALUES (?, ?)` arguments [1, "Bobby"]: FOREIGN KEY constraint failed""
+            
+                print("Get ReportHealth Fail!!")
+                print(error)
+            }
+        }
+        return  getReportHealth
+    }
+
 
  
     func getPressure() -> [PressureTable]{

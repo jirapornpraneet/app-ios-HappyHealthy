@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "DatabaseHelper.(getReportHealth(datedisease : String) -&gt; [DiabetesTable]).(closure #1):DatabaseHelper.swift">
+      </ContextState>
+      <ContextState
+         contextName = "SerializedDatabase.(sync&lt;A&gt; ((Database) throws -&gt; A) throws -&gt; A).(closure #1):SerializedDatabase.swift">
+      </ContextState>
+      <ContextState
+         contextName = "ShowDetailFoodViewController.setAddAmountDetail(total : Double) -&gt; ():ShowDetailFoodViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "DatabaseHelper.getReportHealth(datedisease : String) -&gt; [DiabetesTable]:DatabaseHelper.swift">
+      </ContextState>
+      <ContextState
+         contextName = "ShowDetailFoodViewController.viewDidLoad() -&gt; ():ShowDetailFoodViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "ShowDetailFoodViewController.textFieldDidBeginEditing(UITextField) -&gt; ():ShowDetailFoodViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "ShowDetailFoodViewController.textDidChanged(Any) -&gt; ():ShowDetailFoodViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "totalAmount">
+            </PersistentString>
+            <PersistentString
+               value = "amountFoodTextField.text">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DatabaseValue.losslessConvert&lt;A where ...&gt; (sql : String?, arguments : StatementArguments?) -&gt; A:DatabaseValue.swift">
+      </ContextState>
+      <ContextState
+         contextName = "Row.value&lt;A where ...&gt; (named : String) -&gt; A:Row.swift">
+      </ContextState>
+      <ContextState
+         contextName = "ReportHealthViewController.viewDidLoad() -&gt; ():ReportHealthViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "ReportHealthViewController.loadAllData(dateChoose : String) -&gt; ():ReportHealthViewController.swift">
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

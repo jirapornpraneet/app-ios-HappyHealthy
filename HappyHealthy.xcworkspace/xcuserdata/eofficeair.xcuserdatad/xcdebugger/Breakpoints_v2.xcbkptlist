@@ -26,12 +26,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Helper/DatabaseHelper.swift"
-            timestampString = "520230111.987856"
+            timestampString = "520312971.279497"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "198"
-            endingLineNumber = "198"
-            landmarkName = "insertDiabetesTable(dataRowDiabetesTable:)"
+            startingLineNumber = "316"
+            endingLineNumber = "316"
+            landmarkName = "getReportHealth(datedisease:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -42,12 +42,76 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Helper/DatabaseHelper.swift"
-            timestampString = "520230111.987856"
+            timestampString = "520312971.279497"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "195"
-            endingLineNumber = "195"
-            landmarkName = "insertDiabetesTable(dataRowDiabetesTable:)"
+            startingLineNumber = "319"
+            endingLineNumber = "319"
+            landmarkName = "getReportHealth(datedisease:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Helper/DatabaseHelper.swift"
+            timestampString = "520313378.003209"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "297"
+            endingLineNumber = "297"
+            landmarkName = "getReportHealth(datedisease:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HappyHealthy.DatabaseHelper.(getReportHealth (datedisease : Swift.String) -&gt; Swift.Array&lt;HappyHealthy.DiabetesTable&gt;).(closure #1)"
+                  moduleName = "HappyHealthy"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eofficeair/Documents/Test/HappyHealthy/Helper/DatabaseHelper.swift"
+                  timestampString = "520325968.162581"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "297"
+                  endingLineNumber = "297"
+                  offsetFromSymbolStart = "704">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HappyHealthy.DatabaseHelper.(getReportHealth (datedisease : Swift.String) -&gt; Swift.Array&lt;HappyHealthy.DiabetesTable&gt;).(closure #1)"
+                  moduleName = "HappyHealthy"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eofficeair/Documents/Test/HappyHealthy/Helper/DatabaseHelper.swift"
+                  timestampString = "520325968.165897"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "297"
+                  endingLineNumber = "297"
+                  offsetFromSymbolStart = "1444">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Helper/DatabaseHelper.swift"
+            timestampString = "520313890.851477"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "290"
+            endingLineNumber = "290"
+            landmarkName = "getReportHealth(datedisease:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
