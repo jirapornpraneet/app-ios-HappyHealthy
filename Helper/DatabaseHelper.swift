@@ -102,6 +102,27 @@ class DatabaseHelper {
         return getExerciseHistoryTable
     }
     
+    func getAllHistoryExercise(Exercise_Id: Int) -> [ExerciseHistoryTable] {
+        var listHistoryExercise = [ExerciseHistoryTable]()
+        dbQueue.inDatabase { db in
+            do{
+                for row in try Row.fetchAll(db, "select * from Exercise_History  Where Exercise_Id = \(Exercise_Id)" ) {
+                    let rowExerciseHistory = ExerciseHistoryTable()
+                    rowExerciseHistory.History_Exercise_Id = row.value(named: "History_Exercise_Id") as Int
+                    rowExerciseHistory.History_Exercise_Date = row.value(named: "History_Exercise_Date") as String
+                    rowExerciseHistory.Exercise_Id = row.value(named: "Exercise_Id") as Int
+                    rowExerciseHistory.Exercise_TotalDuration = row.value(named: "Exercise_TotalDuration") as Double
+                    listHistoryExercise.append(rowExerciseHistory)
+                } } catch {
+                    print("get detail fail !!")
+            }
+        }
+        
+        return listHistoryExercise
+    }
+    //select * from (select * from  Exercise_History  where  History_Exercise_Date  LIKE  "27-06-2560 15:23") eh,  Exercise  e  where eh. Exercise_Id = e.Exercise_Id
+
+    
     func insertExerciseHistory(dataRowExerciseHistoryTable: ExerciseHistoryTable) {
         try! dbQueue.inDatabase { db in
             do {
@@ -113,6 +134,7 @@ class DatabaseHelper {
             }
         }
     }
+ 
     
     func getAllFood() -> [FoodTable]{
         var getFoodTable = [FoodTable]()
@@ -158,8 +180,8 @@ class DatabaseHelper {
         
         
     }
-
-    func getFoodHistory() -> [FoodHistoryTable]{
+    
+      func getFoodHistory() -> [FoodHistoryTable]{
         var getFoodHistoryTable = [FoodHistoryTable]()
         dbQueue.inDatabase { db in
             do {
@@ -192,7 +214,7 @@ class DatabaseHelper {
             }
         }
     }
-
+    //select * from (select * from  Food_History  where   History_Food_Date  LIKE  "27-06-2560 15:23" ) fh, Food  f  where fh. Food_Id  = f.Food_Id
     
     func getDiabetes() -> [DiabetesTable]{
         var getDiabetesTable = [DiabetesTable]()
@@ -314,10 +336,13 @@ class DatabaseHelper {
         var  getReportHealth = [DiabetesTable]()
         try! dbQueue.inDatabase { db in
             do {
-                for row in try Row.fetchAll(db, "select * from (select MAX (D_Id),* from Diabetes where D_DateTime LIKE 'datedisease')"){
+                for row in try Row.fetchAll(db, "select * from (select MAX (D_Id),* from Diabetes where D_DateTime LIKE \(datedisease)"){
                     let rowDiabetesTable = DiabetesTable()
                     rowDiabetesTable.D_DateTime = row.value(named: "D_DateTime") as String
                     rowDiabetesTable.D_CostSugar = row.value(named: "D_CostSugar") as Int
+                    rowDiabetesTable.D_Level = row.value(named: "D_Level") as String
+                    rowDiabetesTable.D_Status = row.value(named: "D_Status") as String
+                    rowDiabetesTable.D_People = row.value(named: "D_People") as String
                     getReportHealth.append(rowDiabetesTable)
                 }
             }

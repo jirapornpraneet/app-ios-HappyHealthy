@@ -17,13 +17,19 @@ class ReportHealthViewController: UIViewController{
     @IBOutlet var datePicker: UIDatePicker!
     @IBOutlet var costSugarLabel: UILabel!
     @IBOutlet var dateDiabetesLabel: UILabel!
+    @IBOutlet var level: UILabel!
+    @IBOutlet var status: UILabel!
+    @IBOutlet var people: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        let dateFormatterShow = DateFormatter()
-        dateFormatterShow.dateFormat = "dd-MM-yyyy HH:mm"
-        let  setDate = dateFormatterShow.string(from: datePicker.date)
-        saveDate = setDate
-        loadAllData(dateChoose: saveDate)
+//        let date = Date()
+//        let formatter = DateFormatter()
+//        formatter.dateFormat = "dd-MM-yyyy HH:mm"
+//        let result = formatter.string(from: date)
+//        loadAllData(dateChoose: result)
+        //loadAllData(dateChoose: saveDate)
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,13 +42,15 @@ class ReportHealthViewController: UIViewController{
         dateFormatterShow.dateFormat = "dd-MM-yyyy HH:mm"
         let  setDate = dateFormatterShow.string(from: datePicker.date)
         saveDate = setDate
-    
-        //loadAllData(dateChoose: setDate)
+        loadAllData(dateChoose: setDate)
     }
 
     func loadAllData(dateChoose:String) {
          getReport = dbHelper.getReportHealth(datedisease: dateChoose)
-         costSugarLabel.text = String(format: "%i" ,(getReport[0].D_CostSugar)!)
+//         costSugarLabel.text = String(format: "%i" ,(getReport[0].D_CostSugar)!)
+//         level.text = getReport[0].D_Level
+//         status.text = getReport[0].D_Status
+//         people.text = getReport[0].D_People
          dateDiabetesLabel.text = saveDate
     
     }
