@@ -20,31 +20,20 @@ class ReportHealthViewController: UIViewController{
     @IBOutlet var level: UILabel!
     @IBOutlet var status: UILabel!
     @IBOutlet var people: UILabel!
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-//        let date = Date()
-//        let formatter = DateFormatter()
-//        formatter.dateFormat = "dd-MM-yyyy HH:mm"
-//        let result = formatter.string(from: date)
-//        loadAllData(dateChoose: result)
-        //loadAllData(dateChoose: saveDate)
     }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
     @IBAction func selectDatePicker(_ sender: Any) {
         let dateFormatterShow = DateFormatter()
-        dateFormatterShow.dateFormat = "dd-MM-yyyy HH:mm"
+        dateFormatterShow.dateFormat = "dd-MM-yyyy"
         let  setDate = dateFormatterShow.string(from: datePicker.date)
         saveDate = setDate
         loadAllData(dateChoose: setDate)
     }
-
     func loadAllData(dateChoose:String) {
          getReport = dbHelper.getReportHealth(datedisease: dateChoose)
 //         costSugarLabel.text = String(format: "%i" ,(getReport[0].D_CostSugar)!)

@@ -364,6 +364,7 @@ class DatabaseHelper {
                 // "SQLite error 787 with statement `INSERT INTO pets (masterId, name)
                 //  VALUES (?, ?)` arguments [1, "Bobby"]: FOREIGN KEY constraint failed""
             
+                
                 print("Get ReportHealth Fail!!")
                 print(error)
             }

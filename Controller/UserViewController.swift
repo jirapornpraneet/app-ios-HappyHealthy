@@ -22,6 +22,7 @@ class UserViewController: UIViewController,UITextFieldDelegate{
     var ageUser:Double?
     var showBmi:String?
     var showImageViewBmi: UIImage?
+    var getBmiUser:Double?
     
     @IBOutlet var saveData: UIBarButtonItem!
     @IBOutlet var nameUserTextField: UITextField!
@@ -52,29 +53,25 @@ class UserViewController: UIViewController,UITextFieldDelegate{
     }
     
     
-    override func viewDidAppear(_ animated: Bool) {
-        loadAllUser()
-    }
-
-    func  loadAllUser(){
+       func  loadAllUser(){
         getUserTable = dbHelper.getUser()
        // getUserRowMaxTable = dbHelper.getUserRowMax()
         if getUserTable.count == 0 {
             return
         }
         
-        let getBmiUser:Double? = (getUserTable[0].User_Weight!)
+        getBmiUser = (getUserTable[0].User_BMI!)
         
-        if (Double(getBmiUser!) <= 18.5){
+        if (getBmiUser! <= 18.5){
             showBmi = "ผอม"
             showImageViewBmi = UIImage(named: "bmi1.png")
-        }else if (Double(getBmiUser!) < 22.9){
+        }else if (getBmiUser! < 22.9){
             showBmi = "ปกติ"
             showImageViewBmi = UIImage(named: "bmi2.png")
-        }else if (Double(getBmiUser!) < 24.9){
+        }else if (getBmiUser! < 24.9){
             showBmi = "ท้วม"
              showImageViewBmi = UIImage(named: "bmi3.png")
-        }else if (Double(getBmiUser!)  < 29.9){
+        }else if (getBmiUser!  < 29.9){
             showBmi = "อ้วนปานกลาง"
             showImageViewBmi = UIImage(named: "bmi4.png")
         }else {
@@ -155,6 +152,10 @@ class UserViewController: UIViewController,UITextFieldDelegate{
         weightUserTextField.resignFirstResponder()
         heightUserTextField.resignFirstResponder()
         return true
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        loadAllUser()
     }
     
     override func viewWillAppear(_ animated: Bool) {
