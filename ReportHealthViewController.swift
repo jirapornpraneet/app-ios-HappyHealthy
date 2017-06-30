@@ -9,13 +9,14 @@
 import UIKit
 
 class ReportHealthViewController: UIViewController{
-     var getCheckRowDiabetes = [DiabetesTable]()
+     var getCheckReportDiabetes = [DiabetesTable]()
+     var getCheckReportKidney = [KidneyTable]()
+     var getCheckReportPressure = [PressureTable]()
      var getReportDiabetes = [DiabetesTable]()
      var getReportKidney = [KidneyTable]()
      var getReportPressure = [PressureTable]()
      var dbHelper = DatabaseHelper()
      var saveDate:String = ""
-     //var insertDate:DateComponents
     
     @IBOutlet var datePicker: UIDatePicker!
     @IBOutlet var costSugarLabel: UILabel!
@@ -47,48 +48,45 @@ class ReportHealthViewController: UIViewController{
         let dateFormatterShow = DateFormatter()
         dateFormatterShow.dateFormat = "dd-MM-yyyy"
         let  setDate = dateFormatterShow.string(from: datePicker.date)
-        saveDate = setDate
-        loadAllData(dateChoose: saveDate)
+        //saveDate = setDate
+        loadAllData(dateChoose: setDate)
   
     }
 
     func loadAllData(dateChoose:String) {
-         //เบาหวาน
-        getCheckRowDiabetes = dbHelper.getCheckRowDiabetes(datedisease: dateChoose)
-        if getCheckRowDiabetes.count == 0 {
+        getCheckReportDiabetes = dbHelper.getCheckReportDiabetes(datedisease: dateChoose)
+        if getCheckReportDiabetes.count == 0 {
              return
         }
         getReportDiabetes = dbHelper.getReportDiabetes(datedisease: dateChoose)
         
-//        getReportDiabetes = dbHelper.getReportDiabetes(datedisease: dateChoose)
-//         getReportPressure = dbHelper.getReportPressure(datedisease: dateChoose)
-//         getReportKidney = dbHelper.getReportKidney(datedisease: dateChoose)
-//        if getReportDiabetes.count == 0 {
-//            return
-//        }
-//        
-//        if getReportPressure.count == nil {
-//            return
-//        }
-//        if getReportKidney.count == 0 {
-//            return
-//        }
-//
+        getCheckReportKidney = dbHelper.getCheckReportKidney(datedisease: dateChoose)
+        if getCheckReportKidney.count == 0 {
+            return
+        }
+        getReportKidney = dbHelper.getReportKidney(datedisease: dateChoose)
+
+        getCheckReportPressure = dbHelper.getCheckReportPressure(datedisease: dateChoose)
+        if getCheckReportPressure.count == 0 {
+            return
+        }
+        getReportPressure = dbHelper.getReportPressure(datedisease: dateChoose)
+        //เบาหวาน
         costSugarLabel.text = String(format: "%i" ,(getReportDiabetes[0].D_CostSugar)!)
         level.text = getReportDiabetes[0].D_Level
         status.text = getReportDiabetes[0].D_Status
         people.text = getReportDiabetes[0].D_People
         dateDiabetesLabel.text = getReportDiabetes[0].D_DateTime
-//        //ไต
-//        getReportKidney = dbHelper.getReportKidney(datedisease: dateChoose)
-//        costGFRLabel.text = String(format: "%i" ,(getReportKidney[0].K_CostGFR)!)
-//        dateKidneyLabel.text = getReportKidney[0].K_DateTime
-//        //ความดัน
-//        getReportPressure = dbHelper.getReportPressure(datedisease: dateChoose)
-//        datePressureLabel.text = getReportPressure[0].P_DateTime
-//        costPressureTopLabel.text = String(format: "%i",(getReportPressure[0].P_CostPressureTop)!)
-//        costPressureDownLabel.text = String(format: "%i",(getReportPressure[0].P_CostPressureDown)!)
-//        costHeartLabel.text = String(format: "%i", (getReportPressure[0].P_HeartRate)!)
+        //ไต
+        getReportKidney = dbHelper.getReportKidney(datedisease: dateChoose)
+        costGFRLabel.text = String(format: "%i" ,(getReportKidney[0].K_CostGFR)!)
+        dateKidneyLabel.text = getReportKidney[0].K_DateTime
+       //ความดัน
+        getReportPressure = dbHelper.getReportPressure(datedisease: dateChoose)
+        datePressureLabel.text = getReportPressure[0].P_DateTime
+        costPressureTopLabel.text = String(format: "%i",(getReportPressure[0].P_CostPressureTop)!)
+        costPressureDownLabel.text = String(format: "%i",(getReportPressure[0].P_CostPressureDown)!)
+        costHeartLabel.text = String(format: "%i", (getReportPressure[0].P_HeartRate)!)
         }
     }
 
