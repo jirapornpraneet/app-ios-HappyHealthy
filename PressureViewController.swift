@@ -36,7 +36,7 @@ class PressureViewController: UIViewController,UITextFieldDelegate {
         self.costPressureTopTextField.delegate = self
         //insertDate
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat =  "dd-MM-yyyy HH:mm"
+        dateFormatter.dateFormat =  "dd-MM-yyyy"
         let  setDate = dateFormatter.string(from: dateInputPressurePicker.date)
         saveDatePressure = setDate
     }
@@ -48,7 +48,7 @@ class PressureViewController: UIViewController,UITextFieldDelegate {
     
     @IBAction func selectDatePicker(_ sender: Any) {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat =  "dd-MM-yyyy HH:mm"
+        dateFormatter.dateFormat =  "dd-MM-yyyy"
         let  setDate = dateFormatter.string(from: dateInputPressurePicker.date)
         saveDatePressure = setDate
     }

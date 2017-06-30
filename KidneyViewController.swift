@@ -24,7 +24,7 @@ class KidneyViewController: UIViewController,UITextFieldDelegate {
         self.inputCostGFRTextField.delegate = self
          //insertDate
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat =  "dd-MM-yyyy HH:mm"
+        dateFormatter.dateFormat =  "dd-MM-yyyy"
         let  setDate = dateFormatter.string(from: dateInputKidneyPicker.date)
         saveDateKidney = setDate
     }
@@ -36,7 +36,7 @@ class KidneyViewController: UIViewController,UITextFieldDelegate {
     
     @IBAction func selectDatePicker(_ sender: Any) {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat =  "dd-MM-yyyy HH:mm"
+        dateFormatter.dateFormat =  "dd-MM-yyyy"
         let  setDate = dateFormatter.string(from: dateInputKidneyPicker.date)
         saveDateKidney = setDate
     }

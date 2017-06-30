@@ -91,7 +91,6 @@ class DatabaseHelper {
                     rowExerciseHistoryTable.History_Exercise_Date = row.value(named: "History_Exercise_Date") as String
                     rowExerciseHistoryTable.Exercise_Id = row.value(named: "Exercise_Id") as Int
                     rowExerciseHistoryTable.Exercise_TotalDuration = row.value(named: "Exercise_TotalDuration") as Double
-                    
                     getExerciseHistoryTable.append(rowExerciseHistoryTable)
                 }
             }
@@ -330,20 +329,71 @@ class DatabaseHelper {
         return getHistoryKidneyTable
     }
 
-    
+    //    select * from ((select MAX (D_Id),* from Diabetes where  D_DateTime  LIKE "27-06-2560 15:23" ),
+    //    (select MAX(K_Id),* from Kidney where   K_DateTime  LIKE  "27-06-2560 15:23"),
+    //    (select MAX(P_Id ),* from Pressure  where  P_DateTime   LIKE  "27-06-2560 15:23" ))
     //"select * from (select MAX (D_Id),* from Diabetes where  D_DateTime LIKE '27-06-2560 15:23')"
-    func getReportHealth(datedisease:String) -> [DiabetesTable]{
-        var  getReportHealth = [DiabetesTable]()
+    func getReportDiabetes(datedisease:String) -> [DiabetesTable]{
+        var  getReportDiabetes = [DiabetesTable]()
         try! dbQueue.inDatabase { db in
             do {
-                for row in try Row.fetchAll(db, "select * from (select MAX (D_Id),* from Diabetes where D_DateTime LIKE \(datedisease)"){
+                
+                let qry = String(format: "select * from (select MAX (D_Id),* from Diabetes where  D_DateTime LIKE '%@')", datedisease)
+                for row in try Row.fetchAll(db, qry){
                     let rowDiabetesTable = DiabetesTable()
                     rowDiabetesTable.D_DateTime = row.value(named: "D_DateTime") as String
                     rowDiabetesTable.D_CostSugar = row.value(named: "D_CostSugar") as Int
                     rowDiabetesTable.D_Level = row.value(named: "D_Level") as String
                     rowDiabetesTable.D_Status = row.value(named: "D_Status") as String
                     rowDiabetesTable.D_People = row.value(named: "D_People") as String
-                    getReportHealth.append(rowDiabetesTable)
+                    getReportDiabetes.append(rowDiabetesTable)
+                }
+            }
+            catch let error as DatabaseError{
+                print("Get ReportDiabetes Fail!!")
+                print(error)
+            }
+        }
+        return  getReportDiabetes
+    }
+
+    func getCheckRowDiabetes(datedisease:String) -> [DiabetesTable]{
+        var getCheckRowDiabetes = [DiabetesTable]()
+        try! dbQueue.inDatabase { db in
+            do {
+                
+                let qry = String(format: "select * from Diabetes where D_DateTime LIKE '%@'", datedisease)
+                for row in try Row.fetchAll(db, qry){
+                    let rowDiabetesTable = DiabetesTable()
+                    rowDiabetesTable.D_DateTime = row.value(named: "D_DateTime") as String
+                    rowDiabetesTable.D_CostSugar = row.value(named: "D_CostSugar") as Int
+                    rowDiabetesTable.D_Level = row.value(named: "D_Level") as String
+                    rowDiabetesTable.D_Status = row.value(named: "D_Status") as String
+                    rowDiabetesTable.D_People = row.value(named: "D_People") as String
+                    getCheckRowDiabetes.append(rowDiabetesTable)
+                }
+            }
+            catch let error as DatabaseError{
+                print("Get ReportCheckDiabetes Fail!!")
+                print(error)
+            }
+        }
+        return  getCheckRowDiabetes
+    }
+
+    
+    func getReportKidney(datedisease:String) -> [KidneyTable]{
+        var  getReportKidney = [KidneyTable]()
+        try! dbQueue.inDatabase { db in
+            do {
+                
+                let qry = String(format: "select * from (select MAX (K_Id),* from Kidney where  K_DateTime LIKE '%@')", datedisease)
+                for row in try Row.fetchAll(db, qry){
+                    let rowKidneyTable = KidneyTable()
+                    rowKidneyTable.K_DateTime = row.value(named: "K_DateTime") as String
+                    rowKidneyTable.K_CostGFR = row.value(named: "K_CostGFR")as Int
+                    rowKidneyTable.K_LevelCostGFR = row.value(named: "K_LevelCostGFR") as String
+                    getReportKidney.append(rowKidneyTable)
                 }
             }
             catch let error as DatabaseError{
@@ -363,17 +413,58 @@ class DatabaseHelper {
                 // Full error description:
                 // "SQLite error 787 with statement `INSERT INTO pets (masterId, name)
                 //  VALUES (?, ?)` arguments [1, "Bobby"]: FOREIGN KEY constraint failed""
-            
+                
                 
                 print("Get ReportHealth Fail!!")
                 print(error)
             }
         }
-        return  getReportHealth
+        return  getReportKidney
     }
 
+    func getReportPressure(datedisease:String) -> [PressureTable]{
+        var  getReportPressure = [PressureTable]()
+        try! dbQueue.inDatabase { db in
+            do {
+                
+                let qry = String(format: "select * from (select MAX (P_Id),* from Pressure where  P_DateTime LIKE '%@')", datedisease)
+                for row in try Row.fetchAll(db, qry){
+                    let rowPressureTable = PressureTable()
+                    rowPressureTable.P_DateTime = row.value(named: "P_DateTime") as String
+                    rowPressureTable.P_CostPressureTop = row.value(named: "P_CostPressureTop")as Int
+                    rowPressureTable.P_CostPressureDown = row.value(named: "P_CostPressureDown") as Int
+                    rowPressureTable.P_Pressure_Level = row.value(named: "P_Pressure_Level")as String
+                    rowPressureTable.P_HeartRate = row.value(named: "P_HeartRate")as Int
+                    rowPressureTable.P_HeartRate_Level = row.value(named: "P_HeartRate_Level") as String 
+                    getReportPressure.append(rowPressureTable)
+                }
+            }
+            catch let error as DatabaseError{
+                // The SQLite error code: 19 (SQLITE_CONSTRAINT)
+                error.resultCode
+                
+                // The extended error code: 787 (SQLITE_CONSTRAINT_FOREIGNKEY)
+                error.extendedResultCode
+                
+                // The eventual SQLite message: FOREIGN KEY constraint failed
+                error.message
+                
+                // The eventual erroneous SQL query
+                // "INSERT INTO pets (masterId, name) VALUES (?, ?)"
+                error.sql
+                
+                // Full error description:
+                // "SQLite error 787 with statement `INSERT INTO pets (masterId, name)
+                //  VALUES (?, ?)` arguments [1, "Bobby"]: FOREIGN KEY constraint failed""
+                
+                
+                print("Get ReportHealth Fail!!")
+                print(error)
+            }
+        }
+        return  getReportPressure
+    }
 
- 
     func getPressure() -> [PressureTable]{
         var getPressureTable = [PressureTable]()
         dbQueue.inDatabase { db in

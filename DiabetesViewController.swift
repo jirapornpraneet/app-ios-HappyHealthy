@@ -30,7 +30,7 @@ class DiabetesViewController: UIViewController,UITextFieldDelegate {
         self.inputCostSugarTextField.delegate = self
          //insertDate
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat =  "dd-MM-yyyy HH:mm"
+        dateFormatter.dateFormat =  "dd-MM-yyyy"
         let  setDate = dateFormatter.string(from: dateInputDiabetesPicker.date)
         saveDateDiabetes = setDate
         //DiabetesStatus
@@ -113,7 +113,7 @@ class DiabetesViewController: UIViewController,UITextFieldDelegate {
 
     @IBAction func selectDatePicker(_ sender: Any) {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat =  "dd-MM-yyyy HH:mm"
+        dateFormatter.dateFormat =  "dd-MM-yyyy"
         let  setDate = dateFormatter.string(from: dateInputDiabetesPicker.date)
         saveDateDiabetes = setDate
     }
