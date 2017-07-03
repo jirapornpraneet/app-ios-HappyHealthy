@@ -198,6 +198,49 @@ class DatabaseHelper {
             }
         }
     }
+    
+    func getSumFoodandExercise(dateHistory:String) -> [HistorySUMTable]{
+        var  getSumFoodandExercise = [HistorySUMTable]()
+        try! dbQueue.inDatabase { db in
+            do {
+                let qry = String(format: "select * from (select sum(e.Exercise_Calories *eh.Exercise_TotalDuration ) exc from  Exercise_History  eh, Exercise  e where e.Exercise_Id = eh.Exercise_Id and History_Exercise_Date like '%@')eh,(select sum(f.Food_Calories *fh.Food_TotalAmount) fcal,sum(f.Food_Protein) fpro,sum(f.Food_Fat ) ffat,sum(f.Food_Carbohydrate ) fcar,sum(f.Food_Sugars ) fsug,sum(f.Food_Sodium) fsod from  Food_History  fh,Food  f where fh.Food_Id  = f.Food_Id and History_Food_Date like '%@') fd",dateHistory, dateHistory)
+                for rowSUM in try Row.fetchAll(db, qry){
+                    let row = HistorySUMTable()
+                    row.SUM_EX_Cal = rowSUM.value(named: "exc") as Double
+                    row.SUM_Food_Cal = rowSUM.value(named: "fcal") as Double
+                    row.SUM_car = rowSUM.value(named: "fcar") as Double
+                    row.SUM_pro = rowSUM.value(named: "fpro") as Double
+                    row.SUM_fat = rowSUM.value(named: "ffat") as Double
+                    row.SUM_sodium = rowSUM.value(named: "fsod") as Double
+                    row.SUM_sugar  = rowSUM.value(named: "fsug") as Double
+                    getSumFoodandExercise.append(row)
+                }
+            }
+            catch let error as DatabaseError{
+                // The SQLite error code: 19 (SQLITE_CONSTRAINT)
+                error.resultCode
+                
+                // The extended error code: 787 (SQLITE_CONSTRAINT_FOREIGNKEY)
+                error.extendedResultCode
+                
+                // The eventual SQLite message: FOREIGN KEY constraint failed
+                error.message
+                
+                // The eventual erroneous SQL query
+                // "INSERT INTO pets (masterId, name) VALUES (?, ?)"
+                error.sql
+                
+                // Full error description:
+                // "SQLite error 787 with statement `INSERT INTO pets (masterId, name)
+                //  VALUES (?, ?)` arguments [1, "Bobby"]: FOREIGN KEY constraint failed"
+                print("Get ReportHealth Fail!!")
+                print(error)
+            }
+        }
+        return  getSumFoodandExercise
+    }
+    
+
     //select * from (select * from  Food_History  where   History_Food_Date  LIKE  "27-06-2560 15:23" ) fh, Food  f  where fh. Food_Id  = f.Food_Id
     
     func getDiabetes() -> [DiabetesTable]{
@@ -674,79 +717,4 @@ class DatabaseHelper {
 
     }
     
-        func getSumFoodandExercise() -> [HistorySUMTable]{
-        var  getSumFoodandExercise = [HistorySUMTable]()
-        try! dbQueue.inDatabase { db in
-            do {
-                let qry = String(format: "select * from (select sum(e.Exercise_Calories *eh.Exercise_TotalDuration ) exc from  Exercise_History  eh, Exercise  e where e.Exercise_Id = eh.Exercise_Id and History_Exercise_Date like '03-07-2560')eh,(select sum(f.Food_Calories *fh.Food_TotalAmount) fcal,sum(f.Food_Protein) fpro,sum(f.Food_Fat ) ffat,sum(f.Food_Carbohydrate ) fcar,sum(f.Food_Sugars ) fsug,sum(f.Food_Sodium) fsod from  Food_History  fh,Food  f where fh.Food_Id  = f.Food_Id and History_Food_Date like '03-07-2560') fd")
-                for rowSUM in try Row.fetchAll(db, qry){
-                    let row = HistorySUMTable()
-                        row.SUM_EX_Cal = rowSUM.value(named: "exc") as Double
-                    row.SUM_Food_Cal = rowSUM.value(named: "fcal") as Double
-                    row.SUM_car = rowSUM.value(named: "fcar") as Double
-                    row.SUM_pro = rowSUM.value(named: "fpro") as Double
-                    row.SUM_fat = rowSUM.value(named: "ffat") as Double
-                    row.SUM_sodium = rowSUM.value(named: "fsod") as Double
-                    row.SUM_sugar  = rowSUM.value(named: "fsug") as Double
-                    getSumFoodandExercise.append(row)
-                }
-            }
-            catch let error as DatabaseError{
-                // The SQLite error code: 19 (SQLITE_CONSTRAINT)
-                error.resultCode
-                
-                // The extended error code: 787 (SQLITE_CONSTRAINT_FOREIGNKEY)
-                error.extendedResultCode
-                
-                // The eventual SQLite message: FOREIGN KEY constraint failed
-                error.message
-                
-                // The eventual erroneous SQL query
-                // "INSERT INTO pets (masterId, name) VALUES (?, ?)"
-                error.sql
-                
-                // Full error description:
-                // "SQLite error 787 with statement `INSERT INTO pets (masterId, name)
-                //  VALUES (?, ?)` arguments [1, "Bobby"]: FOREIGN KEY constraint failed"
-                print("Get ReportHealth Fail!!")
-                print(error)
-            }
         }
-        return  getSumFoodandExercise
-    }
-
-//    func getCheckReportPressure(datedisease:String) -> [PressureTable]{
-//        var  getCheckReportPressure = [PressureTable]()
-//        try! dbQueue.inDatabase { db in
-//            do {
-//                
-//                let qry = String(format: "select * from Pressure where P_DateTime LIKE '%@'", datedisease)
-
-
-    
-    //Join
-    /*func getAllHistoryExercise(Exercise_Id: Int) -> [exerciseHistoryModel] {
-        var listHistoryExercise = [exerciseHistoryModel]()
-        dbQueue.inDatabase { db in
-            do{
-                 for row in try Row.fetchAll(db, "select * from Exercise_History  Where Exercise_Id = \(Exercise_Id)" ) {
-                    let newExerciseHistory = exerciseHistoryModel()
-                    newExerciseHistory .History_Exercise_Id = row.value(named: "History_Exercise_Id") as Int
-                    newExerciseHistory .History_Exercise_Date = row.value(named: "History_Exercise_Date") as String
-                    newExerciseHistory .Exercise_Id = row.value(named: "Exercise_Id") as Int
-                    newExerciseHistory .Exercise_TotalDuration = row.value(named: "Exercise_TotalDuration") as Double
-                    
-                    listHistoryExercise.append(newExerciseHistory)
-             
-            }
-            } catch {
-                print("get detail fail !!")
-                
-            }
-                
-            }
-        
-        return listHistoryExercise
-    }*/
-
-}

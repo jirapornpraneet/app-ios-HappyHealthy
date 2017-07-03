@@ -343,6 +343,9 @@
                                                 <date key="date" timeIntervalSinceReferenceDate="520147212.15810603">
                                                     <!--2017-06-26 05:20:12 +0000-->
                                                 </date>
+                                                <connections>
+                                                    <action selector="selectDatePicker:" destination="TiB-OW-0Pr" eventType="valueChanged" id="FOs-U0-yQ3"/>
+                                                </connections>
                                             </datePicker>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IPG-hf-mha">
                                                 <rect key="frame" x="32" y="87" width="46" height="30"/>
@@ -649,6 +652,14 @@
                     <size key="freeformSize" width="320" height="700"/>
                     <connections>
                         <outlet property="dateHistoryPicker" destination="cc2-xX-70g" id="5mv-RE-x4S"/>
+                        <outlet property="exerciseTotalcal" destination="IYz-8s-HVf" id="J8O-sm-3VI"/>
+                        <outlet property="foodTotalcal" destination="Thk-dv-54Q" id="EAC-aF-3aT"/>
+                        <outlet property="sumCarbohydate" destination="r8Y-ug-dP1" id="Dsm-vT-JEm"/>
+                        <outlet property="sumFat" destination="u50-NK-7ie" id="Lnl-ih-Yyc"/>
+                        <outlet property="sumProtin" destination="2pv-9g-eIl" id="VG3-b0-upV"/>
+                        <outlet property="sumSodium" destination="01P-bF-fJJ" id="t2x-zS-EAl"/>
+                        <outlet property="sumSugar" destination="eJf-5G-4qV" id="Z2D-Sa-abM"/>
+                        <outlet property="sumTotalCal" destination="Dou-U7-VCg" id="bfM-7C-rdF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="93g-uG-4Fo" userLabel="First Responder" sceneMemberID="firstResponder"/>
