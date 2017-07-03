@@ -42,22 +42,7 @@ class DatabaseHelper {
                     getExerciseTable.append(rowExerciseTable)
                 }
             } catch let error as DatabaseError {
-                // The SQLite error code: 19 (SQLITE_CONSTRAINT)
-                error.resultCode
-                
-                // The extended error code: 787 (SQLITE_CONSTRAINT_FOREIGNKEY)
-                error.extendedResultCode
-                
-                // The eventual SQLite message: FOREIGN KEY constraint failed
-                error.message
-                
-                // The eventual erroneous SQL query
-                // "INSERT INTO pets (masterId, name) VALUES (?, ?)"
-                error.sql
-                
-                // Full error description:
-                // "SQLite error 787 with statement `INSERT INTO pets (masterId, name)
-                //  VALUES (?, ?)` arguments [1, "Bobby"]: FOREIGN KEY constraint failed""
+             
 
                 print("Get All Exercise Fail!!")
             }
