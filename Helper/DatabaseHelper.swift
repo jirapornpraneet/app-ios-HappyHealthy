@@ -66,11 +66,12 @@ class DatabaseHelper {
         
     }
 
-    func getExerciseHistory() -> [ExerciseHistoryTable]{
+    func getExerciseHistory(dateHistory:String) -> [ExerciseHistoryTable]{
         var getExerciseHistoryTable = [ExerciseHistoryTable]()
         dbQueue.inDatabase { db in
             do {
-                for row in try Row.fetchAll(db, "select * from Exercise_History "){
+                let qry = String(format: "select * from Exercise_History where History_Exercise_Date LIKE '%@'", dateHistory)
+                for row in try Row.fetchAll(db, qry){
                     let rowExerciseHistoryTable = ExerciseHistoryTable()
                     rowExerciseHistoryTable.History_Exercise_Id = row.value(named: "History_Exercise_Id") as Int
                     rowExerciseHistoryTable.History_Exercise_Date = row.value(named: "History_Exercise_Date") as String
@@ -165,11 +166,12 @@ class DatabaseHelper {
         
     }
     
-      func getFoodHistory() -> [FoodHistoryTable]{
+    func getFoodHistory(dateHistory:String) -> [FoodHistoryTable]{
         var getFoodHistoryTable = [FoodHistoryTable]()
         dbQueue.inDatabase { db in
             do {
-                for row in try Row.fetchAll(db, "select * from Food_History"){
+                let qry = String(format: "select * from Food_History where History_Food_Date LIKE '%@'", dateHistory)
+                for row in try Row.fetchAll(db, qry){
                     let rowFoodHistoryTable = FoodHistoryTable()
                     rowFoodHistoryTable.History_Food_Id = row.value(named: "History_Food_Id") as Int
                     rowFoodHistoryTable.History_Food_Date = row.value(named: "History_Food_Date") as String

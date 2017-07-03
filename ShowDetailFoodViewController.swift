@@ -71,6 +71,29 @@ class ShowDetailFoodViewController: UIViewController,UITextFieldDelegate {
     }
     
     @IBAction func saveDataHistoryFood(_ sender: Any) {
+        //ShowAlertController
+        let alertShow = UIAlertController (title: "ยืนยันการบันทึกข้อมูลอาหาร", message:"คุณแน่ใจใช่ไหม" , preferredStyle: UIAlertControllerStyle.alert)
+        alertShow.addAction(UIAlertAction(title: "Yes" , style: UIAlertActionStyle.default, handler: { (action) in
+            alertShow.dismiss(animated: true, completion: nil)
+            self.insertHistoryTableFood()
+            self.alertSaveData()
+        }))
+        
+        alertShow.addAction(UIAlertAction(title: "No" , style: UIAlertActionStyle.default, handler: { (action) in
+            alertShow.dismiss(animated: true, completion: nil)
+            
+        }))
+        self.present(alertShow,animated: true,completion: nil)
+    }
+    
+    func alertSaveData(){
+        //ShowAlertController
+        let alertShowSave = UIAlertController (title: "บันทึกข้อมูลอาหาร", message:" คุณได้บันทึกข้อมูลอาหารสำเร็จ" , preferredStyle: UIAlertControllerStyle.alert)
+        alertShowSave.addAction(UIAlertAction(title: "OK" , style: UIAlertActionStyle.default, handler:nil))
+        self.present(alertShowSave, animated: true, completion: nil)
+    }
+    
+    func insertHistoryTableFood() {
         let date = Date()
         let formatter = DateFormatter()
         formatter.dateFormat = "dd-MM-yyyy"

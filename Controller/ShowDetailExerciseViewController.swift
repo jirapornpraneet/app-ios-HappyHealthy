@@ -51,6 +51,29 @@ class ShowDetailExerciseViewController: UIViewController,UITextFieldDelegate {
     }
     
     @IBAction func saveDataExercise(_ sender: Any) {
+        //ShowAlertController
+        let alertShow = UIAlertController (title: "ยืนยันการบันทึกข้อมูลออกกำลังกาย", message:"คุณแน่ใจใช่ไหม" , preferredStyle: UIAlertControllerStyle.alert)
+        alertShow.addAction(UIAlertAction(title: "Yes" , style: UIAlertActionStyle.default, handler: { (action) in
+            alertShow.dismiss(animated: true, completion: nil)
+            self.insertHistoryTableExercise()
+            self.alertSaveData()
+        }))
+        
+        alertShow.addAction(UIAlertAction(title: "No" , style: UIAlertActionStyle.default, handler: { (action) in
+            alertShow.dismiss(animated: true, completion: nil)
+            
+        }))
+        self.present(alertShow,animated: true,completion: nil)
+    }
+    
+    func alertSaveData(){
+        //ShowAlertController
+        let alertShowSave = UIAlertController (title: "บันทึกข้อมูลออกกำลังกาย", message:" คุณได้บันทึกข้อมูลออกกำลังกายสำเร็จ" , preferredStyle: UIAlertControllerStyle.alert)
+        alertShowSave.addAction(UIAlertAction(title: "OK" , style: UIAlertActionStyle.default, handler:nil))
+        self.present(alertShowSave, animated: true, completion: nil)
+    }
+
+    func insertHistoryTableExercise(){
         let date = Date()
         let formatter = DateFormatter()
         formatter.dateFormat = "dd-MM-yyyy"
@@ -60,7 +83,9 @@ class ShowDetailExerciseViewController: UIViewController,UITextFieldDelegate {
         exerciseHistoryResource.Exercise_Id = Int((getExerciseTable?.Exercise_Id)!)
         exerciseHistoryResource.Exercise_TotalDuration = Double(amountExerciseTextField.text!)
         dbHelper.insertExerciseHistory(dataRowExerciseHistoryTable: exerciseHistoryResource)
+        
     }
+    
     
     //Hide KeyBoard when user touches outside keyBoard
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

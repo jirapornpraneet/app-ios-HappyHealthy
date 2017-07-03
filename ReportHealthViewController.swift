@@ -46,6 +46,7 @@ class ReportHealthViewController: UIViewController{
         let  setDate = dateFormatterShow.string(from: datePicker.date)
         saveDate = setDate
         loadAllData(dateChoose: saveDate)
+        
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -56,8 +57,8 @@ class ReportHealthViewController: UIViewController{
         let dateFormatterShow = DateFormatter()
         dateFormatterShow.dateFormat = "dd-MM-yyyy"
         let  setDate = dateFormatterShow.string(from: datePicker.date)
-        //saveDate = setDate
-        loadAllData(dateChoose: setDate)
+        saveDate = setDate
+        loadAllData(dateChoose: saveDate)
   
     }
 
@@ -222,5 +223,6 @@ class ReportHealthViewController: UIViewController{
         alertPressureImage.image = showAlertPressureImage
         alertHeartImage.image = showAlertHeartImage
         }
+    
     }
 

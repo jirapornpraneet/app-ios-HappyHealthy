@@ -54,7 +54,7 @@
                                                         <color key="textColor" red="1" green="0.48813878849999998" blue="0.56102057579999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="alertpre6" translatesAutoresizingMaskIntoConstraints="NO" id="fXO-v8-4wE">
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fXO-v8-4wE">
                                                         <rect key="frame" x="20" y="77" width="260" height="33"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="33" id="HHO-NA-sOl"/>
@@ -118,7 +118,7 @@
                                                         <color key="textColor" red="1" green="0.48813878849999998" blue="0.56102057579999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="alertheart5" translatesAutoresizingMaskIntoConstraints="NO" id="DH8-6t-p7Y">
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DH8-6t-p7Y">
                                                         <rect key="frame" x="20" y="162" width="260" height="33"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="33" id="Pdd-zS-Xmj"/>
@@ -183,7 +183,7 @@
                                                         <color key="textColor" red="0.5404158832" green="0.3925275184" blue="0.73927734369999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="alertnormal" translatesAutoresizingMaskIntoConstraints="NO" id="4Ku-Kc-Xym">
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4Ku-Kc-Xym">
                                                         <rect key="frame" x="20" y="75" width="250" height="33"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="33" id="bs5-ue-wSS"/>
@@ -237,7 +237,7 @@
                                                         <color key="textColor" red="0.30289639739511115" green="0.56245620273221497" blue="0.79634765625000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="alertkid5" translatesAutoresizingMaskIntoConstraints="NO" id="tgB-JR-L5D">
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tgB-JR-L5D">
                                                         <rect key="frame" x="20" y="78" width="260" height="33"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="33" id="BVn-c9-8qq"/>
@@ -315,6 +315,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MvV-kc-V3N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-892.5" y="-646.47887323943667"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="fcl-zs-WDi">
+            <objects>
+                <viewController id="Zjn-VF-KOG" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sUo-2f-vtt"/>
+                        <viewControllerLayoutGuide type="bottom" id="LAj-ol-myi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xgI-wI-1qh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f5I-cb-OWN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2276" y="-1359"/>
         </scene>
         <!--รายงาน-->
         <scene sceneID="NMj-kZ-q4T">
@@ -664,7 +682,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="93g-uG-4Fo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1494.375" y="-1367.9577464788733"/>
+            <point key="canvasLocation" x="-915" y="-1323"/>
         </scene>
         <!--หน้าหลัก-->
         <scene sceneID="CeB-Yg-pfD">
@@ -2784,10 +2802,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ชื่ออาหาร" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bK7-ZS-Z8O">
-                                <rect key="frame" x="63.5" y="84" width="193" height="41"/>
+                                <rect key="frame" x="26" y="84" width="267" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="41" id="6Uq-nj-0qe"/>
-                                    <constraint firstAttribute="width" constant="193" id="hR3-NC-J34"/>
+                                    <constraint firstAttribute="width" constant="267" id="hR3-NC-J34"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                 <color key="textColor" red="1" green="0.63347493693665535" blue="0.5013749225359061" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -3096,10 +3114,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ชื่อออกกำลังกาย" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="px6-kr-Vq1">
-                                <rect key="frame" x="60.5" y="85" width="199" height="50"/>
+                                <rect key="frame" x="33" y="85" width="265" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="0w7-dU-LJC"/>
-                                    <constraint firstAttribute="width" constant="199" id="S87-LN-lRG"/>
+                                    <constraint firstAttribute="width" constant="265" id="S87-LN-lRG"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <color key="textColor" red="0.65866281019999995" green="0.89810546869999996" blue="0.66894121920000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -3200,7 +3218,7 @@
                             <constraint firstItem="rnm-Ef-SkV" firstAttribute="centerX" secondItem="Z88-ry-OPF" secondAttribute="centerX" id="ljU-Aj-dMy"/>
                             <constraint firstItem="k2B-OV-iYc" firstAttribute="centerX" secondItem="Z88-ry-OPF" secondAttribute="centerX" id="qEE-Vn-rg8"/>
                             <constraint firstItem="91h-FV-k2Q" firstAttribute="top" secondItem="px6-kr-Vq1" secondAttribute="bottom" constant="8" id="rkX-iF-MB7"/>
-                            <constraint firstItem="px6-kr-Vq1" firstAttribute="centerX" secondItem="Z88-ry-OPF" secondAttribute="centerX" id="wDr-ao-vDq"/>
+                            <constraint firstItem="px6-kr-Vq1" firstAttribute="centerX" secondItem="Z88-ry-OPF" secondAttribute="centerX" constant="5.5" id="wDr-ao-vDq"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="บันทึกออกกำลังกาย" id="IJx-Cm-IT5">
@@ -3222,7 +3240,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lr9-jN-u9X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="498.75" y="-750"/>
+            <point key="canvasLocation" x="570" y="-750"/>
         </scene>
         <!--เพิ่มข้อมูลอาหาร-->
         <scene sceneID="GKw-aP-JIP">
@@ -3663,10 +3681,6 @@
         <image name="InstructionDrink" width="2480" height="3508"/>
         <image name="InstructionEat" width="2480" height="3508"/>
         <image name="InstructionKidney" width="2480" height="3508"/>
-        <image name="alertheart5" width="320" height="43"/>
-        <image name="alertkid5" width="320" height="43"/>
-        <image name="alertnormal" width="320" height="43"/>
-        <image name="alertpre6" width="320" height="43"/>
         <image name="bmi" width="75" height="40"/>
         <image name="bmi1" width="560" height="95"/>
         <image name="bmr" width="85" height="40"/>
