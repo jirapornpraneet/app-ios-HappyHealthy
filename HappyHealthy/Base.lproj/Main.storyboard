@@ -319,7 +319,7 @@
         <!--รายงาน-->
         <scene sceneID="NMj-kZ-q4T">
             <objects>
-                <viewController id="TiB-OW-0Pr" sceneMemberID="viewController">
+                <viewController id="TiB-OW-0Pr" customClass="ReportFoodandExercise" customModule="HappyHealthy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lVr-In-bX7"/>
                         <viewControllerLayoutGuide type="bottom" id="Y2q-pY-7gY"/>
@@ -647,6 +647,9 @@
                     <tabBarItem key="tabBarItem" title="รายงาน" image="iconreport" id="S1R-dj-9ul"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="700"/>
+                    <connections>
+                        <outlet property="dateHistoryPicker" destination="cc2-xX-70g" id="5mv-RE-x4S"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="93g-uG-4Fo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1923,7 +1926,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ต่อ 30 นาที" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Cn-7g-QVt">
-                                                    <rect key="frame" x="259" y="27" width="52.5" height="24"/>
+                                                    <rect key="frame" x="255" y="25" width="57" height="24"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <nil key="textColor"/>

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ABB2FF231F0A14EE00F8FBEC /* HistorySUMTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB2FF221F0A14EE00F8FBEC /* HistorySUMTable.swift */; };
+		ABB2FF261F0A1DEC00F8FBEC /* ReportFoodandExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB2FF251F0A1DEC00F8FBEC /* ReportFoodandExercise.swift */; };
 		D7157CB9367F23D3C3930B42 /* Pods_HappyHealthy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66708A232800003B100801A5 /* Pods_HappyHealthy.framework */; };
 		FC2BE1EA1EF0E63500CBF9FE /* homeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2BE1E91EF0E63500CBF9FE /* homeViewController.swift */; };
 		FC5231A71EF511800067E0C0 /* ExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC52319E1EF511800067E0C0 /* ExerciseViewController.swift */; };
@@ -84,6 +86,8 @@
 		66708A232800003B100801A5 /* Pods_HappyHealthy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HappyHealthy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C20B913DE92550432902952 /* Pods-HappyHealthy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HappyHealthy.release.xcconfig"; path = "Pods/Target Support Files/Pods-HappyHealthy/Pods-HappyHealthy.release.xcconfig"; sourceTree = "<group>"; };
 		8F8188C3D3AE417086977A70 /* Pods-HappyHealthy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HappyHealthy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HappyHealthy/Pods-HappyHealthy.debug.xcconfig"; sourceTree = "<group>"; };
+		ABB2FF221F0A14EE00F8FBEC /* HistorySUMTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistorySUMTable.swift; sourceTree = "<group>"; };
+		ABB2FF251F0A1DEC00F8FBEC /* ReportFoodandExercise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportFoodandExercise.swift; sourceTree = "<group>"; };
 		FC2BE1E91EF0E63500CBF9FE /* homeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = homeViewController.swift; sourceTree = "<group>"; };
 		FC52319E1EF511800067E0C0 /* ExerciseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExerciseViewController.swift; path = ../Controller/ExerciseViewController.swift; sourceTree = "<group>"; };
 		FC5231A01EF511800067E0C0 /* DatabaseHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseHelper.swift; sourceTree = "<group>"; };
@@ -175,6 +179,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		ABB2FF241F0A1D6100F8FBEC /* Report */ = {
+			isa = PBXGroup;
+			children = (
+				FC6C4EB91F024000009EE8A7 /* ReportHealthViewController.swift */,
+				ABB2FF251F0A1DEC00F8FBEC /* ReportFoodandExercise.swift */,
+			);
+			name = Report;
+			sourceTree = "<group>";
+		};
 		FC52319F1EF511800067E0C0 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
@@ -194,6 +207,7 @@
 				FC5231DF1EF5541A0067E0C0 /* PressureTable.swift */,
 				FC5231E31EF5552D0067E0C0 /* UserTable.swift */,
 				FC5231E71EF563560067E0C0 /* DiabetesTable.swift */,
+				ABB2FF221F0A14EE00F8FBEC /* HistorySUMTable.swift */,
 			);
 			name = Table;
 			path = Model;
@@ -267,7 +281,7 @@
 			isa = PBXGroup;
 			children = (
 				FC63C1681EF63FC6006ED946 /* HappyHealthy_Sqlite.db */,
-				FC6C4EB91F024000009EE8A7 /* ReportHealthViewController.swift */,
+				ABB2FF241F0A1D6100F8FBEC /* Report */,
 				FC7D398C1EFCC66600F037C9 /* Pressure */,
 				FC7D39851EFCB82A00F037C9 /* Kidney */,
 				FC7E40751EFBA527006D45CD /* Diabetes */,
@@ -521,6 +535,7 @@
 				FC9924081F00C19C00CBF363 /* HistoryDiabetesViewController.swift in Sources */,
 				FC6C4EBA1F024000009EE8A7 /* ReportHealthViewController.swift in Sources */,
 				FC7E62721EEE35DA0065F6C2 /* AppDelegate.swift in Sources */,
+				ABB2FF231F0A14EE00F8FBEC /* HistorySUMTable.swift in Sources */,
 				FC5231E41EF5552D0067E0C0 /* UserTable.swift in Sources */,
 				FC5231AF1EF5149D0067E0C0 /* ExerciseTableViewCell.swift in Sources */,
 				FC7E40771EFBA546006D45CD /* DiabetesViewController.swift in Sources */,
@@ -529,6 +544,7 @@
 				FC7E40791EFBBC7F006D45CD /* ShowDiabetesViewController.swift in Sources */,
 				FC5231A81EF511800067E0C0 /* DatabaseHelper.swift in Sources */,
 				FC9924041F00B92F00CBF363 /* HistoryPressureTableViewCell.swift in Sources */,
+				ABB2FF261F0A1DEC00F8FBEC /* ReportFoodandExercise.swift in Sources */,
 				FC7D39871EFCB84100F037C9 /* KidneyViewController.swift in Sources */,
 				FC5231D11EF530430067E0C0 /* FoodTable.swift in Sources */,
 				FC5231D31EF53D000067E0C0 /* FoodViewController.swift in Sources */,

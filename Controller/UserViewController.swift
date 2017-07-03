@@ -10,7 +10,7 @@ import UIKit
 
 class UserViewController: UIViewController,UITextFieldDelegate{
     var getUserTable = [UserTable]()
-    var getUserRowMaxTable = [UserTable]()
+    var getCheckUserTable = [UserTable]()
     var insertDataUser = [UserTable]()
     var dbHelper = DatabaseHelper()
     var genderList: [String] = ["Male", "Female"]
@@ -54,6 +54,11 @@ class UserViewController: UIViewController,UITextFieldDelegate{
     
     
        func  loadAllUser(){
+        
+        getCheckUserTable = dbHelper.getCheckUser()
+        if getCheckUserTable.count == 0 {
+            return
+        }
         getUserTable = dbHelper.getUser()
        // getUserRowMaxTable = dbHelper.getUserRowMax()
         if getUserTable.count == 0 {
@@ -119,8 +124,6 @@ class UserViewController: UIViewController,UITextFieldDelegate{
         userResource.User_BMR = Double(bmrUser!)
         userResource.User_Gender = genderName
         dbHelper.insertUserTable(dataRowUserTable: userResource)
-        
-        
     }
     
     @IBAction func selectGenderSegmented(_ sender: Any) {

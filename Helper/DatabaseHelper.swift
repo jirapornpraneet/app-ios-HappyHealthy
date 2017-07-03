@@ -453,6 +453,7 @@ class DatabaseHelper {
         }
         return  getReportPressure
     }
+    
     func getCheckReportPressure(datedisease:String) -> [PressureTable]{
         var  getCheckReportPressure = [PressureTable]()
         try! dbQueue.inDatabase { db in
@@ -471,24 +472,6 @@ class DatabaseHelper {
                 }
             }
             catch let error as DatabaseError{
-                // The SQLite error code: 19 (SQLITE_CONSTRAINT)
-                error.resultCode
-                
-                // The extended error code: 787 (SQLITE_CONSTRAINT_FOREIGNKEY)
-                error.extendedResultCode
-                
-                // The eventual SQLite message: FOREIGN KEY constraint failed
-                error.message
-                
-                // The eventual erroneous SQL query
-                // "INSERT INTO pets (masterId, name) VALUES (?, ?)"
-                error.sql
-                
-                // Full error description:
-                // "SQLite error 787 with statement `INSERT INTO pets (masterId, name)
-                //  VALUES (?, ?)` arguments [1, "Bobby"]: FOREIGN KEY constraint failed""
-                
-                
                 print("Get ReportHealth Fail!!")
                 print(error)
             }
@@ -573,6 +556,49 @@ class DatabaseHelper {
             }
         }
     }
+    
+    func getCheckUser() -> [UserTable]{
+        var getCheckUserTable = [UserTable]()
+        try! dbQueue.inDatabase { db in
+            do {
+                for row in try Row.fetchAll(db, "SELECT * FROM User"){
+                    let rowUserTable = UserTable()
+                    rowUserTable.User_Id = row.value(named: "User_Id") as Int
+                    rowUserTable.User_Name = row.value(named: "User_Name") as String
+                    rowUserTable.User_Gender = row.value(named: "User_Gender" ) as String
+                    rowUserTable.User_Age = row.value(named: "User_Age") as Int
+                    rowUserTable.User_Weight = row.value(named: "User_Weight" ) as Double
+                    rowUserTable.User_Height = row.value(named: "User_Height") as Int
+                    rowUserTable.User_BMI = row.value(named: "User_BMI") as Double
+                    rowUserTable.User_BMR = row.value(named: "User_BMR") as Double
+                    getCheckUserTable.append(rowUserTable)
+                }
+            }
+            catch let error as DatabaseError {
+                // The SQLite error code: 19 (SQLITE_CONSTRAINT)
+                error.resultCode
+                
+                // The extended error code: 787 (SQLITE_CONSTRAINT_FOREIGNKEY)
+                error.extendedResultCode
+                
+                // The eventual SQLite message: FOREIGN KEY constraint failed
+                error.message
+                
+                // The eventual erroneous SQL query
+                // "INSERT INTO pets (masterId, name) VALUES (?, ?)"
+                error.sql
+                
+                // Full error description:
+                // "SQLite error 787 with statement `INSERT INTO pets (masterId, name)
+                //  VALUES (?, ?)` arguments [1, "Bobby"]: FOREIGN KEY constraint failed"
+                print(error)
+                print("Get All User Fail!!")
+                
+            }
+        }
+        return getCheckUserTable
+    }
+
 
     func getUser() -> [UserTable]{
         var getUserTable = [UserTable]()
@@ -624,13 +650,79 @@ class DatabaseHelper {
                                arguments: ["User_Name": dataRowUserTable.User_Name,"User_Gender": dataRowUserTable.User_Gender,"User_Age": dataRowUserTable.User_Age,"User_Weight":dataRowUserTable.User_Weight,"User_Height": dataRowUserTable.User_Height,"User_BMI": dataRowUserTable.User_BMI,"User_BMR": dataRowUserTable.User_BMR])
                 print("Insert value")
             } catch let error as DatabaseError {
+                // The SQLite error code: 19 (SQLITE_CONSTRAINT)
+                error.resultCode
                 
+                // The extended error code: 787 (SQLITE_CONSTRAINT_FOREIGNKEY)
+                error.extendedResultCode
+                
+                // The eventual SQLite message: FOREIGN KEY constraint failed
+                error.message
+                
+                // The eventual erroneous SQL query
+                // "INSERT INTO pets (masterId, name) VALUES (?, ?)"
+                error.sql
+                
+                // Full error description:
+                // "SQLite error 787 with statement `INSERT INTO pets (masterId, name)
+                //  VALUES (?, ?)` arguments [1, "Bobby"]: FOREIGN KEY constraint failed"
+                print(error)
             print("Insert User Fail!!")
             }
         }
         
 
     }
+    
+        func getSumFoodandExercise() -> [HistorySUMTable]{
+        var  getSumFoodandExercise = [HistorySUMTable]()
+        try! dbQueue.inDatabase { db in
+            do {
+                let qry = String(format: "select * from (select sum(e.Exercise_Calories *eh.Exercise_TotalDuration ) exc from  Exercise_History  eh, Exercise  e where e.Exercise_Id = eh.Exercise_Id and History_Exercise_Date like '03-07-2560')eh,(select sum(f.Food_Calories *fh.Food_TotalAmount) fcal,sum(f.Food_Protein) fpro,sum(f.Food_Fat ) ffat,sum(f.Food_Carbohydrate ) fcar,sum(f.Food_Sugars ) fsug,sum(f.Food_Sodium) fsod from  Food_History  fh,Food  f where fh.Food_Id  = f.Food_Id and History_Food_Date like '03-07-2560') fd")
+                for rowSUM in try Row.fetchAll(db, qry){
+                    let row = HistorySUMTable()
+                        row.SUM_EX_Cal = rowSUM.value(named: "exc") as Double
+                    row.SUM_Food_Cal = rowSUM.value(named: "fcal") as Double
+                    row.SUM_car = rowSUM.value(named: "fcar") as Double
+                    row.SUM_pro = rowSUM.value(named: "fpro") as Double
+                    row.SUM_fat = rowSUM.value(named: "ffat") as Double
+                    row.SUM_sodium = rowSUM.value(named: "fsod") as Double
+                    row.SUM_sugar  = rowSUM.value(named: "fsug") as Double
+                    getSumFoodandExercise.append(row)
+                }
+            }
+            catch let error as DatabaseError{
+                // The SQLite error code: 19 (SQLITE_CONSTRAINT)
+                error.resultCode
+                
+                // The extended error code: 787 (SQLITE_CONSTRAINT_FOREIGNKEY)
+                error.extendedResultCode
+                
+                // The eventual SQLite message: FOREIGN KEY constraint failed
+                error.message
+                
+                // The eventual erroneous SQL query
+                // "INSERT INTO pets (masterId, name) VALUES (?, ?)"
+                error.sql
+                
+                // Full error description:
+                // "SQLite error 787 with statement `INSERT INTO pets (masterId, name)
+                //  VALUES (?, ?)` arguments [1, "Bobby"]: FOREIGN KEY constraint failed"
+                print("Get ReportHealth Fail!!")
+                print(error)
+            }
+        }
+        return  getSumFoodandExercise
+    }
+
+//    func getCheckReportPressure(datedisease:String) -> [PressureTable]{
+//        var  getCheckReportPressure = [PressureTable]()
+//        try! dbQueue.inDatabase { db in
+//            do {
+//                
+//                let qry = String(format: "select * from Pressure where P_DateTime LIKE '%@'", datedisease)
+
+
     
     //Join
     /*func getAllHistoryExercise(Exercise_Id: Int) -> [exerciseHistoryModel] {

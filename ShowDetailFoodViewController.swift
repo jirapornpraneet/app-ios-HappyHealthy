@@ -73,7 +73,7 @@ class ShowDetailFoodViewController: UIViewController,UITextFieldDelegate {
     @IBAction func saveDataHistoryFood(_ sender: Any) {
         let date = Date()
         let formatter = DateFormatter()
-        formatter.dateFormat = "dd.MM.yyyy"
+        formatter.dateFormat = "dd-MM-yyyy"
         let result = formatter.string(from: date)
         let foodHistoryResource = FoodHistoryTable()
         foodHistoryResource.History_Food_Date = result

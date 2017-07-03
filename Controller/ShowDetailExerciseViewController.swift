@@ -53,7 +53,7 @@ class ShowDetailExerciseViewController: UIViewController,UITextFieldDelegate {
     @IBAction func saveDataExercise(_ sender: Any) {
         let date = Date()
         let formatter = DateFormatter()
-        formatter.dateFormat = "dd.MM.yyyy"
+        formatter.dateFormat = "dd-MM-yyyy"
         let result = formatter.string(from: date)
         let exerciseHistoryResource = ExerciseHistoryTable()
         exerciseHistoryResource.History_Exercise_Date = result
