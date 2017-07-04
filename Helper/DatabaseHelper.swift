@@ -201,6 +201,56 @@ class DatabaseHelper {
         }
     }
     
+    func getListHistoryFood() -> [ListFoodHistory]{
+        var  getListHistoryFoodTable = [ListFoodHistory]()
+        try! dbQueue.inDatabase { db in
+            do {
+                let qry = String(format: "select * from (select * from  Food_History where History_Food_Date  LIKE  '27-06-2560' ) fh, Food f where fh.Food_Id = f.Food_Id ")
+                for row in try Row.fetchAll(db, qry) {
+                    let rowFoodHistory = ListFoodHistory()
+                    rowFoodHistory.History_Food_Id = row.value(named: "History_Food_Id") as Int
+                    rowFoodHistory.History_Food_Date = row.value(named: "History_Food_Date")as String
+                    rowFoodHistory.Food_TotalAmount = row.value(named: "Food_TotalAmount")as Double
+                    rowFoodHistory.Food_Id = row.value(named: "Food_Id") as Int
+                    rowFoodHistory.Food_Name = row.value(named: "Food_Name") as String
+                    rowFoodHistory.Food_Calories = row.value(named: "Food_Calories") as Double
+                    rowFoodHistory.Food_Unit = row.value(named: "Food_Unit") as String
+                    rowFoodHistory.Food_Netweight = row.value(named: "Food_Netweight") as Double
+                    rowFoodHistory.Food_NetUnit  = row.value(named: "Food_NetUnit") as String
+                    rowFoodHistory.Food_Protein = row.value(named: "Food_Protein") as Double
+                    rowFoodHistory.Food_Fat = row.value(named: "Food_Fat") as Double
+                    rowFoodHistory.Food_Carbohydrate = row.value(named: "Food_Carbohydrate") as Double
+                    rowFoodHistory.Food_Sugars = row.value(named: "Food_Sugars") as Double
+                    rowFoodHistory.Food_Sodium = row.value(named: "Food_Sodium") as Double
+                    rowFoodHistory.Food_Detail  = row.value(named: "Food_Detail") as String
+                    getListHistoryFoodTable.append(rowFoodHistory)
+                }
+            }
+            catch let error as DatabaseError{
+                // The SQLite error code: 19 (SQLITE_CONSTRAINT)
+                error.resultCode
+                
+                // The extended error code: 787 (SQLITE_CONSTRAINT_FOREIGNKEY)
+                error.extendedResultCode
+                
+                // The eventual SQLite message: FOREIGN KEY constraint failed
+                error.message
+                
+                // The eventual erroneous SQL query
+                // "INSERT INTO pets (masterId, name) VALUES (?, ?)"
+                error.sql
+                
+                // Full error description:
+                // "SQLite error 787 with statement `INSERT INTO pets (masterId, name)
+                //  VALUES (?, ?)` arguments [1, "Bobby"]: FOREIGN KEY constraint failed"
+                print("Get ReportHealth Fail!!")
+                print(error)
+            }
+        }
+        return  getListHistoryFoodTable
+    }
+
+    
     func getSumFoodandExercise(dateHistory:String) -> [HistorySUMTable]{
         var  getSumFoodandExercise = [HistorySUMTable]()
         try! dbQueue.inDatabase { db in

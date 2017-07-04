@@ -11,8 +11,10 @@ import UIKit
 class ReportFoodandExercise: UIViewController {
     var getSumFoodandExercis = [HistorySUMTable]()
     var getFoodHistory = [FoodHistoryTable]()
-    var getExerciseHistory = [ExerciseHistoryTable]()
+    var getFoodTable = [FoodTable]()
     var dbHelper = DatabaseHelper()
+    var dataFoodTable: FoodTable?
+    var getExerciseHistory = [ExerciseHistoryTable]()
     var sumTotal:Double?
     var saveDate:String = ""
 
@@ -57,7 +59,6 @@ class ReportFoodandExercise: UIViewController {
         }
         getSumFoodandExercis = dbHelper.getSumFoodandExercise(dateHistory: dateChoose)
         
-        
         let getSumFood:Double? = (getSumFoodandExercis[0].SUM_Food_Cal!)
         let getSumExercise:Double? = (getSumFoodandExercis[0].SUM_EX_Cal!)
         sumTotal = getSumFood! - getSumExercise!
@@ -79,4 +80,10 @@ class ReportFoodandExercise: UIViewController {
         saveDate = setDate
         loadAllData(dateChoose: saveDate)
     }
+    
+    @IBAction func clickHistoryFood(_ sender: Any) {
+//        getFoodHistory = dbHelper.getAllHistoryFood()
+    }
+    
+  
 }

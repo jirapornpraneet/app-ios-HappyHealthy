@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		ABB2FF231F0A14EE00F8FBEC /* HistorySUMTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB2FF221F0A14EE00F8FBEC /* HistorySUMTable.swift */; };
 		ABB2FF261F0A1DEC00F8FBEC /* ReportFoodandExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB2FF251F0A1DEC00F8FBEC /* ReportFoodandExercise.swift */; };
+		ABD62EFF1F0B4576001C2ABA /* listFoodHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD62EFE1F0B4576001C2ABA /* listFoodHistoryViewController.swift */; };
+		ABD62F011F0B4B88001C2ABA /* DetailFoodHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD62F001F0B4B88001C2ABA /* DetailFoodHistoryTableViewCell.swift */; };
+		ABD62F031F0B6E86001C2ABA /* ListFoodHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD62F021F0B6E86001C2ABA /* ListFoodHistory.swift */; };
 		D7157CB9367F23D3C3930B42 /* Pods_HappyHealthy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66708A232800003B100801A5 /* Pods_HappyHealthy.framework */; };
 		FC2BE1EA1EF0E63500CBF9FE /* homeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2BE1E91EF0E63500CBF9FE /* homeViewController.swift */; };
 		FC5231A71EF511800067E0C0 /* ExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC52319E1EF511800067E0C0 /* ExerciseViewController.swift */; };
@@ -88,6 +91,9 @@
 		8F8188C3D3AE417086977A70 /* Pods-HappyHealthy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HappyHealthy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HappyHealthy/Pods-HappyHealthy.debug.xcconfig"; sourceTree = "<group>"; };
 		ABB2FF221F0A14EE00F8FBEC /* HistorySUMTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistorySUMTable.swift; sourceTree = "<group>"; };
 		ABB2FF251F0A1DEC00F8FBEC /* ReportFoodandExercise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportFoodandExercise.swift; sourceTree = "<group>"; };
+		ABD62EFE1F0B4576001C2ABA /* listFoodHistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = listFoodHistoryViewController.swift; sourceTree = "<group>"; };
+		ABD62F001F0B4B88001C2ABA /* DetailFoodHistoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailFoodHistoryTableViewCell.swift; sourceTree = "<group>"; };
+		ABD62F021F0B6E86001C2ABA /* ListFoodHistory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListFoodHistory.swift; sourceTree = "<group>"; };
 		FC2BE1E91EF0E63500CBF9FE /* homeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = homeViewController.swift; sourceTree = "<group>"; };
 		FC52319E1EF511800067E0C0 /* ExerciseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExerciseViewController.swift; path = ../Controller/ExerciseViewController.swift; sourceTree = "<group>"; };
 		FC5231A01EF511800067E0C0 /* DatabaseHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseHelper.swift; sourceTree = "<group>"; };
@@ -188,6 +194,15 @@
 			name = Report;
 			sourceTree = "<group>";
 		};
+		ABD62EFD1F0B4556001C2ABA /* History */ = {
+			isa = PBXGroup;
+			children = (
+				ABD62EFE1F0B4576001C2ABA /* listFoodHistoryViewController.swift */,
+				ABD62F001F0B4B88001C2ABA /* DetailFoodHistoryTableViewCell.swift */,
+			);
+			name = History;
+			sourceTree = "<group>";
+		};
 		FC52319F1EF511800067E0C0 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
@@ -208,6 +223,7 @@
 				FC5231E31EF5552D0067E0C0 /* UserTable.swift */,
 				FC5231E71EF563560067E0C0 /* DiabetesTable.swift */,
 				ABB2FF221F0A14EE00F8FBEC /* HistorySUMTable.swift */,
+				ABD62F021F0B6E86001C2ABA /* ListFoodHistory.swift */,
 			);
 			name = Table;
 			path = Model;
@@ -281,6 +297,7 @@
 			isa = PBXGroup;
 			children = (
 				FC63C1681EF63FC6006ED946 /* HappyHealthy_Sqlite.db */,
+				ABD62EFD1F0B4556001C2ABA /* History */,
 				ABB2FF241F0A1D6100F8FBEC /* Report */,
 				FC7D398C1EFCC66600F037C9 /* Pressure */,
 				FC7D39851EFCB82A00F037C9 /* Kidney */,
@@ -544,10 +561,13 @@
 				FC7E40791EFBBC7F006D45CD /* ShowDiabetesViewController.swift in Sources */,
 				FC5231A81EF511800067E0C0 /* DatabaseHelper.swift in Sources */,
 				FC9924041F00B92F00CBF363 /* HistoryPressureTableViewCell.swift in Sources */,
+				ABD62F011F0B4B88001C2ABA /* DetailFoodHistoryTableViewCell.swift in Sources */,
+				ABD62F031F0B6E86001C2ABA /* ListFoodHistory.swift in Sources */,
 				ABB2FF261F0A1DEC00F8FBEC /* ReportFoodandExercise.swift in Sources */,
 				FC7D39871EFCB84100F037C9 /* KidneyViewController.swift in Sources */,
 				FC5231D11EF530430067E0C0 /* FoodTable.swift in Sources */,
 				FC5231D31EF53D000067E0C0 /* FoodViewController.swift in Sources */,
+				ABD62EFF1F0B4576001C2ABA /* listFoodHistoryViewController.swift in Sources */,
 				FC5231CF1EF51EF90067E0C0 /* ShowDetailExerciseViewController.swift in Sources */,
 				FC9924021F00AC4200CBF363 /* HistoryKidneyTableViewCell.swift in Sources */,
 				FC5231E01EF5541A0067E0C0 /* PressureTable.swift in Sources */,
