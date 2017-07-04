@@ -84,9 +84,13 @@ class ReportFoodandExercise: UIViewController {
     }
         
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "DetailHistoryFood" {
+        if segue.identifier == "DetailHistoryFood"  {
             let vc = segue.destination as! listFoodHistoryViewController
             vc.senderDate = saveDate
+        } else if segue.identifier == "DetailHistoryExercise"{
+            let vc = segue.destination as! listExerciseHistoryViewController
+            vc.senderDate = saveDate
         }
-    }
+    
+}
 }
