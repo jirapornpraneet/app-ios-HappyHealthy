@@ -9,11 +9,11 @@
 import UIKit
 
 class listFoodHistoryViewController: UIViewController,UITableViewDelegate,UITableViewDataSource{
-//    var getFoodTable: FoodTable?
+    var senderDate:String?
     var dbHelper = DatabaseHelper()
     var getlistFoodHistory = [ListFoodHistory]()
     var dataListFoodHistoryTable: ListFoodHistory?
-
+  
 
     @IBOutlet weak var listHistoryFoodTable: UITableView!
     override func viewDidLoad() {
@@ -27,7 +27,7 @@ class listFoodHistoryViewController: UIViewController,UITableViewDelegate,UITabl
     }
     
     func loadAllListHistoryFood() {
-        getlistFoodHistory = dbHelper.getListHistoryFood()
+        getlistFoodHistory = dbHelper.getListHistoryFood(dateHistory: senderDate!)
         listHistoryFoodTable.dataSource = self
         listHistoryFoodTable.delegate = self
     }

@@ -552,8 +552,7 @@
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="clickHistoryFood:" destination="TiB-OW-0Pr" eventType="touchUpInside" id="kKQ-ig-Ds9"/>
-                                                    <segue destination="Zjn-VF-KOG" kind="push" identifier="DetailHistoryFood" id="Jxy-Ga-Wm1"/>
+                                                    <segue destination="Zjn-VF-KOG" kind="push" identifier="DetailHistoryFood" id="eHm-hh-Axw"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Thk-dv-54Q">

@@ -10,6 +10,8 @@ import UIKit
 
 class DetailFoodHistoryTableViewCell: UITableViewCell {
     
+    var senderDate:String?
+    
     @IBOutlet weak var iconFoodImage: UIView!
     @IBOutlet weak var nameFoodLabel: UILabel!
     @IBOutlet weak var kcalFoodLabel: UILabel!

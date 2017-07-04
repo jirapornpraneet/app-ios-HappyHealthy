@@ -201,11 +201,11 @@ class DatabaseHelper {
         }
     }
     
-    func getListHistoryFood() -> [ListFoodHistory]{
+    func getListHistoryFood(dateHistory:String) -> [ListFoodHistory]{
         var  getListHistoryFoodTable = [ListFoodHistory]()
         try! dbQueue.inDatabase { db in
             do {
-                let qry = String(format: "select * from (select * from  Food_History where History_Food_Date  LIKE  '27-06-2560' ) fh, Food f where fh.Food_Id = f.Food_Id ")
+                let qry = String(format: "select * from (select * from  Food_History where History_Food_Date  LIKE '%@' ) fh, Food f where fh.Food_Id = f.Food_Id ",dateHistory)
                 for row in try Row.fetchAll(db, qry) {
                     let rowFoodHistory = ListFoodHistory()
                     rowFoodHistory.History_Food_Id = row.value(named: "History_Food_Id") as Int

@@ -16,7 +16,9 @@ class ReportFoodandExercise: UIViewController {
     var dataFoodTable: FoodTable?
     var getExerciseHistory = [ExerciseHistoryTable]()
     var sumTotal:Double?
-    var saveDate:String = ""
+    var saveDate:String?
+    var senderDate:String?
+    
 
     @IBOutlet weak var exerciseTotalcal: UILabel!
     @IBOutlet weak var foodTotalcal: UILabel!
@@ -41,7 +43,7 @@ class ReportFoodandExercise: UIViewController {
     @IBAction func selectDatePicker(_ sender: Any) {
         let dateFormatterShow = DateFormatter()
         dateFormatterShow.dateFormat = "dd-MM-yyyy"
-        let  setDate = dateFormatterShow.string(from: dateHistoryPicker.date)
+        let setDate = dateFormatterShow.string(from: dateHistoryPicker.date)
         //saveDate = setDate
         loadAllData(dateChoose: setDate)
         
@@ -76,14 +78,15 @@ class ReportFoodandExercise: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         let dateFormatterShow = DateFormatter()
         dateFormatterShow.dateFormat = "dd-MM-yyyy"
-        let  setDate = dateFormatterShow.string(from: dateHistoryPicker.date)
+        let setDate = dateFormatterShow.string(from: dateHistoryPicker.date)
         saveDate = setDate
-        loadAllData(dateChoose: saveDate)
+        loadAllData(dateChoose: saveDate!)
     }
-    
-    @IBAction func clickHistoryFood(_ sender: Any) {
-//        getFoodHistory = dbHelper.getAllHistoryFood()
+        
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "DetailHistoryFood" {
+            let vc = segue.destination as! listFoodHistoryViewController
+            vc.senderDate = saveDate
+        }
     }
-    
-  
 }
