@@ -101,30 +101,6 @@ class UserViewController: UIViewController,UITextFieldDelegate{
         }
 
         }
-
-    @IBAction func saveDataUserButton(_ sender: Any) {
-
-        weigthUser = Double(weightUserTextField.text!)!
-        heightUser = Double(heightUserTextField.text!)!
-        bmiUser = ((weigthUser)! / (((heightUser)!/100)*2))
-        ageUser = Double(ageUserTextField.text!)!
-        
-        if genderName == "Male"{
-            bmrUser = 66 + (13.7 * (weigthUser)!) + (5 * (heightUser)!) - (6.8 * (ageUser)!)
-        } else {
-            bmrUser = 665 + (9.6 * (weigthUser)!) + (1.8 * (heightUser)!) - (4.7 * (ageUser)!)
-        }
-
-        let userResource = UserTable()
-        userResource.User_Name = nameUserTextField.text
-        userResource.User_Age = Int(ageUserTextField.text!)
-        userResource.User_Weight = Double(weightUserTextField.text!)
-        userResource.User_Height = Int(heightUserTextField.text!)
-        userResource.User_BMI = Double(bmiUser!)
-        userResource.User_BMR = Double(bmrUser!)
-        userResource.User_Gender = genderName
-        dbHelper.insertUserTable(dataRowUserTable: userResource)
-    }
     
     @IBAction func selectGenderSegmented(_ sender: Any) {
         switch genderSegmentedControl.selectedSegmentIndex {
@@ -139,6 +115,55 @@ class UserViewController: UIViewController,UITextFieldDelegate{
         let genderSelect: String = self.genderList[self.genderSegmentedControl.selectedSegmentIndex]
         genderName = genderSelect
     }
+
+
+    @IBAction func saveDataUserButton(_ sender: Any) {
+        //ShowAlertController
+        let alertShow = UIAlertController (title: "ยืนยันการบันทึกข้อมูลผู้ใช้งาน", message:"คุณแน่ใจใช่ไหม" , preferredStyle: UIAlertControllerStyle.alert)
+        alertShow.addAction(UIAlertAction(title: "Yes" , style: UIAlertActionStyle.default, handler: { (action) in
+            alertShow.dismiss(animated: true, completion: nil)
+            self.insertHistoryTableUser()
+            self.alertSaveData()
+        }))
+        
+        alertShow.addAction(UIAlertAction(title: "No" , style: UIAlertActionStyle.default, handler: { (action) in
+            alertShow.dismiss(animated: true, completion: nil)
+            
+        }))
+        self.present(alertShow,animated: true,completion: nil)
+        }
+    
+    func insertHistoryTableUser()  {
+        weigthUser = Double(weightUserTextField.text!)!
+        heightUser = Double(heightUserTextField.text!)!
+        bmiUser = ((weigthUser)! / (((heightUser)!/100)*2))
+        ageUser = Double(ageUserTextField.text!)!
+        
+        if genderName == "Male"{
+            bmrUser = 66 + (13.7 * (weigthUser)!) + (5 * (heightUser)!) - (6.8 * (ageUser)!)
+        } else {
+            bmrUser = 665 + (9.6 * (weigthUser)!) + (1.8 * (heightUser)!) - (4.7 * (ageUser)!)
+        }
+        
+        let userResource = UserTable()
+        userResource.User_Name = nameUserTextField.text
+        userResource.User_Age = Int(ageUserTextField.text!)
+        userResource.User_Weight = Double(weightUserTextField.text!)
+        userResource.User_Height = Int(heightUserTextField.text!)
+        userResource.User_BMI = Double(bmiUser!)
+        userResource.User_BMR = Double(bmrUser!)
+        userResource.User_Gender = genderName
+        dbHelper.insertUserTable(dataRowUserTable: userResource)
+
+    }
+    
+    func alertSaveData(){
+        //ShowAlertController
+        let alertShowSave = UIAlertController (title: "บันทึกข้อมูลผู้ใช้งาน", message:" คุณได้บันทึกข้อมูลผู้ใช้งานสำเร็จ" , preferredStyle: UIAlertControllerStyle.alert)
+        alertShowSave.addAction(UIAlertAction(title: "OK" , style: UIAlertActionStyle.default, handler:nil))
+        self.present(alertShowSave, animated: true, completion: nil)
+    }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
