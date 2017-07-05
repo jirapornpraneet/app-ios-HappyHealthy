@@ -45,13 +45,13 @@ class AddExerciseViewController: UIViewController,UITextFieldDelegate {
     @IBAction func saveExercise(_ sender: Any) {
         //ShowAlertController
         let alertShow = UIAlertController (title: "ยืนยันการบันทึกข้อมูลออกกำลังกาย", message:"คุณแน่ใจใช่ไหม" , preferredStyle: UIAlertControllerStyle.alert)
-        alertShow.addAction(UIAlertAction(title: "Yes" , style: UIAlertActionStyle.default, handler: { (action) in
+        alertShow.addAction(UIAlertAction(title: "บันทึก" , style: UIAlertActionStyle.default, handler: { (action) in
             alertShow.dismiss(animated: true, completion: nil)
               self.insertDataExercise()
               self.alertSaveData()
         }))
         
-        alertShow.addAction(UIAlertAction(title: "No" , style: UIAlertActionStyle.default, handler: { (action) in
+        alertShow.addAction(UIAlertAction(title: "ยกเลิก" , style: UIAlertActionStyle.default, handler: { (action) in
             alertShow.dismiss(animated: true, completion: nil)
             
         }))
@@ -61,7 +61,7 @@ class AddExerciseViewController: UIViewController,UITextFieldDelegate {
     func alertSaveData(){
         //ShowAlertController
         let alertShowSave = UIAlertController (title: "บันทึกข้อมูลออกกำลังกาย", message:" คุณได้บันทึกข้อมูลออกกำลังกายสำเร็จ" , preferredStyle: UIAlertControllerStyle.alert)
-        alertShowSave.addAction(UIAlertAction(title: "OK" , style: UIAlertActionStyle.default, handler:nil))
+        alertShowSave.addAction(UIAlertAction(title: "บันทึก" , style: UIAlertActionStyle.default, handler:nil))
         self.present(alertShowSave, animated: true, completion: nil)
      }
 

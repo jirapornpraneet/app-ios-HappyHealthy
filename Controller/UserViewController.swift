@@ -120,13 +120,13 @@ class UserViewController: UIViewController,UITextFieldDelegate{
     @IBAction func saveDataUserButton(_ sender: Any) {
         //ShowAlertController
         let alertShow = UIAlertController (title: "ยืนยันการบันทึกข้อมูลผู้ใช้งาน", message:"คุณแน่ใจใช่ไหม" , preferredStyle: UIAlertControllerStyle.alert)
-        alertShow.addAction(UIAlertAction(title: "Yes" , style: UIAlertActionStyle.default, handler: { (action) in
+        alertShow.addAction(UIAlertAction(title: "บันทึก" , style: UIAlertActionStyle.default, handler: { (action) in
             alertShow.dismiss(animated: true, completion: nil)
             self.insertHistoryTableUser()
             self.alertSaveData()
         }))
         
-        alertShow.addAction(UIAlertAction(title: "No" , style: UIAlertActionStyle.default, handler: { (action) in
+        alertShow.addAction(UIAlertAction(title: "ยกเลิก" , style: UIAlertActionStyle.default, handler: { (action) in
             alertShow.dismiss(animated: true, completion: nil)
             
         }))
@@ -160,7 +160,7 @@ class UserViewController: UIViewController,UITextFieldDelegate{
     func alertSaveData(){
         //ShowAlertController
         let alertShowSave = UIAlertController (title: "บันทึกข้อมูลผู้ใช้งาน", message:" คุณได้บันทึกข้อมูลผู้ใช้งานสำเร็จ" , preferredStyle: UIAlertControllerStyle.alert)
-        alertShowSave.addAction(UIAlertAction(title: "OK" , style: UIAlertActionStyle.default, handler:nil))
+        alertShowSave.addAction(UIAlertAction(title: "บันทึก" , style: UIAlertActionStyle.default, handler:nil))
         self.present(alertShowSave, animated: true, completion: nil)
     }
     
@@ -184,13 +184,18 @@ class UserViewController: UIViewController,UITextFieldDelegate{
     
     override func viewDidAppear(_ animated: Bool) {
         loadAllUser()
+        self.tabBarController?.navigationItem.title = "ข้อมูลผู้ใช้งาน"
+        
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        self.tabBarController?.navigationItem.rightBarButtonItem = nil
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.tabBarController?.navigationItem.title = "ข้อมูลผู้ใช้งาน"
-        self.tabBarController?.navigationItem.rightBarButtonItem = saveData //This is the IBOutlet variable that you previously added
-    }
+        self.tabBarController?.navigationItem.rightBarButtonItem = saveData     }
     
 }
 

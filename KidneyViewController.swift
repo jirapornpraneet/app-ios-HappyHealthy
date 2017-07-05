@@ -66,13 +66,13 @@ class KidneyViewController: UIViewController,UITextFieldDelegate {
         
         //ShowAlertController
         let alertShow = UIAlertController (title:String(format:"คุณต้องการบันทึกข้อมูลใช่ไหม?"), message:String(format: "วันที่ : %@ \n ค่าการทำงานไต : %i\n  อยู่ในเกณฑ์ที่ : %@ ", dateKidney!, costGFR! ,levelGFR!) , preferredStyle: UIAlertControllerStyle.alert)
-        alertShow.addAction(UIAlertAction(title: "Yes" , style: UIAlertActionStyle.default, handler: { (action) in
+        alertShow.addAction(UIAlertAction(title: "บันทึก" , style: UIAlertActionStyle.default, handler: { (action) in
             alertShow.dismiss(animated: true, completion: nil)
             self.insertTableKidney()
             self.performSegue(withIdentifier: "ShowKidney", sender: sender)
         }))
         
-        alertShow.addAction(UIAlertAction(title: "No" , style: UIAlertActionStyle.default, handler: { (action) in
+        alertShow.addAction(UIAlertAction(title: "ยกเลิก" , style: UIAlertActionStyle.default, handler: { (action) in
             alertShow.dismiss(animated: true, completion: nil)
         }))
         self.present(alertShow,animated: true,completion: nil)

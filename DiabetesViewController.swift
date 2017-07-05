@@ -164,23 +164,22 @@ class DiabetesViewController: UIViewController,UITextFieldDelegate {
             }else{
                 diabetesLevel = DiabetesAfter()
             }
-            
+        }
         dateDiabetes = saveDateDiabetes
         showCostSugar = Int(inputCostSugarTextField.text!)
         levelDiabetes = diabetesLevel
         statusDiabetes = diabetesStatusName
         peopleDiabetes = diabetesPeopleName
    
-                }
         //ShowAlertController
         let alertShow = UIAlertController (title:String(format:"คุณต้องการบันทึกข้อมูลใช่ไหม?"), message:String(format: "วันที่ : %@ \n ค่าน้ำตาลในเลือด%@ : %i \n อยู่ในเกณฑ์ที่ : %@ \n  สถานะที่ : %@ ", dateDiabetes!,statusDiabetes!, showCostSugar! ,levelDiabetes!,peopleDiabetes!) , preferredStyle: UIAlertControllerStyle.alert)
-        alertShow.addAction(UIAlertAction(title: "Yes" , style: UIAlertActionStyle.default, handler: { (action) in
+        alertShow.addAction(UIAlertAction(title: "บันทึก" , style: UIAlertActionStyle.default, handler: { (action) in
             alertShow.dismiss(animated: true, completion: nil)
             self.insertTableDiabetes()
             self.performSegue(withIdentifier: "ShowDiabetes", sender: sender)
         }))
         
-        alertShow.addAction(UIAlertAction(title: "No" , style: UIAlertActionStyle.default, handler: { (action) in
+        alertShow.addAction(UIAlertAction(title: "ยกเลิก" , style: UIAlertActionStyle.default, handler: { (action) in
             alertShow.dismiss(animated: true, completion: nil)
             
         }))

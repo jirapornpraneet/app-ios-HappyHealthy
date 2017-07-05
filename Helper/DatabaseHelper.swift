@@ -582,6 +582,31 @@ class DatabaseHelper {
         }
         return  getCheckReportKidney
     }
+    
+    
+    func deleteHistoryKidney(K_Id:Int) -> [KidneyTable] {
+        var  deleteHistoryKidneyTable = [KidneyTable]()
+        try! dbQueue.inDatabase { db in
+            do {
+                
+                let qry = String(format: "DELETE FROM Kidney WHERE K_Id = '%i'", K_Id)
+                for row in try Row.fetchAll(db, qry){
+                    let rowKidneyTable = KidneyTable()
+                    rowKidneyTable.K_DateTime = row.value(named: "K_DateTime") as String
+                    rowKidneyTable.K_CostGFR = row.value(named: "K_CostGFR")as Int
+                    rowKidneyTable.K_LevelCostGFR = row.value(named: "K_LevelCostGFR") as String
+                    deleteHistoryKidneyTable.append(rowKidneyTable)
+                }
+            }
+            catch let error as DatabaseError{
+                print("Delete HistoryKidneyTable Fail!!")
+                print(error)
+            }
+        }
+        return  deleteHistoryKidneyTable
+    }
+
+
 
     func getReportPressure(datedisease:String) -> [PressureTable]{
         var  getReportPressure = [PressureTable]()
@@ -842,8 +867,7 @@ class DatabaseHelper {
             print("Insert User Fail!!")
             }
         }
-        
-
     }
     
-        }
+    
+}

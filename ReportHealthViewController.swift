@@ -41,12 +41,14 @@ class ReportHealthViewController: UIViewController{
 
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         let dateFormatterShow = DateFormatter()
         dateFormatterShow.dateFormat = "dd-MM-yyyy"
         let  setDate = dateFormatterShow.string(from: datePicker.date)
         saveDate = setDate
         loadAllData(dateChoose: saveDate)
-        
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
