@@ -12,9 +12,13 @@ class KidneyViewController: UIViewController,UITextFieldDelegate {
     var getKidneyTable = [KidneyTable]()
     var insertDataKidney = [KidneyTable]()
     var dbHelper = DatabaseHelper()
-    var saveDateKidney:String = ""
-    var kidneyLevel: String = ""
+    var saveDateKidney:String?
+    var kidneyLevel: String?
     var costGFR:Int?
+    var date:String?
+    var dateKidney:String?
+    var showGFR:Int?
+    var levelGFR:String?
 
     @IBOutlet var inputCostGFRTextField: UITextField!
     @IBOutlet var dateInputKidneyPicker: UIDatePicker!
@@ -55,13 +59,47 @@ class KidneyViewController: UIViewController,UITextFieldDelegate {
             kidneyLevel = "ลดลงอันตราย"
         }
 
+        dateKidney = saveDateKidney
+        showGFR = Int(inputCostGFRTextField.text!)
+        levelGFR = kidneyLevel
+        
+        //ShowAlertController
+        let alertShow = UIAlertController (title:String(format:"คุณต้องการบันทึกข้อมูลใช่ไหม?"), message:String(format: "วันที่ : %@ \n ค่าการทำงานไต : %i\n  อยู่ในเกณฑ์ที่ : %@ ", dateKidney!, costGFR! ,levelGFR!) , preferredStyle: UIAlertControllerStyle.alert)
+        alertShow.addAction(UIAlertAction(title: "Yes" , style: UIAlertActionStyle.default, handler: { (action) in
+            alertShow.dismiss(animated: true, completion: nil)
+            self.insertTableKidney()
+            self.performSegue(withIdentifier: "ShowKidney", sender: sender)
+        }))
+        //performSegue(withIdentifier: "ShowKidney", sender: sender)
+        
+        alertShow.addAction(UIAlertAction(title: "No" , style: UIAlertActionStyle.default, handler: { (action) in
+            alertShow.dismiss(animated: true, completion: nil)
+            
+        }))
+        self.present(alertShow,animated: true,completion: nil)
+    }
+    
+    func insertTableKidney()  {
+        costGFR = Int(inputCostGFRTextField.text!)!
+        if costGFR! >= 90 {
+            kidneyLevel  = "ปกติ"
+        }else if costGFR! >= 60 && costGFR! < 90{
+            kidneyLevel = "ลดลงเล็กน้อย"
+        }else if costGFR! >= 30 && costGFR! < 60{
+            kidneyLevel = "ลดลงปานกลาง"
+        }else if costGFR! >= 15 && costGFR! < 30{
+            kidneyLevel = "ลดลงมาก"
+        }else{
+            kidneyLevel = "ลดลงอันตราย"
+        }
+        
         let kidneyUserResource = KidneyTable()
         kidneyUserResource.K_DateTime = saveDateKidney
         kidneyUserResource.K_CostGFR = Int(inputCostGFRTextField.text!)
         kidneyUserResource.K_LevelCostGFR = kidneyLevel
-
         dbHelper.insertKidneyTable(dataRowKidneyTable: kidneyUserResource)
     }
+    
     //Hide KeyBoard when user touches outside keyBoard
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)

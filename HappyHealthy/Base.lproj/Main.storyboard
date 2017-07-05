@@ -1734,7 +1734,6 @@
                                         <state key="normal" image="buttonsavekid"/>
                                         <connections>
                                             <action selector="saveDataKidney:" destination="Q5x-Lt-wGk" eventType="touchUpInside" id="Hb6-Rh-JsR"/>
-                                            <segue destination="aaU-Fy-uiB" kind="show" id="fTW-Ez-VnQ"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -1775,6 +1774,7 @@
                     <connections>
                         <outlet property="dateInputKidneyPicker" destination="Idi-C6-2um" id="Clw-mX-xXg"/>
                         <outlet property="inputCostGFRTextField" destination="TA3-8m-WDn" id="GOH-Mq-mZb"/>
+                        <segue destination="aaU-Fy-uiB" kind="push" identifier="ShowKidney" id="TT7-B4-Bnw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vee-hG-ZQj" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2326,7 +2326,7 @@
         <!--แสดงข้อมูลโรคไต-->
         <scene sceneID="Ky4-Ng-Gri">
             <objects>
-                <viewController title="แสดงข้อมูลโรคไต" id="aaU-Fy-uiB" customClass="ShowKidneyViewController" customModule="HappyHealthy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ShowKidney" title="แสดงข้อมูลโรคไต" id="aaU-Fy-uiB" customClass="ShowKidneyViewController" customModule="HappyHealthy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zfB-xf-0r2"/>
                         <viewControllerLayoutGuide type="bottom" id="r2n-Dr-tVv"/>
@@ -3927,8 +3927,8 @@
         <image name="year" width="50" height="45"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="hZu-bF-sau"/>
+        <segue reference="Ktf-Jr-dMH"/>
         <segue reference="DpI-k7-bDz"/>
-        <segue reference="chi-Wk-MDk"/>
+        <segue reference="hZu-bF-sau"/>
     </inferredMetricsTieBreakers>
 </document>
