@@ -59,11 +59,11 @@ class ReportFoodandExercise: UIViewController {
         if getExerciseHistory.count == 0 {
             return
         }
+
         getSumFoodandExercis = dbHelper.getSumFoodandExercise(dateHistory: dateChoose)
         
         let getSumFood:Double? = (getSumFoodandExercis[0].SUM_Food_Cal!)
         let getSumExercise:Double? = (getSumFoodandExercis[0].SUM_EX_Cal!)
-        sumTotal = getSumFood! - getSumExercise!
         exerciseTotalcal.text = String(format: "%.02f", (getSumFoodandExercis[0].SUM_EX_Cal)!)
         foodTotalcal.text = String(format: "%.02f", (getSumFoodandExercis[0].SUM_Food_Cal)!)
         sumProtin.text = String(format: "%.02f", (getSumFoodandExercis[0].SUM_pro)!)
@@ -71,7 +71,9 @@ class ReportFoodandExercise: UIViewController {
         sumFat.text = String(format: "%.02f", (getSumFoodandExercis[0].SUM_fat)!)
         sumSugar.text = String(format: "%.02f", (getSumFoodandExercis[0].SUM_sugar)!)
         sumSodium.text = String(format: "%.02f", (getSumFoodandExercis[0].SUM_sodium)!)
+        sumTotal = getSumFood! - getSumExercise!
         sumTotalCal.text = String(format: "%.02f", (sumTotal)!)
+        
 
     }
     

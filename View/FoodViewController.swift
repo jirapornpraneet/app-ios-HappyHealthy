@@ -15,7 +15,10 @@ class FoodViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     var getFoodTable = [FoodTable]()
     var dbHelper = DatabaseHelper()
     var dataFoodTable: FoodTable?
-    var FilteredFood = [String]()
+    //SerachBar
+    var FilteredFood:[String] = []
+    var getSearchFood = [FoodTable]()
+    var searchActive: Bool = false
 
     
     override func viewDidLoad() {
@@ -33,20 +36,50 @@ class FoodViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         tableFood.dataSource = self
         tableFood.delegate = self
         foodSearchBar.delegate = self
+    
+    }
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        searchActive = true;
     }
     
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        searchActive = false;
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchActive = false;
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchActive = false;
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        getSearchFood = dbHelper.getSearchFood(word: searchText)
+        print(getSearchFood)
+        self.tableFood.reloadData()
+    }
+
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-              return getFoodTable.count
+        if(searchActive) {
+            return getSearchFood.count
+        }
+        return getFoodTable.count
+       
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let  cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! FoodTableViewCell
+        if(searchActive){
+            cell.FoodTableViewCell = getSearchFood[indexPath.row]
+        }else {
            cell.FoodTableViewCell = getFoodTable[indexPath.row]
-        return cell
+        }
+        return cell;
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -54,8 +87,13 @@ class FoodViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        dataFoodTable = (getFoodTable[indexPath.row] as? FoodTable)!
-        self.performSegue(withIdentifier: "DetailFood", sender: nil)
+        if(searchActive){
+            dataFoodTable = (getSearchFood[indexPath.row] as? FoodTable)!
+            self.performSegue(withIdentifier: "DetailFood", sender: nil)
+        }else{
+            dataFoodTable = (getFoodTable[indexPath.row] as? FoodTable)!
+            self.performSegue(withIdentifier: "DetailFood", sender: nil)
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -64,6 +102,9 @@ class FoodViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             vc.getFoodTable = dataFoodTable
         }
     }
+    
+    
+    
 }
 
 

@@ -317,6 +317,53 @@ class DatabaseHelper {
         return  getSumFoodandExercise
     }
     
+    func getSearchFood(word:String) -> [FoodTable]{
+        var  getSearchFoodTable = [FoodTable]()
+        try! dbQueue.inDatabase { db in
+            do {
+                let qry = String(format: "SELECT * FROM  Food Where Food_Name  LIKE '%%%@%%'",word)
+                for row in try Row.fetchAll(db, qry){
+                    let rowFood = FoodTable()
+                    rowFood.Food_Id = row.value(named: "Food_Id") as Int
+                    rowFood.Food_Name = row.value(named: "Food_Name") as String
+                    rowFood.Food_Calories = row.value(named: "Food_Calories") as Double
+                    rowFood.Food_Unit = row.value(named: "Food_Unit") as String
+                    rowFood.Food_Netweight = row.value(named: "Food_Netweight") as Double
+                    rowFood.Food_NetUnit  = row.value(named: "Food_NetUnit") as String
+                    rowFood.Food_Protein = row.value(named: "Food_Protein") as Double
+                    rowFood.Food_Fat = row.value(named: "Food_Fat") as Double
+                    rowFood.Food_Carbohydrate = row.value(named: "Food_Carbohydrate") as Double
+                    rowFood.Food_Sugars = row.value(named: "Food_Sugars") as Double
+                    rowFood.Food_Sodium = row.value(named: "Food_Sodium") as Double
+                    rowFood.Food_Detail  = row.value(named: "Food_Detail") as String
+                    getSearchFoodTable.append(rowFood)
+                }
+            }
+            catch let error as DatabaseError{
+                // The SQLite error code: 19 (SQLITE_CONSTRAINT)
+                error.resultCode
+                
+                // The extended error code: 787 (SQLITE_CONSTRAINT_FOREIGNKEY)
+                error.extendedResultCode
+                
+                // The eventual SQLite message: FOREIGN KEY constraint failed
+                error.message
+                
+                // The eventual erroneous SQL query
+                // "INSERT INTO pets (masterId, name) VALUES (?, ?)"
+                error.sql
+                
+                // Full error description:
+                // "SQLite error 787 with statement `INSERT INTO pets (masterId, name)
+                //  VALUES (?, ?)` arguments [1, "Bobby"]: FOREIGN KEY constraint failed"
+                print("Get ReportHealth Fail!!")
+                print(error)
+            }
+        }
+        return  getSearchFoodTable
+    }
+
+    
 
     //select * from (select * from  Food_History  where   History_Food_Date  LIKE  "27-06-2560 15:23" ) fh, Food  f  where fh. Food_Id  = f.Food_Id
     
