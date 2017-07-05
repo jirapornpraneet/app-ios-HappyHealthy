@@ -2204,6 +2204,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="exerciseSearchBar" destination="eDR-M7-Hjs" id="qvb-Yy-COV"/>
                         <outlet property="tableExercis" destination="Mjb-cp-C1W" id="RbM-UF-p2Z"/>
                         <segue destination="Jh3-be-Ps1" kind="push" identifier="DetailExe" id="wlX-qi-wUT"/>
                     </connections>

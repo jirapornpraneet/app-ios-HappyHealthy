@@ -310,7 +310,7 @@ class DatabaseHelper {
                 // Full error description:
                 // "SQLite error 787 with statement `INSERT INTO pets (masterId, name)
                 //  VALUES (?, ?)` arguments [1, "Bobby"]: FOREIGN KEY constraint failed"
-                print("Get ReportHealth Fail!!")
+                print("Get SumFoodandExercise Fail!!")
                 print(error)
             }
         }
@@ -340,32 +340,37 @@ class DatabaseHelper {
                 }
             }
             catch let error as DatabaseError{
-                // The SQLite error code: 19 (SQLITE_CONSTRAINT)
-                error.resultCode
-                
-                // The extended error code: 787 (SQLITE_CONSTRAINT_FOREIGNKEY)
-                error.extendedResultCode
-                
-                // The eventual SQLite message: FOREIGN KEY constraint failed
-                error.message
-                
-                // The eventual erroneous SQL query
-                // "INSERT INTO pets (masterId, name) VALUES (?, ?)"
-                error.sql
-                
-                // Full error description:
-                // "SQLite error 787 with statement `INSERT INTO pets (masterId, name)
-                //  VALUES (?, ?)` arguments [1, "Bobby"]: FOREIGN KEY constraint failed"
-                print("Get ReportHealth Fail!!")
+                print("Get SearchFood Fail!!")
                 print(error)
             }
         }
         return  getSearchFoodTable
     }
-
     
-
-    //select * from (select * from  Food_History  where   History_Food_Date  LIKE  "27-06-2560 15:23" ) fh, Food  f  where fh. Food_Id  = f.Food_Id
+    func getSearchExercise(word:String) -> [ExerciseTable]{
+        var  getSearchExerciseTable = [ExerciseTable]()
+        try! dbQueue.inDatabase { db in
+            do {
+                let qry = String(format: "SELECT * FROM Exercise Where Exercise_Name LIKE '%%%@%%'",word)
+                for row in try Row.fetchAll(db, qry){
+                    let rowExerciseTable = ExerciseTable()
+                    rowExerciseTable.Exercise_Id = row.value(named: "Exercise_Id") as Int
+                    rowExerciseTable.Exercise_Name = row.value(named: "Exercise_Name") as String
+                    rowExerciseTable.Exercise_Calories = row.value(named: "Exercise_Calories") as Double
+                    rowExerciseTable.Exercise_Duration = row.value(named: "Exercise_Duration") as Double
+                    rowExerciseTable.Exercise_Disease = row.value(named: "Exercise_Disease") as String
+                    rowExerciseTable.Exercise_Detail  = row.value(named: "Exercise_Detail") as String
+                    rowExerciseTable.Exercise_Description = row.value(named: "Exercise_Description") as String
+                    getSearchExerciseTable.append(rowExerciseTable)
+                }
+            }
+            catch let error as DatabaseError{
+                print("Get SearchExercise Fail!!")
+                print(error)
+            }
+        }
+        return  getSearchExerciseTable
+    }
     
     func getDiabetes() -> [DiabetesTable]{
         var getDiabetesTable = [DiabetesTable]()

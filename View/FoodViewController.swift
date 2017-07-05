@@ -15,16 +15,13 @@ class FoodViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     var getFoodTable = [FoodTable]()
     var dbHelper = DatabaseHelper()
     var dataFoodTable: FoodTable?
-    //SerachBar
-    var FilteredFood:[String] = []
+    //SearchBar
     var getSearchFood = [FoodTable]()
     var searchActive: Bool = false
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         loadAllFood()
-
     }
     
     override func didReceiveMemoryWarning() {
@@ -56,7 +53,6 @@ class FoodViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         getSearchFood = dbHelper.getSearchFood(word: searchText)
-        print(getSearchFood)
         self.tableFood.reloadData()
     }
 
@@ -102,9 +98,6 @@ class FoodViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             vc.getFoodTable = dataFoodTable
         }
     }
-    
-    
-    
 }
 
 
