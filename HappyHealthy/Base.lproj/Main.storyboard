@@ -1475,7 +1475,6 @@
                                         <state key="normal" image="buttonsavediba"/>
                                         <connections>
                                             <action selector="saveDataDiabetes:" destination="2SL-D9-DPF" eventType="touchUpInside" id="iFu-DL-t6r"/>
-                                            <segue destination="Pox-vi-83I" kind="show" id="t2o-xs-CA4"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -1522,6 +1521,7 @@
                         <outlet property="inputCostSugarTextField" destination="a3O-I5-tlQ" id="SlY-vF-Fgt"/>
                         <outlet property="peopleDiabetesSegmented" destination="Ocf-7a-2pe" id="MXe-ls-t79"/>
                         <outlet property="statusDiabetesSegmented" destination="IG6-jm-XKs" id="54e-9b-Zd1"/>
+                        <segue destination="Pox-vi-83I" kind="push" identifier="ShowDiabetes" id="2PN-XF-0V4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cNy-QY-UeH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1897,7 +1897,6 @@
                                         <state key="normal" image="buttonsave"/>
                                         <connections>
                                             <action selector="saveDataPressure:" destination="XAO-Ys-IaU" eventType="touchUpInside" id="cEI-Ap-yyc"/>
-                                            <segue destination="8Go-j4-kGQ" kind="show" id="fca-z3-esw"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -1953,6 +1952,7 @@
                         <outlet property="costPressureDownTextField" destination="PWs-2E-cuM" id="lzh-sP-gjF"/>
                         <outlet property="costPressureTopTextField" destination="Per-Cv-m6j" id="yzr-XW-PtY"/>
                         <outlet property="dateInputPressurePicker" destination="naH-rh-8qw" id="jL7-Jj-eDc"/>
+                        <segue destination="8Go-j4-kGQ" kind="push" identifier="ShowPressure" id="qph-Lx-pOU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BPg-nc-rFy" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2210,7 +2210,7 @@
         <!--แสดงข้อมูลเบาหวาน-->
         <scene sceneID="BcB-bS-JJ3">
             <objects>
-                <viewController title="แสดงข้อมูลเบาหวาน" id="Pox-vi-83I" customClass="ShowDiabetesViewController" customModule="HappyHealthy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ShowDiabetes" title="แสดงข้อมูลเบาหวาน" id="Pox-vi-83I" customClass="ShowDiabetesViewController" customModule="HappyHealthy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fKZ-Wd-VLD"/>
                         <viewControllerLayoutGuide type="bottom" id="6Hj-v5-bsx"/>
@@ -2435,7 +2435,7 @@
         <!--แสดงข้อมูลความดันโลหิต-->
         <scene sceneID="tXQ-ie-G35">
             <objects>
-                <viewController title="แสดงข้อมูลความดันโลหิต" id="8Go-j4-kGQ" customClass="ShowPressureViewController" customModule="HappyHealthy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ShowPressure" title="แสดงข้อมูลความดันโลหิต" id="8Go-j4-kGQ" customClass="ShowPressureViewController" customModule="HappyHealthy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fvi-Bb-Z30"/>
                         <viewControllerLayoutGuide type="bottom" id="42K-WZ-DgF"/>
@@ -3928,7 +3928,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Ktf-Jr-dMH"/>
-        <segue reference="DpI-k7-bDz"/>
-        <segue reference="hZu-bF-sau"/>
+        <segue reference="Hdr-ah-W2Y"/>
+        <segue reference="w1Y-5d-cnC"/>
     </inferredMetricsTieBreakers>
 </document>

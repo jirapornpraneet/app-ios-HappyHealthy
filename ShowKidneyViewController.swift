@@ -39,7 +39,6 @@ class ShowKidneyViewController: UIViewController {
         }else{
             showKidneyLevelImage = UIImage(named: "textlevelkid5.png")
             showLineKidneyLevelImage = UIImage(named: "prokid5.png")
-
         }
     
         showDatetimeLabel.text = getKidneyTable[0].K_DateTime

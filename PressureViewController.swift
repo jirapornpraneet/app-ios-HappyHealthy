@@ -21,6 +21,13 @@ class PressureViewController: UIViewController,UITextFieldDelegate {
     var costDown:Int?
     var costHeart:Int?
     var pressureLevelName: [String] = ["พบแพทย์ทันที ระดับอันตราย","พบแพทย์ทันที ระดับสูงมาก","พบแพทย์ทันที ระดับสูง","พบแพทย์ทันที ระดับค่อนข้างสูง","ระดับปกติ","ระดับเหมาะสม"]
+    //setShowAlertController
+    var datePressure:String?
+    var showCostTop:Int?
+    var showCostDown:Int?
+    var showCostHeart:Int?
+    var levelPressure:String?
+    var levelHeart:String?
 
     @IBOutlet var costPressureDownTextField: UITextField!
     @IBOutlet var costHeartTextField: UITextField!
@@ -120,28 +127,30 @@ class PressureViewController: UIViewController,UITextFieldDelegate {
     }
 
     @IBAction func saveDataPressure(_ sender: Any) {
+        heartLevel = LevelHeart()
+        pressureLevel = LevelPressure()
+        
+        datePressure = saveDatePressure
+        showCostTop = Int(costPressureTopTextField.text!)
+        showCostDown = Int(costPressureDownTextField.text!)
+        showCostHeart = Int(costHeartTextField.text!)
+        levelPressure = pressureLevel
+        levelHeart = heartLevel
+
         //ShowAlertController
-        let alertShow = UIAlertController (title:String(format: "ยืนยันการบันทึกข้อมูลความดันโลหิต"), message:"คุณแน่ใจใช่ไหม" , preferredStyle: UIAlertControllerStyle.alert)
+        let alertShow = UIAlertController (title:String(format:"คุณต้องการบันทึกข้อมูลใช่ไหม?"), message:String(format: "วันที่ : %@ \n ค่าความดันโลหิตตัวบน : %i \n  ค่าความดันโลหิตตัวล่าง : %i \n อยู่ในเกณฑ์ที่ : %@ \n อัตราการเต้นหัวใจ : %i \n อยู่ในเกณฑ์ที่ : %@ ", datePressure!, showCostTop! ,showCostDown!, levelPressure!, showCostHeart! , levelHeart!) , preferredStyle: UIAlertControllerStyle.alert)
         alertShow.addAction(UIAlertAction(title: "Yes" , style: UIAlertActionStyle.default, handler: { (action) in
             alertShow.dismiss(animated: true, completion: nil)
             self.insertTablePressure()
-            self.alertSaveData()
+            self.performSegue(withIdentifier: "ShowPressure", sender: sender)
         }))
         
         alertShow.addAction(UIAlertAction(title: "No" , style: UIAlertActionStyle.default, handler: { (action) in
             alertShow.dismiss(animated: true, completion: nil)
-            
         }))
         self.present(alertShow,animated: true,completion: nil)
     }
     
-    func alertSaveData(){
-        //ShowAlertController
-        let alertShowSave = UIAlertController (title: "บันทึกข้อมูลความดันโลหิต", message:" คุณได้บันทึกข้อมูลความดันโลหิตสำเร็จ" , preferredStyle: UIAlertControllerStyle.alert)
-        alertShowSave.addAction(UIAlertAction(title: "OK" , style: UIAlertActionStyle.default, handler:nil))
-        self.present(alertShowSave, animated: true, completion: nil)
-    }
-
     func insertTablePressure()  {
         heartLevel = LevelHeart()
         pressureLevel = LevelPressure()

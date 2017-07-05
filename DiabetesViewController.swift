@@ -19,6 +19,12 @@ class DiabetesViewController: UIViewController,UITextFieldDelegate {
     var saveDateDiabetes:String = ""
     var diabetesLevel: String = ""
     var costSugar:Int?
+    //setShowAlertController
+    var dateDiabetes:String?
+    var showCostSugar:Int?
+    var levelDiabetes:String?
+    var statusDiabetes:String?
+    var peopleDiabetes:String?
     
     @IBOutlet var peopleDiabetesSegmented: UISegmentedControl!
     @IBOutlet var inputCostSugarTextField: UITextField!
@@ -108,7 +114,6 @@ class DiabetesViewController: UIViewController,UITextFieldDelegate {
             diabetesLevel = "พบแพทย์ทันที น้ำตาลในเลือดต่ำ อันตราย"
         }
         return diabetesLevel
-        
     }
 
     @IBAction func selectDatePicker(_ sender: Any) {
@@ -130,7 +135,6 @@ class DiabetesViewController: UIViewController,UITextFieldDelegate {
         
         let statusDiabetesSelect: String = self.diabetesStatusList[self.statusDiabetesSegmented.selectedSegmentIndex]
         diabetesStatusName = statusDiabetesSelect
-
     }
 
     @IBAction func selectPeopleDiabetesSegmented(_ sender: Any) {
@@ -148,7 +152,42 @@ class DiabetesViewController: UIViewController,UITextFieldDelegate {
     }
     
     @IBAction func saveDataDiabetes(_ sender: Any) {
+        if diabetesPeopleName == "คนปกติ" {
+            if diabetesStatusName == "ก่อนอาหาร" {
+                diabetesLevel = NormalBefore()
+            }else{
+                diabetesLevel = NormalAfter()
+            }
+        }else if diabetesPeopleName == "ผู้เป็นเบาหวาน" {
+            if diabetesStatusName == "ก่อนอาหาร"{
+                diabetesLevel = DiabetesBefore()
+            }else{
+                diabetesLevel = DiabetesAfter()
+            }
+            
+        dateDiabetes = saveDateDiabetes
+        showCostSugar = Int(inputCostSugarTextField.text!)
+        levelDiabetes = diabetesLevel
+        statusDiabetes = diabetesStatusName
+        peopleDiabetes = diabetesPeopleName
+   
+                }
+        //ShowAlertController
+        let alertShow = UIAlertController (title:String(format:"คุณต้องการบันทึกข้อมูลใช่ไหม?"), message:String(format: "วันที่ : %@ \n ค่าน้ำตาลในเลือด%@ : %i \n อยู่ในเกณฑ์ที่ : %@ \n  สถานะที่ : %@ ", dateDiabetes!,statusDiabetes!, showCostSugar! ,levelDiabetes!,peopleDiabetes!) , preferredStyle: UIAlertControllerStyle.alert)
+        alertShow.addAction(UIAlertAction(title: "Yes" , style: UIAlertActionStyle.default, handler: { (action) in
+            alertShow.dismiss(animated: true, completion: nil)
+            self.insertTableDiabetes()
+            self.performSegue(withIdentifier: "ShowDiabetes", sender: sender)
+        }))
         
+        alertShow.addAction(UIAlertAction(title: "No" , style: UIAlertActionStyle.default, handler: { (action) in
+            alertShow.dismiss(animated: true, completion: nil)
+            
+        }))
+        self.present(alertShow,animated: true,completion: nil)
+    }
+    
+    func insertTableDiabetes() {
         if diabetesPeopleName == "คนปกติ" {
             if diabetesStatusName == "ก่อนอาหาร" {
                 diabetesLevel = NormalBefore()
@@ -170,8 +209,6 @@ class DiabetesViewController: UIViewController,UITextFieldDelegate {
         diabetesUserResource.D_Level = diabetesLevel
         dbHelper.insertDiabetesTable(dataRowDiabetesTable: diabetesUserResource)
     }
-
-    
 }
 
 

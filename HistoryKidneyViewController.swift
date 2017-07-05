@@ -20,13 +20,10 @@ class HistoryKidneyViewController: UIViewController,UITableViewDelegate,UITableV
         getHistoryKidneyTable = dbHelper.getHistoryKidney()
         HistoryKidneyTableView.dataSource = self
         HistoryKidneyTableView.dataSource = self
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {

@@ -16,6 +16,7 @@ class KidneyViewController: UIViewController,UITextFieldDelegate {
     var kidneyLevel: String?
     var costGFR:Int?
     var date:String?
+    //setShowAlertController
     var dateKidney:String?
     var showGFR:Int?
     var levelGFR:String?
@@ -70,11 +71,9 @@ class KidneyViewController: UIViewController,UITextFieldDelegate {
             self.insertTableKidney()
             self.performSegue(withIdentifier: "ShowKidney", sender: sender)
         }))
-        //performSegue(withIdentifier: "ShowKidney", sender: sender)
         
         alertShow.addAction(UIAlertAction(title: "No" , style: UIAlertActionStyle.default, handler: { (action) in
             alertShow.dismiss(animated: true, completion: nil)
-            
         }))
         self.present(alertShow,animated: true,completion: nil)
     }
