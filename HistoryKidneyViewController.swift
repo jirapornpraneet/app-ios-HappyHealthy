@@ -15,7 +15,7 @@ class HistoryKidneyViewController: UIViewController,UITableViewDelegate,UITableV
     var dbHelper = DatabaseHelper()
     var dataKidneyTable:KidneyTable?
     var deleteHistory = [KidneyTable]()
-    var idKidney:Int?
+    var deleteId:Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,28 +45,19 @@ class HistoryKidneyViewController: UIViewController,UITableViewDelegate,UITableV
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 60
     }
-    
-    // Override to support editing the table view.
+
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         getHistoryKidneyTable = dbHelper.getHistoryKidney()
-        deleteHistory = dbHelper.deleteHistoryKidney(K_Id: idKidney!)
+        deleteId = getHistoryKidneyTable[indexPath.row].K_Id
         if editingStyle == .delete {
-            self.deleteHistory.remove(at: indexPath.row)
-            //Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        }else if editingStyle == .insert{
-            
+            deleteHistory = dbHelper.deleteHistoryKidney(K_Id: deleteId!)
+            getHistoryKidneyTable = dbHelper.getHistoryKidney()
+            HistoryKidneyTableView.reloadData()
         }
     }
-    
-    // Override to support rearranging the table view.
-    func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to toIndexPath: IndexPath) {
-        let itemToMove = getHistoryKidneyTable[fromIndexPath.row]
-        getHistoryKidneyTable.remove(at: fromIndexPath.row)
-        getHistoryKidneyTable.insert(itemToMove, at: toIndexPath.row)
-    }
+
 }

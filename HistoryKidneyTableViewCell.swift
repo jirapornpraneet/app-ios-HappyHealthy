@@ -9,6 +9,8 @@
 import UIKit
 
 class HistoryKidneyTableViewCell: UITableViewCell {
+//    var deleteId:Int?
+    
 
     @IBOutlet var dateHistoryLabel: UILabel!
     @IBOutlet var costGFRLabel: UILabel!
@@ -17,6 +19,7 @@ class HistoryKidneyTableViewCell: UITableViewCell {
     
     var  HistoryKidneyTableViewCell:KidneyTable?{
         didSet{
+//            deleteId = HistoryKidneyTableViewCell?.K_Id
             dateHistoryLabel.text = HistoryKidneyTableViewCell?.K_DateTime
             costGFRLabel.text = String(format: "%i",(HistoryKidneyTableViewCell?.K_CostGFR)!)
             levelCostGFRLabel.text = HistoryKidneyTableViewCell?.K_LevelCostGFR

@@ -485,6 +485,45 @@ class DatabaseHelper {
         }
         return getHistoryKidneyTable
     }
+    
+    func deleteHistoryKidney(K_Id:Int) -> [KidneyTable] {
+        var  deleteHistoryKidneyTable = [KidneyTable]()
+        try! dbQueue.inDatabase { db in
+            do {
+                
+                let qry = String(format: "DELETE FROM Kidney WHERE K_Id = '%i'", K_Id)
+                for row in try Row.fetchAll(db, qry){
+                    let rowKidneyTable = KidneyTable()
+                    rowKidneyTable.K_DateTime = row.value(named: "K_DateTime") as String
+                    rowKidneyTable.K_CostGFR = row.value(named: "K_CostGFR")as Int
+                    rowKidneyTable.K_LevelCostGFR = row.value(named: "K_LevelCostGFR") as String
+                    deleteHistoryKidneyTable.append(rowKidneyTable)
+                }
+            }
+            catch let error as DatabaseError{
+                // The SQLite error code: 19 (SQLITE_CONSTRAINT)
+                error.resultCode
+                
+                // The extended error code: 787 (SQLITE_CONSTRAINT_FOREIGNKEY)
+                error.extendedResultCode
+                
+                // The eventual SQLite message: FOREIGN KEY constraint failed
+                error.message
+                
+                // The eventual erroneous SQL query
+                // "INSERT INTO pets (masterId, name) VALUES (?, ?)"
+                error.sql
+                
+                // Full error description:
+                // "SQLite error 787 with statement `INSERT INTO pets (masterId, name)
+                //  VALUES (?, ?)` arguments [1, "Bobby"]: FOREIGN KEY constraint failed""
+                print("Delete HistoryKidneyTable Fail!!")
+                print(error)
+            }
+        }
+        return  deleteHistoryKidneyTable
+    }
+
 
     //    select * from ((select MAX (D_Id),* from Diabetes where  D_DateTime  LIKE "27-06-2560 15:23" ),
     //    (select MAX(K_Id),* from Kidney where   K_DateTime  LIKE  "27-06-2560 15:23"),
@@ -583,31 +622,6 @@ class DatabaseHelper {
         return  getCheckReportKidney
     }
     
-    
-    func deleteHistoryKidney(K_Id:Int) -> [KidneyTable] {
-        var  deleteHistoryKidneyTable = [KidneyTable]()
-        try! dbQueue.inDatabase { db in
-            do {
-                
-                let qry = String(format: "DELETE FROM Kidney WHERE K_Id = '%i'", K_Id)
-                for row in try Row.fetchAll(db, qry){
-                    let rowKidneyTable = KidneyTable()
-                    rowKidneyTable.K_DateTime = row.value(named: "K_DateTime") as String
-                    rowKidneyTable.K_CostGFR = row.value(named: "K_CostGFR")as Int
-                    rowKidneyTable.K_LevelCostGFR = row.value(named: "K_LevelCostGFR") as String
-                    deleteHistoryKidneyTable.append(rowKidneyTable)
-                }
-            }
-            catch let error as DatabaseError{
-                print("Delete HistoryKidneyTable Fail!!")
-                print(error)
-            }
-        }
-        return  deleteHistoryKidneyTable
-    }
-
-
-
     func getReportPressure(datedisease:String) -> [PressureTable]{
         var  getReportPressure = [PressureTable]()
         try! dbQueue.inDatabase { db in
@@ -722,7 +736,48 @@ class DatabaseHelper {
         return getHistoryPressureTable
     }
     
-    
+    func deleteHistoryPressure(P_Id:Int) -> [PressureTable] {
+        var  deleteHistoryPressureTable = [PressureTable]()
+        try! dbQueue.inDatabase { db in
+            do {
+                
+                let qry = String(format: "DELETE FROM Pressure WHERE P_Id = '%i'", P_Id)
+                for row in try Row.fetchAll(db, qry){
+                    let rowPressureTable = PressureTable()
+                    rowPressureTable.P_Id = row.value(named:"P_Id") as Int
+                    rowPressureTable.P_DateTime = row.value(named:"P_DateTime") as String
+                    rowPressureTable.P_CostPressureTop = row.value(named:"P_CostPressureTop") as Int
+                    rowPressureTable.P_CostPressureDown = row.value(named:"P_CostPressureDown") as Int
+                    rowPressureTable.P_Pressure_Level = row.value(named: "P_Pressure_Level") as String
+                    rowPressureTable.P_HeartRate = row.value(named: "P_HeartRate") as Int
+                    rowPressureTable.P_HeartRate_Level = row.value(named: "P_HeartRate_Level") as String
+                    deleteHistoryPressureTable.append(rowPressureTable)
+                }
+            }
+            catch let error as DatabaseError{
+                // The SQLite error code: 19 (SQLITE_CONSTRAINT)
+                error.resultCode
+                
+                // The extended error code: 787 (SQLITE_CONSTRAINT_FOREIGNKEY)
+                error.extendedResultCode
+                
+                // The eventual SQLite message: FOREIGN KEY constraint failed
+                error.message
+                
+                // The eventual erroneous SQL query
+                // "INSERT INTO pets (masterId, name) VALUES (?, ?)"
+                error.sql
+                
+                // Full error description:
+                // "SQLite error 787 with statement `INSERT INTO pets (masterId, name)
+                //  VALUES (?, ?)` arguments [1, "Bobby"]: FOREIGN KEY constraint failed""
+                print("Delete HistoryPressureTable Fail!!")
+                print(error)
+            }
+        }
+        return  deleteHistoryPressureTable
+    }
+
     func insertPressureTable(dataRowPressureTable: PressureTable) {
         try! dbQueue.inDatabase { db in
             do {

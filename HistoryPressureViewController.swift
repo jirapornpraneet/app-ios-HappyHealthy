@@ -14,19 +14,18 @@ class HistoryPressureViewController: UIViewController,UITableViewDelegate,UITabl
     var getHistoryPressureTable = [PressureTable]()
     var dbHelper = DatabaseHelper()
     var dataPressureTable:PressureTable?
+    var deleteHistory = [PressureTable]()
+    var deleteId:Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         getHistoryPressureTable = dbHelper.getHistoryPressure()
         HistoryPressureTableView.dataSource = self
         HistoryPressureTableView.dataSource = self
-        
-        // Do any additional setup after loading the view.
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -47,4 +46,17 @@ class HistoryPressureViewController: UIViewController,UITableViewDelegate,UITabl
         return 60
     }
     
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        getHistoryPressureTable = dbHelper.getHistoryPressure()
+        deleteId = getHistoryPressureTable[indexPath.row].P_Id
+        if editingStyle == .delete {
+            deleteHistory = dbHelper.deleteHistoryPressure(P_Id: deleteId!)
+            getHistoryPressureTable = dbHelper.getHistoryPressure()
+            HistoryPressureTableView.reloadData()
+        }
+    }
 }
