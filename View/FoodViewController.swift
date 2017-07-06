@@ -18,6 +18,10 @@ class FoodViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     //SearchBar
     var getSearchFood = [FoodTable]()
     var searchActive: Bool = false
+    var deleteHistory = [FoodTable]()
+    var deleteId:Int?
+    var deleteIdSearch:Int?
+    var searchText:String = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +37,7 @@ class FoodViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         tableFood.dataSource = self
         tableFood.delegate = self
         foodSearchBar.delegate = self
+     
     
     }
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
@@ -90,6 +95,28 @@ class FoodViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             dataFoodTable = (getFoodTable[indexPath.row] as? FoodTable)!
             self.performSegue(withIdentifier: "DetailFood", sender: nil)
         }
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if (searchActive) {
+            if editingStyle == .delete {
+                getFoodTable = dbHelper.getAllFood()
+                deleteIdSearch = getSearchFood[indexPath.row].Food_Id
+                deleteHistory = dbHelper.deleteFood(Food_Id: deleteIdSearch!)
+                tableFood.reloadData()
+            }
+        }else{
+            getFoodTable = dbHelper.getAllFood()
+            deleteId = getFoodTable[indexPath.row].Food_Id
+            deleteHistory = dbHelper.deleteFood(Food_Id: deleteId!)
+            getFoodTable = dbHelper.getAllFood()
+            tableFood.reloadData()
+        }
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

@@ -191,16 +191,50 @@ class DatabaseHelper {
                     rowFoodTable.Food_Sugars = row.value(named: "Food_Sugars") as Double
                     rowFoodTable.Food_Sodium = row.value(named: "Food_Sodium") as Double
                     rowFoodTable.Food_Detail  = row.value(named: "Food_Detail") as String
-              
                     getFoodTable .append(rowFoodTable)
+                    print("Get All Food ")
                 }
             }
             catch  {
-                print("Get All Exercise Fail!!")
+                print("Get All Food Fail!!")
             }
         }
-        return getFoodTable 
+        return getFoodTable
+        
     }
+    
+    func deleteFood(Food_Id:Int) -> [FoodTable] {
+        var  deleteFoodTable = [FoodTable]()
+        try! dbQueue.inDatabase { db in
+            do {
+                
+                let qry = String(format: "DELETE FROM Food WHERE Food_Id = '%i'", Food_Id)
+                for row in try Row.fetchAll(db, qry){
+                    let rowFoodTable = FoodTable()
+                    rowFoodTable.Food_Id = row.value(named: "Food_Id") as Int
+                    rowFoodTable.Food_Name = row.value(named: "Food_Name") as String
+                    rowFoodTable.Food_Calories = row.value(named: "Food_Calories") as Double
+                    rowFoodTable.Food_Unit = row.value(named: "Food_Unit") as String
+                    rowFoodTable.Food_Netweight = row.value(named: "Food_Netweight") as Double
+                    rowFoodTable.Food_NetUnit  = row.value(named: "Food_NetUnit") as String
+                    rowFoodTable.Food_Protein = row.value(named: "Food_Protein") as Double
+                    rowFoodTable.Food_Fat = row.value(named: "Food_Fat") as Double
+                    rowFoodTable.Food_Carbohydrate = row.value(named: "Food_Carbohydrate") as Double
+                    rowFoodTable.Food_Sugars = row.value(named: "Food_Sugars") as Double
+                    rowFoodTable.Food_Sodium = row.value(named: "Food_Sodium") as Double
+                    rowFoodTable.Food_Detail  = row.value(named: "Food_Detail") as String
+                    deleteFoodTable.append(rowFoodTable)
+                    
+                }
+            }
+            catch let error as DatabaseError{
+                print("Delete Food Fail!!")
+                print(error)
+            }
+        }
+        return  deleteFoodTable
+    }
+
     
     func insertFoodTable(dataRowFoodTable: FoodTable) {
         try! dbQueue.inDatabase { db in

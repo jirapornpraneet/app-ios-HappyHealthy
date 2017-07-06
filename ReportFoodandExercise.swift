@@ -31,8 +31,7 @@ class ReportFoodandExercise: UIViewController {
     @IBOutlet weak var sumTotalCal: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
+     
     }
 
     override func didReceiveMemoryWarning() {
@@ -50,18 +49,19 @@ class ReportFoodandExercise: UIViewController {
     }
     
     func loadAllData(dateChoose:String) {
-        
-       getFoodHistory = dbHelper.getFoodHistory(dateHistory: dateChoose)
-        if getFoodHistory.count == 0 {
+        getFoodHistory = dbHelper.getFoodHistory(dateHistory: dateChoose)
+        getExerciseHistory = dbHelper.getExerciseHistory(dateHistory: dateChoose)
+  
+        if getFoodHistory.count == 0  {
             return
         }
-       getExerciseHistory = dbHelper.getExerciseHistory(dateHistory: dateChoose)
+        
         if getExerciseHistory.count == 0 {
             return
         }
-
-        getSumFoodandExercis = dbHelper.getSumFoodandExercise(dateHistory: dateChoose)
         
+        getSumFoodandExercis = dbHelper.getSumFoodandExercise(dateHistory: dateChoose)
+       
         let getSumFood:Double? = (getSumFoodandExercis[0].SUM_Food_Cal!)
         let getSumExercise:Double? = (getSumFoodandExercis[0].SUM_EX_Cal!)
         exerciseTotalcal.text = String(format: "%.02f", (getSumFoodandExercis[0].SUM_EX_Cal)!)
@@ -83,6 +83,7 @@ class ReportFoodandExercise: UIViewController {
         let setDate = dateFormatterShow.string(from: dateHistoryPicker.date)
         saveDate = setDate
         loadAllData(dateChoose: saveDate!)
+   
     }
         
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
