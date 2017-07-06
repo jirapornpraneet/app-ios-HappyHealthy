@@ -31,17 +31,12 @@ class DetailFoodHistoryTableViewCell: UITableViewCell {
             totalKcal = (amountTotalFood! * kcalSum!)
 
             nameFoodLabel.text = DetailFoodHistoryTableViewCell?.Food_Name
-            kcalFoodLabel.text = String(format: "%.00f", (totalKcal)!)
+            kcalFoodLabel.text = String(format: "%.02f", (totalKcal)!)
             amountFoodLabel.text = String(format: "%.00f", (DetailFoodHistoryTableViewCell?.Food_TotalAmount)!)
             detailFoodLabel.text = DetailFoodHistoryTableViewCell?.Food_Detail
             unitFoodLabel.text = DetailFoodHistoryTableViewCell?.Food_Unit
-            
-            
         }
     }
-    
-
-    
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -87,7 +87,6 @@ class DatabaseHelper {
         return getExerciseHistoryTable
     }
     
-    
     func insertExerciseHistory(dataRowExerciseHistoryTable: ExerciseHistoryTable) {
         try! dbQueue.inDatabase { db in
             do {
@@ -144,8 +143,36 @@ class DatabaseHelper {
         return  getListHistoryExerciseTable
     }
 
- 
     
+    func deleteHistoryExercise(History_Exercise_Id:Int) -> [ListExerciseHistory] {
+        var  deleteHistoryExerciseTable = [ListExerciseHistory]()
+        try! dbQueue.inDatabase { db in
+            do {
+                
+                let qry = String(format: "DELETE FROM Exercise_History WHERE History_Exercise_Id = '%i'", History_Exercise_Id)
+                for row in try Row.fetchAll(db, qry){
+                    let rowExerciseHistory = ListExerciseHistory()
+                    rowExerciseHistory.History_Exercise_Id = row.value(named: "History_Exercise_Id") as Int
+                    rowExerciseHistory.History_Exercise_Date = row.value(named: "History_Exercise_Date") as String
+                    rowExerciseHistory.Exercise_Id = row.value(named: "Exercise_Id") as Int
+                    rowExerciseHistory.Exercise_TotalDuration = row.value(named: "Exercise_TotalDuration") as Double
+                    rowExerciseHistory.Exercise_Name = row.value(named: "Exercise_Name") as String
+                    rowExerciseHistory.Exercise_Calories = row.value(named: "Exercise_Calories") as Double
+                    rowExerciseHistory.Exercise_Duration = row.value(named: "Exercise_Duration") as Double
+                    rowExerciseHistory.Exercise_Disease = row.value(named: "Exercise_Disease") as String
+                    rowExerciseHistory.Exercise_Detail  = row.value(named: "Exercise_Detail") as String
+                    rowExerciseHistory.Exercise_Description = row.value(named: "Exercise_Description") as String
+                    deleteHistoryExerciseTable.append(rowExerciseHistory)
+                    
+                }
+            }
+            catch let error as DatabaseError{
+                print("Delete HistoryExerciseTablee Fail!!")
+            }
+        }
+        return  deleteHistoryExerciseTable
+    }
+
     func getAllFood() -> [FoodTable]{
         var getFoodTable = [FoodTable]()
         dbQueue.inDatabase { db in
@@ -666,24 +693,6 @@ class DatabaseHelper {
                 }
             }
             catch let error as DatabaseError{
-                // The SQLite error code: 19 (SQLITE_CONSTRAINT)
-                error.resultCode
-                
-                // The extended error code: 787 (SQLITE_CONSTRAINT_FOREIGNKEY)
-                error.extendedResultCode
-                
-                // The eventual SQLite message: FOREIGN KEY constraint failed
-                error.message
-                
-                // The eventual erroneous SQL query
-                // "INSERT INTO pets (masterId, name) VALUES (?, ?)"
-                error.sql
-                
-                // Full error description:
-                // "SQLite error 787 with statement `INSERT INTO pets (masterId, name)
-                //  VALUES (?, ?)` arguments [1, "Bobby"]: FOREIGN KEY constraint failed""
-                
-                
                 print("Get ReportHealth Fail!!")
                 print(error)
             }
@@ -836,22 +845,6 @@ class DatabaseHelper {
                 }
             }
             catch let error as DatabaseError {
-                // The SQLite error code: 19 (SQLITE_CONSTRAINT)
-                error.resultCode
-                
-                // The extended error code: 787 (SQLITE_CONSTRAINT_FOREIGNKEY)
-                error.extendedResultCode
-                
-                // The eventual SQLite message: FOREIGN KEY constraint failed
-                error.message
-                
-                // The eventual erroneous SQL query
-                // "INSERT INTO pets (masterId, name) VALUES (?, ?)"
-                error.sql
-                
-                // Full error description:
-                // "SQLite error 787 with statement `INSERT INTO pets (masterId, name)
-                //  VALUES (?, ?)` arguments [1, "Bobby"]: FOREIGN KEY constraint failed"
                 print(error)
                 print("Get All User Fail!!")
                 
@@ -911,22 +904,7 @@ class DatabaseHelper {
                                arguments: ["User_Name": dataRowUserTable.User_Name,"User_Gender": dataRowUserTable.User_Gender,"User_Age": dataRowUserTable.User_Age,"User_Weight":dataRowUserTable.User_Weight,"User_Height": dataRowUserTable.User_Height,"User_BMI": dataRowUserTable.User_BMI,"User_BMR": dataRowUserTable.User_BMR])
                 print("Insert value")
             } catch let error as DatabaseError {
-                // The SQLite error code: 19 (SQLITE_CONSTRAINT)
-                error.resultCode
-                
-                // The extended error code: 787 (SQLITE_CONSTRAINT_FOREIGNKEY)
-                error.extendedResultCode
-                
-                // The eventual SQLite message: FOREIGN KEY constraint failed
-                error.message
-                
-                // The eventual erroneous SQL query
-                // "INSERT INTO pets (masterId, name) VALUES (?, ?)"
-                error.sql
-                
-                // Full error description:
-                // "SQLite error 787 with statement `INSERT INTO pets (masterId, name)
-                //  VALUES (?, ?)` arguments [1, "Bobby"]: FOREIGN KEY constraint failed"
+      
                 print(error)
             print("Insert User Fail!!")
             }

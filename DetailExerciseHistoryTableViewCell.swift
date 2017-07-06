@@ -30,7 +30,7 @@ class DetailExerciseHistoryTableViewCell: UITableViewCell {
             nameExerciseLabel.text = DetailExerciseHistoryTableViewCell?.Exercise_Name
             detailExerciseLabel.text = DetailExerciseHistoryTableViewCell?.Exercise_Disease
             amountExerciseLabel.text = String(format: "%.00f", (DetailExerciseHistoryTableViewCell?.Exercise_TotalDuration)!)
-            kcalExerciseLabel.text = String(format: "%.00f", (totalKcal)!)
+            kcalExerciseLabel.text = String(format: "%.02f", (totalKcal)!)
 
         }
     }

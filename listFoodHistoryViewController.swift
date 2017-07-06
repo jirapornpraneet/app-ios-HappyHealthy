@@ -13,8 +13,9 @@ class listFoodHistoryViewController: UIViewController,UITableViewDelegate,UITabl
     var dbHelper = DatabaseHelper()
     var getlistFoodHistory = [ListFoodHistory]()
     var dataListFoodHistoryTable: ListFoodHistory?
+    var deleteHistory = [ListFoodHistory]()
+    var deleteId:Int?
   
-
     @IBOutlet weak var listHistoryFoodTable: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,4 +56,17 @@ class listFoodHistoryViewController: UIViewController,UITableViewDelegate,UITabl
         self.performSegue(withIdentifier: "DetailHistoryFood", sender: nil)
     }
     
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
     }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+          getlistFoodHistory = dbHelper.getListHistoryFood(dateHistory: senderDate!)
+          deleteId = getlistFoodHistory[indexPath.row].History_Food_Id
+        if editingStyle == .delete {
+            deleteHistory = dbHelper.deleteHistoryFood(History_Food_Id: deleteId!)
+            getlistFoodHistory = dbHelper.getListHistoryFood(dateHistory: senderDate!)
+            listHistoryFoodTable.reloadData()
+        }
+    }
+}

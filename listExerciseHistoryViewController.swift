@@ -13,6 +13,9 @@ class listExerciseHistoryViewController: UIViewController,UITableViewDelegate,UI
     var dbHelper = DatabaseHelper()
     var getlistExerciseHistory = [ListExerciseHistory]()
     var dataListExerciseHistoryTable: ListExerciseHistory?
+    var deleteHistory = [ListExerciseHistory]()
+    var deleteId:Int?
+    
 
     @IBOutlet weak var listHistoryExerciseTable: UITableView!
     override func viewDidLoad() {
@@ -51,5 +54,18 @@ class listExerciseHistoryViewController: UIViewController,UITableViewDelegate,UI
         dataListExerciseHistoryTable = (getlistExerciseHistory[indexPath.row] as? ListExerciseHistory)!
         self.performSegue(withIdentifier: "DetailHistoryExercise", sender: nil)
     }
-
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        getlistExerciseHistory = dbHelper.getListHistoryExercise(dateHistory: senderDate!)
+        deleteId = getlistExerciseHistory[indexPath.row].History_Exercise_Id
+        if editingStyle == .delete {
+            deleteHistory = dbHelper.deleteHistoryExercise(History_Exercise_Id: deleteId!)
+            getlistExerciseHistory = dbHelper.getListHistoryExercise(dateHistory: senderDate!)
+            listHistoryExerciseTable.reloadData()
+        }
+    }
 }
