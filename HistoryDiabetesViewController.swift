@@ -14,6 +14,8 @@ class HistoryDiabetesViewController: UIViewController,UITableViewDelegate,UITabl
     var getHistoryDiabetesTable = [DiabetesTable]()
     var dbHelper = DatabaseHelper()
     var dataDiabetesTable:DiabetesTable?
+    var deleteHistory = [DiabetesTable]()
+    var deleteId:Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,4 +46,18 @@ class HistoryDiabetesViewController: UIViewController,UITableViewDelegate,UITabl
         return 60
     }
     
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        getHistoryDiabetesTable = dbHelper.getHistoryDiabetes()
+        deleteId = getHistoryDiabetesTable[indexPath.row].D_Id
+        if editingStyle == .delete {
+            deleteHistory = dbHelper.deleteHistoryDiabetes(D_Id: deleteId!)
+            getHistoryDiabetesTable = dbHelper.getHistoryDiabetes()
+            HistoryDiabetesTableView.reloadData()
+        }
+    }
+
 }

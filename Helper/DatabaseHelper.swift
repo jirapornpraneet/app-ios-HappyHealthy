@@ -252,30 +252,46 @@ class DatabaseHelper {
                 }
             }
             catch let error as DatabaseError{
-                // The SQLite error code: 19 (SQLITE_CONSTRAINT)
-                error.resultCode
-                
-                // The extended error code: 787 (SQLITE_CONSTRAINT_FOREIGNKEY)
-                error.extendedResultCode
-                
-                // The eventual SQLite message: FOREIGN KEY constraint failed
-                error.message
-                
-                // The eventual erroneous SQL query
-                // "INSERT INTO pets (masterId, name) VALUES (?, ?)"
-                error.sql
-                
-                // Full error description:
-                // "SQLite error 787 with statement `INSERT INTO pets (masterId, name)
-                //  VALUES (?, ?)` arguments [1, "Bobby"]: FOREIGN KEY constraint failed"
                 print("Get ListHistoryFood Fail!!")
                 print(error)
             }
         }
         return  getListHistoryFoodTable
     }
-
     
+    func deleteHistoryFood(History_Food_Id:Int) -> [ListFoodHistory] {
+        var  deleteHistoryFoodTable = [ListFoodHistory]()
+        try! dbQueue.inDatabase { db in
+            do {
+                
+                let qry = String(format: "DELETE FROM Food_History WHERE History_Food_Id = '%i'", History_Food_Id)
+                for row in try Row.fetchAll(db, qry){
+                    let rowFoodHistory = ListFoodHistory()
+                    rowFoodHistory.History_Food_Id = row.value(named: "History_Food_Id") as Int
+                    rowFoodHistory.History_Food_Date = row.value(named: "History_Food_Date")as String
+                    rowFoodHistory.Food_TotalAmount = row.value(named: "Food_TotalAmount")as Double
+                    rowFoodHistory.Food_Id = row.value(named: "Food_Id") as Int
+                    rowFoodHistory.Food_Name = row.value(named: "Food_Name") as String
+                    rowFoodHistory.Food_Calories = row.value(named: "Food_Calories") as Double
+                    rowFoodHistory.Food_Unit = row.value(named: "Food_Unit") as String
+                    rowFoodHistory.Food_Netweight = row.value(named: "Food_Netweight") as Double
+                    rowFoodHistory.Food_NetUnit  = row.value(named: "Food_NetUnit") as String
+                    rowFoodHistory.Food_Protein = row.value(named: "Food_Protein") as Double
+                    rowFoodHistory.Food_Fat = row.value(named: "Food_Fat") as Double
+                    rowFoodHistory.Food_Carbohydrate = row.value(named: "Food_Carbohydrate") as Double
+                    rowFoodHistory.Food_Sugars = row.value(named: "Food_Sugars") as Double
+                    rowFoodHistory.Food_Sodium = row.value(named: "Food_Sodium") as Double
+                    rowFoodHistory.Food_Detail  = row.value(named: "Food_Detail") as String
+                    deleteHistoryFoodTable.append(rowFoodHistory)
+                }
+            }
+            catch let error as DatabaseError{
+                print("Delete HistoryFoodTable Fail!!")
+            }
+        }
+        return  deleteHistoryFoodTable
+    }
+
     func getSumFoodandExercise(dateHistory:String) -> [HistorySUMTable]{
         var  getSumFoodandExercise = [HistorySUMTable]()
         try! dbQueue.inDatabase { db in
@@ -430,6 +446,31 @@ class DatabaseHelper {
         }
         return getHistoryDiabetesTable
     }
+    
+    func deleteHistoryDiabetes(D_Id:Int) -> [DiabetesTable] {
+        var  deleteHistoryDiabetesTable = [DiabetesTable]()
+        try! dbQueue.inDatabase { db in
+            do {
+                
+                let qry = String(format: "DELETE FROM Diabetes WHERE D_Id = '%i'", D_Id)
+                for row in try Row.fetchAll(db, qry){
+                    let rowDiabetesTable = DiabetesTable()
+                    rowDiabetesTable.D_Id = row.value(named: "D_Id") as Int
+                    rowDiabetesTable.D_DateTime = row.value(named: "D_DateTime") as String
+                    rowDiabetesTable.D_CostSugar = row.value(named: "D_CostSugar") as Int
+                    rowDiabetesTable.D_Level = row.value(named: "D_Level") as String
+                    rowDiabetesTable.D_Status = row.value(named: "D_Status") as String
+                    rowDiabetesTable.D_People = row.value(named: "D_People") as String
+                    deleteHistoryDiabetesTable.append(rowDiabetesTable)
+                }
+            }
+            catch let error as DatabaseError{
+                print("Delete HistoryDiabetesTable Fail!!")
+                print(error)
+            }
+        }
+        return  deleteHistoryDiabetesTable
+    }
 
 
     func getKidney() -> [KidneyTable]{
@@ -501,22 +542,7 @@ class DatabaseHelper {
                 }
             }
             catch let error as DatabaseError{
-                // The SQLite error code: 19 (SQLITE_CONSTRAINT)
-                error.resultCode
-                
-                // The extended error code: 787 (SQLITE_CONSTRAINT_FOREIGNKEY)
-                error.extendedResultCode
-                
-                // The eventual SQLite message: FOREIGN KEY constraint failed
-                error.message
-                
-                // The eventual erroneous SQL query
-                // "INSERT INTO pets (masterId, name) VALUES (?, ?)"
-                error.sql
-                
-                // Full error description:
-                // "SQLite error 787 with statement `INSERT INTO pets (masterId, name)
-                //  VALUES (?, ?)` arguments [1, "Bobby"]: FOREIGN KEY constraint failed""
+    
                 print("Delete HistoryKidneyTable Fail!!")
                 print(error)
             }
@@ -755,24 +781,7 @@ class DatabaseHelper {
                 }
             }
             catch let error as DatabaseError{
-                // The SQLite error code: 19 (SQLITE_CONSTRAINT)
-                error.resultCode
-                
-                // The extended error code: 787 (SQLITE_CONSTRAINT_FOREIGNKEY)
-                error.extendedResultCode
-                
-                // The eventual SQLite message: FOREIGN KEY constraint failed
-                error.message
-                
-                // The eventual erroneous SQL query
-                // "INSERT INTO pets (masterId, name) VALUES (?, ?)"
-                error.sql
-                
-                // Full error description:
-                // "SQLite error 787 with statement `INSERT INTO pets (masterId, name)
-                //  VALUES (?, ?)` arguments [1, "Bobby"]: FOREIGN KEY constraint failed""
                 print("Delete HistoryPressureTable Fail!!")
-                print(error)
             }
         }
         return  deleteHistoryPressureTable
