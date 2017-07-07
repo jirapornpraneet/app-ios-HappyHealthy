@@ -192,7 +192,6 @@ class DatabaseHelper {
                     rowFoodTable.Food_Sodium = row.value(named: "Food_Sodium") as Double
                     rowFoodTable.Food_Detail  = row.value(named: "Food_Detail") as String
                     getFoodTable .append(rowFoodTable)
-                    print("Get All Food ")
                 }
             }
             catch  {
@@ -203,12 +202,12 @@ class DatabaseHelper {
         
     }
     
-    func deleteFood(Food_Id:Int) -> [FoodTable] {
+    func deleteFood(foodId:Int) -> [FoodTable] {
         var  deleteFoodTable = [FoodTable]()
         try! dbQueue.inDatabase { db in
             do {
                 
-                let qry = String(format: "DELETE FROM Food WHERE Food_Id = '%i'", Food_Id)
+                let qry = String(format: "DELETE FROM Food WHERE Food_Id = '%i'", foodId)
                 for row in try Row.fetchAll(db, qry){
                     let rowFoodTable = FoodTable()
                     rowFoodTable.Food_Id = row.value(named: "Food_Id") as Int
@@ -217,7 +216,7 @@ class DatabaseHelper {
                     rowFoodTable.Food_Unit = row.value(named: "Food_Unit") as String
                     rowFoodTable.Food_Netweight = row.value(named: "Food_Netweight") as Double
                     rowFoodTable.Food_NetUnit  = row.value(named: "Food_NetUnit") as String
-                    rowFoodTable.Food_Protein = row.value(named: "Food_Protein") as Double
+                    rowFoodTable.Food_Protein = row.value(named: "Food_Pr otein") as Double
                     rowFoodTable.Food_Fat = row.value(named: "Food_Fat") as Double
                     rowFoodTable.Food_Carbohydrate = row.value(named: "Food_Carbohydrate") as Double
                     rowFoodTable.Food_Sugars = row.value(named: "Food_Sugars") as Double
@@ -228,6 +227,22 @@ class DatabaseHelper {
                 }
             }
             catch let error as DatabaseError{
+                // The SQLite error code: 19 (SQLITE_CONSTRAINT)
+                error.resultCode
+                
+                // The extended error code: 787 (SQLITE_CONSTRAINT_FOREIGNKEY)
+                error.extendedResultCode
+                
+                // The eventual SQLite message: FOREIGN KEY constraint failed
+                error.message
+                
+                // The eventual erroneous SQL query
+                // "INSERT INTO pets (masterId, name) VALUES (?, ?)"
+                error.sql
+                
+                // Full error description:
+                // "SQLite error 787 with statement `INSERT INTO pets (masterId, name)
+                //  VALUES (?, ?)` arguments [1, "Bobby"]: FOREIGN KEY constraint failed"
                 print("Delete Food Fail!!")
                 print(error)
             }
