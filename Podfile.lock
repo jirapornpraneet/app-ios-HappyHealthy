@@ -1,15 +1,12 @@
 PODS:
-  - GRDB.swift (1.1)
-  - IQKeyboardManagerSwift (4.0.10)
+  - GRDB.swift (1.0)
 
 DEPENDENCIES:
   - GRDB.swift (~> 1.0)
-  - IQKeyboardManagerSwift (= 4.0.10)
 
 SPEC CHECKSUMS:
-  GRDB.swift: 58dd10ae08200ce68434e025ca454b8b79fc3c0d
-  IQKeyboardManagerSwift: 75ba21a23794a1e6b6fe6d9a267ea17f80e06771
+  GRDB.swift: d2613b2a4c07270d91c8589d94f8b237776e6473
 
-PODFILE CHECKSUM: 29ab62377b35ae1c6b37f77e43a1fb06147b9a9d
+PODFILE CHECKSUM: 17794233dc9264a87c036474790de3f49f5f0c16
 
 COCOAPODS: 1.2.1
