@@ -87,28 +87,6 @@ class FoodViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         return 60
     }
     
-//    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-//        return true
-//    }
-//    
-//    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-//        getFoodTable = dbHelper.getAllFood()
-//        deleteId = getFoodTable[indexPath.row].Food_Id
-//        deleteIdSearch = getFoodTable[indexPath.row].Food_Id
-//        if(searchActive){
-//            if editingStyle == .delete {
-//                deleteHistory = dbHelper.deleteFood(foodId: deleteIdSearch!)
-//                getFoodTable = dbHelper.getAllFood()
-//                tableFood.reloadData()
-//            }
-//        } else {
-//                deleteHistory = dbHelper.deleteFood(foodId: deleteId!)
-//                getFoodTable = dbHelper.getAllFood()
-//                tableFood.reloadData()
-//            }
-//        }
-
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if(searchActive){
             dataFoodTable = (getSearchFood[indexPath.row] as? FoodTable)!
@@ -119,6 +97,27 @@ class FoodViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         }
     }
     
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if (searchActive) {
+            if editingStyle == .delete {
+                getFoodTable = dbHelper.getAllFood()
+                deleteIdSearch = getSearchFood[indexPath.row].Food_Id
+                deleteHistory = dbHelper.deleteFood(Food_Id: deleteIdSearch!)
+                tableFood.reloadData()
+            }
+        }else{
+            getFoodTable = dbHelper.getAllFood()
+            deleteId = getFoodTable[indexPath.row].Food_Id
+            deleteHistory = dbHelper.deleteFood(Food_Id: deleteId!)
+            getFoodTable = dbHelper.getAllFood()
+            tableFood.reloadData()
+        }
+        
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "DetailFood" {
@@ -126,10 +125,6 @@ class FoodViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             vc.getFoodTable = dataFoodTable
         }
     }
-    
-    
-    }
-
-
+}
 
 
