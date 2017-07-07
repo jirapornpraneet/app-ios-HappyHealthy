@@ -26,19 +26,19 @@ class ShowKidneyViewController: UIViewController {
         
         if getCostGFR! >= 90 {
             showKidneyLevelImage = UIImage(named: "textlevelkid1.png")
-            showLineKidneyLevelImage = UIImage(named: "prokid1.png")
+            showLineKidneyLevelImage = UIImage(named: "levelKidney1.png")
         }else if getCostGFR! >= 60 && getCostGFR! < 90 {
             showKidneyLevelImage = UIImage(named: "textlevelkid2.png")
-            showLineKidneyLevelImage = UIImage(named: "prokid2.png")
+            showLineKidneyLevelImage = UIImage(named: "levelKidney2.png")
         }else if getCostGFR! >= 30 && getCostGFR! < 60 {
             showKidneyLevelImage = UIImage(named: "textlevelkid3.png")
-            showLineKidneyLevelImage = UIImage(named: "prokid3.png")
+            showLineKidneyLevelImage = UIImage(named: "levelKidney3.png")
         }else if getCostGFR! >= 15 && getCostGFR! < 30 {
             showKidneyLevelImage = UIImage(named: "textlevelkid4.png")
-            showLineKidneyLevelImage = UIImage(named: "prokid4.png")
+            showLineKidneyLevelImage = UIImage(named: "levelKidney4.png")
         }else{
             showKidneyLevelImage = UIImage(named: "textlevelkid5.png")
-            showLineKidneyLevelImage = UIImage(named: "prokid5.png")
+            showLineKidneyLevelImage = UIImage(named: "levelKidney5.png")
         }
     
         showDatetimeLabel.text = getKidneyTable[0].K_DateTime

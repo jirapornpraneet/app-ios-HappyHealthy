@@ -23,7 +23,7 @@ class ReportHealthViewController: UIViewController{
      var showAlertHeartImage:UIImage?
      var costTop:Int?
      var costDown:Int?
-     var imageAlertLevelPre:[UIImage] = [UIImage(named: "alertpre1.png")!,UIImage(named: "alertpre2.png")!,UIImage(named: "alertpre3.png")!,UIImage(named: "alertpre4.png")!,UIImage(named: "alertpre5.png")!,UIImage(named: "alertpre0.png")!,UIImage(named: "alertpre6.png")!]
+     var imageAlertLevelPre:[UIImage] = [UIImage(named: "alertPressure1.png")!,UIImage(named: "alertPressure2.png")!,UIImage(named: "alertPressure3.png")!,UIImage(named: "alertPressure4.png")!,UIImage(named: "alertPressure5.png")!,UIImage(named: "alertPressure0.png")!,UIImage(named: "alertPressure6.png")!]
 
     @IBOutlet var datePicker: UIDatePicker!
     @IBOutlet var costSugarLabel: UILabel!
@@ -79,45 +79,45 @@ class ReportHealthViewController: UIViewController{
         if getPeople == "คนปกติ" {
             if getStatus == "ก่อนอาหาร" {
                 if getCostSuger! >= 126 {
-                    showAlertDiabetesImage = UIImage(named: "alertnormal.png")
+                    showAlertDiabetesImage = UIImage(named: "alertNormal.png")
                 }else if getCostSuger! >= 70 && getCostSuger! < 126{
-                    showAlertDiabetesImage = UIImage(named: "alertnormal1.png")
+                    showAlertDiabetesImage = UIImage(named: "alertNormal1.png")
                 }else{
-                    showAlertDiabetesImage = UIImage(named: "alertnormal2.png")
+                    showAlertDiabetesImage = UIImage(named: "alertNormal2.png")
                 }
             }else{
                 if getCostSuger! >= 200 {
-                    showAlertDiabetesImage = UIImage(named: "alertnormal.png")
+                    showAlertDiabetesImage = UIImage(named: "alertNormal.png")
                 }else if getCostSuger! >= 70 && getCostSuger! < 200 {
-                    showAlertDiabetesImage = UIImage(named: "alertnormal1.png")
+                    showAlertDiabetesImage = UIImage(named: "alertNormal1.png")
                 }else{
-                    showAlertDiabetesImage = UIImage(named: "alertnormal2.png")
+                    showAlertDiabetesImage = UIImage(named: "alertNormal2.png")
                 }
             }
         }else{
             if getStatus == "ก่อนอาหาร" {
                 if getCostSuger! >= 130 {
-                    showAlertDiabetesImage = UIImage(named: "alertdibefore1.png")
+                    showAlertDiabetesImage = UIImage(named: "alertDiabetes1.png")
                 }else if getCostSuger! >= 100 && getCostSuger! < 130{
-                    showAlertDiabetesImage = UIImage(named: "alertdibefore4.png")
+                    showAlertDiabetesImage = UIImage(named: "alertDiabetes4.png")
                 }else if getCostSuger! >= 90 && getCostSuger! < 100{
-                    showAlertDiabetesImage = UIImage(named: "alertdibefore5.png")
+                    showAlertDiabetesImage = UIImage(named: "alertDiabetes5.png")
                 }else if getCostSuger! >= 70 && getCostSuger! < 90{
-                    showAlertDiabetesImage = UIImage(named: "alertdibefore2.png")
+                    showAlertDiabetesImage = UIImage(named: "alertDiabetes2.png")
                 }else{
-                    showAlertDiabetesImage = UIImage(named: "alertdibefore3.png")
+                    showAlertDiabetesImage = UIImage(named: "alertDiabetes3.png")
                 }
             }else{
                 if getCostSuger! >= 180{
-                    showAlertDiabetesImage = UIImage(named: "alertdibefore1.png")
+                    showAlertDiabetesImage = UIImage(named: "alertDiabetes1.png")
                 }else if getCostSuger! >= 150 && getCostSuger! < 180{
-                    showAlertDiabetesImage = UIImage(named: "alertdibefore4.png")
+                    showAlertDiabetesImage = UIImage(named: "alertDiabetes4.png")
                 }else if getCostSuger! >= 110 && getCostSuger! < 150{
-                    showAlertDiabetesImage = UIImage(named: "alertdibefore5.png")
+                    showAlertDiabetesImage = UIImage(named: "alertDiabetes5.png")
                 }else if getCostSuger! >= 70 && getCostSuger! < 110{
-                    showAlertDiabetesImage = UIImage(named: "alertdibefore2.png")
+                    showAlertDiabetesImage = UIImage(named: "alertDiabetes2.png")
                 }else{
-                    showAlertDiabetesImage = UIImage(named: "alertdibefore3.png")
+                    showAlertDiabetesImage = UIImage(named: "alertDiabetes3.png")
                 }
                 
             }
@@ -138,15 +138,15 @@ class ReportHealthViewController: UIViewController{
         let getCostGFR:Int? = (getReportKidney[0].K_CostGFR!)
         
         if getCostGFR! >= 90 {
-            showAlertKidneyImage = UIImage(named: "alertnormal1.png")
+            showAlertKidneyImage = UIImage(named: "alertNormal1.png")
         }else if getCostGFR! >= 60 && getCostGFR! < 90 {
-            showAlertKidneyImage = UIImage(named: "alertkid2.png")
+            showAlertKidneyImage = UIImage(named: "alertKidney2.png")
         }else if getCostGFR! >= 30 && getCostGFR! < 60 {
-             showAlertKidneyImage = UIImage(named: "alertkid3.png")
+             showAlertKidneyImage = UIImage(named: "alertKidney3.png")
         }else if getCostGFR! >= 15 && getCostGFR! < 30 {
-            showAlertKidneyImage = UIImage(named: "alertkid4.png")
+            showAlertKidneyImage = UIImage(named: "alertKidney4.png")
         }else{
-            showAlertKidneyImage = UIImage(named: "alertkid5.png")
+            showAlertKidneyImage = UIImage(named: "alertKidney5.png")
         }
 
         getReportKidney = dbHelper.getReportKidney(datedisease: dateChoose)
@@ -166,17 +166,17 @@ class ReportHealthViewController: UIViewController{
         let getPressureDown:Int? = (getReportPressure[0].P_CostPressureDown!)
         
         if getCostHeart! >= 101 {
-            showAlertHeartImage = UIImage(named: "alertheart5.png")
+            showAlertHeartImage = UIImage(named: "alertHeart5.png")
         }else if getCostHeart!  >= 85 && getCostHeart!   < 101{
-            showAlertHeartImage = UIImage(named: "alertheart4.png")
+            showAlertHeartImage = UIImage(named: "alertHeart4.png")
         }else if getCostHeart!  >= 70 && getCostHeart!  < 85 {
-            showAlertHeartImage = UIImage(named: "alertheart3.png")
+            showAlertHeartImage = UIImage(named: "alertHeart3.png")
         }else if getCostHeart!  >= 60 && getCostHeart!   < 70 {
-            showAlertHeartImage = UIImage(named: "alertheart2.png")
+            showAlertHeartImage = UIImage(named: "alertHeart2.png")
         }else if getCostHeart!  >= 41 && getCostHeart!   < 60 {
-            showAlertHeartImage = UIImage(named: "alertheart1.png")
+            showAlertHeartImage = UIImage(named: "alertHeart1.png")
         }else{
-            showAlertHeartImage = UIImage(named: "alertheart5.png")
+            showAlertHeartImage = UIImage(named: "alertHeart5.png")
         }
         
         if getPressureTop! >= 180 {

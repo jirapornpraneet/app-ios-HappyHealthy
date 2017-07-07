@@ -17,8 +17,8 @@ class ShowPressureViewController: UIViewController {
     var showLineHeartLevelImage:UIImage?
     var costTop:Int?
     var costDown:Int?
-    var imageTextLevelPre:[UIImage] = [UIImage(named: "textlevelpre1.png")!,UIImage(named: "textlevelpre2.png")!,UIImage(named: "textlevelpre3.png")!,UIImage(named: "textlevelpre4.png")!,UIImage(named: "textlevelpre5.png")!,UIImage(named: "textlevelpre6.png")!]
-    var imageLineLevelPre:[UIImage] = [UIImage(named: "pre6.png")!,UIImage(named: "pre5.png")!,UIImage(named: "pre4.png")!,UIImage(named: "pre3.png")!,UIImage(named: "pre2.png")!,UIImage(named: "pre1.png")!]
+    var imageTextLevelPre:[UIImage] = [UIImage(named: "textlevelPressure1.png")!,UIImage(named: "textlevelPressure2.png")!,UIImage(named: "textlevelPressure3.png")!,UIImage(named: "textlevelPressure4.png")!,UIImage(named: "textlevelPressure5.png")!,UIImage(named: "textlevelPressure6.png")!]
+    var imageLineLevelPre:[UIImage] = [UIImage(named: "levelPressure6.png")!,UIImage(named: "levelPressure5.png")!,UIImage(named: "levelPressure4.png")!,UIImage(named: "levelPressure3.png")!,UIImage(named: "levelPressure2.png")!,UIImage(named: "levelPressure1.png")!]
     
     @IBOutlet var lineAlertLevelHeartImage: UIImageView!
     @IBOutlet var alertLevelHeartImage: UIImageView!
@@ -42,23 +42,23 @@ class ShowPressureViewController: UIViewController {
         let getPressureDown:Int? = (getPressureTable[0].P_CostPressureDown!)
         
         if getCostHeart! >= 101 {
-            showHeartLevelImage  = UIImage(named: "textlevelheart5.png")
-            showLineHeartLevelImage = UIImage(named: "proheart5.png")
+            showHeartLevelImage  = UIImage(named: "textlevelHeart5.png")
+            showLineHeartLevelImage = UIImage(named: "levelHeart5.png")
         }else if getCostHeart!  >= 85 && getCostHeart!   < 101{
-            showHeartLevelImage  = UIImage(named: "textlevelheart4.png")
-            showLineHeartLevelImage = UIImage(named: "proheart4.png")
+            showHeartLevelImage  = UIImage(named: "textlevelHeart4.png")
+            showLineHeartLevelImage = UIImage(named: "levelHeart4.png")
         }else if getCostHeart!  >= 70 && getCostHeart!  < 85 {
-            showHeartLevelImage  = UIImage(named: "textlevelheart3.png")
-            showLineHeartLevelImage = UIImage(named: "proheart3.png")
+            showHeartLevelImage  = UIImage(named: "textlevelHeart3.png")
+            showLineHeartLevelImage = UIImage(named: "levelHeart3.png")
         }else if getCostHeart!  >= 60 && getCostHeart!   < 70 {
-            showHeartLevelImage  = UIImage(named: "textlevelheart2.png")
-            showLineHeartLevelImage = UIImage(named: "proheart2.png")
+            showHeartLevelImage  = UIImage(named: "textlevelHeart2.png")
+            showLineHeartLevelImage = UIImage(named: "levelHeart2.png")
         }else if getCostHeart!  >= 41 && getCostHeart!   < 60 {
-            showHeartLevelImage  = UIImage(named: "textlevelheart1.png")
-            showLineHeartLevelImage = UIImage(named: "proheart1.png")
+            showHeartLevelImage  = UIImage(named: "textlevelHeart1.png")
+            showLineHeartLevelImage = UIImage(named: "levelHeart1.png")
         }else{
-            showHeartLevelImage  = UIImage(named: "textlevelheart5.png")
-            showLineHeartLevelImage = UIImage(named: "proheart5.png")
+            showHeartLevelImage  = UIImage(named: "textlevelHeart5.png")
+            showLineHeartLevelImage = UIImage(named: "levelHeart5.png")
         }
         
     

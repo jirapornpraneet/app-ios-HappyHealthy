@@ -706,7 +706,7 @@
                                                     <constraint firstAttribute="height" constant="82" id="lB1-g9-e1t"/>
                                                 </constraints>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calrories" translatesAutoresizingMaskIntoConstraints="NO" id="MoS-LW-TIs">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ShowCalFood" translatesAutoresizingMaskIntoConstraints="NO" id="MoS-LW-TIs">
                                                 <rect key="frame" x="55" y="56" width="210" height="23"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="210" id="KU3-nc-VIa"/>
@@ -720,7 +720,7 @@
                                                     <constraint firstAttribute="height" constant="20" id="hfj-GN-a1c"/>
                                                 </constraints>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calexe" translatesAutoresizingMaskIntoConstraints="NO" id="Qfs-5c-9CK">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ShowCalExercise" translatesAutoresizingMaskIntoConstraints="NO" id="Qfs-5c-9CK">
                                                 <rect key="frame" x="55" y="136" width="210" height="23"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="23" id="KcG-kS-OQ1"/>
@@ -892,35 +892,35 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="92" id="9C4-sj-ypc"/>
                                 </constraints>
-                                <state key="normal" title="Button" image="dii"/>
+                                <state key="normal" title="Button" image="diabetes"/>
                                 <connections>
                                     <segue destination="2SL-D9-DPF" kind="show" id="wXe-rA-2ZE"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NC2-gc-DlG">
                                 <rect key="frame" x="0.0" y="247" width="320" height="92"/>
-                                <state key="normal" title="Button" image="diiii"/>
+                                <state key="normal" title="Button" image="pressure"/>
                                 <connections>
                                     <segue destination="XAO-Ys-IaU" kind="show" id="adW-mD-Frh"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KTz-uh-leA">
                                 <rect key="frame" x="0.0" y="339" width="320" height="92"/>
-                                <state key="normal" title="Button" image="diiiii"/>
+                                <state key="normal" title="Button" image="food"/>
                                 <connections>
                                     <segue destination="nS4-Tv-lzw" kind="show" id="E0C-16-0Tf"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1RZ-ns-ghB">
                                 <rect key="frame" x="0.0" y="428" width="320" height="92"/>
-                                <state key="normal" title="Button" image="diiiiii"/>
+                                <state key="normal" title="Button" image="exercise"/>
                                 <connections>
                                     <segue destination="Qzg-4y-Hg1" kind="show" id="7BF-uP-Ie8"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RiU-KX-fw4">
                                 <rect key="frame" x="0.0" y="156" width="320" height="92"/>
-                                <state key="normal" title="Button" image="diii"/>
+                                <state key="normal" title="Button" image="kidney"/>
                                 <connections>
                                     <segue destination="Q5x-Lt-wGk" kind="show" id="1f2-c9-ebs"/>
                                 </connections>
@@ -971,7 +971,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aRM-3S-8cc">
                                 <rect key="frame" x="0.0" y="64" width="320" height="51.5"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="da5" translatesAutoresizingMaskIntoConstraints="NO" id="W9G-I1-a6P">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nameUser" translatesAutoresizingMaskIntoConstraints="NO" id="W9G-I1-a6P">
                                         <rect key="frame" x="45" y="13" width="70" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="22" id="dYA-K7-WBe"/>
@@ -1000,7 +1000,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lfP-Px-5gA">
                                 <rect key="frame" x="0.0" y="165.5" width="320" height="51.5"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="da7" translatesAutoresizingMaskIntoConstraints="NO" id="lPc-1u-Z46">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ageUser" translatesAutoresizingMaskIntoConstraints="NO" id="lPc-1u-Z46">
                                         <rect key="frame" x="65" y="15" width="45" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="22" id="0a0-h0-P0b"/>
@@ -1037,7 +1037,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KuZ-Ev-waC">
                                 <rect key="frame" x="0.0" y="216" width="320" height="51.5"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="da8" translatesAutoresizingMaskIntoConstraints="NO" id="TDy-ut-3ot">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="weightUser" translatesAutoresizingMaskIntoConstraints="NO" id="TDy-ut-3ot">
                                         <rect key="frame" x="59" y="14" width="50" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="6e6-ja-ybk"/>
@@ -1054,7 +1054,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
                                     </textField>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kk" translatesAutoresizingMaskIntoConstraints="NO" id="myh-Dg-79b">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kg" translatesAutoresizingMaskIntoConstraints="NO" id="myh-Dg-79b">
                                         <rect key="frame" x="243" y="14" width="26" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="22" id="C4k-uE-axY"/>
@@ -1074,7 +1074,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ido-PM-PAX">
                                 <rect key="frame" x="0.0" y="266.5" width="320" height="51"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="da9" translatesAutoresizingMaskIntoConstraints="NO" id="EkS-3W-UMk">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heightUser" translatesAutoresizingMaskIntoConstraints="NO" id="EkS-3W-UMk">
                                         <rect key="frame" x="54" y="12" width="54" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="22" id="Apc-5b-Nzy"/>
@@ -1128,7 +1128,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="disbmr" translatesAutoresizingMaskIntoConstraints="NO" id="uEh-yv-YYT">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="costBmr" translatesAutoresizingMaskIntoConstraints="NO" id="uEh-yv-YYT">
                                         <rect key="frame" x="112" y="33" width="150" height="18"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="150" id="JOw-ed-lrM"/>
@@ -1177,15 +1177,15 @@
                                 <rect key="frame" x="0.0" y="417.5" width="320" height="51"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bmi1" translatesAutoresizingMaskIntoConstraints="NO" id="3sF-QE-WjE">
-                                        <rect key="frame" x="7.5" y="0.0" width="305" height="45"/>
+                                        <rect key="frame" x="18" y="0.0" width="287" height="45"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="305" id="RmG-ZI-gpu"/>
+                                            <constraint firstAttribute="width" constant="287" id="RmG-ZI-gpu"/>
                                             <constraint firstAttribute="height" constant="45" id="lyu-at-dT5"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="3sF-QE-WjE" firstAttribute="centerX" secondItem="KZa-fa-qKH" secondAttribute="centerX" id="33c-HB-EUt"/>
+                                    <constraint firstItem="3sF-QE-WjE" firstAttribute="centerX" secondItem="KZa-fa-qKH" secondAttribute="centerX" constant="1.5" id="33c-HB-EUt"/>
                                     <constraint firstItem="3sF-QE-WjE" firstAttribute="top" secondItem="KZa-fa-qKH" secondAttribute="top" id="fkv-2K-mq6"/>
                                 </constraints>
                             </view>
@@ -1223,7 +1223,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dIK-0b-krA">
                                 <rect key="frame" x="0.0" y="115.5" width="320" height="51"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="da6" translatesAutoresizingMaskIntoConstraints="NO" id="h9C-db-6IF">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="genderUser" translatesAutoresizingMaskIntoConstraints="NO" id="h9C-db-6IF">
                                         <rect key="frame" x="66" y="14" width="44" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="22" id="EHQ-I9-WpA"/>
@@ -1319,7 +1319,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5BT-DV-u87" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-949" y="768"/>
+            <point key="canvasLocation" x="-950.625" y="767.95774647887322"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="v7d-s0-N7j">
@@ -1413,7 +1413,7 @@
                                             <action selector="selectDatePicker:" destination="2SL-D9-DPF" eventType="valueChanged" id="mrq-Mr-c0Q"/>
                                         </connections>
                                     </datePicker>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tstsugarbefore" translatesAutoresizingMaskIntoConstraints="NO" id="XrL-8T-CJ4">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="costSugarUser" translatesAutoresizingMaskIntoConstraints="NO" id="XrL-8T-CJ4">
                                         <rect key="frame" x="32" y="70" width="201" height="37"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="201" id="grl-T1-zOs"/>
@@ -1450,7 +1450,7 @@
                                             <action selector="selectPeopleDiabetesSegmented:" destination="2SL-D9-DPF" eventType="valueChanged" id="SI6-UJ-oLl"/>
                                         </connections>
                                     </segmentedControl>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ml2" translatesAutoresizingMaskIntoConstraints="NO" id="nou-Jw-Ksb">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unitDiabetes" translatesAutoresizingMaskIntoConstraints="NO" id="nou-Jw-Ksb">
                                         <rect key="frame" x="96" y="240" width="73" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="73" id="HJb-db-uUm"/>
@@ -1472,7 +1472,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="47" id="mia-kR-NVs"/>
                                         </constraints>
-                                        <state key="normal" image="buttonsavediba"/>
+                                        <state key="normal" image="buttonSaveDiabetes"/>
                                         <connections>
                                             <action selector="saveDataDiabetes:" destination="2SL-D9-DPF" eventType="touchUpInside" id="iFu-DL-t6r"/>
                                         </connections>
@@ -1698,14 +1698,14 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
                                     </textField>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mlgf" translatesAutoresizingMaskIntoConstraints="NO" id="oYT-JK-8ve">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unitKidney" translatesAutoresizingMaskIntoConstraints="NO" id="oYT-JK-8ve">
                                         <rect key="frame" x="65" y="167" width="136" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="Osu-x8-uxU"/>
                                             <constraint firstAttribute="width" constant="136" id="drx-qZ-aDU"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="txtgfr" translatesAutoresizingMaskIntoConstraints="NO" id="pN5-uN-hwX">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="costGFRUser" translatesAutoresizingMaskIntoConstraints="NO" id="pN5-uN-hwX">
                                         <rect key="frame" x="43" y="70" width="181" height="31"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="31" id="UtK-eH-OyY"/>
@@ -1731,7 +1731,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="47" id="6vq-Pl-its"/>
                                         </constraints>
-                                        <state key="normal" image="buttonsavekid"/>
+                                        <state key="normal" image="buttonSaveKidney"/>
                                         <connections>
                                             <action selector="saveDataKidney:" destination="Q5x-Lt-wGk" eventType="touchUpInside" id="Hb6-Rh-JsR"/>
                                         </connections>
@@ -1810,21 +1810,21 @@
                                             <action selector="selectDatePicker:" destination="XAO-Ys-IaU" eventType="valueChanged" id="Khr-JP-rT3"/>
                                         </connections>
                                     </datePicker>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="txtpretop" translatesAutoresizingMaskIntoConstraints="NO" id="ae3-Vw-A0x">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="costPressureUser" translatesAutoresizingMaskIntoConstraints="NO" id="ae3-Vw-A0x">
                                         <rect key="frame" x="27" y="74" width="224" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="224" id="csn-5E-ASh"/>
                                             <constraint firstAttribute="height" constant="30" id="e09-yA-t5v"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="top2" translatesAutoresizingMaskIntoConstraints="NO" id="lEy-ND-Jx4">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="costPressureTop" translatesAutoresizingMaskIntoConstraints="NO" id="lEy-ND-Jx4">
                                         <rect key="frame" x="25" y="108" width="47" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="47" id="79Q-yN-Eri"/>
                                             <constraint firstAttribute="height" constant="30" id="PJe-lC-F9w"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mlpre" translatesAutoresizingMaskIntoConstraints="NO" id="ZTa-V6-OIf">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unitPressure" translatesAutoresizingMaskIntoConstraints="NO" id="ZTa-V6-OIf">
                                         <rect key="frame" x="193" y="155" width="80" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="IBw-wj-wBc"/>
@@ -1841,7 +1841,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
                                     </textField>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="textheart" translatesAutoresizingMaskIntoConstraints="NO" id="s1W-xu-Mi9">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="costHeartUser" translatesAutoresizingMaskIntoConstraints="NO" id="s1W-xu-Mi9">
                                         <rect key="frame" x="29" y="200" width="220" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="220" id="BFW-eN-YRu"/>
@@ -1858,7 +1858,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
                                     </textField>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mlh" translatesAutoresizingMaskIntoConstraints="NO" id="LeF-bN-rfx">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unitHeart" translatesAutoresizingMaskIntoConstraints="NO" id="LeF-bN-rfx">
                                         <rect key="frame" x="106" y="269" width="66" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="66" id="ANK-HX-Gvn"/>
@@ -1875,14 +1875,14 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
                                     </textField>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="down2" translatesAutoresizingMaskIntoConstraints="NO" id="QRd-Pq-WF5">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="costPressureDown" translatesAutoresizingMaskIntoConstraints="NO" id="QRd-Pq-WF5">
                                         <rect key="frame" x="25" y="155" width="47" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="K8Z-Vw-b0A"/>
                                             <constraint firstAttribute="width" constant="47" id="N0L-QJ-YS6"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mlpre" translatesAutoresizingMaskIntoConstraints="NO" id="cdo-kL-L8B">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unitPressure" translatesAutoresizingMaskIntoConstraints="NO" id="cdo-kL-L8B">
                                         <rect key="frame" x="193" y="108" width="80" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="24y-Ue-Smb"/>
@@ -1894,7 +1894,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="47" id="ATM-K9-Xcg"/>
                                         </constraints>
-                                        <state key="normal" image="buttonsave"/>
+                                        <state key="normal" image="buttonSavePressure"/>
                                         <connections>
                                             <action selector="saveDataPressure:" destination="XAO-Ys-IaU" eventType="touchUpInside" id="cEI-Ap-yyc"/>
                                         </connections>
@@ -2238,7 +2238,7 @@
                                         <color key="textColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tstsugarbefore" translatesAutoresizingMaskIntoConstraints="NO" id="4PF-fX-o3o">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="costSugarUser" translatesAutoresizingMaskIntoConstraints="NO" id="4PF-fX-o3o">
                                         <rect key="frame" x="41.5" y="72" width="200" height="38"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="38" id="vQV-9u-x4H"/>
@@ -2256,21 +2256,21 @@
                                         <color key="textColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dia1" translatesAutoresizingMaskIntoConstraints="NO" id="rBX-P8-1hn">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="textLevelDiabetes1" translatesAutoresizingMaskIntoConstraints="NO" id="rBX-P8-1hn">
                                         <rect key="frame" x="10" y="303" width="262" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="AcL-Uz-FsA"/>
                                             <constraint firstAttribute="width" constant="262" id="SCU-Zi-VMj"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="textleveldi1" translatesAutoresizingMaskIntoConstraints="NO" id="xNV-vX-Y7e">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="levelDiabetes1" translatesAutoresizingMaskIntoConstraints="NO" id="xNV-vX-Y7e">
                                         <rect key="frame" x="4" y="236" width="275" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="275" id="LgM-TS-Tqd"/>
                                             <constraint firstAttribute="height" constant="50" id="Mgz-4y-KNa"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ml2" translatesAutoresizingMaskIntoConstraints="NO" id="lh3-v0-Eiv">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unitDiabetes" translatesAutoresizingMaskIntoConstraints="NO" id="lh3-v0-Eiv">
                                         <rect key="frame" x="104.5" y="169" width="74" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="74" id="8eX-6R-Zvd"/>
@@ -2354,7 +2354,7 @@
                                         <color key="textColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="txtgfr" translatesAutoresizingMaskIntoConstraints="NO" id="nIj-43-XcS">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="costGFRUser" translatesAutoresizingMaskIntoConstraints="NO" id="nIj-43-XcS">
                                         <rect key="frame" x="39.5" y="78" width="203" height="28"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="203" id="hpc-kv-bmR"/>
@@ -2368,14 +2368,14 @@
                                             <constraint firstAttribute="width" constant="290" id="vWE-7O-RY0"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mlgf" translatesAutoresizingMaskIntoConstraints="NO" id="C0E-fJ-BIu">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unitKidney" translatesAutoresizingMaskIntoConstraints="NO" id="C0E-fJ-BIu">
                                         <rect key="frame" x="75.5" y="232" width="131" height="29"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="131" id="ArP-iK-YBg"/>
                                             <constraint firstAttribute="height" constant="29" id="sKT-yz-06d"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="prokid1" translatesAutoresizingMaskIntoConstraints="NO" id="faU-s3-QQN">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="levelKidney" translatesAutoresizingMaskIntoConstraints="NO" id="faU-s3-QQN">
                                         <rect key="frame" x="10" y="274" width="262" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="262" id="8Nd-7b-JW3"/>
@@ -2482,42 +2482,42 @@
                                 <color key="textColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="textlevelkid1" translatesAutoresizingMaskIntoConstraints="NO" id="Nr7-BT-9L0">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="textlevelpre1" translatesAutoresizingMaskIntoConstraints="NO" id="Nr7-BT-9L0">
                                 <rect key="frame" x="15" y="243" width="290" height="55"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="AiF-g7-qwR"/>
                                     <constraint firstAttribute="width" constant="290" id="ybt-qm-fq9"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="txtpretop" translatesAutoresizingMaskIntoConstraints="NO" id="Sj2-6j-jpe">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="costPressureUser" translatesAutoresizingMaskIntoConstraints="NO" id="Sj2-6j-jpe">
                                 <rect key="frame" x="55" y="113" width="210" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="210" id="Kde-G8-ebE"/>
                                     <constraint firstAttribute="height" constant="30" id="zb6-L1-cZd"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="top2" translatesAutoresizingMaskIntoConstraints="NO" id="7kE-L7-zHQ">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="costPressureTop" translatesAutoresizingMaskIntoConstraints="NO" id="7kE-L7-zHQ">
                                 <rect key="frame" x="40" y="147.5" width="50" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="2PQ-DF-8I6"/>
                                     <constraint firstAttribute="width" constant="50" id="tUo-S2-EQd"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mlpre" translatesAutoresizingMaskIntoConstraints="NO" id="NjL-V3-gHX">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unitPressure" translatesAutoresizingMaskIntoConstraints="NO" id="NjL-V3-gHX">
                                 <rect key="frame" x="240" y="148" width="70" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="jsk-Hj-hwb"/>
                                     <constraint firstAttribute="height" constant="30" id="mzh-6k-X9X"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="down2" translatesAutoresizingMaskIntoConstraints="NO" id="oZC-Bg-Ifd">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="costPressureDown" translatesAutoresizingMaskIntoConstraints="NO" id="oZC-Bg-Ifd">
                                 <rect key="frame" x="40" y="197" width="50" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="7ii-LC-B36"/>
                                     <constraint firstAttribute="height" constant="30" id="kEG-sn-Iwk"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mlpre" translatesAutoresizingMaskIntoConstraints="NO" id="hC2-hb-3dd">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unitPressure" translatesAutoresizingMaskIntoConstraints="NO" id="hC2-hb-3dd">
                                 <rect key="frame" x="240" y="196.5" width="70" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="La2-RC-hDI"/>
@@ -2535,20 +2535,20 @@
                                 <color key="textColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="prokid1" translatesAutoresizingMaskIntoConstraints="NO" id="1qF-wa-fhq">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="levelHeart1" translatesAutoresizingMaskIntoConstraints="NO" id="1qF-wa-fhq">
                                 <rect key="frame" x="10" y="508" width="300" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="OoG-Fb-Oss"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="textheart" translatesAutoresizingMaskIntoConstraints="NO" id="6Mo-un-qdy">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="costHeartUser" translatesAutoresizingMaskIntoConstraints="NO" id="6Mo-un-qdy">
                                 <rect key="frame" x="60" y="368" width="200" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="HHi-qb-b8a"/>
                                     <constraint firstAttribute="height" constant="30" id="cno-Tq-55O"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mlh" translatesAutoresizingMaskIntoConstraints="NO" id="ZV4-PB-exY">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unitHeart" translatesAutoresizingMaskIntoConstraints="NO" id="ZV4-PB-exY">
                                 <rect key="frame" x="243" y="414.5" width="55" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="HcT-eF-2gI"/>
@@ -2562,7 +2562,7 @@
                                     <constraint firstAttribute="width" constant="290" id="ZX8-dY-4KU"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="prokid1" translatesAutoresizingMaskIntoConstraints="NO" id="ehr-is-NvC">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="levelKidney" translatesAutoresizingMaskIntoConstraints="NO" id="ehr-is-NvC">
                                 <rect key="frame" x="10" y="299" width="300" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="EGe-Pk-Gsp"/>
@@ -3882,63 +3882,66 @@
         <image name="InstructionDrink" width="2480" height="3508"/>
         <image name="InstructionEat" width="2480" height="3508"/>
         <image name="InstructionKidney" width="2480" height="3508"/>
+        <image name="ShowCalExercise" width="270" height="30"/>
+        <image name="ShowCalFood" width="280" height="30"/>
+        <image name="ageUser" width="80" height="40"/>
         <image name="bmi" width="75" height="40"/>
         <image name="bmi1" width="560" height="95"/>
         <image name="bmr" width="85" height="40"/>
-        <image name="buttonsave" width="420" height="70"/>
-        <image name="buttonsavediba" width="420" height="70"/>
-        <image name="buttonsavekid" width="420" height="70"/>
+        <image name="buttonSaveDiabetes" width="420" height="70"/>
+        <image name="buttonSaveKidney" width="420" height="70"/>
+        <image name="buttonSavePressure" width="420" height="70"/>
         <image name="calender" width="60" height="60"/>
-        <image name="calexe" width="270" height="30"/>
-        <image name="calrories" width="280" height="30"/>
         <image name="carbohydate" width="650" height="100"/>
         <image name="cm" width="50" height="45"/>
-        <image name="da5" width="150" height="40"/>
-        <image name="da6" width="85" height="40"/>
-        <image name="da7" width="80" height="40"/>
-        <image name="da8" width="102" height="40"/>
-        <image name="da9" width="102" height="40"/>
-        <image name="dia1" width="700" height="110"/>
-        <image name="dii" width="1200" height="300"/>
-        <image name="diii" width="1200" height="300"/>
-        <image name="diiii" width="1200" height="300"/>
-        <image name="diiiii" width="1200" height="300"/>
-        <image name="diiiiii" width="1200" height="300"/>
-        <image name="disbmr" width="200" height="30"/>
-        <image name="down2" width="70" height="45"/>
+        <image name="costBmr" width="200" height="30"/>
+        <image name="costGFRUser" width="340" height="50"/>
+        <image name="costHeartUser" width="340" height="50"/>
+        <image name="costPressureDown" width="70" height="45"/>
+        <image name="costPressureTop" width="70" height="45"/>
+        <image name="costPressureUser" width="340" height="50"/>
+        <image name="costSugarUser" width="420" height="75"/>
+        <image name="diabetes" width="1200" height="300"/>
+        <image name="exercise" width="1200" height="300"/>
         <image name="fat" width="650" height="100"/>
+        <image name="food" width="1200" height="300"/>
+        <image name="genderUser" width="85" height="40"/>
+        <image name="heightUser" width="102" height="40"/>
         <image name="iconexe" width="100" height="100"/>
         <image name="iconfood" width="100" height="100"/>
-        <image name="iconheart" width="40" height="40"/>
+        <image name="iconheart" width="36" height="36"/>
         <image name="iconhome" width="20" height="20"/>
         <image name="iconintro" width="20" height="20"/>
         <image name="iconreport" width="20" height="20"/>
         <image name="iconuser" width="20" height="20"/>
-        <image name="kk" width="50" height="45"/>
+        <image name="kg" width="50" height="45"/>
+        <image name="kidney" width="1200" height="300"/>
+        <image name="levelDiabetes1" width="700" height="110"/>
+        <image name="levelHeart1" width="700" height="110"/>
+        <image name="levelKidney" width="700" height="110"/>
         <image name="listhistory" width="80" height="60"/>
-        <image name="ml2" width="100" height="45"/>
-        <image name="mlgf" width="200" height="45"/>
-        <image name="mlh" width="90" height="30"/>
-        <image name="mlpre" width="100" height="45"/>
-        <image name="prokid1" width="700" height="110"/>
+        <image name="nameUser" width="150" height="40"/>
+        <image name="pressure" width="1200" height="300"/>
         <image name="protin" width="650" height="100"/>
         <image name="sodium" width="650" height="100"/>
         <image name="sugar" width="650" height="100"/>
         <image name="sumtotal" width="420" height="110"/>
-        <image name="textheart" width="340" height="50"/>
-        <image name="textleveldi1" width="420" height="75"/>
+        <image name="textLevelDiabetes1" width="420" height="75"/>
         <image name="textlevelkid1" width="400" height="75"/>
-        <image name="top2" width="70" height="45"/>
+        <image name="textlevelpre1" width="400" height="75"/>
         <image name="tstsugarbefore" width="420" height="75"/>
-        <image name="txtgfr" width="340" height="50"/>
-        <image name="txtpretop" width="340" height="50"/>
+        <image name="unitDiabetes" width="100" height="45"/>
+        <image name="unitHeart" width="90" height="30"/>
+        <image name="unitKidney" width="200" height="45"/>
+        <image name="unitPressure" width="100" height="45"/>
         <image name="unitcalexe" width="80" height="25"/>
         <image name="unitcalfood" width="80" height="25"/>
+        <image name="weightUser" width="102" height="40"/>
         <image name="year" width="50" height="45"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Ktf-Jr-dMH"/>
-        <segue reference="Hdr-ah-W2Y"/>
         <segue reference="w1Y-5d-cnC"/>
+        <segue reference="Hdr-ah-W2Y"/>
+        <segue reference="Ktf-Jr-dMH"/>
     </inferredMetricsTieBreakers>
 </document>

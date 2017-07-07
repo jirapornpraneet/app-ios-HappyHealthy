@@ -30,13 +30,13 @@ class ShowDiabetesViewController: UIViewController {
             if getStatus == "ก่อนอาหาร" {
                 if getCostSuger! >= 126 {
                     showDiabetesLevelImage = UIImage(named: "textlevelnormal.png")
-                    showLineDiabetesLevelImage = UIImage(named: "lol.png")
+                    showLineDiabetesLevelImage = UIImage(named: "levelNormal1.png")
                 }else if getCostSuger! >= 70 && getCostSuger! < 126{
                     showDiabetesLevelImage = UIImage(named: "textlevelnormal1.png")
-                    showLineDiabetesLevelImage = UIImage(named: "lol1.png")
+                    showLineDiabetesLevelImage = UIImage(named: "levelNormal2.png")
                 }else{
                     showDiabetesLevelImage = UIImage(named: "textlevelnormal1.png")
-                    showLineDiabetesLevelImage = UIImage(named: "lol.png")
+                    showLineDiabetesLevelImage = UIImage(named: "levelNormal1.png")
                 }
                 }else{
                     if getCostSuger! >= 200 {
@@ -53,37 +53,37 @@ class ShowDiabetesViewController: UIViewController {
         }else{
             if getStatus == "ก่อนอาหาร" {
              if getCostSuger! >= 130 {
-                showDiabetesLevelImage = UIImage(named: "textleveldi1.png")
-                showLineDiabetesLevelImage = UIImage(named: "dia4.png")
+                showDiabetesLevelImage = UIImage(named: "textLevelDiabetes1.png")
+                showLineDiabetesLevelImage = UIImage(named: "levelDiabetes4.png")
             }else if getCostSuger! >= 100 && getCostSuger! < 130{
-                showDiabetesLevelImage = UIImage(named: "textleveldi5.png")
-                showLineDiabetesLevelImage = UIImage(named: "dia3.png")
+                showDiabetesLevelImage = UIImage(named: "textLevelDiabetes5.png")
+                showLineDiabetesLevelImage = UIImage(named: "levelDiabetes3.png")
             }else if getCostSuger! >= 90 && getCostSuger! < 100{
-                showDiabetesLevelImage = UIImage(named: "textleveldi4.png")
-                showLineDiabetesLevelImage = UIImage(named: "dia2.png")
+                showDiabetesLevelImage = UIImage(named: "textLevelDiabetes4.png")
+                showLineDiabetesLevelImage = UIImage(named: "levelDiabetes2.png")
             }else if getCostSuger! >= 70 && getCostSuger! < 90{
-                showDiabetesLevelImage = UIImage(named: "textleveldi3.png")
-                showLineDiabetesLevelImage = UIImage(named: "dia1.png")
+                showDiabetesLevelImage = UIImage(named: "textLevelDiabetes3.png")
+                showLineDiabetesLevelImage = UIImage(named: "levelDiabetes1.png")
             }else{
-                showDiabetesLevelImage = UIImage(named: "textleveldi2.png")
-                showLineDiabetesLevelImage = UIImage(named: "dia4.png")
+                showDiabetesLevelImage = UIImage(named: "textLevelDiabetes2.png")
+                showLineDiabetesLevelImage = UIImage(named: "levelDiabetes4.png")
             }
         }else{
             if getCostSuger! >= 180{
-            showDiabetesLevelImage = UIImage(named: "textleveldi1.png")
-            showLineDiabetesLevelImage = UIImage(named: "dia4.png")
+            showDiabetesLevelImage = UIImage(named: "textLevelDiabetes1.png")
+            showLineDiabetesLevelImage = UIImage(named: "levelDiabetes4.png")
             }else if getCostSuger! >= 150 && getCostSuger! < 180{
-                showDiabetesLevelImage = UIImage(named: "textleveldi5.png")
-                showLineDiabetesLevelImage = UIImage(named: "dia3.png")
+                showDiabetesLevelImage = UIImage(named: "textLevelDiabetes5.png")
+                showLineDiabetesLevelImage = UIImage(named: "levelDiabetes3.png")
             }else if getCostSuger! >= 110 && getCostSuger! < 150{
-                showDiabetesLevelImage = UIImage(named: "textleveldi4.png")
-                showLineDiabetesLevelImage = UIImage(named: "dia2.png")
+                showDiabetesLevelImage = UIImage(named: "textLevelDiabetes4.png")
+                showLineDiabetesLevelImage = UIImage(named: "levelDiabetes2.png")
             }else if getCostSuger! >= 70 && getCostSuger! < 110{
-                showDiabetesLevelImage = UIImage(named: "textleveldi3.png")
-                showLineDiabetesLevelImage = UIImage(named: "dia1.png")
+                showDiabetesLevelImage = UIImage(named: "textLevelDiabetes3.png")
+                showLineDiabetesLevelImage = UIImage(named: "levelDiabetes1.png")
             }else{
-                showDiabetesLevelImage = UIImage(named: "textleveldi2.png")
-                showLineDiabetesLevelImage = UIImage(named: "dia4.png")
+                showDiabetesLevelImage = UIImage(named: "textLevelDiabetes2.png")
+                showLineDiabetesLevelImage = UIImage(named: "levelDiabetes4.png")
                 }
             }
         }
