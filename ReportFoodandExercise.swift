@@ -83,6 +83,7 @@ class ReportFoodandExercise: UIViewController {
         let setDate = dateFormatterShow.string(from: dateHistoryPicker.date)
         saveDate = setDate
         loadAllData(dateChoose: saveDate!)
+        self.tabBarController?.navigationItem.title = "รายงานการบริโภคและการออกกำลังกาย"
    
     }
         

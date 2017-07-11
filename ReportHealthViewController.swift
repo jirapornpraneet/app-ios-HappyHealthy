@@ -49,6 +49,7 @@ class ReportHealthViewController: UIViewController{
         let  setDate = dateFormatterShow.string(from: datePicker.date)
         saveDate = setDate
         loadAllData(dateChoose: saveDate)
+        self.tabBarController?.navigationItem.title = "รายงานสุขภาพ"
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -119,7 +120,6 @@ class ReportHealthViewController: UIViewController{
                 }else{
                     showAlertDiabetesImage = UIImage(named: "alertDiabetes3.png")
                 }
-                
             }
         }
         
@@ -225,6 +225,5 @@ class ReportHealthViewController: UIViewController{
         alertPressureImage.image = showAlertPressureImage
         alertHeartImage.image = showAlertHeartImage
         }
-    
-    }
+}
 

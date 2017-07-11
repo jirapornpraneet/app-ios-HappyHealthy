@@ -184,8 +184,6 @@ class UserViewController: UIViewController,UITextFieldDelegate{
     
     override func viewDidAppear(_ animated: Bool) {
         loadAllUser()
-        self.tabBarController?.navigationItem.title = "ข้อมูลผู้ใช้งาน"
-        
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -195,7 +193,8 @@ class UserViewController: UIViewController,UITextFieldDelegate{
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.tabBarController?.navigationItem.title = "ข้อมูลผู้ใช้งาน"
-        self.tabBarController?.navigationItem.rightBarButtonItem = saveData     }
+        self.tabBarController?.navigationItem.rightBarButtonItem = saveData
+    }
     
 }
 
