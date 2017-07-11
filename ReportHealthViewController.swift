@@ -43,7 +43,6 @@ class ReportHealthViewController: UIViewController{
 
     override func viewDidLoad() {
         super.viewDidLoad()
-      
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -65,7 +64,16 @@ class ReportHealthViewController: UIViewController{
         self.tabBarController?.navigationItem.title = "รายงานสุขภาพ"
         }
  }
-        
+    
+//    override func viewWillAppear(_ animated: Bool) {
+////        let dateFormatterShow = DateFormatter()
+////        dateFormatterShow.dateFormat = "dd-MM-yyyy"
+////        let  setDate = dateFormatterShow.string(from: datePicker.date)
+////        saveDate = setDate
+////        loadAllData(dateChoose: saveDate)
+////        self.tabBarController?.navigationItem.title = "รายงานสุขภาพ"
+//    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

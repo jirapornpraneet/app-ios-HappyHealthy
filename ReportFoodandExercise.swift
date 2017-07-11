@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AAPickerView
 
 class ReportFoodandExercise: UIViewController {
     var getSumFoodandExercis = [HistorySUMTable]()
@@ -22,7 +23,7 @@ class ReportFoodandExercise: UIViewController {
 
     @IBOutlet weak var exerciseTotalcal: UILabel!
     @IBOutlet weak var foodTotalcal: UILabel!
-    @IBOutlet var dateHistoryPicker: UIDatePicker!
+    @IBOutlet var dateHistoryPicker: AAPickerView!
     @IBOutlet weak var sumProtin: UILabel!
     @IBOutlet weak var sumCarbohydate: UILabel!
     @IBOutlet weak var sumFat: UILabel!

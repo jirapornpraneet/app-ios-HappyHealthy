@@ -60,7 +60,6 @@ class UserViewController: UIViewController,UITextFieldDelegate{
             return
         }
         getUserTable = dbHelper.getUser()
-       // getUserRowMaxTable = dbHelper.getUserRowMax()
         if getUserTable.count == 0 {
             return
         }
