@@ -889,64 +889,109 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4U0-2o-iH8">
                                 <rect key="frame" x="0.0" y="64" width="320" height="92"/>
+                                <color key="backgroundColor" red="0.824937582" green="0.74073529240000002" blue="0.89022874829999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="92" id="9C4-sj-ypc"/>
                                 </constraints>
-                                <state key="normal" title="Button" image="diabetes"/>
                                 <connections>
                                     <segue destination="2SL-D9-DPF" kind="show" id="wXe-rA-2ZE"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NC2-gc-DlG">
                                 <rect key="frame" x="0.0" y="247" width="320" height="92"/>
-                                <state key="normal" title="Button" image="pressure"/>
+                                <color key="backgroundColor" red="0.93842339519999995" green="0.78845047950000002" blue="0.78434020280000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <segue destination="XAO-Ys-IaU" kind="show" id="adW-mD-Frh"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KTz-uh-leA">
                                 <rect key="frame" x="0.0" y="339" width="320" height="92"/>
-                                <state key="normal" title="Button" image="food"/>
+                                <color key="backgroundColor" red="0.93984878059999999" green="0.70063066480000002" blue="0.60003376009999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <segue destination="nS4-Tv-lzw" kind="show" id="E0C-16-0Tf"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1RZ-ns-ghB">
                                 <rect key="frame" x="0.0" y="428" width="320" height="92"/>
-                                <state key="normal" title="Button" image="exercise"/>
+                                <color key="backgroundColor" red="0.63805043699999997" green="0.81293475630000001" blue="0.57256901260000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <segue destination="Qzg-4y-Hg1" kind="show" id="7BF-uP-Ie8"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RiU-KX-fw4">
                                 <rect key="frame" x="0.0" y="156" width="320" height="92"/>
-                                <state key="normal" title="Button" image="kidney"/>
+                                <color key="backgroundColor" red="0.71583187579999996" green="0.81949579719999999" blue="0.95688760279999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <segue destination="Q5x-Lt-wGk" kind="show" id="1f2-c9-ebs"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="เบาหวาน" translatesAutoresizingMaskIntoConstraints="NO" id="7Xc-fx-jC5">
+                                <rect key="frame" x="111" y="65" width="98" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="98" id="cTK-ld-Vpn"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ไต" translatesAutoresizingMaskIntoConstraints="NO" id="pZv-RC-Z5L">
+                                <rect key="frame" x="113" y="157" width="94" height="89"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="94" id="XbS-qt-8mT"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ความดันโลหิต" translatesAutoresizingMaskIntoConstraints="NO" id="5dw-sE-iv2">
+                                <rect key="frame" x="87" y="249" width="145" height="89"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="145" id="Ijg-Fo-ta0"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="อาหาร" translatesAutoresizingMaskIntoConstraints="NO" id="srN-hg-9gC">
+                                <rect key="frame" x="111" y="340" width="98" height="87"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="98" id="8ls-GX-I7u"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ออกกำลังกาย" translatesAutoresizingMaskIntoConstraints="NO" id="Yf8-xf-DVV">
+                                <rect key="frame" x="90.5" y="432" width="135" height="86"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="135" id="Dc4-jR-63J"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="4U0-2o-iH8" secondAttribute="trailing" id="0Ud-qi-yIq"/>
                             <constraint firstItem="RiU-KX-fw4" firstAttribute="leading" secondItem="3NZ-Wc-DoA" secondAttribute="leading" id="0WK-cJ-G2p"/>
                             <constraint firstItem="KTz-uh-leA" firstAttribute="leading" secondItem="3NZ-Wc-DoA" secondAttribute="leading" id="0ay-VJ-rPv"/>
+                            <constraint firstItem="7Xc-fx-jC5" firstAttribute="centerX" secondItem="3NZ-Wc-DoA" secondAttribute="centerX" id="3pX-Uk-M2v"/>
                             <constraint firstItem="NC2-gc-DlG" firstAttribute="leading" secondItem="3NZ-Wc-DoA" secondAttribute="leading" id="60h-kQ-yNf"/>
+                            <constraint firstItem="1RZ-ns-ghB" firstAttribute="top" secondItem="srN-hg-9gC" secondAttribute="bottom" constant="1" id="AY4-aF-Pw2"/>
                             <constraint firstItem="RiU-KX-fw4" firstAttribute="height" secondItem="NC2-gc-DlG" secondAttribute="height" id="CoA-oz-3fC"/>
+                            <constraint firstItem="7Xc-fx-jC5" firstAttribute="top" secondItem="wZe-gv-cVM" secondAttribute="bottom" constant="1" id="DUA-Lb-8IX"/>
+                            <constraint firstItem="RiU-KX-fw4" firstAttribute="top" secondItem="7Xc-fx-jC5" secondAttribute="bottom" constant="1" id="G8P-x0-VhZ"/>
                             <constraint firstAttribute="trailing" secondItem="RiU-KX-fw4" secondAttribute="trailing" id="Gzh-S1-fsw"/>
                             <constraint firstItem="KTz-uh-leA" firstAttribute="top" secondItem="NC2-gc-DlG" secondAttribute="bottom" id="H3D-3P-Ka6"/>
+                            <constraint firstItem="srN-hg-9gC" firstAttribute="centerX" secondItem="3NZ-Wc-DoA" secondAttribute="centerX" id="IRx-pF-uVr"/>
                             <constraint firstItem="4U0-2o-iH8" firstAttribute="leading" secondItem="3NZ-Wc-DoA" secondAttribute="leading" id="IxX-Pm-yQc"/>
+                            <constraint firstItem="pZv-RC-Z5L" firstAttribute="top" secondItem="4U0-2o-iH8" secondAttribute="bottom" constant="1" id="Kay-D3-xkJ"/>
                             <constraint firstItem="1RZ-ns-ghB" firstAttribute="top" secondItem="KTz-uh-leA" secondAttribute="bottom" constant="-3" id="M73-4z-rUf"/>
+                            <constraint firstItem="Yf8-xf-DVV" firstAttribute="centerX" secondItem="3NZ-Wc-DoA" secondAttribute="centerX" constant="-2" id="Omw-6Y-Zxs"/>
                             <constraint firstAttribute="trailing" secondItem="KTz-uh-leA" secondAttribute="trailing" id="PZW-P1-1Sw"/>
                             <constraint firstItem="HaP-8l-vPI" firstAttribute="top" secondItem="1RZ-ns-ghB" secondAttribute="bottom" constant="-1" id="QnF-Vn-n7O"/>
+                            <constraint firstItem="HaP-8l-vPI" firstAttribute="top" secondItem="Yf8-xf-DVV" secondAttribute="bottom" constant="1" id="SCy-CO-Cro"/>
+                            <constraint firstItem="Yf8-xf-DVV" firstAttribute="top" secondItem="KTz-uh-leA" secondAttribute="bottom" constant="1" id="Z9h-28-d6e"/>
+                            <constraint firstItem="NC2-gc-DlG" firstAttribute="top" secondItem="pZv-RC-Z5L" secondAttribute="bottom" constant="1" id="ZZ8-Pc-HPN"/>
+                            <constraint firstItem="srN-hg-9gC" firstAttribute="top" secondItem="NC2-gc-DlG" secondAttribute="bottom" constant="1" id="cVX-a5-JCV"/>
                             <constraint firstItem="NC2-gc-DlG" firstAttribute="top" secondItem="RiU-KX-fw4" secondAttribute="bottom" constant="-1" id="cfr-3D-dkk"/>
+                            <constraint firstItem="5dw-sE-iv2" firstAttribute="top" secondItem="RiU-KX-fw4" secondAttribute="bottom" constant="1" id="dar-qp-BaI"/>
                             <constraint firstItem="4U0-2o-iH8" firstAttribute="top" secondItem="wZe-gv-cVM" secondAttribute="bottom" id="fge-AW-yUa"/>
                             <constraint firstItem="4U0-2o-iH8" firstAttribute="height" secondItem="RiU-KX-fw4" secondAttribute="height" id="i5n-ag-tWw"/>
+                            <constraint firstItem="KTz-uh-leA" firstAttribute="top" secondItem="5dw-sE-iv2" secondAttribute="bottom" constant="1" id="qPq-Rc-S9V"/>
                             <constraint firstItem="NC2-gc-DlG" firstAttribute="height" secondItem="KTz-uh-leA" secondAttribute="height" id="r33-q1-11Z"/>
+                            <constraint firstItem="5dw-sE-iv2" firstAttribute="centerX" secondItem="3NZ-Wc-DoA" secondAttribute="centerX" id="sID-Bx-ok5"/>
                             <constraint firstAttribute="trailing" secondItem="NC2-gc-DlG" secondAttribute="trailing" id="uWj-m3-dFK"/>
                             <constraint firstAttribute="trailing" secondItem="1RZ-ns-ghB" secondAttribute="trailing" id="uYZ-Hk-6ox"/>
                             <constraint firstItem="RiU-KX-fw4" firstAttribute="top" secondItem="4U0-2o-iH8" secondAttribute="bottom" id="upU-2d-Jaw"/>
                             <constraint firstItem="KTz-uh-leA" firstAttribute="height" secondItem="1RZ-ns-ghB" secondAttribute="height" id="vAN-0a-DuW"/>
+                            <constraint firstItem="pZv-RC-Z5L" firstAttribute="centerX" secondItem="3NZ-Wc-DoA" secondAttribute="centerX" id="vGh-Xg-KUc"/>
                             <constraint firstItem="1RZ-ns-ghB" firstAttribute="leading" secondItem="3NZ-Wc-DoA" secondAttribute="leading" id="ybz-JR-7Gk"/>
                         </constraints>
                     </view>
@@ -954,7 +999,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aOZ-B6-dQN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-889" y="-2209"/>
+            <point key="canvasLocation" x="-894.375" y="-2229.929577464789"/>
         </scene>
         <!--ข้อมูลผู้ใช้-->
         <scene sceneID="X5x-WE-5Hg">
@@ -3901,10 +3946,7 @@
         <image name="costPressureTop" width="70" height="45"/>
         <image name="costPressureUser" width="340" height="50"/>
         <image name="costSugarUser" width="420" height="75"/>
-        <image name="diabetes" width="1200" height="300"/>
-        <image name="exercise" width="1200" height="300"/>
         <image name="fat" width="650" height="100"/>
-        <image name="food" width="1200" height="300"/>
         <image name="genderUser" width="85" height="40"/>
         <image name="heightUser" width="102" height="40"/>
         <image name="iconexe" width="100" height="100"/>
@@ -3915,13 +3957,11 @@
         <image name="iconreport" width="20" height="20"/>
         <image name="iconuser" width="20" height="20"/>
         <image name="kg" width="50" height="45"/>
-        <image name="kidney" width="1200" height="300"/>
         <image name="levelDiabetes1" width="700" height="110"/>
         <image name="levelHeart1" width="700" height="110"/>
         <image name="levelKidney" width="700" height="110"/>
         <image name="listhistory" width="80" height="60"/>
         <image name="nameUser" width="150" height="40"/>
-        <image name="pressure" width="1200" height="300"/>
         <image name="protin" width="650" height="100"/>
         <image name="sodium" width="650" height="100"/>
         <image name="sugar" width="650" height="100"/>
@@ -3938,6 +3978,11 @@
         <image name="unitcalfood" width="80" height="25"/>
         <image name="weightUser" width="102" height="40"/>
         <image name="year" width="50" height="45"/>
+        <image name="ความดันโลหิต" width="495" height="300"/>
+        <image name="ออกกำลังกาย" width="477" height="300"/>
+        <image name="อาหาร" width="321" height="300"/>
+        <image name="เบาหวาน" width="330" height="300"/>
+        <image name="ไต" width="312" height="300"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="w1Y-5d-cnC"/>
