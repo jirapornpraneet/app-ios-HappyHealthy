@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import AAPickerView
+
 
 class ReportHealthViewController: UIViewController{
      var getCheckReportDiabetes = [DiabetesTable]()
@@ -25,7 +27,6 @@ class ReportHealthViewController: UIViewController{
      var costDown:Int?
      var imageAlertLevelPre:[UIImage] = [UIImage(named: "alertPressure1.png")!,UIImage(named: "alertPressure2.png")!,UIImage(named: "alertPressure3.png")!,UIImage(named: "alertPressure4.png")!,UIImage(named: "alertPressure5.png")!,UIImage(named: "alertPressure0.png")!,UIImage(named: "alertPressure6.png")!]
 
-    @IBOutlet var datePicker: UIDatePicker!
     @IBOutlet var costSugarLabel: UILabel!
     @IBOutlet var dateDiabetesLabel: UILabel!
     @IBOutlet var costGFRLabel: UILabel!
@@ -38,31 +39,36 @@ class ReportHealthViewController: UIViewController{
     @IBOutlet weak var alertKidneyImage: UIImageView!
     @IBOutlet weak var alertPressureImage: UIImageView!
     @IBOutlet weak var alertHeartImage: UIImageView!
+    @IBOutlet weak var picker: AAPickerView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+      
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        configPicker()
+    }
+    
+    func configPicker(){
+        picker.pickerType = .DatePicker
+        picker.datePicker?.datePickerMode = .date
+        picker.dateFormatter.dateFormat = "dd-MM-YYYY"
+        picker.dateDidChange = { date in
+            print("selectedDate ", date )
         let dateFormatterShow = DateFormatter()
         dateFormatterShow.dateFormat = "dd-MM-yyyy"
-        let  setDate = dateFormatterShow.string(from: datePicker.date)
-        saveDate = setDate
-        loadAllData(dateChoose: saveDate)
+        let setDate  = dateFormatterShow.string(from: date)
+        print(">>> %@", dateFormatterShow.string(from: date))
+        self.saveDate = setDate
+        self.loadAllData(dateChoose: self.saveDate)
         self.tabBarController?.navigationItem.title = "รายงานสุขภาพ"
-    }
+        }
+ }
+        
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-
-    @IBAction func selectDatePicker(_ sender: Any) {
-        let dateFormatterShow = DateFormatter()
-        dateFormatterShow.dateFormat = "dd-MM-yyyy"
-        let  setDate = dateFormatterShow.string(from: datePicker.date)
-        saveDate = setDate
-        loadAllData(dateChoose: saveDate)
-  
     }
 
     func loadAllData(dateChoose:String) {
