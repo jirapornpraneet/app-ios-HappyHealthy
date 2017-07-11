@@ -925,31 +925,31 @@
                                     <segue destination="Q5x-Lt-wGk" kind="show" id="1f2-c9-ebs"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="เบาหวาน" translatesAutoresizingMaskIntoConstraints="NO" id="7Xc-fx-jC5">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="diabetes" translatesAutoresizingMaskIntoConstraints="NO" id="7Xc-fx-jC5">
                                 <rect key="frame" x="111" y="65" width="98" height="90"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="98" id="cTK-ld-Vpn"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ไต" translatesAutoresizingMaskIntoConstraints="NO" id="pZv-RC-Z5L">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kidney" translatesAutoresizingMaskIntoConstraints="NO" id="pZv-RC-Z5L">
                                 <rect key="frame" x="113" y="157" width="94" height="89"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="94" id="XbS-qt-8mT"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ความดันโลหิต" translatesAutoresizingMaskIntoConstraints="NO" id="5dw-sE-iv2">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pressure" translatesAutoresizingMaskIntoConstraints="NO" id="5dw-sE-iv2">
                                 <rect key="frame" x="87" y="249" width="145" height="89"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="145" id="Ijg-Fo-ta0"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="อาหาร" translatesAutoresizingMaskIntoConstraints="NO" id="srN-hg-9gC">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="food" translatesAutoresizingMaskIntoConstraints="NO" id="srN-hg-9gC">
                                 <rect key="frame" x="111" y="340" width="98" height="87"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="98" id="8ls-GX-I7u"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ออกกำลังกาย" translatesAutoresizingMaskIntoConstraints="NO" id="Yf8-xf-DVV">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="exercise" translatesAutoresizingMaskIntoConstraints="NO" id="Yf8-xf-DVV">
                                 <rect key="frame" x="90.5" y="432" width="135" height="86"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="135" id="Dc4-jR-63J"/>
@@ -3946,7 +3946,10 @@
         <image name="costPressureTop" width="70" height="45"/>
         <image name="costPressureUser" width="340" height="50"/>
         <image name="costSugarUser" width="420" height="75"/>
+        <image name="diabetes" width="330" height="300"/>
+        <image name="exercise" width="477" height="300"/>
         <image name="fat" width="650" height="100"/>
+        <image name="food" width="321" height="300"/>
         <image name="genderUser" width="85" height="40"/>
         <image name="heightUser" width="102" height="40"/>
         <image name="iconexe" width="100" height="100"/>
@@ -3957,11 +3960,13 @@
         <image name="iconreport" width="20" height="20"/>
         <image name="iconuser" width="20" height="20"/>
         <image name="kg" width="50" height="45"/>
+        <image name="kidney" width="312" height="300"/>
         <image name="levelDiabetes1" width="700" height="110"/>
         <image name="levelHeart1" width="700" height="110"/>
         <image name="levelKidney" width="700" height="110"/>
         <image name="listhistory" width="80" height="60"/>
         <image name="nameUser" width="150" height="40"/>
+        <image name="pressure" width="495" height="300"/>
         <image name="protin" width="650" height="100"/>
         <image name="sodium" width="650" height="100"/>
         <image name="sugar" width="650" height="100"/>
@@ -3978,11 +3983,6 @@
         <image name="unitcalfood" width="80" height="25"/>
         <image name="weightUser" width="102" height="40"/>
         <image name="year" width="50" height="45"/>
-        <image name="ความดันโลหิต" width="495" height="300"/>
-        <image name="ออกกำลังกาย" width="477" height="300"/>
-        <image name="อาหาร" width="321" height="300"/>
-        <image name="เบาหวาน" width="330" height="300"/>
-        <image name="ไต" width="312" height="300"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="w1Y-5d-cnC"/>
