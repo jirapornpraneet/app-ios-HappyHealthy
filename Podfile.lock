@@ -1,15 +1,20 @@
 PODS:
   - GRDB.swift (1.1)
+  - ImageSlideshow (1.3.2):
+    - ImageSlideshow/Core (= 1.3.2)
+  - ImageSlideshow/Core (1.3.2)
   - IQKeyboardManagerSwift (4.0.10)
 
 DEPENDENCIES:
   - GRDB.swift (~> 1.0)
+  - ImageSlideshow (~> 1.3)
   - IQKeyboardManagerSwift (= 4.0.10)
 
 SPEC CHECKSUMS:
   GRDB.swift: 58dd10ae08200ce68434e025ca454b8b79fc3c0d
+  ImageSlideshow: a68a76fc618ebd2b7481ce355ad67d7097203976
   IQKeyboardManagerSwift: 75ba21a23794a1e6b6fe6d9a267ea17f80e06771
 
-PODFILE CHECKSUM: 29ab62377b35ae1c6b37f77e43a1fb06147b9a9d
+PODFILE CHECKSUM: 10beff66c74189577b428a9c6eefb1b20835045f
 
 COCOAPODS: 1.2.1

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class homeViewController: UIViewController {
+class HomeViewController: UIViewController {
 
     var dbHelper = DatabaseHelper()
     override func viewDidLoad() {

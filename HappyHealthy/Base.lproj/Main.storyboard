@@ -875,10 +875,44 @@
             </objects>
             <point key="canvasLocation" x="-915" y="-1323.5915492957747"/>
         </scene>
+        <!--Instruction-->
+        <scene sceneID="fpU-xs-Tw5">
+            <objects>
+                <viewController title="Instruction" id="kQi-od-Ylo" customClass="InstructionViewController" customModule="HappyHealthy" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zL8-vo-rcP"/>
+                        <viewControllerLayoutGuide type="bottom" id="UKh-q9-j8u"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="p56-4T-pYR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ojB-Fc-VVD" customClass="ImageSlideshow" customModule="ImageSlideshow">
+                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="UKh-q9-j8u" firstAttribute="top" secondItem="ojB-Fc-VVD" secondAttribute="bottom" id="Bku-oL-Vv4"/>
+                            <constraint firstItem="ojB-Fc-VVD" firstAttribute="top" secondItem="zL8-vo-rcP" secondAttribute="bottom" id="Ssq-Ia-HmB"/>
+                            <constraint firstAttribute="trailing" secondItem="ojB-Fc-VVD" secondAttribute="trailing" id="Um7-i1-jAa"/>
+                            <constraint firstItem="ojB-Fc-VVD" firstAttribute="leading" secondItem="p56-4T-pYR" secondAttribute="leading" id="Ux5-oG-FaP"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="คำแนะนำ" image="iconintro" id="F5R-tM-Adm"/>
+                    <connections>
+                        <outlet property="slideshow" destination="ojB-Fc-VVD" id="scp-RD-mfr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ydV-Ds-Iwz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-877.5" y="75"/>
+        </scene>
         <!--หน้าหลัก-->
         <scene sceneID="CeB-Yg-pfD">
             <objects>
-                <viewController id="oyd-O9-vxd" customClass="homeViewController" customModule="HappyHealthy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="oyd-O9-vxd" customClass="HomeViewController" customModule="HappyHealthy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wZe-gv-cVM"/>
                         <viewControllerLayoutGuide type="bottom" id="HaP-8l-vPI"/>
@@ -1364,46 +1398,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5BT-DV-u87" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-950.625" y="767.95774647887322"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="v7d-s0-N7j">
-            <objects>
-                <viewController storyboardIdentifier="InstructionDiabetes" id="HXI-GC-eMA" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Hsd-GQ-7vZ"/>
-                        <viewControllerLayoutGuide type="bottom" id="KYO-cy-g3D"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="jhE-y7-Erq">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="InstructionDiabetes" translatesAutoresizingMaskIntoConstraints="NO" id="lUI-RZ-jtn">
-                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="lUI-RZ-jtn" firstAttribute="leading" secondItem="jhE-y7-Erq" secondAttribute="leading" id="D84-9I-LOE"/>
-                            <constraint firstItem="KYO-cy-g3D" firstAttribute="top" secondItem="lUI-RZ-jtn" secondAttribute="bottom" id="iIy-t0-7qx"/>
-                            <constraint firstAttribute="trailing" secondItem="lUI-RZ-jtn" secondAttribute="trailing" id="kyg-j6-wRl"/>
-                            <constraint firstItem="lUI-RZ-jtn" firstAttribute="top" secondItem="Hsd-GQ-7vZ" secondAttribute="bottom" id="qSw-10-ePM"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1W6-cv-8xz" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-236" y="-164"/>
-        </scene>
-        <!--คำแนะนำ-->
-        <scene sceneID="apT-x6-cY7">
-            <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" pageSpacing="6" navigationOrientation="horizontal" spineLocation="none" doubleSided="YES" id="Udm-no-oZu" customClass="InstructionViewController" customModule="HappyHealthy" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="คำแนะนำ" image="iconintro" id="Rbr-Hs-9xA"/>
-                </pageViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="S2N-e2-Qa3" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-947" y="76"/>
+            <point key="canvasLocation" x="-878" y="771"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="IOy-fn-d2n">
@@ -1421,8 +1416,8 @@
                         <segue destination="oyd-O9-vxd" kind="relationship" relationship="viewControllers" id="M49-Ur-xhP"/>
                         <segue destination="TiB-OW-0Pr" kind="relationship" relationship="viewControllers" id="ht8-hc-hkD"/>
                         <segue destination="6Y7-sD-JEH" kind="relationship" relationship="viewControllers" id="P7R-oz-400"/>
-                        <segue destination="Udm-no-oZu" kind="relationship" relationship="viewControllers" id="QIC-ll-5EG"/>
-                        <segue destination="qEZ-y9-PiU" kind="relationship" relationship="viewControllers" id="zKy-oT-q1T"/>
+                        <segue destination="kQi-od-Ylo" kind="relationship" relationship="viewControllers" id="X4N-Bz-uSY"/>
+                        <segue destination="qEZ-y9-PiU" kind="relationship" relationship="viewControllers" id="u7s-DS-sbJ"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A71-SY-arv" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1572,151 +1567,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cNy-QY-UeH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-193.125" y="-3418.3098591549297"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="Pvn-j3-6zr">
-            <objects>
-                <viewController storyboardIdentifier="InstructionDiabetes2" id="8qO-Yi-hEk" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="lmW-44-fEe"/>
-                        <viewControllerLayoutGuide type="bottom" id="aoZ-8W-OHj"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="mf6-3w-msz">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="InstructionDiabetes2" translatesAutoresizingMaskIntoConstraints="NO" id="jiq-wJ-yC6">
-                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="jiq-wJ-yC6" firstAttribute="leading" secondItem="mf6-3w-msz" secondAttribute="leading" id="Oxw-el-LBF"/>
-                            <constraint firstAttribute="trailing" secondItem="jiq-wJ-yC6" secondAttribute="trailing" id="PN0-19-Gw7"/>
-                            <constraint firstItem="jiq-wJ-yC6" firstAttribute="top" secondItem="lmW-44-fEe" secondAttribute="bottom" id="s7H-da-m13"/>
-                            <constraint firstItem="aoZ-8W-OHj" firstAttribute="top" secondItem="jiq-wJ-yC6" secondAttribute="bottom" id="v5F-vb-Ufm"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ctc-r4-AYK" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="429" y="-165"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="Cgz-Gj-QHf">
-            <objects>
-                <viewController storyboardIdentifier="InstructionBloodPressure" id="jpg-uw-mMn" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="4Ol-ju-kaf"/>
-                        <viewControllerLayoutGuide type="bottom" id="huj-8k-Vjy"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="FrD-hH-6mA">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="InstructionBloodPressure" translatesAutoresizingMaskIntoConstraints="NO" id="dRc-Zk-29t">
-                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="dRc-Zk-29t" firstAttribute="top" secondItem="4Ol-ju-kaf" secondAttribute="bottom" id="K7s-cM-DzR"/>
-                            <constraint firstItem="dRc-Zk-29t" firstAttribute="leading" secondItem="FrD-hH-6mA" secondAttribute="leading" id="ZNS-a6-8TC"/>
-                            <constraint firstAttribute="trailing" secondItem="dRc-Zk-29t" secondAttribute="trailing" id="btT-U4-EgW"/>
-                            <constraint firstItem="huj-8k-Vjy" firstAttribute="top" secondItem="dRc-Zk-29t" secondAttribute="bottom" id="rSN-X5-Cde"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="AyP-BG-cSZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1082" y="-165"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="OtJ-1M-7in">
-            <objects>
-                <viewController storyboardIdentifier="InstructionKidney" id="kSf-E5-hnU" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="ymO-PM-Qay"/>
-                        <viewControllerLayoutGuide type="bottom" id="edf-Se-nXM"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="XTF-IR-QjB">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="InstructionKidney" translatesAutoresizingMaskIntoConstraints="NO" id="Rrt-bT-VCB">
-                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="edf-Se-nXM" firstAttribute="top" secondItem="Rrt-bT-VCB" secondAttribute="bottom" id="3kA-Rg-Ud2"/>
-                            <constraint firstItem="Rrt-bT-VCB" firstAttribute="leading" secondItem="XTF-IR-QjB" secondAttribute="leading" id="Jqg-KE-moL"/>
-                            <constraint firstItem="Rrt-bT-VCB" firstAttribute="top" secondItem="ymO-PM-Qay" secondAttribute="bottom" id="S87-Of-Gkz"/>
-                            <constraint firstAttribute="trailing" secondItem="Rrt-bT-VCB" secondAttribute="trailing" id="fgq-uk-HBm"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pP5-Zd-SWz" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1714" y="-166"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="Hwt-3D-aM5">
-            <objects>
-                <viewController storyboardIdentifier="InstructionDrink" id="vIv-vL-9fK" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="PKP-Ne-bQ1"/>
-                        <viewControllerLayoutGuide type="bottom" id="AHV-hF-ILD"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="urO-hy-AEz">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="InstructionDrink" translatesAutoresizingMaskIntoConstraints="NO" id="myX-yi-1Of">
-                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="myX-yi-1Of" firstAttribute="top" secondItem="PKP-Ne-bQ1" secondAttribute="bottom" id="CB1-4n-yA0"/>
-                            <constraint firstAttribute="trailing" secondItem="myX-yi-1Of" secondAttribute="trailing" id="ori-lJ-JhL"/>
-                            <constraint firstItem="myX-yi-1Of" firstAttribute="leading" secondItem="urO-hy-AEz" secondAttribute="leading" id="pHW-tP-fww"/>
-                            <constraint firstItem="AHV-hF-ILD" firstAttribute="top" secondItem="myX-yi-1Of" secondAttribute="bottom" id="vF6-Xg-DVZ"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yzd-nd-bsL" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2374" y="-165"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="Lch-Ny-VgW">
-            <objects>
-                <viewController storyboardIdentifier="InstructionEat" id="TJn-Rj-HrB" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="zP5-Qb-zhd"/>
-                        <viewControllerLayoutGuide type="bottom" id="wux-WN-emI"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="28N-39-xWr">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="InstructionEat" translatesAutoresizingMaskIntoConstraints="NO" id="GqF-1v-gZ0">
-                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="GqF-1v-gZ0" secondAttribute="trailing" id="5Xq-Y4-6ov"/>
-                            <constraint firstItem="GqF-1v-gZ0" firstAttribute="leading" secondItem="28N-39-xWr" secondAttribute="leading" id="R80-e8-ORZ"/>
-                            <constraint firstItem="GqF-1v-gZ0" firstAttribute="top" secondItem="zP5-Qb-zhd" secondAttribute="bottom" id="jUe-MI-QiF"/>
-                            <constraint firstItem="wux-WN-emI" firstAttribute="top" secondItem="GqF-1v-gZ0" secondAttribute="bottom" id="rmC-sw-3Sb"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="N5a-c9-JPp" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3013" y="-167"/>
         </scene>
         <!--ไต-->
         <scene sceneID="QvU-LB-fwA">
@@ -3921,12 +3771,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="InstructionBloodPressure" width="2480" height="3508"/>
-        <image name="InstructionDiabetes" width="2480" height="3508"/>
-        <image name="InstructionDiabetes2" width="2480" height="3508"/>
-        <image name="InstructionDrink" width="2480" height="3508"/>
-        <image name="InstructionEat" width="2480" height="3508"/>
-        <image name="InstructionKidney" width="2480" height="3508"/>
         <image name="ShowCalExercise" width="270" height="30"/>
         <image name="ShowCalFood" width="280" height="30"/>
         <image name="ageUser" width="80" height="40"/>
