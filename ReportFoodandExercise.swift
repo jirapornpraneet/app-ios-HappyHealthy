@@ -40,15 +40,6 @@ class ReportFoodandExercise: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func selectDatePicker(_ sender: Any) {
-        let dateFormatterShow = DateFormatter()
-        dateFormatterShow.dateFormat = "dd-MM-yyyy"
-        let setDate = dateFormatterShow.string(from: dateHistoryPicker.date)
-        //saveDate = setDate
-        loadAllData(dateChoose: setDate)
-        
-    }
-    
     func loadAllData(dateChoose:String) {
         getFoodHistory = dbHelper.getFoodHistory(dateHistory: dateChoose)
         getExerciseHistory = dbHelper.getExerciseHistory(dateHistory: dateChoose)
@@ -74,20 +65,28 @@ class ReportFoodandExercise: UIViewController {
         sumSodium.text = String(format: "%.02f", (getSumFoodandExercis[0].SUM_sodium)!)
         sumTotal = getSumFood! - getSumExercise!
         sumTotalCal.text = String(format: "%.02f", (sumTotal)!)
-        
-
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        let dateFormatterShow = DateFormatter()
-        dateFormatterShow.dateFormat = "dd-MM-yyyy"
-        let setDate = dateFormatterShow.string(from: dateHistoryPicker.date)
-        saveDate = setDate
-        loadAllData(dateChoose: saveDate!)
-        self.tabBarController?.navigationItem.title = "รายงานการบริโภคและการออกกำลังกาย"
-   
+    override func viewWillAppear(_ animated: Bool) {
+        configPicker()
     }
-        
+    
+    func configPicker(){
+        dateHistoryPicker.pickerType = .DatePicker
+        dateHistoryPicker.datePicker?.datePickerMode = .date
+        dateHistoryPicker.dateFormatter.dateFormat = "dd-MM-YYYY"
+        dateHistoryPicker.dateDidChange = { date in
+            print("selectedDate ", date )
+            let dateFormatterShow = DateFormatter()
+            dateFormatterShow.dateFormat = "dd-MM-yyyy"
+            let setDate  = dateFormatterShow.string(from: date)
+            print(">>> %@", dateFormatterShow.string(from: date))
+            self.saveDate = setDate
+            self.loadAllData(dateChoose: self.saveDate!)
+            self.tabBarController?.navigationItem.title = "รายงานการบริโภคและการออกกำลังกาย"
+        }
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "DetailHistoryFood"  {
             let vc = segue.destination as! listFoodHistoryViewController
@@ -97,5 +96,5 @@ class ReportFoodandExercise: UIViewController {
             vc.senderDate = saveDate
         }
     
-}
+    }
 }
