@@ -51,10 +51,8 @@ class UserViewController: UIViewController,UITextFieldDelegate{
         genderName = genderSelect
 
     }
-    
-    
-       func  loadAllUser(){
-        
+
+       func  loadAllUser(){  
         getCheckUserTable = dbHelper.getCheckUser()
         if getCheckUserTable.count == 0 {
             return

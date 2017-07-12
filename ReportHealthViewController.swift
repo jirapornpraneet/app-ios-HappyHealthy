@@ -45,7 +45,7 @@ class ReportHealthViewController: UIViewController{
         super.viewDidLoad()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         let date = Date()
         let formatter = DateFormatter()
         formatter.dateFormat = "dd-MM-yyyy"
@@ -72,7 +72,6 @@ class ReportHealthViewController: UIViewController{
         self.loadDiabetes(dateChoose: self.saveDate)
         self.loadKidney(dateChoose: self.saveDate)
         self.loadPressure(dateChoose: self.saveDate)
-        self.tabBarController?.navigationItem.title = "รายงานสุขภาพ"
         }
  }
 
@@ -247,6 +246,11 @@ class ReportHealthViewController: UIViewController{
         costHeartLabel.text = String(format: "%i", (getReportPressure[0].P_HeartRate)!)
         alertPressureImage.image = showAlertPressureImage
         alertHeartImage.image = showAlertHeartImage
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tabBarController?.navigationItem.title = "รายงานสุขภาพ"
     }
 }
 

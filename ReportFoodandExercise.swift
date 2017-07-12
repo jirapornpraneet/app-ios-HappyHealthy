@@ -40,7 +40,7 @@ class ReportFoodandExercise: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         let date = Date()
         let formatter = DateFormatter()
         formatter.dateFormat = "dd-MM-yyyy"
@@ -65,7 +65,6 @@ class ReportFoodandExercise: UIViewController {
             self.saveDate = setDate
             self.loadFood(dateChoose: self.saveDate!)
             self.loadExercise(dateChoose: self.saveDate!)
-            self.tabBarController?.navigationItem.title = "รายงานการบริโภคและการออกกำลังกาย"
         }
     }
 
@@ -116,8 +115,7 @@ class ReportFoodandExercise: UIViewController {
         sumTotalCal.text = String(format: "%.02f", (sumTotal)!)
 
     }
-    
-    
+ 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "DetailHistoryFood"  {
             let vc = segue.destination as! listFoodHistoryViewController
@@ -128,4 +126,11 @@ class ReportFoodandExercise: UIViewController {
         }
     
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tabBarController?.navigationItem.title = "รายงานการบริโภคและการออกกำลังกาย"
+    }
+    
+    
 }
