@@ -52,7 +52,9 @@ class ReportHealthViewController: UIViewController{
         let setDate = formatter.string(from: date)
         self.saveDate = setDate
         picker.text = saveDate
-        self.loadAllData(dateChoose: self.saveDate)
+        self.loadDiabetes(dateChoose: self.saveDate)
+        self.loadKidney(dateChoose: self.saveDate)
+        self.loadPressure(dateChoose: self.saveDate)
         configPicker()
     }
     
@@ -67,26 +69,19 @@ class ReportHealthViewController: UIViewController{
         let setDate  = dateFormatterShow.string(from: date)
         print(">>> %@", dateFormatterShow.string(from: date))
         self.saveDate = setDate
-        self.loadAllData(dateChoose: self.saveDate)
+        self.loadDiabetes(dateChoose: self.saveDate)
+        self.loadKidney(dateChoose: self.saveDate)
+        self.loadPressure(dateChoose: self.saveDate)
         self.tabBarController?.navigationItem.title = "รายงานสุขภาพ"
         }
  }
-    
-//    override func viewWillAppear(_ animated: Bool) {
-////        let dateFormatterShow = DateFormatter()
-////        dateFormatterShow.dateFormat = "dd-MM-yyyy"
-////        let  setDate = dateFormatterShow.string(from: datePicker.date)
-////        saveDate = setDate
-////        loadAllData(dateChoose: saveDate)
-////        self.tabBarController?.navigationItem.title = "รายงานสุขภาพ"
-//    }
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
-    func loadAllData(dateChoose:String) {
+    func loadDiabetes(dateChoose:String) {
         //เบาหวาน
         getCheckReportDiabetes = dbHelper.getCheckReportDiabetes(datedisease: dateChoose)
         if getCheckReportDiabetes.count == 0 {
@@ -148,6 +143,9 @@ class ReportHealthViewController: UIViewController{
         alertDiabetesImage.image = showAlertDiabetesImage
         dateDiabetesLabel.text = getReportDiabetes[0].D_DateTime
         
+      }
+    
+    func loadKidney(dateChoose:String) {
         //ไต
         getCheckReportKidney = dbHelper.getCheckReportKidney(datedisease: dateChoose)
         
@@ -163,25 +161,29 @@ class ReportHealthViewController: UIViewController{
         }else if getCostGFR! >= 60 && getCostGFR! < 90 {
             showAlertKidneyImage = UIImage(named: "alertKidney2.png")
         }else if getCostGFR! >= 30 && getCostGFR! < 60 {
-             showAlertKidneyImage = UIImage(named: "alertKidney3.png")
+            showAlertKidneyImage = UIImage(named: "alertKidney3.png")
         }else if getCostGFR! >= 15 && getCostGFR! < 30 {
             showAlertKidneyImage = UIImage(named: "alertKidney4.png")
         }else{
             showAlertKidneyImage = UIImage(named: "alertKidney5.png")
         }
-
+        
         getReportKidney = dbHelper.getReportKidney(datedisease: dateChoose)
         costGFRLabel.text = String(format: "%i" ,(getReportKidney[0].K_CostGFR)!)
         dateKidneyLabel.text = getReportKidney[0].K_DateTime
         alertKidneyImage.image =  showAlertKidneyImage
-        getCheckReportPressure = dbHelper.getCheckReportPressure(datedisease: dateChoose)
         
+    }
+    
+    func loadPressure(dateChoose:String) {
+        
+        getCheckReportPressure = dbHelper.getCheckReportPressure(datedisease: dateChoose)
         //ความดัน
         if getCheckReportPressure.count == 0 {
             return
         }
         getReportPressure = dbHelper.getReportPressure(datedisease: dateChoose)
-    
+        
         let getCostHeart:Int? = (getReportPressure[0].P_HeartRate!)
         let getPressureTop:Int? = (getReportPressure[0].P_CostPressureTop!)
         let getPressureDown:Int? = (getReportPressure[0].P_CostPressureDown!)
@@ -237,7 +239,7 @@ class ReportHealthViewController: UIViewController{
         }else{
             showAlertPressureImage = imageAlertLevelPre[costDown!]
         }
-       
+        
         getReportPressure = dbHelper.getReportPressure(datedisease: dateChoose)
         datePressureLabel.text = getReportPressure[0].P_DateTime
         costPressureTopLabel.text = String(format: "%i",(getReportPressure[0].P_CostPressureTop)!)
@@ -245,6 +247,6 @@ class ReportHealthViewController: UIViewController{
         costHeartLabel.text = String(format: "%i", (getReportPressure[0].P_HeartRate)!)
         alertPressureImage.image = showAlertPressureImage
         alertHeartImage.image = showAlertHeartImage
-        }
+    }
 }
 
