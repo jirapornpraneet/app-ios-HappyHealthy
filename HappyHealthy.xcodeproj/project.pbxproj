@@ -10,6 +10,7 @@
 		AB14F21B1F1488C100781A46 /* InstructionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB14F21A1F1488C100781A46 /* InstructionViewController.swift */; };
 		ABB2FF231F0A14EE00F8FBEC /* HistorySumFoodTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB2FF221F0A14EE00F8FBEC /* HistorySumFoodTable.swift */; };
 		ABB2FF261F0A1DEC00F8FBEC /* ReportFoodandExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB2FF251F0A1DEC00F8FBEC /* ReportFoodandExercise.swift */; };
+		ABD3CF171F15EB15002C617E /* HistorySumExerciseTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD3CF161F15EB15002C617E /* HistorySumExerciseTable.swift */; };
 		ABD62EFF1F0B4576001C2ABA /* listFoodHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD62EFE1F0B4576001C2ABA /* listFoodHistoryViewController.swift */; };
 		ABD62F011F0B4B88001C2ABA /* DetailFoodHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD62F001F0B4B88001C2ABA /* DetailFoodHistoryTableViewCell.swift */; };
 		ABD62F031F0B6E86001C2ABA /* ListFoodHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD62F021F0B6E86001C2ABA /* ListFoodHistory.swift */; };
@@ -95,6 +96,7 @@
 		AB14F21A1F1488C100781A46 /* InstructionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InstructionViewController.swift; path = ../InstructionViewController.swift; sourceTree = "<group>"; };
 		ABB2FF221F0A14EE00F8FBEC /* HistorySumFoodTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistorySumFoodTable.swift; sourceTree = "<group>"; };
 		ABB2FF251F0A1DEC00F8FBEC /* ReportFoodandExercise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportFoodandExercise.swift; sourceTree = "<group>"; };
+		ABD3CF161F15EB15002C617E /* HistorySumExerciseTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistorySumExerciseTable.swift; sourceTree = "<group>"; };
 		ABD62EFE1F0B4576001C2ABA /* listFoodHistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = listFoodHistoryViewController.swift; sourceTree = "<group>"; };
 		ABD62F001F0B4B88001C2ABA /* DetailFoodHistoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailFoodHistoryTableViewCell.swift; sourceTree = "<group>"; };
 		ABD62F021F0B6E86001C2ABA /* ListFoodHistory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListFoodHistory.swift; sourceTree = "<group>"; };
@@ -233,6 +235,7 @@
 				ABB2FF221F0A14EE00F8FBEC /* HistorySumFoodTable.swift */,
 				ABD62F021F0B6E86001C2ABA /* ListFoodHistory.swift */,
 				ABD62F081F0B9284001C2ABA /* ListExerciseHistory.swift */,
+				ABD3CF161F15EB15002C617E /* HistorySumExerciseTable.swift */,
 			);
 			name = Table;
 			path = Model;
@@ -594,6 +597,7 @@
 				FC5231A71EF511800067E0C0 /* ExerciseViewController.swift in Sources */,
 				FC5231AB1EF511800067E0C0 /* ExerciseHistoryTable.swift in Sources */,
 				FC5231D61EF53E230067E0C0 /* FoodTableViewCell.swift in Sources */,
+				ABD3CF171F15EB15002C617E /* HistorySumExerciseTable.swift in Sources */,
 				FC2BE1EA1EF0E63500CBF9FE /* HomeViewController.swift in Sources */,
 				FC5231AC1EF511800067E0C0 /* ExerciseTable.swift in Sources */,
 				FC5231D81EF53E420067E0C0 /* ShowDetailFoodViewController.swift in Sources */,

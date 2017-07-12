@@ -10,7 +10,8 @@ import UIKit
 import AAPickerView
 
 class ReportFoodandExercise: UIViewController {
-    var getSumFoodandExercis = [HistorySUMTable]()
+    var getSumFoodAll = [HistorySumFoodTable]()
+    var getSumExerciseAll = [HistorySumExerciseTable]()
     var getFoodHistory = [FoodHistoryTable]()
     var getFoodTable = [FoodTable]()
     var dbHelper = DatabaseHelper()
@@ -32,7 +33,6 @@ class ReportFoodandExercise: UIViewController {
     @IBOutlet weak var sumTotalCal: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-     
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,34 +40,15 @@ class ReportFoodandExercise: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func loadAllData(dateChoose:String) {
-        getFoodHistory = dbHelper.getFoodHistory(dateHistory: dateChoose)
-        getExerciseHistory = dbHelper.getExerciseHistory(dateHistory: dateChoose)
-  
-        if getFoodHistory.count == 0  {
-            return
-        }
-        
-        if getExerciseHistory.count == 0 {
-            return
-        }
-        
-        getSumFoodandExercis = dbHelper.getSumFoodandExercise(dateHistory: dateChoose)
-       
-        let getSumFood:Double? = (getSumFoodandExercis[0].SUM_Food_Cal!)
-        let getSumExercise:Double? = (getSumFoodandExercis[0].SUM_EX_Cal!)
-        exerciseTotalcal.text = String(format: "%.02f", (getSumFoodandExercis[0].SUM_EX_Cal)!)
-        foodTotalcal.text = String(format: "%.02f", (getSumFoodandExercis[0].SUM_Food_Cal)!)
-        sumProtin.text = String(format: "%.02f", (getSumFoodandExercis[0].SUM_pro)!)
-        sumCarbohydate.text = String(format: "%.02f", (getSumFoodandExercis[0].SUM_car)!)
-        sumFat.text = String(format: "%.02f", (getSumFoodandExercis[0].SUM_fat)!)
-        sumSugar.text = String(format: "%.02f", (getSumFoodandExercis[0].SUM_sugar)!)
-        sumSodium.text = String(format: "%.02f", (getSumFoodandExercis[0].SUM_sodium)!)
-        sumTotal = getSumFood! - getSumExercise!
-        sumTotalCal.text = String(format: "%.02f", (sumTotal)!)
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
+        let date = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd-MM-yyyy"
+        let setDate = formatter.string(from: date)
+        self.saveDate = setDate
+        dateHistoryPicker.text = saveDate
+        self.loadFood(dateChoose: self.saveDate!)
+        self.loadExercise(dateChoose: self.saveDate!)
         configPicker()
     }
     
@@ -82,10 +63,60 @@ class ReportFoodandExercise: UIViewController {
             let setDate  = dateFormatterShow.string(from: date)
             print(">>> %@", dateFormatterShow.string(from: date))
             self.saveDate = setDate
-            self.loadAllData(dateChoose: self.saveDate!)
+            self.loadFood(dateChoose: self.saveDate!)
+            self.loadExercise(dateChoose: self.saveDate!)
             self.tabBarController?.navigationItem.title = "รายงานการบริโภคและการออกกำลังกาย"
         }
     }
+
+    func loadFood(dateChoose:String) {
+        getFoodHistory = dbHelper.getFoodHistory(dateHistory: dateChoose)
+        if getFoodHistory.count == 0   {
+            return
+        }
+        getSumFoodAll = dbHelper.getSumFood(dateHistory: dateChoose)
+        
+        foodTotalcal.text = String(format: "%.02f", (getSumFoodAll[0].SUM_Food_Cal)!)
+        sumProtin.text = String(format: "%.02f", (getSumFoodAll[0].SUM_pro)!)
+        sumCarbohydate.text = String(format: "%.02f", (getSumFoodAll[0].SUM_car)!)
+        sumFat.text = String(format: "%.02f", (getSumFoodAll[0].SUM_fat)!)
+        sumSugar.text = String(format: "%.02f", (getSumFoodAll[0].SUM_sugar)!)
+        sumSodium.text = String(format: "%.02f", (getSumFoodAll[0].SUM_sodium)!)
+        let getSumFood:Double? = (getSumFoodAll[0].SUM_Food_Cal!)
+        sumTotal = getSumFood!
+        sumTotalCal.text = String(format: "%.02f", (sumTotal)!)
+        getExerciseHistory = dbHelper.getExerciseHistory(dateHistory: dateChoose)
+        if getExerciseHistory.count == 0 {
+            return
+        }
+        getSumExerciseAll = dbHelper.getSumExercise(dateHistory: dateChoose)
+        let getSumExercise:Double? = (getSumExerciseAll[0].SUM_EX_Cal!)
+        sumTotal = getSumFood! - getSumExercise!
+        sumTotalCal.text = String(format: "%.02f", (sumTotal)!)
+
+    }
+    
+    func loadExercise(dateChoose:String){
+        getExerciseHistory = dbHelper.getExerciseHistory(dateHistory: dateChoose)
+        if getExerciseHistory.count == 0 {
+            return
+        }
+        getSumExerciseAll = dbHelper.getSumExercise(dateHistory: dateChoose)
+        exerciseTotalcal.text = String(format: "%.02f", (getSumExerciseAll[0].SUM_EX_Cal)!)
+        let getSumExercise:Double? = (getSumExerciseAll[0].SUM_EX_Cal!)
+        sumTotal =  getSumExercise!
+        sumTotalCal.text = String(format: "%.02f", (sumTotal)!)
+        getFoodHistory = dbHelper.getFoodHistory(dateHistory: dateChoose)
+        if getFoodHistory.count == 0   {
+            return
+        }
+        getSumFoodAll = dbHelper.getSumFood(dateHistory: dateChoose)
+        let getSumFood:Double? = (getSumFoodAll[0].SUM_Food_Cal!)
+        sumTotal = getSumFood! - getSumExercise!
+        sumTotalCal.text = String(format: "%.02f", (sumTotal)!)
+
+    }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "DetailHistoryFood"  {

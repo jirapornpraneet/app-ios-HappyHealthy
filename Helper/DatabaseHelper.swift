@@ -353,46 +353,51 @@ class DatabaseHelper {
         return  deleteHistoryFoodTable
     }
 
-    func getSumFoodandExercise(dateHistory:String) -> [HistorySUMTable]{
-        var  getSumFoodandExercise = [HistorySUMTable]()
+    func getSumFood(dateHistory:String) -> [HistorySumFoodTable]{
+        var  getSumFood = [HistorySumFoodTable]()
         try! dbQueue.inDatabase { db in
             do {
-                let qry = String(format: "select * from (select sum(e.Exercise_Calories *eh.Exercise_TotalDuration ) exc from  Exercise_History  eh, Exercise  e where e.Exercise_Id = eh.Exercise_Id and History_Exercise_Date like '%@')eh,(select sum(f.Food_Calories *fh.Food_TotalAmount) fcal,sum(f.Food_Protein) fpro,sum(f.Food_Fat ) ffat,sum(f.Food_Carbohydrate ) fcar,sum(f.Food_Sugars ) fsug,sum(f.Food_Sodium) fsod from  Food_History  fh,Food  f where fh.Food_Id  = f.Food_Id and History_Food_Date like '%@') fd",dateHistory, dateHistory)
+                let qry = String(format: "select * from (select sum(f.Food_Calories *fh.Food_TotalAmount) fcal,sum(f.Food_Protein) fpro,sum(f.Food_Fat ) ffat,sum(f.Food_Carbohydrate ) fcar,sum(f.Food_Sugars ) fsug,sum(f.Food_Sodium) fsod from  Food_History  fh,Food  f where fh.Food_Id  = f.Food_Id and History_Food_Date like '%@') fd",dateHistory)
                 for rowSUM in try Row.fetchAll(db, qry){
-                    let row = HistorySUMTable()
-                    row.SUM_EX_Cal = rowSUM.value(named: "exc") as Double
+                    let row = HistorySumFoodTable()
                     row.SUM_Food_Cal = rowSUM.value(named: "fcal") as Double
                     row.SUM_car = rowSUM.value(named: "fcar") as Double
                     row.SUM_pro = rowSUM.value(named: "fpro") as Double
                     row.SUM_fat = rowSUM.value(named: "ffat") as Double
                     row.SUM_sodium = rowSUM.value(named: "fsod") as Double
                     row.SUM_sugar  = rowSUM.value(named: "fsug") as Double
-                    getSumFoodandExercise.append(row)
+                    getSumFood.append(row)
                 }
             }
             catch let error as DatabaseError{
-                // The SQLite error code: 19 (SQLITE_CONSTRAINT)
-                error.resultCode
-                
-                // The extended error code: 787 (SQLITE_CONSTRAINT_FOREIGNKEY)
-                error.extendedResultCode
-                
-                // The eventual SQLite message: FOREIGN KEY constraint failed
-                error.message
-                
-                // The eventual erroneous SQL query
-                // "INSERT INTO pets (masterId, name) VALUES (?, ?)"
-                error.sql
-                
-                // Full error description:
-                // "SQLite error 787 with statement `INSERT INTO pets (masterId, name)
-                //  VALUES (?, ?)` arguments [1, "Bobby"]: FOREIGN KEY constraint failed"
-                print("Get SumFoodandExercise Fail!!")
+
+                print("Get SumFood Fail!!")
                 print(error)
             }
         }
-        return  getSumFoodandExercise
+        return  getSumFood
     }
+
+    func getSumExercise(dateHistory:String) -> [HistorySumExerciseTable]{
+        var  getSumExercise = [HistorySumExerciseTable]()
+        try! dbQueue.inDatabase { db in
+            do {
+                let qry = String(format: "select * from (select sum(e.Exercise_Calories *eh.Exercise_TotalDuration ) exc from  Exercise_History  eh, Exercise  e where e.Exercise_Id = eh.Exercise_Id and History_Exercise_Date like '%@')eh",dateHistory)
+                for rowSUM in try Row.fetchAll(db, qry){
+                    let row = HistorySumExerciseTable()
+                    row.SUM_EX_Cal = rowSUM.value(named: "exc") as Double
+                    getSumExercise.append(row)
+                }
+            }
+            catch let error as DatabaseError{
+                
+                print("Get SumExercise Fail!!")
+                print(error)
+            }
+        }
+        return  getSumExercise
+    }
+
     
     func getSearchFood(word:String) -> [FoodTable]{
         var  getSearchFoodTable = [FoodTable]()

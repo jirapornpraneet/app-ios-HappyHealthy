@@ -8,8 +8,7 @@
 
 import Foundation
 
-class HistorySUMTable: NSObject{
-    var SUM_EX_Cal:Double?
+class HistorySumFoodTable: NSObject{
     var SUM_Food_Cal:Double?
     var SUM_pro:Double?
     var SUM_fat:Double?
