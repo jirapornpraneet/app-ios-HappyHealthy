@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AB14F21B1F1488C100781A46 /* InstructionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB14F21A1F1488C100781A46 /* InstructionViewController.swift */; };
-		ABB2FF231F0A14EE00F8FBEC /* HistorySUMTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB2FF221F0A14EE00F8FBEC /* HistorySUMTable.swift */; };
+		ABB2FF231F0A14EE00F8FBEC /* HistorySumFoodTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB2FF221F0A14EE00F8FBEC /* HistorySumFoodTable.swift */; };
 		ABB2FF261F0A1DEC00F8FBEC /* ReportFoodandExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB2FF251F0A1DEC00F8FBEC /* ReportFoodandExercise.swift */; };
 		ABD62EFF1F0B4576001C2ABA /* listFoodHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD62EFE1F0B4576001C2ABA /* listFoodHistoryViewController.swift */; };
 		ABD62F011F0B4B88001C2ABA /* DetailFoodHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD62F001F0B4B88001C2ABA /* DetailFoodHistoryTableViewCell.swift */; };
@@ -93,7 +93,7 @@
 		8C20B913DE92550432902952 /* Pods-HappyHealthy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HappyHealthy.release.xcconfig"; path = "Pods/Target Support Files/Pods-HappyHealthy/Pods-HappyHealthy.release.xcconfig"; sourceTree = "<group>"; };
 		8F8188C3D3AE417086977A70 /* Pods-HappyHealthy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HappyHealthy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HappyHealthy/Pods-HappyHealthy.debug.xcconfig"; sourceTree = "<group>"; };
 		AB14F21A1F1488C100781A46 /* InstructionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InstructionViewController.swift; path = ../InstructionViewController.swift; sourceTree = "<group>"; };
-		ABB2FF221F0A14EE00F8FBEC /* HistorySUMTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistorySUMTable.swift; sourceTree = "<group>"; };
+		ABB2FF221F0A14EE00F8FBEC /* HistorySumFoodTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistorySumFoodTable.swift; sourceTree = "<group>"; };
 		ABB2FF251F0A1DEC00F8FBEC /* ReportFoodandExercise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportFoodandExercise.swift; sourceTree = "<group>"; };
 		ABD62EFE1F0B4576001C2ABA /* listFoodHistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = listFoodHistoryViewController.swift; sourceTree = "<group>"; };
 		ABD62F001F0B4B88001C2ABA /* DetailFoodHistoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailFoodHistoryTableViewCell.swift; sourceTree = "<group>"; };
@@ -230,7 +230,7 @@
 				FC5231DF1EF5541A0067E0C0 /* PressureTable.swift */,
 				FC5231E31EF5552D0067E0C0 /* UserTable.swift */,
 				FC5231E71EF563560067E0C0 /* DiabetesTable.swift */,
-				ABB2FF221F0A14EE00F8FBEC /* HistorySUMTable.swift */,
+				ABB2FF221F0A14EE00F8FBEC /* HistorySumFoodTable.swift */,
 				ABD62F021F0B6E86001C2ABA /* ListFoodHistory.swift */,
 				ABD62F081F0B9284001C2ABA /* ListExerciseHistory.swift */,
 			);
@@ -561,7 +561,7 @@
 				FC9924081F00C19C00CBF363 /* HistoryDiabetesViewController.swift in Sources */,
 				FC6C4EBA1F024000009EE8A7 /* ReportHealthViewController.swift in Sources */,
 				FC7E62721EEE35DA0065F6C2 /* AppDelegate.swift in Sources */,
-				ABB2FF231F0A14EE00F8FBEC /* HistorySUMTable.swift in Sources */,
+				ABB2FF231F0A14EE00F8FBEC /* HistorySumFoodTable.swift in Sources */,
 				FC5231E41EF5552D0067E0C0 /* UserTable.swift in Sources */,
 				FC5231AF1EF5149D0067E0C0 /* ExerciseTableViewCell.swift in Sources */,
 				ABD62F051F0B8FD2001C2ABA /* listExerciseHistoryViewController.swift in Sources */,

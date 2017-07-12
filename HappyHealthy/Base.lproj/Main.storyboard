@@ -1698,8 +1698,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="เบาหวาน" id="Io8-hQ-o06">
                         <barButtonItem key="rightBarButtonItem" image="listhistory" id="XYl-RY-6x0">
-                            <inset key="imageInsets" minX="40" minY="20" maxX="5" maxY="15"/>
-                            <color key="tintColor" red="0.73334293100000003" green="0.58502760499999995" blue="0.87873046870000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <inset key="imageInsets" minX="30" minY="20" maxX="5" maxY="15"/>
+                            <color key="tintColor" red="0.34170764590000002" green="0.34170764590000002" blue="0.34170764590000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
                                 <segue destination="QtC-zT-4AY" kind="show" id="DpI-k7-bDz"/>
                             </connections>
@@ -1808,8 +1808,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="ไต" id="G2Y-QX-tzr">
                         <barButtonItem key="rightBarButtonItem" image="listhistory" id="N6Q-If-Spe">
-                            <inset key="imageInsets" minX="40" minY="20" maxX="5" maxY="15"/>
-                            <color key="tintColor" red="0.53337152862025872" green="0.72856527099957735" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <inset key="imageInsets" minX="30" minY="20" maxX="5" maxY="15"/>
+                            <color key="tintColor" red="0.34170764590000002" green="0.34170764590000002" blue="0.34170764590000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
                                 <segue destination="tEo-TV-tR9" kind="show" id="chi-Wk-MDk"/>
                             </connections>
@@ -1984,8 +1984,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="ความดันโลหิต" id="Mlu-Bx-O1H">
                         <barButtonItem key="rightBarButtonItem" image="listhistory" id="2sZ-rc-w8d">
-                            <inset key="imageInsets" minX="40" minY="20" maxX="5" maxY="15"/>
-                            <color key="tintColor" red="1" green="0.48813878849999998" blue="0.56102057579999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <inset key="imageInsets" minX="30" minY="20" maxX="5" maxY="15"/>
+                            <color key="tintColor" red="0.34170764590000002" green="0.34170764590000002" blue="0.34170764590000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
                                 <segue destination="adI-hF-9Sr" kind="show" id="hZu-bF-sau"/>
                             </connections>
@@ -2348,8 +2348,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="ข้อมูลเบาหวาน" id="o8L-RO-wMd">
                         <barButtonItem key="rightBarButtonItem" image="listhistory" id="AaW-Vv-xIz">
-                            <inset key="imageInsets" minX="40" minY="20" maxX="5" maxY="15"/>
-                            <color key="tintColor" red="0.73334293100000003" green="0.58502760499999995" blue="0.87873046870000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <inset key="imageInsets" minX="30" minY="20" maxX="5" maxY="15"/>
+                            <color key="tintColor" red="0.34170764590000002" green="0.34170764590000002" blue="0.34170764590000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
                                 <segue destination="QtC-zT-4AY" kind="show" id="Hdr-ah-W2Y"/>
                             </connections>
@@ -2464,8 +2464,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="ข้อมูลไต" id="8Jd-af-yg7">
                         <barButtonItem key="rightBarButtonItem" image="listhistory" id="j7E-Rg-tU3">
-                            <inset key="imageInsets" minX="40" minY="20" maxX="5" maxY="15"/>
-                            <color key="tintColor" red="0.53337152860000003" green="0.72856527100000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <inset key="imageInsets" minX="30" minY="20" maxX="5" maxY="15"/>
+                            <color key="tintColor" red="0.34170764590000002" green="0.34170764590000002" blue="0.34170764590000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
                                 <segue destination="tEo-TV-tR9" kind="show" id="Ktf-Jr-dMH"/>
                             </connections>
@@ -2651,8 +2651,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="ข้อมูลความดันโลหิต" id="N7g-bz-S4Z">
                         <barButtonItem key="rightBarButtonItem" image="listhistory" id="7iB-xq-uY4">
-                            <inset key="imageInsets" minX="40" minY="20" maxX="5" maxY="15"/>
-                            <color key="tintColor" red="1" green="0.48813878849999998" blue="0.56102057579999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <inset key="imageInsets" minX="30" minY="20" maxX="5" maxY="15"/>
+                            <color key="tintColor" red="0.34170764590000002" green="0.34170764590000002" blue="0.34170764590000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
                                 <segue destination="adI-hF-9Sr" kind="show" id="w1Y-5d-cnC"/>
                             </connections>
@@ -3953,7 +3953,7 @@
         <image name="levelDiabetes1" width="700" height="110"/>
         <image name="levelHeart1" width="700" height="110"/>
         <image name="levelKidney" width="700" height="110"/>
-        <image name="listhistory" width="80" height="60"/>
+        <image name="listhistory" width="64" height="64"/>
         <image name="nameUser" width="150" height="40"/>
         <image name="pressure" width="495" height="300"/>
         <image name="textLevelDiabetes1" width="420" height="75"/>
@@ -3969,7 +3969,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="w1Y-5d-cnC"/>
-        <segue reference="Hdr-ah-W2Y"/>
         <segue reference="Ktf-Jr-dMH"/>
+        <segue reference="Hdr-ah-W2Y"/>
     </inferredMetricsTieBreakers>
 </document>
