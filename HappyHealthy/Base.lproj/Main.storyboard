@@ -520,7 +520,7 @@
         <!--รายงาน-->
         <scene sceneID="NMj-kZ-q4T">
             <objects>
-                <viewController id="TiB-OW-0Pr" customClass="ReportFoodandExercise" customModule="HappyHealthy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ShowHistoryFood" id="TiB-OW-0Pr" customClass="ReportFoodandExercise" customModule="HappyHealthy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lVr-In-bX7"/>
                         <viewControllerLayoutGuide type="bottom" id="Y2q-pY-7gY"/>
@@ -1006,6 +1006,7 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="รายงาน" image="iconreport" id="S1R-dj-9ul"/>
+                    <navigationItem key="navigationItem" id="5Ja-uV-iT3"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="750"/>
                     <connections>
@@ -2526,7 +2527,7 @@
                                 <color key="textColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="textlevelpre1" translatesAutoresizingMaskIntoConstraints="NO" id="Nr7-BT-9L0">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="textlevelPressure1" translatesAutoresizingMaskIntoConstraints="NO" id="Nr7-BT-9L0">
                                 <rect key="frame" x="15" y="243" width="290" height="55"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="AiF-g7-qwR"/>
@@ -3340,6 +3341,7 @@
                         <outlet property="sodiumFoodLabel" destination="fy5-AR-nX3" id="bQp-3i-XYV"/>
                         <outlet property="sugarsFoodLabel" destination="pCw-3e-Xwa" id="Gs2-rw-UmK"/>
                         <outlet property="unitFoodLabel" destination="est-lF-Dv6" id="TVb-8u-hEA"/>
+                        <segue destination="TiB-OW-0Pr" kind="push" identifier="ShowHistoryFood" id="sSb-4b-yyg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h0e-2R-ied" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -3481,6 +3483,7 @@
                         <outlet property="disExerciseLabel" destination="rnm-Ef-SkV" id="Eat-bf-sPp"/>
                         <outlet property="kcalExerciseLabel" destination="UgD-4a-hlC" id="TN8-6i-Uvf"/>
                         <outlet property="nameExerciseLabel" destination="px6-kr-Vq1" id="JNB-NB-SS5"/>
+                        <segue destination="TiB-OW-0Pr" kind="push" identifier="ShowHistoryExercise" id="Est-Xm-R6r"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lr9-jN-u9X" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -3957,8 +3960,8 @@
         <image name="nameUser" width="150" height="40"/>
         <image name="pressure" width="495" height="300"/>
         <image name="textLevelDiabetes1" width="420" height="75"/>
+        <image name="textlevelPressure1" width="400" height="75"/>
         <image name="textlevelkid1" width="400" height="75"/>
-        <image name="textlevelpre1" width="400" height="75"/>
         <image name="tstsugarbefore" width="420" height="75"/>
         <image name="unitDiabetes" width="100" height="45"/>
         <image name="unitHeart" width="90" height="30"/>
@@ -3968,8 +3971,9 @@
         <image name="year" width="50" height="45"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="DpI-k7-bDz"/>
         <segue reference="w1Y-5d-cnC"/>
+        <segue reference="Est-Xm-R6r"/>
         <segue reference="Ktf-Jr-dMH"/>
-        <segue reference="Hdr-ah-W2Y"/>
     </inferredMetricsTieBreakers>
 </document>

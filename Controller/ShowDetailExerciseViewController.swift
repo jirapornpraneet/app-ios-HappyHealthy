@@ -52,11 +52,11 @@ class ShowDetailExerciseViewController: UIViewController,UITextFieldDelegate {
     
     @IBAction func saveDataExercise(_ sender: Any) {
         //ShowAlertController
-        let alertShow = UIAlertController (title: "ยืนยันการบันทึกข้อมูลออกกำลังกาย", message:"คุณแน่ใจใช่ไหม" , preferredStyle: UIAlertControllerStyle.alert)
+        let alertShow = UIAlertController (title: "ยืนยันการบันทึกออกกำลังกาย", message:"คุณแน่ใจใช่ไหม" , preferredStyle: UIAlertControllerStyle.alert)
         alertShow.addAction(UIAlertAction(title: "บันทึก" , style: UIAlertActionStyle.default, handler: { (action) in
             alertShow.dismiss(animated: true, completion: nil)
             self.insertHistoryTableExercise()
-            self.alertSaveData()
+             self.performSegue(withIdentifier: "ShowHistoryExercise", sender: sender)
         }))
         
         alertShow.addAction(UIAlertAction(title: "ยกเลิก" , style: UIAlertActionStyle.default, handler: { (action) in
@@ -64,13 +64,6 @@ class ShowDetailExerciseViewController: UIViewController,UITextFieldDelegate {
             
         }))
         self.present(alertShow,animated: true,completion: nil)
-    }
-    
-    func alertSaveData(){
-        //ShowAlertController
-        let alertShowSave = UIAlertController (title: "บันทึกข้อมูลออกกำลังกาย", message:" คุณได้บันทึกข้อมูลออกกำลังกายสำเร็จ" , preferredStyle: UIAlertControllerStyle.alert)
-        alertShowSave.addAction(UIAlertAction(title: "ตกลง" , style: UIAlertActionStyle.default, handler:nil))
-        self.present(alertShowSave, animated: true, completion: nil)
     }
 
     func insertHistoryTableExercise(){

@@ -72,11 +72,11 @@ class ShowDetailFoodViewController: UIViewController,UITextFieldDelegate {
     
     @IBAction func saveDataHistoryFood(_ sender: Any) {
         //ShowAlertController
-        let alertShow = UIAlertController (title: "ยืนยันการบันทึกข้อมูลอาหาร", message:"คุณแน่ใจใช่ไหม" , preferredStyle: UIAlertControllerStyle.alert)
+        let alertShow = UIAlertController (title: "ยืนยันการบันทึกอาหาร", message:"คุณแน่ใจใช่ไหม" , preferredStyle: UIAlertControllerStyle.alert)
         alertShow.addAction(UIAlertAction(title: "บันทึก" , style: UIAlertActionStyle.default, handler: { (action) in
             alertShow.dismiss(animated: true, completion: nil)
             self.insertHistoryTableFood()
-            self.alertSaveData()
+            self.performSegue(withIdentifier: "ShowHistoryFood", sender: sender)
         }))
         
         alertShow.addAction(UIAlertAction(title: "ยกเลิก" , style: UIAlertActionStyle.default, handler: { (action) in
@@ -84,13 +84,6 @@ class ShowDetailFoodViewController: UIViewController,UITextFieldDelegate {
             
         }))
         self.present(alertShow,animated: true,completion: nil)
-    }
-    
-    func alertSaveData(){
-        //ShowAlertController
-        let alertShowSave = UIAlertController (title: "บันทึกข้อมูลอาหาร", message:" คุณได้บันทึกข้อมูลอาหารสำเร็จ" , preferredStyle: UIAlertControllerStyle.alert)
-        alertShowSave.addAction(UIAlertAction(title: "ตกลง" , style: UIAlertActionStyle.default, handler:nil))
-        self.present(alertShowSave, animated: true, completion: nil)
     }
     
     func insertHistoryTableFood() {
