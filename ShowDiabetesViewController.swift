@@ -41,13 +41,13 @@ class ShowDiabetesViewController: UIViewController {
                 }else{
                     if getCostSuger! >= 200 {
                         showDiabetesLevelImage = UIImage(named: "textlevelnormal.png")
-                        showLineDiabetesLevelImage = UIImage(named: "lol.png")
+                        showLineDiabetesLevelImage = UIImage(named: "levelNormal1.png")
                     }else if getCostSuger! >= 70 && getCostSuger! < 200 {
                         showDiabetesLevelImage = UIImage(named: "textlevelnormal1.png")
-                        showLineDiabetesLevelImage = UIImage(named: "lol1.png")
+                        showLineDiabetesLevelImage = UIImage(named: "levelNormal2.png")
                     }else{
                         showDiabetesLevelImage = UIImage(named: "textlevelnormal2.png")
-                        showLineDiabetesLevelImage = UIImage(named: "lol.png")
+                        showLineDiabetesLevelImage = UIImage(named: "levelNormal1.png")
                 }
             }
         }else{

@@ -81,7 +81,6 @@ class UserViewController: UIViewController,UITextFieldDelegate{
             showImageViewBmi = UIImage(named: "bmi5.png")
         }
 
-    
         nameUserTextField.text = getUserTable[0].User_Name
         ageUserTextField.text = String(format: "%i",(getUserTable[0].User_Age)!)
         weightUserTextField.text = String(format: "%.02f",(getUserTable[0].User_Weight)!)
