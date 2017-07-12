@@ -26,8 +26,8 @@ class InstructionViewController: UIViewController {
         slideshow.backgroundColor = UIColor.white
         slideshow.slideshowInterval = 5.0
         slideshow.pageControlPosition = PageControlPosition.underScrollView
-        slideshow.pageControl.currentPageIndicatorTintColor = UIColor.lightGray
-        slideshow.pageControl.pageIndicatorTintColor = UIColor.black
+        slideshow.pageControl.currentPageIndicatorTintColor = UIColor.black
+        slideshow.pageControl.pageIndicatorTintColor = UIColor.lightGray
         slideshow.contentScaleMode = UIViewContentMode.scaleToFill
         
         // optional way to show activity indicator during image load (skipping the line will show no activity indicator)
