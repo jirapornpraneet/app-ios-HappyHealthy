@@ -46,13 +46,20 @@ class ReportHealthViewController: UIViewController{
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        let date = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd-MM-yyyy"
+        let setDate = formatter.string(from: date)
+        self.saveDate = setDate
+        picker.text = saveDate
+        self.loadAllData(dateChoose: self.saveDate)
         configPicker()
     }
     
     func configPicker(){
         picker.pickerType = .DatePicker
         picker.datePicker?.datePickerMode = .date
-        picker.dateFormatter.dateFormat = "dd-MM-YYYY"
+        picker.dateFormatter.dateFormat = "dd-MM-yyyy"
         picker.dateDidChange = { date in
             print("selectedDate ", date )
         let dateFormatterShow = DateFormatter()
