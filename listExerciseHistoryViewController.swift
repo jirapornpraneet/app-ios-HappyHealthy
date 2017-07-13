@@ -50,11 +50,6 @@ class listExerciseHistoryViewController: UIViewController,UITableViewDelegate,UI
         return 60
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        dataListExerciseHistoryTable = (getlistExerciseHistory[indexPath.row] as? ListExerciseHistory)!
-        self.performSegue(withIdentifier: "DetailHistoryExercise", sender: nil)
-    }
-    
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }

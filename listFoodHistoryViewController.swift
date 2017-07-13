@@ -50,12 +50,7 @@ class listFoodHistoryViewController: UIViewController,UITableViewDelegate,UITabl
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 60
     }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        dataListFoodHistoryTable = (getlistFoodHistory[indexPath.row] as? ListFoodHistory)!
-        self.performSegue(withIdentifier: "DetailHistoryFood", sender: nil)
-    }
-    
+        
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }
@@ -69,4 +64,5 @@ class listFoodHistoryViewController: UIViewController,UITableViewDelegate,UITabl
             listHistoryFoodTable.reloadData()
         }
     }
+   
 }
