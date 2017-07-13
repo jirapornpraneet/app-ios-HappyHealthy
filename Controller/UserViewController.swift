@@ -111,10 +111,21 @@ class UserViewController: UIViewController,UITextFieldDelegate{
         let genderSelect: String = self.genderList[self.genderSegmentedControl.selectedSegmentIndex]
         genderName = genderSelect
     }
+    
+    func checkTextField(){
+        
+    }
 
 
     @IBAction func saveDataUserButton(_ sender: Any) {
-        //ShowAlertController
+        if ((nameUserTextField.text?.isEqual(""))! || (ageUserTextField.text?.isEqual(""))! || (weightUserTextField.text?.isEqual(""))! || (heightUserTextField.text?.isEqual(""))!){
+            alertInputData()
+        }else{
+            alertSucceed()
+            }
+        }
+    
+    func alertSucceed()  {
         let alertShow = UIAlertController (title: "ยืนยันการบันทึกข้อมูลผู้ใช้งาน", message:"คุณแน่ใจใช่ไหม" , preferredStyle: UIAlertControllerStyle.alert)
         alertShow.addAction(UIAlertAction(title: "บันทึก" , style: UIAlertActionStyle.default, handler: { (action) in
             alertShow.dismiss(animated: true, completion: nil)
@@ -127,7 +138,7 @@ class UserViewController: UIViewController,UITextFieldDelegate{
             
         }))
         self.present(alertShow,animated: true,completion: nil)
-        }
+    }
     
     func insertHistoryTableUser()  {
         weigthUser = Double(weightUserTextField.text!)!
@@ -154,9 +165,14 @@ class UserViewController: UIViewController,UITextFieldDelegate{
     }
     
     func alertSaveData(){
-        //ShowAlertController
         let alertShowSave = UIAlertController (title: "บันทึกข้อมูลผู้ใช้งาน", message:" คุณได้บันทึกข้อมูลผู้ใช้งานสำเร็จ" , preferredStyle: UIAlertControllerStyle.alert)
         alertShowSave.addAction(UIAlertAction(title: "บันทึก" , style: UIAlertActionStyle.default, handler:nil))
+        self.present(alertShowSave, animated: true, completion: nil)
+    }
+    
+    func alertInputData(){
+        let alertShowSave = UIAlertController (title: "กรุณาใส่ข้อมูลผู้ใช้งาน", message:"คุณต้องใส่ข้อมูลให้ครบก่อนบันทึก" , preferredStyle: UIAlertControllerStyle.alert)
+        alertShowSave.addAction(UIAlertAction(title: "ตกลง" , style: UIAlertActionStyle.default, handler:nil))
         self.present(alertShowSave, animated: true, completion: nil)
     }
     
