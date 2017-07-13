@@ -5,19 +5,22 @@ PODS:
     - ImageSlideshow/Core (= 1.3.2)
   - ImageSlideshow/Core (1.3.2)
   - IQKeyboardManagerSwift (4.0.10)
+  - SwiftyButton (0.6.0)
 
 DEPENDENCIES:
   - AAPickerView (~> 0.1.0)
   - GRDB.swift (~> 1.0)
   - ImageSlideshow (~> 1.3)
   - IQKeyboardManagerSwift (~> 4.0.10)
+  - SwiftyButton (~> 0.6.0)
 
 SPEC CHECKSUMS:
   AAPickerView: 6766b83b3401d117c78cb4efb1cf4256a659d6a9
   GRDB.swift: 58dd10ae08200ce68434e025ca454b8b79fc3c0d
   ImageSlideshow: a68a76fc618ebd2b7481ce355ad67d7097203976
   IQKeyboardManagerSwift: 75ba21a23794a1e6b6fe6d9a267ea17f80e06771
+  SwiftyButton: 4c9b61c499f172971a1b8c2eebbbdc20a26d8a08
 
-PODFILE CHECKSUM: 3a56ab99976db4e5e1bbf3208d09f66a7ae00e13
+PODFILE CHECKSUM: 7cfe01b0cac7463c98b7f43d8144ab5998bd9ad5
 
 COCOAPODS: 1.2.1
