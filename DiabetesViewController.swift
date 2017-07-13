@@ -170,7 +170,6 @@ class DiabetesViewController: UIViewController,UITextFieldDelegate {
         levelDiabetes = diabetesLevel
         statusDiabetes = diabetesStatusName
         peopleDiabetes = diabetesPeopleName
-   
         //ShowAlertController
         let alertShow = UIAlertController (title:String(format:"คุณต้องการบันทึกข้อมูลใช่ไหม?"), message:String(format: "วันที่ : %@ \n ค่าน้ำตาลในเลือด%@ : %i \n อยู่ในเกณฑ์ที่ : %@ \n  สถานะที่ : %@ ", dateDiabetes!,statusDiabetes!, showCostSugar! ,levelDiabetes!,peopleDiabetes!) , preferredStyle: UIAlertControllerStyle.alert)
         alertShow.addAction(UIAlertAction(title: "บันทึก" , style: UIAlertActionStyle.default, handler: { (action) in

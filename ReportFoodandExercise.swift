@@ -21,6 +21,7 @@ class ReportFoodandExercise: UIViewController {
     var saveDate:String?
     var senderDate:String?
     
+     let myNotification = Notification.Name(rawValue:"MyNotification")
 
     @IBOutlet weak var exerciseTotalcal: UILabel!
     @IBOutlet weak var foodTotalcal: UILabel!
@@ -33,6 +34,9 @@ class ReportFoodandExercise: UIViewController {
     @IBOutlet weak var sumTotalCal: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+         NotificationCenter.default.addObserver(self, selector: #selector(configPickerFood), name: NSNotification.Name(rawValue: "NotificationIdentifierFood"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(configPickerExercise), name: NSNotification.Name(rawValue: "NotificationIdentifierExercise"), object: nil)
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -49,10 +53,11 @@ class ReportFoodandExercise: UIViewController {
         dateHistoryPicker.text = saveDate
         self.loadFood(dateChoose: self.saveDate!)
         self.loadExercise(dateChoose: self.saveDate!)
-        configPicker()
+//        configPicker()
     }
+
     
-    func configPicker(){
+    func configPickerFood(){
         dateHistoryPicker.pickerType = .DatePicker
         dateHistoryPicker.datePicker?.datePickerMode = .date
         dateHistoryPicker.dateFormatter.dateFormat = "dd-MM-YYYY"
@@ -64,13 +69,35 @@ class ReportFoodandExercise: UIViewController {
             print(">>> %@", dateFormatterShow.string(from: date))
             self.saveDate = setDate
             self.loadFood(dateChoose: self.saveDate!)
+        }
+    }
+    
+    func configPickerExercise(){
+        dateHistoryPicker.pickerType = .DatePicker
+        dateHistoryPicker.datePicker?.datePickerMode = .date
+        dateHistoryPicker.dateFormatter.dateFormat = "dd-MM-YYYY"
+        dateHistoryPicker.dateDidChange = { date in
+            print("selectedDate ", date )
+            let dateFormatterShow = DateFormatter()
+            dateFormatterShow.dateFormat = "dd-MM-yyyy"
+            let setDate  = dateFormatterShow.string(from: date)
+            print(">>> %@", dateFormatterShow.string(from: date))
+            self.saveDate = setDate
             self.loadExercise(dateChoose: self.saveDate!)
         }
     }
 
+
     func loadFood(dateChoose:String) {
         getFoodHistory = dbHelper.getFoodHistory(dateHistory: dateChoose)
         if getFoodHistory.count == 0   {
+            foodTotalcal.text = "000"
+            sumProtin.text = "0"
+            sumFat.text = "0"
+            sumCarbohydate.text = "0"
+            sumSugar.text = "0"
+            sumSodium.text = "0"
+            sumTotalCal.text = "0" 
             return
         }
         getSumFoodAll = dbHelper.getSumFood(dateHistory: dateChoose)
@@ -98,13 +125,13 @@ class ReportFoodandExercise: UIViewController {
     func loadExercise(dateChoose:String){
         getExerciseHistory = dbHelper.getExerciseHistory(dateHistory: dateChoose)
         if getExerciseHistory.count == 0 {
+            exerciseTotalcal.text = "000"
             return
         }
         getSumExerciseAll = dbHelper.getSumExercise(dateHistory: dateChoose)
         exerciseTotalcal.text = String(format: "%.02f", (getSumExerciseAll[0].SUM_EX_Cal)!)
         let getSumExercise:Double? = (getSumExerciseAll[0].SUM_EX_Cal!)
-        sumTotal =  getSumExercise!
-        sumTotalCal.text = String(format: "%.02f", (sumTotal)!)
+        sumTotalCal.text = "000"
         getFoodHistory = dbHelper.getFoodHistory(dateHistory: dateChoose)
         if getFoodHistory.count == 0   {
             return
