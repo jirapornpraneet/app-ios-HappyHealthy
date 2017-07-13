@@ -15,7 +15,7 @@ class listExerciseHistoryViewController: UIViewController,UITableViewDelegate,UI
     var dataListExerciseHistoryTable: ListExerciseHistory?
     var deleteHistory = [ListExerciseHistory]()
     var deleteId:Int?
-    let notificationNameExercise = Notification.Name("NotificationIdentifierExercise")
+//    let notificationNameExercise = Notification.Name("NotificationIdentifierExercise")
     
 
     @IBOutlet weak var listHistoryExerciseTable: UITableView!
@@ -62,7 +62,7 @@ class listExerciseHistoryViewController: UIViewController,UITableViewDelegate,UI
             deleteHistory = dbHelper.deleteHistoryExercise(History_Exercise_Id: deleteId!)
             getlistExerciseHistory = dbHelper.getListHistoryExercise(dateHistory: senderDate!)
             listHistoryExerciseTable.reloadData()
-            NotificationCenter.default.post(name: notificationNameExercise, object: nil)
+//            NotificationCenter.default.post(name: notificationNameExercise, object: nil)
         }
     }
 }

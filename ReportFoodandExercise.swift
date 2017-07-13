@@ -34,8 +34,6 @@ class ReportFoodandExercise: UIViewController {
     @IBOutlet weak var sumTotalCal: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-         NotificationCenter.default.addObserver(self, selector: #selector(configPickerFood), name: NSNotification.Name(rawValue: "NotificationIdentifierFood"), object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(configPickerExercise), name: NSNotification.Name(rawValue: "NotificationIdentifierExercise"), object: nil)
         
     }
 
@@ -53,11 +51,11 @@ class ReportFoodandExercise: UIViewController {
         dateHistoryPicker.text = saveDate
         self.loadFood(dateChoose: self.saveDate!)
         self.loadExercise(dateChoose: self.saveDate!)
-//        configPicker()
+        configPicker()
     }
 
     
-    func configPickerFood(){
+    func configPicker(){
         dateHistoryPicker.pickerType = .DatePicker
         dateHistoryPicker.datePicker?.datePickerMode = .date
         dateHistoryPicker.dateFormatter.dateFormat = "dd-MM-YYYY"
@@ -69,25 +67,10 @@ class ReportFoodandExercise: UIViewController {
             print(">>> %@", dateFormatterShow.string(from: date))
             self.saveDate = setDate
             self.loadFood(dateChoose: self.saveDate!)
+              self.loadExercise(dateChoose: self.saveDate!)
         }
     }
     
-    func configPickerExercise(){
-        dateHistoryPicker.pickerType = .DatePicker
-        dateHistoryPicker.datePicker?.datePickerMode = .date
-        dateHistoryPicker.dateFormatter.dateFormat = "dd-MM-YYYY"
-        dateHistoryPicker.dateDidChange = { date in
-            print("selectedDate ", date )
-            let dateFormatterShow = DateFormatter()
-            dateFormatterShow.dateFormat = "dd-MM-yyyy"
-            let setDate  = dateFormatterShow.string(from: date)
-            print(">>> %@", dateFormatterShow.string(from: date))
-            self.saveDate = setDate
-            self.loadExercise(dateChoose: self.saveDate!)
-        }
-    }
-
-
     func loadFood(dateChoose:String) {
         getFoodHistory = dbHelper.getFoodHistory(dateHistory: dateChoose)
         if getFoodHistory.count == 0   {

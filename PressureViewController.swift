@@ -163,7 +163,6 @@ class PressureViewController: UIViewController,UITextFieldDelegate {
     func insertTablePressure()  {
         heartLevel = LevelHeart()
         pressureLevel = LevelPressure()
-        
         let pressureUserResource = PressureTable()
         pressureUserResource.P_DateTime = saveDatePressure
         pressureUserResource.P_CostPressureTop = Int(costPressureTopTextField.text!)

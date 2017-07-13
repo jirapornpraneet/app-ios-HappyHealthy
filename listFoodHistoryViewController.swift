@@ -15,7 +15,7 @@ class listFoodHistoryViewController: UIViewController,UITableViewDelegate,UITabl
     var dataListFoodHistoryTable: ListFoodHistory?
     var deleteHistory = [ListFoodHistory]()
     var deleteId:Int?
-    let notificationNameFood = Notification.Name("NotificationIdentifierFood")
+//    let notificationNameFood = Notification.Name("NotificationIdentifierFood")
   
     @IBOutlet weak var listHistoryFoodTable: UITableView!
     override func viewDidLoad() {
@@ -63,7 +63,7 @@ class listFoodHistoryViewController: UIViewController,UITableViewDelegate,UITabl
             deleteHistory = dbHelper.deleteHistoryFood(History_Food_Id: deleteId!)
             getlistFoodHistory = dbHelper.getListHistoryFood(dateHistory: senderDate!)
             listHistoryFoodTable.reloadData()
-            NotificationCenter.default.post(name: notificationNameFood, object: nil)
+//            NotificationCenter.default.post(name: notificationNameFood, object: nil)
             
            
         }
