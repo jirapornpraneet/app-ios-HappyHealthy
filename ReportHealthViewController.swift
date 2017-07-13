@@ -9,7 +9,6 @@
 import UIKit
 import AAPickerView
 
-
 class ReportHealthViewController: UIViewController{
      var getCheckReportDiabetes = [DiabetesTable]()
      var getCheckReportKidney = [KidneyTable]()
@@ -81,10 +80,12 @@ class ReportHealthViewController: UIViewController{
     }
 
     func loadDiabetes(dateChoose:String) {
-        //เบาหวาน
         getCheckReportDiabetes = dbHelper.getCheckReportDiabetes(datedisease: dateChoose)
         if getCheckReportDiabetes.count == 0 {
-             return
+            dateDiabetesLabel.text = "วัน-เดือน-ปี"
+            costSugarLabel.text = "000"
+            alertDiabetesImage.image = nil
+            return
         }
         getReportDiabetes = dbHelper.getReportDiabetes(datedisease: dateChoose)
         
@@ -145,10 +146,12 @@ class ReportHealthViewController: UIViewController{
       }
     
     func loadKidney(dateChoose:String) {
-        //ไต
         getCheckReportKidney = dbHelper.getCheckReportKidney(datedisease: dateChoose)
         
         if getCheckReportKidney.count == 0 {
+            costGFRLabel.text = "000"
+            dateKidneyLabel.text = "วัน-เดือน-ปี"
+            alertKidneyImage.image = nil
             return
         }
         getReportKidney = dbHelper.getReportKidney(datedisease: dateChoose)
@@ -175,10 +178,15 @@ class ReportHealthViewController: UIViewController{
     }
     
     func loadPressure(dateChoose:String) {
-        
         getCheckReportPressure = dbHelper.getCheckReportPressure(datedisease: dateChoose)
-        //ความดัน
+
         if getCheckReportPressure.count == 0 {
+            datePressureLabel.text = "วัน-เดือน-ปี"
+            costPressureTopLabel.text = "000"
+            costPressureDownLabel.text = "000"
+            costHeartLabel.text = "000"
+            alertPressureImage.image = nil
+            alertHeartImage.image = nil
             return
         }
         getReportPressure = dbHelper.getReportPressure(datedisease: dateChoose)
