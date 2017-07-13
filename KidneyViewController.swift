@@ -83,7 +83,7 @@ class KidneyViewController: UIViewController,UITextFieldDelegate {
     }
     
     func alertInputDataNull(){
-        let alertShowSave = UIAlertController (title: "กรุณาใส่ค่าการทำงานไต", message:"คุณต้องใส่ค่าการทำงานไตก่อนทำการบันทึก" , preferredStyle: UIAlertControllerStyle.alert)
+        let alertShowSave = UIAlertController (title: "กรุณาใส่ข้อมูลโรคไต", message:"คุณต้องใส่ค่าการทำงานไตก่อนทำการบันทึก" , preferredStyle: UIAlertControllerStyle.alert)
         alertShowSave.addAction(UIAlertAction(title: "ตกลง" , style: UIAlertActionStyle.default, handler:nil))
         self.present(alertShowSave, animated: true, completion: nil)
     }

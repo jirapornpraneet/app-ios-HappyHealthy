@@ -192,7 +192,7 @@ class DiabetesViewController: UIViewController,UITextFieldDelegate {
     }
     
     func alertInputDataNull(){
-        let alertShowSave = UIAlertController (title: "กรุณาใส่ค่าน้ำตาลในเลือด", message:"คุณต้องใส่ค่าน้ำตาลในเลือดก่อนทำการบันทึก" , preferredStyle: UIAlertControllerStyle.alert)
+        let alertShowSave = UIAlertController (title: "กรุณาใส่ข้อมูลโรคเบาหวาน", message:"คุณต้องใส่ค่าน้ำตาลในเลือดก่อนทำการบันทึก" , preferredStyle: UIAlertControllerStyle.alert)
         alertShowSave.addAction(UIAlertAction(title: "ตกลง" , style: UIAlertActionStyle.default, handler:nil))
         self.present(alertShowSave, animated: true, completion: nil)
     }
