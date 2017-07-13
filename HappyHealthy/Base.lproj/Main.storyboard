@@ -3499,257 +3499,324 @@
                         <viewControllerLayoutGuide type="bottom" id="G97-tk-RLg"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="f9p-D4-bhN">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="630"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BYL-20-hkP">
-                                <rect key="frame" x="172" y="141" width="132" height="73"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="พลังงาน(กิโลแคลอรี่)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m8p-kp-HSY">
-                                        <rect key="frame" x="10" y="50" width="117" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ค่าพลังงาน" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0ZP-32-t6D">
-                                        <rect key="frame" x="18" y="8" width="97" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next"/>
-                                    </textField>
-                                </subviews>
-                                <color key="backgroundColor" red="1" green="0.63347493690000001" blue="0.50137492250000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="73" id="kFJ-QK-ciC"/>
-                                    <constraint firstAttribute="width" constant="132" id="lEp-gL-NFT"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7uu-fN-E3L">
-                                <rect key="frame" x="21" y="141" width="132" height="73"/>
-                                <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="หน่วยอาหาร" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gVY-Ys-kHO">
-                                        <rect key="frame" x="18" y="40" width="97" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="textColor" red="1" green="0.63347493690000001" blue="0.50137492250000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" returnKeyType="next"/>
-                                    </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="จำนวนบริโภค" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fcg-gm-5jM">
-                                        <rect key="frame" x="18" y="4" width="97" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next"/>
-                                    </textField>
-                                </subviews>
-                                <color key="backgroundColor" red="1" green="0.63347493690000001" blue="0.50137492250000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="132" id="1ns-T9-olx"/>
-                                    <constraint firstAttribute="height" constant="73" id="XWo-kV-zpW"/>
-                                </constraints>
-                            </view>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="เพิ่มชื่ออาหาร" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dQP-8k-4fA">
                                 <rect key="frame" x="52" y="86" width="229" height="30"/>
-                                <color key="backgroundColor" red="1" green="0.63347493690000001" blue="0.50137492250000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="DN3-xB-pv4"/>
                                     <constraint firstAttribute="width" constant="229" id="h0N-Z8-UTH"/>
                                 </constraints>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KOH-Og-vGI">
-                                <rect key="frame" x="38" y="265" width="245" height="230"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="คาร์โบไฮเดรต" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NEr-DT-OsT">
-                                        <rect key="frame" x="20" y="115" width="96" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="น้ำตาล" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oRP-FJ-qM6">
-                                        <rect key="frame" x="19" y="155" width="42" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="โซเดียม" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hmk-74-Aew">
-                                        <rect key="frame" x="20" y="197" width="61" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="กรัม" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CIT-Yb-684">
-                                        <rect key="frame" x="183" y="159" width="42" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
-                                        <color key="textColor" red="1" green="0.63347493690000001" blue="0.50137492250000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="กรัม" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b9d-Ql-y5F">
-                                        <rect key="frame" x="183" y="115" width="42" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
-                                        <color key="textColor" red="1" green="0.63347493690000001" blue="0.50137492250000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="กรัม" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bCJ-TX-dzg">
-                                        <rect key="frame" x="183" y="40" width="42" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
-                                        <color key="textColor" red="1" green="0.63347493690000001" blue="0.50137492250000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="กรัม" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wA8-oX-sdz">
-                                        <rect key="frame" x="183" y="74" width="42" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
-                                        <color key="textColor" red="1" green="0.63347493690000001" blue="0.50137492250000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="โปรตีน" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RdP-an-Cfo">
-                                        <rect key="frame" x="19" y="40" width="42" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="มิลลิกรัม" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hIY-AR-3nL">
-                                        <rect key="frame" x="183" y="197" width="42" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
-                                        <color key="textColor" red="1" green="0.63347493690000001" blue="0.50137492250000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fhF-jr-l7n">
-                                        <rect key="frame" x="99" y="31" width="66" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="1" green="0.63347493690000001" blue="0.50137492250000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <color key="textColor" red="1" green="0.97485377669999995" blue="0.93052344899999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next"/>
-                                    </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cna-vJ-Wvm">
-                                        <rect key="frame" x="99" y="69" width="66" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="1" green="0.63347493690000001" blue="0.50137492250000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <color key="textColor" red="1" green="0.97485377669999995" blue="0.93052344899999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next"/>
-                                    </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HdX-fk-d0a">
-                                        <rect key="frame" x="99" y="110" width="66" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="1" green="0.63347493690000001" blue="0.50137492250000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <color key="textColor" red="1" green="0.97485377669999995" blue="0.93052344899999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next"/>
-                                    </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8dU-yC-Y6J">
-                                        <rect key="frame" x="99" y="150" width="66" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="1" green="0.63347493690000001" blue="0.50137492250000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <color key="textColor" red="1" green="0.97485377669999995" blue="0.93052344899999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next"/>
-                                    </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pjE-VE-A7c">
-                                        <rect key="frame" x="99" y="192" width="66" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="1" green="0.63347493690000001" blue="0.50137492250000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <color key="textColor" red="1" green="0.97485377669999995" blue="0.93052344899999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
-                                    </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ไขมัน" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kSf-Pd-AQr">
-                                        <rect key="frame" x="20" y="78" width="42" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ข้อมูลโภชนาการ (Nutrition Information)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9r4-RK-UMR">
-                                        <rect key="frame" x="-22" y="8" width="289" height="16"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="จำนวนบริโภค" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fcg-gm-5jM">
+                                <rect key="frame" x="36" y="141" width="97" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="245" id="pdn-3J-gYl"/>
-                                    <constraint firstAttribute="height" constant="230" id="za7-i0-a53"/>
+                                    <constraint firstAttribute="width" constant="97" id="SCr-cK-3kp"/>
+                                    <constraint firstAttribute="height" constant="30" id="Ua9-Wg-pK8"/>
                                 </constraints>
-                            </view>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="รายละเอียดของอาหารที่เหมาะสมกับโรค" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G6N-IT-spC">
-                                <rect key="frame" x="50" y="513" width="233" height="30"/>
-                                <color key="backgroundColor" red="1" green="0.76820688115214331" blue="0.67474297827329144" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="Io1-TZ-BX2"/>
-                                    <constraint firstAttribute="width" constant="233" id="ZFh-13-lVu"/>
-                                </constraints>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="น้ำหนักสุทธิที่บริโภค" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lws-7s-W0X">
-                                <rect key="frame" x="26" y="236" width="113" height="14.5"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="หน่วยอาหาร" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gVY-Ys-kHO">
+                                <rect key="frame" x="36" y="179" width="97" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="113" id="Jvr-9U-Llc"/>
-                                    <constraint firstAttribute="height" constant="14.5" id="ZZc-BU-ACF"/>
+                                    <constraint firstAttribute="height" constant="30" id="5bG-qU-1LV"/>
+                                    <constraint firstAttribute="width" constant="97" id="5fy-As-cUR"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ค่าพลังงาน" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0ZP-32-t6D">
+                                <rect key="frame" x="186" y="141" width="97" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="BDi-OR-Gsc"/>
+                                    <constraint firstAttribute="height" constant="30" id="Tc8-Ta-1Ge"/>
+                                </constraints>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="พลังงาน(กิโลแคลอรี่)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m8p-kp-HSY">
+                                <rect key="frame" x="174" y="184" width="137" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="137" id="VJu-1B-Voc"/>
+                                    <constraint firstAttribute="height" constant="25" id="ixP-h6-2t8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="น้ำหนักสุทธิที่บริโภค" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lws-7s-W0X">
+                                <rect key="frame" x="14" y="238.5" width="113" height="14.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="14.5" id="2fC-Gf-qKp"/>
+                                    <constraint firstAttribute="width" constant="113" id="oM5-Nq-LTT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ค่าน้ำหนักสุทธิ" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HSs-Ao-Pfw">
-                                <rect key="frame" x="140" y="230" width="97" height="30"/>
-                                <color key="backgroundColor" red="1" green="0.63347493690000001" blue="0.50137492250000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="135" y="230" width="97" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="97" id="0bd-rP-31W"/>
-                                    <constraint firstAttribute="height" constant="30" id="G4A-Td-AWq"/>
+                                    <constraint firstAttribute="width" constant="97" id="GOH-kg-8xe"/>
+                                    <constraint firstAttribute="height" constant="30" id="Pa7-ib-dED"/>
                                 </constraints>
-                                <color key="textColor" red="1" green="0.97485377669999995" blue="0.93052344899999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="หน่วย" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="twj-6B-6Br">
                                 <rect key="frame" x="245" y="230" width="49" height="30"/>
-                                <color key="backgroundColor" red="1" green="0.63347493690000001" blue="0.50137492250000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="2HZ-LS-MWR"/>
-                                    <constraint firstAttribute="width" constant="49" id="d2K-oZ-J1D"/>
+                                    <constraint firstAttribute="height" constant="30" id="21z-IU-Cmr"/>
+                                    <constraint firstAttribute="width" constant="49" id="cgz-Nh-v3T"/>
                                 </constraints>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="next"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="กรัม" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CIT-Yb-684">
+                                <rect key="frame" x="233" y="437" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="BIq-QQ-ZIQ"/>
+                                    <constraint firstAttribute="width" constant="42" id="IMQ-ap-wHa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="กรัม" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b9d-Ql-y5F">
+                                <rect key="frame" x="233" y="395" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="OGb-NV-m4Z"/>
+                                    <constraint firstAttribute="width" constant="42" id="vti-gM-4kP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="กรัม" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bCJ-TX-dzg">
+                                <rect key="frame" x="233" y="353" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="42" id="BwL-ln-TNP"/>
+                                    <constraint firstAttribute="height" constant="21" id="tCh-64-FTx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="กรัม" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wA8-oX-sdz">
+                                <rect key="frame" x="233" y="311" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="6xW-dW-LkR"/>
+                                    <constraint firstAttribute="width" constant="42" id="xt6-s1-zqj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="โปรตีน" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RdP-an-Cfo">
+                                <rect key="frame" x="38" y="311" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="42" id="QXV-t1-9AX"/>
+                                    <constraint firstAttribute="height" constant="21" id="Ttz-yd-Va9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ไขมัน" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kSf-Pd-AQr">
+                                <rect key="frame" x="41" y="353" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="42" id="49N-O2-nmC"/>
+                                    <constraint firstAttribute="height" constant="21" id="s7E-Ih-0ab"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="คาร์โบไฮเดรต" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NEr-DT-OsT">
+                                <rect key="frame" x="38" y="395" width="81" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="5k1-kR-3EG"/>
+                                    <constraint firstAttribute="width" constant="81" id="KBA-MV-Bzj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="น้ำตาล" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oRP-FJ-qM6">
+                                <rect key="frame" x="38" y="437" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="ZCA-VX-tdJ"/>
+                                    <constraint firstAttribute="width" constant="42" id="kPe-Sf-802"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="โซเดียม" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hmk-74-Aew">
+                                <rect key="frame" x="38" y="479" width="61" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="61" id="ouB-JP-J9A"/>
+                                    <constraint firstAttribute="height" constant="21" id="zPA-lK-abe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fhF-jr-l7n">
+                                <rect key="frame" x="127" y="307" width="66" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="66" id="OCq-kt-IsX"/>
+                                    <constraint firstAttribute="height" constant="30" id="fQE-wc-j4X"/>
+                                </constraints>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cna-vJ-Wvm">
+                                <rect key="frame" x="127" y="349" width="66" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="9ea-LE-mGq"/>
+                                    <constraint firstAttribute="width" constant="66" id="ngw-AG-BQW"/>
+                                </constraints>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HdX-fk-d0a">
+                                <rect key="frame" x="127" y="391" width="66" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="6GS-t3-qNw"/>
+                                    <constraint firstAttribute="width" constant="66" id="kji-V2-OeX"/>
+                                </constraints>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8dU-yC-Y6J">
+                                <rect key="frame" x="127" y="433" width="66" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="66" id="clM-h7-NO7"/>
+                                    <constraint firstAttribute="height" constant="30" id="vyX-p8-q88"/>
+                                </constraints>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pjE-VE-A7c">
+                                <rect key="frame" x="127" y="475" width="66" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="66" id="1R1-d7-xLH"/>
+                                    <constraint firstAttribute="height" constant="30" id="E3t-KE-f2C"/>
+                                </constraints>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ข้อมูลโภชนาการ (Nutrition Information)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9r4-RK-UMR">
+                                <rect key="frame" x="16" y="277" width="289" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16" id="Hzd-xQ-RLC"/>
+                                    <constraint firstAttribute="width" constant="289" id="OOO-bg-p5y"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="รายละเอียดของอาหารที่เหมาะสมกับโรค" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G6N-IT-spC">
+                                <rect key="frame" x="43.5" y="523" width="233" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="233" id="Rci-yN-xhv"/>
+                                    <constraint firstAttribute="height" constant="30" id="fzI-G4-Bch"/>
+                                </constraints>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="มิลลิกรัม" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hIY-AR-3nL">
+                                <rect key="frame" x="233" y="479" width="50" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="ANP-eo-ccf"/>
+                                    <constraint firstAttribute="width" constant="50" id="gM1-Ue-1bl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.93197578189999997" green="0.75550871190921909" blue="0.64721652012489017" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="HSs-Ao-Pfw" firstAttribute="baseline" secondItem="lws-7s-W0X" secondAttribute="baseline" constant="2" id="46T-h6-xvS"/>
-                            <constraint firstItem="BYL-20-hkP" firstAttribute="leading" secondItem="7uu-fN-E3L" secondAttribute="trailing" constant="19" id="AUQ-AP-HXW"/>
+                            <constraint firstItem="oRP-FJ-qM6" firstAttribute="baseline" secondItem="8dU-yC-Y6J" secondAttribute="baseline" constant="2" id="0kH-l1-JT5"/>
+                            <constraint firstItem="CIT-Yb-684" firstAttribute="baseline" secondItem="8dU-yC-Y6J" secondAttribute="baseline" constant="2" id="10Z-uo-COZ"/>
+                            <constraint firstItem="HSs-Ao-Pfw" firstAttribute="top" secondItem="m8p-kp-HSY" secondAttribute="bottom" constant="21" id="1Sh-Jj-Gcb"/>
+                            <constraint firstItem="pjE-VE-A7c" firstAttribute="leading" secondItem="hmk-74-Aew" secondAttribute="trailing" constant="28" id="2qB-Un-vKw"/>
+                            <constraint firstItem="lws-7s-W0X" firstAttribute="baseline" secondItem="HSs-Ao-Pfw" secondAttribute="baseline" id="2tt-rr-iUP"/>
+                            <constraint firstItem="RdP-an-Cfo" firstAttribute="baseline" secondItem="fhF-jr-l7n" secondAttribute="baseline" constant="2" id="3Yk-hu-w8K"/>
+                            <constraint firstItem="fhF-jr-l7n" firstAttribute="centerX" secondItem="f9p-D4-bhN" secondAttribute="centerX" id="3bJ-rV-sIc"/>
+                            <constraint firstItem="9r4-RK-UMR" firstAttribute="centerX" secondItem="f9p-D4-bhN" secondAttribute="centerX" id="6TU-77-R62"/>
+                            <constraint firstItem="8dU-yC-Y6J" firstAttribute="centerX" secondItem="f9p-D4-bhN" secondAttribute="centerX" id="7BJ-xp-g4V"/>
+                            <constraint firstItem="HSs-Ao-Pfw" firstAttribute="leading" secondItem="lws-7s-W0X" secondAttribute="trailing" constant="8" id="7VU-ou-6Qm"/>
+                            <constraint firstItem="NEr-DT-OsT" firstAttribute="baseline" secondItem="HdX-fk-d0a" secondAttribute="baseline" constant="2" id="7wp-hc-BjK"/>
+                            <constraint firstItem="cna-vJ-Wvm" firstAttribute="top" secondItem="fhF-jr-l7n" secondAttribute="bottom" constant="12" id="9Tc-re-b8o"/>
+                            <constraint firstItem="8dU-yC-Y6J" firstAttribute="leading" secondItem="oRP-FJ-qM6" secondAttribute="trailing" constant="47" id="9nt-6Z-dxk"/>
+                            <constraint firstItem="pjE-VE-A7c" firstAttribute="top" secondItem="8dU-yC-Y6J" secondAttribute="bottom" constant="12" id="9x5-r1-3q1"/>
+                            <constraint firstItem="hIY-AR-3nL" firstAttribute="leading" secondItem="pjE-VE-A7c" secondAttribute="trailing" constant="40" id="Ben-Ef-fMo"/>
+                            <constraint firstItem="wA8-oX-sdz" firstAttribute="baseline" secondItem="fhF-jr-l7n" secondAttribute="baseline" constant="2" id="Blk-xp-qCA"/>
+                            <constraint firstItem="b9d-Ql-y5F" firstAttribute="leading" secondItem="HdX-fk-d0a" secondAttribute="trailing" constant="40" id="Bnw-R9-WH9"/>
+                            <constraint firstItem="G6N-IT-spC" firstAttribute="centerX" secondItem="f9p-D4-bhN" secondAttribute="centerX" id="C6q-py-dcG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0ZP-32-t6D" secondAttribute="trailing" constant="21" id="Edv-wu-pTI"/>
+                            <constraint firstItem="HdX-fk-d0a" firstAttribute="leading" secondItem="NEr-DT-OsT" secondAttribute="trailing" constant="8" id="G8n-5C-p0g"/>
                             <constraint firstItem="dQP-8k-4fA" firstAttribute="centerX" secondItem="f9p-D4-bhN" secondAttribute="centerX" constant="6.5" id="H6A-Kh-evE"/>
-                            <constraint firstItem="HSs-Ao-Pfw" firstAttribute="leading" secondItem="lws-7s-W0X" secondAttribute="trailing" constant="1" id="JAG-bw-0W2"/>
+                            <constraint firstItem="cna-vJ-Wvm" firstAttribute="centerX" secondItem="f9p-D4-bhN" secondAttribute="centerX" id="JFG-LG-bKW"/>
+                            <constraint firstItem="b9d-Ql-y5F" firstAttribute="baseline" secondItem="HdX-fk-d0a" secondAttribute="baseline" constant="2" id="KjH-Bv-obe"/>
+                            <constraint firstItem="fcg-gm-5jM" firstAttribute="leading" secondItem="f9p-D4-bhN" secondAttribute="leadingMargin" constant="20" id="LmL-XT-2pT"/>
                             <constraint firstItem="dQP-8k-4fA" firstAttribute="top" secondItem="07J-Uv-LPS" secondAttribute="bottom" constant="22" id="MxG-AL-w9z"/>
-                            <constraint firstItem="KOH-Og-vGI" firstAttribute="centerX" secondItem="f9p-D4-bhN" secondAttribute="centerX" constant="0.5" id="OK8-h7-uz7"/>
-                            <constraint firstItem="KOH-Og-vGI" firstAttribute="top" secondItem="lws-7s-W0X" secondAttribute="bottom" constant="14.5" id="Q9Y-pg-TTn"/>
-                            <constraint firstItem="lws-7s-W0X" firstAttribute="top" secondItem="7uu-fN-E3L" secondAttribute="bottom" constant="22" id="Te3-9b-wXw"/>
-                            <constraint firstItem="twj-6B-6Br" firstAttribute="leading" secondItem="HSs-Ao-Pfw" secondAttribute="trailing" constant="8" id="fjm-iV-dJH"/>
-                            <constraint firstItem="BYL-20-hkP" firstAttribute="baseline" secondItem="7uu-fN-E3L" secondAttribute="baseline" id="gPw-YE-lwT"/>
-                            <constraint firstItem="7uu-fN-E3L" firstAttribute="top" secondItem="dQP-8k-4fA" secondAttribute="bottom" constant="25" id="hBJ-sC-UFn"/>
-                            <constraint firstItem="G6N-IT-spC" firstAttribute="top" secondItem="KOH-Og-vGI" secondAttribute="bottom" constant="18" id="kJq-VN-0qr"/>
-                            <constraint firstItem="7uu-fN-E3L" firstAttribute="centerX" secondItem="f9p-D4-bhN" secondAttribute="centerX" constant="-73" id="mPV-HG-fUv"/>
-                            <constraint firstItem="lws-7s-W0X" firstAttribute="centerX" secondItem="f9p-D4-bhN" secondAttribute="centerX" constant="-77.5" id="nKo-Jp-wVw"/>
-                            <constraint firstItem="twj-6B-6Br" firstAttribute="baseline" secondItem="HSs-Ao-Pfw" secondAttribute="baseline" constant="-2" id="sbs-L8-GyO"/>
-                            <constraint firstItem="G6N-IT-spC" firstAttribute="centerX" secondItem="f9p-D4-bhN" secondAttribute="centerX" constant="6.5" id="ydU-2K-rIu"/>
+                            <constraint firstItem="hmk-74-Aew" firstAttribute="baseline" secondItem="pjE-VE-A7c" secondAttribute="baseline" constant="2" id="N3v-lC-XwU"/>
+                            <constraint firstItem="CIT-Yb-684" firstAttribute="leading" secondItem="8dU-yC-Y6J" secondAttribute="trailing" constant="40" id="O6M-m7-FBS"/>
+                            <constraint firstItem="fcg-gm-5jM" firstAttribute="top" secondItem="dQP-8k-4fA" secondAttribute="bottom" constant="25" id="SX4-lB-tal"/>
+                            <constraint firstAttribute="trailing" secondItem="m8p-kp-HSY" secondAttribute="trailing" constant="9" id="Ssx-VJ-j2U"/>
+                            <constraint firstItem="wA8-oX-sdz" firstAttribute="leading" secondItem="fhF-jr-l7n" secondAttribute="trailing" constant="40" id="VHZ-5p-egi"/>
+                            <constraint firstItem="hIY-AR-3nL" firstAttribute="baseline" secondItem="pjE-VE-A7c" secondAttribute="baseline" constant="2" id="Y28-1S-lc2"/>
+                            <constraint firstItem="9r4-RK-UMR" firstAttribute="top" secondItem="twj-6B-6Br" secondAttribute="bottom" constant="17" id="Ysn-VI-3gD"/>
+                            <constraint firstItem="HSs-Ao-Pfw" firstAttribute="centerX" secondItem="f9p-D4-bhN" secondAttribute="centerX" constant="23.5" id="ZYn-Cg-wpb"/>
+                            <constraint firstItem="gVY-Ys-kHO" firstAttribute="leading" secondItem="f9p-D4-bhN" secondAttribute="leadingMargin" constant="20" id="bS9-BE-aoU"/>
+                            <constraint firstItem="8dU-yC-Y6J" firstAttribute="top" secondItem="HdX-fk-d0a" secondAttribute="bottom" constant="12" id="cHF-Hv-2dE"/>
+                            <constraint firstItem="bCJ-TX-dzg" firstAttribute="leading" secondItem="cna-vJ-Wvm" secondAttribute="trailing" constant="40" id="cfr-a3-9af"/>
+                            <constraint firstItem="HdX-fk-d0a" firstAttribute="centerX" secondItem="f9p-D4-bhN" secondAttribute="centerX" id="dYX-49-vWb"/>
+                            <constraint firstItem="twj-6B-6Br" firstAttribute="baseline" secondItem="HSs-Ao-Pfw" secondAttribute="baseline" constant="-1" id="diC-60-Lpb"/>
+                            <constraint firstItem="HdX-fk-d0a" firstAttribute="top" secondItem="cna-vJ-Wvm" secondAttribute="bottom" constant="12" id="dmO-eR-GBK"/>
+                            <constraint firstItem="G6N-IT-spC" firstAttribute="top" secondItem="pjE-VE-A7c" secondAttribute="bottom" constant="18" id="gL6-jw-QHC"/>
+                            <constraint firstItem="fhF-jr-l7n" firstAttribute="top" secondItem="9r4-RK-UMR" secondAttribute="bottom" constant="14" id="hOI-EZ-23h"/>
+                            <constraint firstItem="gVY-Ys-kHO" firstAttribute="top" secondItem="fcg-gm-5jM" secondAttribute="bottom" constant="8" id="iL9-Nq-o6c"/>
+                            <constraint firstItem="fhF-jr-l7n" firstAttribute="leading" secondItem="RdP-an-Cfo" secondAttribute="trailing" constant="47" id="jjY-8B-K2y"/>
+                            <constraint firstItem="twj-6B-6Br" firstAttribute="leading" secondItem="HSs-Ao-Pfw" secondAttribute="trailing" constant="13" id="l2o-Wa-lj4"/>
+                            <constraint firstItem="m8p-kp-HSY" firstAttribute="top" secondItem="0ZP-32-t6D" secondAttribute="bottom" constant="13" id="lhw-Ji-ABQ"/>
+                            <constraint firstItem="pjE-VE-A7c" firstAttribute="centerX" secondItem="f9p-D4-bhN" secondAttribute="centerX" id="osU-IH-mpu"/>
+                            <constraint firstItem="cna-vJ-Wvm" firstAttribute="leading" secondItem="kSf-Pd-AQr" secondAttribute="trailing" constant="44" id="owT-gd-kSV"/>
+                            <constraint firstItem="kSf-Pd-AQr" firstAttribute="baseline" secondItem="cna-vJ-Wvm" secondAttribute="baseline" constant="2" id="uE4-Cc-c8J"/>
+                            <constraint firstItem="0ZP-32-t6D" firstAttribute="top" secondItem="dQP-8k-4fA" secondAttribute="bottom" constant="25" id="ujf-I9-Ms7"/>
+                            <constraint firstItem="bCJ-TX-dzg" firstAttribute="baseline" secondItem="cna-vJ-Wvm" secondAttribute="baseline" constant="2" id="zJ7-Px-hy3"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="เพิ่มข้อมูลอาหาร" id="MyD-VX-Y5u">
@@ -3760,6 +3827,8 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="630"/>
                     <connections>
                         <outlet property="amountFoodTextField" destination="fcg-gm-5jM" id="tDh-XI-Acm"/>
                         <outlet property="carbohydrateFoodTextField" destination="HdX-fk-d0a" id="rH9-qU-kz6"/>
