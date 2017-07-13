@@ -107,19 +107,13 @@ class UserViewController: UIViewController,UITextFieldDelegate{
         default:
             break;
         }
-        
         let genderSelect: String = self.genderList[self.genderSegmentedControl.selectedSegmentIndex]
         genderName = genderSelect
     }
     
-    func checkTextField(){
-        
-    }
-
-
     @IBAction func saveDataUserButton(_ sender: Any) {
         if ((nameUserTextField.text?.isEqual(""))! || (ageUserTextField.text?.isEqual(""))! || (weightUserTextField.text?.isEqual(""))! || (heightUserTextField.text?.isEqual(""))!){
-            alertInputData()
+            alertInputDataNull()
         }else{
             alertSucceed()
             }
@@ -170,8 +164,8 @@ class UserViewController: UIViewController,UITextFieldDelegate{
         self.present(alertShowSave, animated: true, completion: nil)
     }
     
-    func alertInputData(){
-        let alertShowSave = UIAlertController (title: "กรุณาใส่ข้อมูลผู้ใช้งาน", message:"คุณต้องใส่ข้อมูลให้ครบก่อนบันทึก" , preferredStyle: UIAlertControllerStyle.alert)
+    func alertInputDataNull(){
+        let alertShowSave = UIAlertController (title: "กรุณาใส่ข้อมูลผู้ใช้งาน", message:"คุณต้องใส่ข้อมูลให้ครบก่อนทำการบันทึก" , preferredStyle: UIAlertControllerStyle.alert)
         alertShowSave.addAction(UIAlertAction(title: "ตกลง" , style: UIAlertActionStyle.default, handler:nil))
         self.present(alertShowSave, animated: true, completion: nil)
     }
