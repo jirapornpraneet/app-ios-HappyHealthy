@@ -47,35 +47,45 @@ class KidneyViewController: UIViewController,UITextFieldDelegate {
     }
 
     @IBAction func saveDataKidney(_ sender: Any) {
-        costGFR = Int(inputCostGFRTextField.text!)!
-        if costGFR! >= 90 {
-            kidneyLevel  = "ปกติ"
-        }else if costGFR! >= 60 && costGFR! < 90{
-            kidneyLevel = "ลดลงเล็กน้อย"
-        }else if costGFR! >= 30 && costGFR! < 60{
-            kidneyLevel = "ลดลงปานกลาง"
-        }else if costGFR! >= 15 && costGFR! < 30{
-            kidneyLevel = "ลดลงมาก"
+        if ((inputCostGFRTextField.text?.isEqual(""))!){
+            alertInputDataNull()
         }else{
-            kidneyLevel = "ลดลงอันตราย"
+            costGFR = Int(inputCostGFRTextField.text!)!
+            if costGFR! >= 90 {
+                kidneyLevel  = "ปกติ"
+            }else if costGFR! >= 60 && costGFR! < 90{
+                kidneyLevel = "ลดลงเล็กน้อย"
+            }else if costGFR! >= 30 && costGFR! < 60{
+                kidneyLevel = "ลดลงปานกลาง"
+            }else if costGFR! >= 15 && costGFR! < 30{
+                kidneyLevel = "ลดลงมาก"
+            }else{
+                kidneyLevel = "ลดลงอันตราย"
+            }
+            
+            dateKidney = saveDateKidney
+            showGFR = Int(inputCostGFRTextField.text!)
+            levelGFR = kidneyLevel
+            
+            //ShowAlertController
+            let alertShow = UIAlertController (title:String(format:"คุณต้องการบันทึกข้อมูลใช่ไหม?"), message:String(format: "วันที่ : %@ \n ค่าการทำงานไต : %i\n  อยู่ในเกณฑ์ที่ : %@ ", dateKidney!, costGFR! ,levelGFR!) , preferredStyle: UIAlertControllerStyle.alert)
+            alertShow.addAction(UIAlertAction(title: "บันทึก" , style: UIAlertActionStyle.default, handler: { (action) in
+                alertShow.dismiss(animated: true, completion: nil)
+                self.insertTableKidney()
+                self.performSegue(withIdentifier: "ShowKidney", sender: sender)
+            }))
+            
+            alertShow.addAction(UIAlertAction(title: "ยกเลิก" , style: UIAlertActionStyle.default, handler: { (action) in
+                alertShow.dismiss(animated: true, completion: nil)
+            }))
+            self.present(alertShow,animated: true,completion: nil)
         }
-
-        dateKidney = saveDateKidney
-        showGFR = Int(inputCostGFRTextField.text!)
-        levelGFR = kidneyLevel
-        
-        //ShowAlertController
-        let alertShow = UIAlertController (title:String(format:"คุณต้องการบันทึกข้อมูลใช่ไหม?"), message:String(format: "วันที่ : %@ \n ค่าการทำงานไต : %i\n  อยู่ในเกณฑ์ที่ : %@ ", dateKidney!, costGFR! ,levelGFR!) , preferredStyle: UIAlertControllerStyle.alert)
-        alertShow.addAction(UIAlertAction(title: "บันทึก" , style: UIAlertActionStyle.default, handler: { (action) in
-            alertShow.dismiss(animated: true, completion: nil)
-            self.insertTableKidney()
-            self.performSegue(withIdentifier: "ShowKidney", sender: sender)
-        }))
-        
-        alertShow.addAction(UIAlertAction(title: "ยกเลิก" , style: UIAlertActionStyle.default, handler: { (action) in
-            alertShow.dismiss(animated: true, completion: nil)
-        }))
-        self.present(alertShow,animated: true,completion: nil)
+    }
+    
+    func alertInputDataNull(){
+        let alertShowSave = UIAlertController (title: "กรุณาใส่ค่าการทำงานไต", message:"คุณต้องใส่ค่าการทำงานไตก่อนทำการบันทึก" , preferredStyle: UIAlertControllerStyle.alert)
+        alertShowSave.addAction(UIAlertAction(title: "ตกลง" , style: UIAlertActionStyle.default, handler:nil))
+        self.present(alertShowSave, animated: true, completion: nil)
     }
     
     func insertTableKidney()  {
