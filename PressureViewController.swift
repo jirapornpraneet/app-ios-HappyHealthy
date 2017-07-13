@@ -127,6 +127,9 @@ class PressureViewController: UIViewController,UITextFieldDelegate {
     }
 
     @IBAction func saveDataPressure(_ sender: Any) {
+        if ((costPressureTopTextField.text?.isEqual(""))! || (costPressureDownTextField.text?.isEqual(""))! || (costHeartTextField.text?.isEqual(""))!) {
+            alertInputDataNull()
+        }else{
         heartLevel = LevelHeart()
         pressureLevel = LevelPressure()
         
@@ -137,7 +140,6 @@ class PressureViewController: UIViewController,UITextFieldDelegate {
         levelPressure = pressureLevel
         levelHeart = heartLevel
 
-        //ShowAlertController
         let alertShow = UIAlertController (title:String(format:"คุณต้องการบันทึกข้อมูลใช่ไหม?"), message:String(format: "วันที่ : %@ \n ค่าความดันโลหิตตัวบน : %i \n  ค่าความดันโลหิตตัวล่าง : %i \n อยู่ในเกณฑ์ที่ : %@ \n อัตราการเต้นหัวใจ : %i \n อยู่ในเกณฑ์ที่ : %@ ", datePressure!, showCostTop! ,showCostDown!, levelPressure!, showCostHeart! , levelHeart!) , preferredStyle: UIAlertControllerStyle.alert)
         alertShow.addAction(UIAlertAction(title: "บันทึก" , style: UIAlertActionStyle.default, handler: { (action) in
             alertShow.dismiss(animated: true, completion: nil)
@@ -149,6 +151,13 @@ class PressureViewController: UIViewController,UITextFieldDelegate {
             alertShow.dismiss(animated: true, completion: nil)
         }))
         self.present(alertShow,animated: true,completion: nil)
+        }
+    }
+    
+    func alertInputDataNull(){
+        let alertShowSave = UIAlertController (title: "กรุณาใส่ข้อมูลโรคความดัน", message:"คุณต้องใส่ค่าความดันโลหิตและค่าการเต้นหัวใจก่อนทำการบันทึก" , preferredStyle: UIAlertControllerStyle.alert)
+        alertShowSave.addAction(UIAlertAction(title: "ตกลง" , style: UIAlertActionStyle.default, handler:nil))
+        self.present(alertShowSave, animated: true, completion: nil)
     }
     
     func insertTablePressure()  {
