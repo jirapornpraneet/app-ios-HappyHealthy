@@ -46,6 +46,7 @@ class PressureViewController: UIViewController,UITextFieldDelegate {
         dateFormatter.dateFormat =  "dd-MM-yyyy"
         let  setDate = dateFormatter.string(from: dateInputPressurePicker.date)
         saveDatePressure = setDate
+
     }
 
     override func didReceiveMemoryWarning() {

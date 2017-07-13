@@ -2001,12 +2001,23 @@
                                             <constraint firstAttribute="width" constant="80" id="Yt6-rg-8Hu"/>
                                         </constraints>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8EM-Gz-4W6">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8EM-Gz-4W6" customClass="FlatButton" customModule="SwiftyButton">
                                         <rect key="frame" x="5" y="300" width="268" height="47"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="47" id="ATM-K9-Xcg"/>
                                         </constraints>
-                                        <state key="normal" image="buttonSavePressure"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <color key="tintColor" red="0.96216261390000002" green="0.48520885619999998" blue="0.54569667820000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="บันทึก"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                <color key="value" red="0.93168443440000004" green="0.57318782810000002" blue="0.56083428859999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="saveDataPressure:" destination="XAO-Ys-IaU" eventType="touchUpInside" id="cEI-Ap-yyc"/>
                                         </connections>
@@ -4063,7 +4074,6 @@
         <image name="bmr" width="85" height="40"/>
         <image name="buttonSaveDiabetes" width="420" height="70"/>
         <image name="buttonSaveKidney" width="420" height="70"/>
-        <image name="buttonSavePressure" width="420" height="70"/>
         <image name="calender" width="60" height="60"/>
         <image name="cm" width="50" height="45"/>
         <image name="costBmr" width="200" height="30"/>
@@ -4107,7 +4117,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="DpI-k7-bDz"/>
         <segue reference="Ktf-Jr-dMH"/>
-        <segue reference="hZu-bF-sau"/>
         <segue reference="Est-Xm-R6r"/>
+        <segue reference="hZu-bF-sau"/>
     </inferredMetricsTieBreakers>
 </document>
