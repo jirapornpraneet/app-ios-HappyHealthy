@@ -1735,8 +1735,11 @@
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
+                                        <connections>
+                                            <action selector="inputCostSugar:" destination="2SL-D9-DPF" eventType="editingChanged" id="AG0-dK-PeH"/>
+                                        </connections>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nre-uY-Sju" customClass="FlatButton" customModule="SwiftyButton">
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nre-uY-Sju" customClass="FlatButton" customModule="SwiftyButton">
                                         <rect key="frame" x="5" y="283" width="255" height="47"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="47" id="mia-kR-NVs"/>
@@ -1872,6 +1875,7 @@
                         <outlet property="dateInputDiabetesPicker" destination="IB2-zF-oDj" id="xCf-sn-U7L"/>
                         <outlet property="inputCostSugarTextField" destination="a3O-I5-tlQ" id="SlY-vF-Fgt"/>
                         <outlet property="peopleDiabetesSegmented" destination="Ocf-7a-2pe" id="MXe-ls-t79"/>
+                        <outlet property="saveButton" destination="nre-uY-Sju" id="yoJ-hp-DW5"/>
                         <outlet property="statusDiabetesSegmented" destination="IG6-jm-XKs" id="54e-9b-Zd1"/>
                         <segue destination="Pox-vi-83I" kind="push" identifier="ShowDiabetes" id="2PN-XF-0V4"/>
                     </connections>
@@ -4365,9 +4369,9 @@
         <image name="year" width="50" height="45"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="chi-Wk-MDk"/>
-        <segue reference="Est-Xm-R6r"/>
-        <segue reference="Hdr-ah-W2Y"/>
         <segue reference="hZu-bF-sau"/>
+        <segue reference="sSb-4b-yyg"/>
+        <segue reference="DpI-k7-bDz"/>
+        <segue reference="chi-Wk-MDk"/>
     </inferredMetricsTieBreakers>
 </document>

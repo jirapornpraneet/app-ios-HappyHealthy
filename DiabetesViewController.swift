@@ -30,6 +30,7 @@ class DiabetesViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet var inputCostSugarTextField: UITextField!
     @IBOutlet var statusDiabetesSegmented: UISegmentedControl!
     @IBOutlet var dateInputDiabetesPicker: UIDatePicker!
+    @IBOutlet var saveButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.inputCostSugarTextField.text = ""
@@ -152,6 +153,7 @@ class DiabetesViewController: UIViewController,UITextFieldDelegate {
     }
     
     @IBAction func saveDataDiabetes(_ sender: Any) {
+        inputCostSugarTextField.resignFirstResponder()
         if ((inputCostSugarTextField.text?.isEqual(""))!){
             alertInputDataNull()
         }else{
@@ -189,6 +191,31 @@ class DiabetesViewController: UIViewController,UITextFieldDelegate {
             self.present(alertShow,animated: true,completion: nil)
             
         }
+    }
+    
+
+    
+    @IBAction func inputCostSugar(_ sender: Any) {
+        let  inputText:String = inputCostSugarTextField.text!
+        if inputText == ""{
+            saveButton.isEnabled = false
+        }else{
+            saveButton.isEnabled = true
+        }
+        
+        print("TextField did begin editing method called")
+    
+    }
+
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        let  inputText:String = inputCostSugarTextField.text!
+         if inputText == ""{
+            saveButton.isEnabled = false
+        }else{
+            saveButton.isEnabled = true
+        }
+    
+        print("TextField did begin editing method called")
     }
     
     func alertInputDataNull(){
