@@ -24,16 +24,23 @@ class ReportHealthViewController: UIViewController{
      var showAlertHeartImage:UIImage?
      var costTop:Int?
      var costDown:Int?
-     var imageAlertLevelPre:[UIImage] = [UIImage(named: "alertPressure1.png")!,UIImage(named: "alertPressure2.png")!,UIImage(named: "alertPressure3.png")!,UIImage(named: "alertPressure4.png")!,UIImage(named: "alertPressure5.png")!,UIImage(named: "alertPressure0.png")!,UIImage(named: "alertPressure6.png")!]
+     var showColorBgLabelPressure:UIColor?
+     var arrayShowColorLevelPressure:[UIColor] = [UIColor(red:0.96, green:0.28, blue:0.28, alpha:1.0),UIColor(red:0.87, green:0.40, blue:0.17, alpha:1.0),UIColor(red:0.92, green:0.55, blue:0.39, alpha:1.0),UIColor(red:0.96, green:0.72, blue:0.62, alpha:1.0),UIColor(red:0.95, green:0.84, blue:0.35, alpha:1.0),UIColor(red:0.50, green:0.93, blue:0.05, alpha:1.0)]
+    
+    
 
     @IBOutlet var costSugarLabel: UILabel!
     @IBOutlet var dateDiabetesLabel: UILabel!
+    @IBOutlet var levelDiabetesLabel: UILabel!
     @IBOutlet var costGFRLabel: UILabel!
     @IBOutlet var dateKidneyLabel: UILabel!
+    @IBOutlet var levelKidneyLabel: UILabel!
     @IBOutlet weak var datePressureLabel: UILabel!
     @IBOutlet weak var costPressureTopLabel: UILabel!
     @IBOutlet weak var costPressureDownLabel: UILabel!
+    @IBOutlet var levelPresureLabel: UILabel!
     @IBOutlet weak var costHeartLabel: UILabel!
+    @IBOutlet var levelHeartLabel: UILabel!
     @IBOutlet weak var alertDiabetesImage: UIImageView!
     @IBOutlet weak var alertKidneyImage: UIImageView!
     @IBOutlet weak var alertPressureImage: UIImageView!
@@ -42,6 +49,7 @@ class ReportHealthViewController: UIViewController{
 
     override func viewDidLoad() {
         super.viewDidLoad()
+     
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -55,6 +63,18 @@ class ReportHealthViewController: UIViewController{
         self.loadKidney(dateChoose: self.saveDate)
         self.loadPressure(dateChoose: self.saveDate)
         configPicker()
+        levelDiabetesLabel.layer.masksToBounds = true
+        levelDiabetesLabel.layer.cornerRadius = 8
+        levelDiabetesLabel.textColor = UIColor.white
+        levelKidneyLabel.layer.masksToBounds = true
+        levelKidneyLabel.layer.cornerRadius = 8
+        levelKidneyLabel.textColor = UIColor.white
+        levelPresureLabel.layer.masksToBounds = true
+        levelPresureLabel.layer.cornerRadius = 8
+        levelPresureLabel.textColor = UIColor.white
+        levelHeartLabel.layer.masksToBounds = true
+        levelHeartLabel.layer.cornerRadius = 8
+        levelHeartLabel.textColor = UIColor.white
     }
     
     func configPicker(){
@@ -92,49 +112,65 @@ class ReportHealthViewController: UIViewController{
         let getCostSuger:Int? = (getReportDiabetes[0].D_CostSugar!)
         let getStatus:String? = (getReportDiabetes[0].D_Status!)
         let getPeople:String? = (getReportDiabetes[0].D_People!)
-        
+      
         if getPeople == "คนปกติ" {
             if getStatus == "ก่อนอาหาร" {
                 if getCostSuger! >= 126 {
-                    showAlertDiabetesImage = UIImage(named: "alertNormal.png")
+                    showAlertDiabetesImage = UIImage(named: "warning.png")
+                    levelDiabetesLabel.backgroundColor = UIColor(red:0.96, green:0.28, blue:0.28, alpha:1.0)
                 }else if getCostSuger! >= 70 && getCostSuger! < 126{
-                    showAlertDiabetesImage = UIImage(named: "alertNormal1.png")
+                    showAlertDiabetesImage = nil
+                    levelDiabetesLabel.backgroundColor = UIColor(red:0.50, green:0.93, blue:0.05, alpha:1.0)
                 }else{
-                    showAlertDiabetesImage = UIImage(named: "alertNormal2.png")
+                    showAlertDiabetesImage = UIImage(named: "warning.png")
+                    levelDiabetesLabel.backgroundColor = UIColor(red:0.96, green:0.28, blue:0.28, alpha:1.0)
                 }
             }else{
                 if getCostSuger! >= 200 {
-                    showAlertDiabetesImage = UIImage(named: "alertNormal.png")
+                    showAlertDiabetesImage = UIImage(named: "warning.png")
+                    levelDiabetesLabel.backgroundColor = UIColor(red:0.96, green:0.28, blue:0.28, alpha:1.0)
                 }else if getCostSuger! >= 70 && getCostSuger! < 200 {
-                    showAlertDiabetesImage = UIImage(named: "alertNormal1.png")
+                    showAlertDiabetesImage = nil
+                    levelDiabetesLabel.backgroundColor = UIColor(red:0.50, green:0.93, blue:0.05, alpha:1.0)
                 }else{
-                    showAlertDiabetesImage = UIImage(named: "alertNormal2.png")
+                    showAlertDiabetesImage = UIImage(named: "warning.png")
+                    levelDiabetesLabel.backgroundColor = UIColor(red:0.96, green:0.28, blue:0.28, alpha:1.0)
                 }
             }
         }else{
             if getStatus == "ก่อนอาหาร" {
                 if getCostSuger! >= 130 {
-                    showAlertDiabetesImage = UIImage(named: "alertDiabetes1.png")
+                    showAlertDiabetesImage = UIImage(named: "warning.png")
+                    levelDiabetesLabel.backgroundColor = UIColor(red:0.96, green:0.28, blue:0.28, alpha:1.0)
                 }else if getCostSuger! >= 100 && getCostSuger! < 130{
-                    showAlertDiabetesImage = UIImage(named: "alertDiabetes4.png")
+                    showAlertDiabetesImage = nil
+                    levelDiabetesLabel.backgroundColor = UIColor(red:0.92, green:0.55, blue:0.39, alpha:1.0)
                 }else if getCostSuger! >= 90 && getCostSuger! < 100{
-                    showAlertDiabetesImage = UIImage(named: "alertDiabetes5.png")
+                    showAlertDiabetesImage = nil
+                    levelDiabetesLabel.backgroundColor = UIColor(red:0.95, green:0.84, blue:0.35, alpha:1.0)
                 }else if getCostSuger! >= 70 && getCostSuger! < 90{
-                    showAlertDiabetesImage = UIImage(named: "alertDiabetes2.png")
+                    showAlertDiabetesImage = nil
+                    levelDiabetesLabel.backgroundColor = UIColor(red:0.50, green:0.93, blue:0.05, alpha:1.0)
                 }else{
-                    showAlertDiabetesImage = UIImage(named: "alertDiabetes3.png")
+                    showAlertDiabetesImage = UIImage(named: "warning.png")
+                    levelDiabetesLabel.backgroundColor = UIColor(red:0.96, green:0.28, blue:0.28, alpha:1.0)
                 }
             }else{
                 if getCostSuger! >= 180{
-                    showAlertDiabetesImage = UIImage(named: "alertDiabetes1.png")
+                    showAlertDiabetesImage = UIImage(named: "warning.png")
+                    levelDiabetesLabel.backgroundColor = UIColor(red:0.96, green:0.28, blue:0.28, alpha:1.0)
                 }else if getCostSuger! >= 150 && getCostSuger! < 180{
-                    showAlertDiabetesImage = UIImage(named: "alertDiabetes4.png")
+                    showAlertDiabetesImage = nil
+                    levelDiabetesLabel.backgroundColor = UIColor(red:0.92, green:0.55, blue:0.39, alpha:1.0)
                 }else if getCostSuger! >= 110 && getCostSuger! < 150{
-                    showAlertDiabetesImage = UIImage(named: "alertDiabetes5.png")
+                    showAlertDiabetesImage = nil
+                    levelDiabetesLabel.backgroundColor = UIColor(red:0.95, green:0.84, blue:0.35, alpha:1.0)
                 }else if getCostSuger! >= 70 && getCostSuger! < 110{
-                    showAlertDiabetesImage = UIImage(named: "alertDiabetes2.png")
+                    showAlertDiabetesImage = nil
+                    levelDiabetesLabel.backgroundColor = UIColor(red:0.50, green:0.93, blue:0.05, alpha:1.0)
                 }else{
-                    showAlertDiabetesImage = UIImage(named: "alertDiabetes3.png")
+                    showAlertDiabetesImage = UIImage(named: "warning.png")
+                    levelDiabetesLabel.backgroundColor = UIColor(red:0.96, green:0.28, blue:0.28, alpha:1.0)
                 }
             }
         }
@@ -142,6 +178,7 @@ class ReportHealthViewController: UIViewController{
         costSugarLabel.text = String(format: "%i" ,(getReportDiabetes[0].D_CostSugar)!)
         alertDiabetesImage.image = showAlertDiabetesImage
         dateDiabetesLabel.text = getReportDiabetes[0].D_DateTime
+        levelDiabetesLabel.text = getReportDiabetes[0].D_Level
         
       }
     
@@ -159,22 +196,27 @@ class ReportHealthViewController: UIViewController{
         let getCostGFR:Int? = (getReportKidney[0].K_CostGFR!)
         
         if getCostGFR! >= 90 {
-            showAlertKidneyImage = UIImage(named: "alertNormal1.png")
+            showAlertKidneyImage = nil
+            levelKidneyLabel.backgroundColor = UIColor(red:0.50, green:0.93, blue:0.05, alpha:1.0)
         }else if getCostGFR! >= 60 && getCostGFR! < 90 {
-            showAlertKidneyImage = UIImage(named: "alertKidney2.png")
+            showAlertKidneyImage = nil
+            levelKidneyLabel.backgroundColor = UIColor(red:0.95, green:0.84, blue:0.35, alpha:1.0)
         }else if getCostGFR! >= 30 && getCostGFR! < 60 {
-            showAlertKidneyImage = UIImage(named: "alertKidney3.png")
+            showAlertKidneyImage = nil
+            levelKidneyLabel.backgroundColor = UIColor(red:0.93, green:0.70, blue:0.58, alpha:1.0)
         }else if getCostGFR! >= 15 && getCostGFR! < 30 {
-            showAlertKidneyImage = UIImage(named: "alertKidney4.png")
+            showAlertKidneyImage = nil
+            levelKidneyLabel.backgroundColor = UIColor(red:0.92, green:0.55, blue:0.39, alpha:1.0)
         }else{
-            showAlertKidneyImage = UIImage(named: "alertKidney5.png")
+            showAlertKidneyImage = UIImage(named: "warning.png")
+            levelKidneyLabel.backgroundColor = UIColor(red:0.96, green:0.28, blue:0.28, alpha:1.0)
         }
         
         getReportKidney = dbHelper.getReportKidney(datedisease: dateChoose)
         costGFRLabel.text = String(format: "%i" ,(getReportKidney[0].K_CostGFR)!)
         dateKidneyLabel.text = getReportKidney[0].K_DateTime
         alertKidneyImage.image =  showAlertKidneyImage
-        
+        levelKidneyLabel.text = getReportKidney[0].K_LevelCostGFR
     }
     
     func loadPressure(dateChoose:String) {
@@ -196,17 +238,23 @@ class ReportHealthViewController: UIViewController{
         let getPressureDown:Int? = (getReportPressure[0].P_CostPressureDown!)
         
         if getCostHeart! >= 101 {
-            showAlertHeartImage = UIImage(named: "alertHeart5.png")
+            showAlertHeartImage = UIImage(named: "warning.png")
+            levelHeartLabel.backgroundColor = UIColor(red:0.96, green:0.28, blue:0.28, alpha:1.0)
         }else if getCostHeart!  >= 85 && getCostHeart!   < 101{
-            showAlertHeartImage = UIImage(named: "alertHeart4.png")
+            showAlertHeartImage = nil
+            levelHeartLabel.backgroundColor = UIColor(red:0.87, green:0.40, blue:0.17, alpha:1.0)
         }else if getCostHeart!  >= 70 && getCostHeart!  < 85 {
-            showAlertHeartImage = UIImage(named: "alertHeart3.png")
+            showAlertHeartImage = nil
+            levelHeartLabel.backgroundColor = UIColor(red:0.96, green:0.72, blue:0.62, alpha:1.0)
         }else if getCostHeart!  >= 60 && getCostHeart!   < 70 {
-            showAlertHeartImage = UIImage(named: "alertHeart2.png")
+            showAlertHeartImage = nil
+            levelHeartLabel.backgroundColor = UIColor(red:0.95, green:0.84, blue:0.35, alpha:1.0)
         }else if getCostHeart!  >= 41 && getCostHeart!   < 60 {
-            showAlertHeartImage = UIImage(named: "alertHeart1.png")
+            showAlertHeartImage = nil
+            levelHeartLabel.backgroundColor = UIColor(red:0.50, green:0.93, blue:0.05, alpha:1.0)
         }else{
-            showAlertHeartImage = UIImage(named: "alertHeart5.png")
+            showAlertHeartImage = UIImage(named: "warning.png")
+            levelHeartLabel.backgroundColor = UIColor(red:0.96, green:0.28, blue:0.28, alpha:1.0)
         }
         
         if getPressureTop! >= 180 {
@@ -242,9 +290,24 @@ class ReportHealthViewController: UIViewController{
         }
         
         if costTop! < costDown! {
-            showAlertPressureImage = imageAlertLevelPre[costTop!]
+            showColorBgLabelPressure = arrayShowColorLevelPressure[costTop!]
+            levelPresureLabel.backgroundColor = showColorBgLabelPressure
+            if costTop == 0 {
+                showAlertPressureImage = UIImage(named: "warning.png")
+                alertPressureImage.image = showAlertPressureImage
+            }else{
+                alertPressureImage.image = nil
+            }
+      
         }else{
-            showAlertPressureImage = imageAlertLevelPre[costDown!]
+            showColorBgLabelPressure = arrayShowColorLevelPressure[costDown!]
+            levelPresureLabel.backgroundColor = showColorBgLabelPressure
+        if costDown == 0 {
+            showAlertPressureImage = UIImage(named: "warning.png")
+            alertPressureImage.image = showAlertPressureImage
+        }else{
+            alertPressureImage.image = nil
+            }
         }
         
         getReportPressure = dbHelper.getReportPressure(datedisease: dateChoose)
@@ -252,10 +315,12 @@ class ReportHealthViewController: UIViewController{
         costPressureTopLabel.text = String(format: "%i",(getReportPressure[0].P_CostPressureTop)!)
         costPressureDownLabel.text = String(format: "%i",(getReportPressure[0].P_CostPressureDown)!)
         costHeartLabel.text = String(format: "%i", (getReportPressure[0].P_HeartRate)!)
-        alertPressureImage.image = showAlertPressureImage
+        levelPresureLabel.text = getReportPressure[0].P_Pressure_Level
+        levelHeartLabel.text = getReportPressure[0].P_HeartRate_Level
         alertHeartImage.image = showAlertHeartImage
+        
     }
-    
+        
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.tabBarController?.navigationItem.title = "รายงานสุขภาพ"
