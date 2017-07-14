@@ -28,11 +28,13 @@ class PressureViewController: UIViewController,UITextFieldDelegate {
     var showCostHeart:Int?
     var levelPressure:String?
     var levelHeart:String?
-
+    
     @IBOutlet var costPressureDownTextField: UITextField!
     @IBOutlet var costHeartTextField: UITextField!
     @IBOutlet var costPressureTopTextField: UITextField!
     @IBOutlet var dateInputPressurePicker: UIDatePicker!
+    @IBOutlet var saveButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.costHeartTextField.text = ""
@@ -53,6 +55,53 @@ class PressureViewController: UIViewController,UITextFieldDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    @IBAction func inputCostPressureTop(_ sender: Any) {
+        let costPressureTop = costPressureTopTextField.text!
+        let costPressureDown = costPressureDownTextField.text!
+        let costHeart = costHeartTextField.text!
+        if  costPressureTop == "" || costPressureDown == "" || costHeart == "" {
+            saveButton.isEnabled = false
+        }else{
+            saveButton.isEnabled = true
+        }
+    }
+    
+    @IBAction func inputCostPressureDown(_ sender: Any) {
+        let costPressureTop = costPressureTopTextField.text!
+        let costPressureDown = costPressureDownTextField.text!
+        let costHeart = costHeartTextField.text!
+        if  costPressureTop == "" || costPressureDown == "" || costHeart == "" {
+            saveButton.isEnabled = false
+        }else{
+            saveButton.isEnabled = true
+        }
+    }
+  
+    @IBAction func inputCostHeart(_ sender: Any) {
+        let costPressureTop = costPressureTopTextField.text!
+        let costPressureDown = costPressureDownTextField.text!
+        let costHeart = costHeartTextField.text!
+        if costPressureTop == "" || costPressureDown == "" || costHeart == "" {
+            saveButton.isEnabled = false
+        }else{
+            saveButton.isEnabled = true
+        }
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+         let costPressureTop = costPressureTopTextField.text!
+         let costPressureDown = costPressureDownTextField.text!
+         let costHeart = costHeartTextField.text!
+      
+      
+        if  costPressureTop == "" || costPressureDown == "" || costHeart == "" {
+            saveButton.isEnabled = false
+        }else{
+            saveButton.isEnabled = true
+        }
+    }
+   
     
     @IBAction func selectDatePicker(_ sender: Any) {
         let dateFormatter = DateFormatter()

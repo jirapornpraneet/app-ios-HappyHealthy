@@ -23,6 +23,7 @@ class KidneyViewController: UIViewController,UITextFieldDelegate {
 
     @IBOutlet var inputCostGFRTextField: UITextField!
     @IBOutlet var dateInputKidneyPicker: UIDatePicker!
+    @IBOutlet var saveButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.inputCostGFRTextField.text = ""
@@ -39,12 +40,33 @@ class KidneyViewController: UIViewController,UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func inputCostGFR(_ sender: Any) {
+        let  inputText:String = inputCostGFRTextField.text!
+        if inputText == ""{
+            saveButton.isEnabled = false
+        }else{
+            saveButton.isEnabled = true
+        }
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        let  inputText:String = inputCostGFRTextField.text!
+        if inputText == ""{
+            saveButton.isEnabled = false
+        }else{
+            saveButton.isEnabled = true
+        }
+    }
+    
+    
+    
     @IBAction func selectDatePicker(_ sender: Any) {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat =  "dd-MM-yyyy"
         let  setDate = dateFormatter.string(from: dateInputKidneyPicker.date)
         saveDateKidney = setDate
     }
+    
 
     @IBAction func saveDataKidney(_ sender: Any) {
         if ((inputCostGFRTextField.text?.isEqual(""))!){
@@ -81,6 +103,7 @@ class KidneyViewController: UIViewController,UITextFieldDelegate {
             self.present(alertShow,animated: true,completion: nil)
         }
     }
+    
     
     func alertInputDataNull(){
         let alertShowSave = UIAlertController (title: "กรุณาใส่ข้อมูลโรคไต", message:"คุณต้องใส่ค่าการทำงานไตก่อนทำการบันทึก" , preferredStyle: UIAlertControllerStyle.alert)

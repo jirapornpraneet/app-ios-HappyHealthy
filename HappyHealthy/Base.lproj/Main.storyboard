@@ -1917,6 +1917,9 @@
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
+                                        <connections>
+                                            <action selector="inputCostGFR:" destination="Q5x-Lt-wGk" eventType="editingChanged" id="qVc-hw-SAU"/>
+                                        </connections>
                                     </textField>
                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Idi-C6-2um">
                                         <rect key="frame" x="0.0" y="8" width="261" height="60"/>
@@ -1932,19 +1935,28 @@
                                             <action selector="selectDatePicker:" destination="Q5x-Lt-wGk" eventType="valueChanged" id="me2-uv-WQE"/>
                                         </connections>
                                     </datePicker>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Gg-p2-09l" customClass="FlatButton" customModule="SwiftyButton">
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Gg-p2-09l" customClass="FlatButton" customModule="SwiftyButton">
                                         <rect key="frame" x="5" y="231" width="256" height="47"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="47" id="6vq-Pl-its"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                         <state key="normal" title="บันทึก"/>
+                                        <state key="disabled" title="บันทึก">
+                                            <color key="titleColor" white="0.85164388020833337" alpha="0.55549015410000002" colorSpace="calibratedWhite"/>
+                                        </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="color">
-                                                <color key="value" red="0.71583187580108643" green="0.8194957971572876" blue="0.95688760280609131" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="value" red="0.63647621969708279" green="0.80013641027882521" blue="0.95688760280609131" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="highlightedColor">
+                                                <color key="value" red="0.35101543653866429" green="0.56744606014064203" blue="0.94426157994923854" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="disabledColor">
+                                                <color key="value" red="0.63647621970000001" green="0.80013641030000004" blue="0.95688760279999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
@@ -2020,6 +2032,7 @@
                     <connections>
                         <outlet property="dateInputKidneyPicker" destination="Idi-C6-2um" id="Clw-mX-xXg"/>
                         <outlet property="inputCostGFRTextField" destination="TA3-8m-WDn" id="GOH-Mq-mZb"/>
+                        <outlet property="saveButton" destination="8Gg-p2-09l" id="Qh3-Gf-1sf"/>
                         <segue destination="aaU-Fy-uiB" kind="push" identifier="ShowKidney" id="TT7-B4-Bnw"/>
                     </connections>
                 </viewController>
@@ -2065,6 +2078,9 @@
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
+                                        <connections>
+                                            <action selector="inputCostPressureTop:" destination="XAO-Ys-IaU" eventType="editingChanged" id="E4C-Ms-Ulg"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PWs-2E-cuM">
                                         <rect key="frame" x="85" y="162" width="108" height="30"/>
@@ -2075,6 +2091,9 @@
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
+                                        <connections>
+                                            <action selector="inputCostPressureDown:" destination="XAO-Ys-IaU" eventType="editingChanged" id="sqU-xo-iMp"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="umF-wS-b4h">
                                         <rect key="frame" x="69" y="231" width="140" height="30"/>
@@ -2085,8 +2104,11 @@
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
+                                        <connections>
+                                            <action selector="inputCostHeart:" destination="XAO-Ys-IaU" eventType="editingChanged" id="Y6z-vO-P1A"/>
+                                        </connections>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8EM-Gz-4W6" customClass="FlatButton" customModule="SwiftyButton">
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8EM-Gz-4W6" customClass="FlatButton" customModule="SwiftyButton">
                                         <rect key="frame" x="5" y="300" width="268" height="47"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="47" id="ATM-K9-Xcg"/>
@@ -2094,13 +2116,22 @@
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                         <color key="tintColor" red="0.96216261390000002" green="0.48520885619999998" blue="0.54569667820000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" title="บันทึก"/>
+                                        <state key="disabled" title="บันทึก">
+                                            <color key="titleColor" red="0.91172271571878172" green="0.76115025653134816" blue="0.88964689815748044" alpha="0.55549015410000002" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="8"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="color">
-                                                <color key="value" red="0.93168443440000004" green="0.57318782810000002" blue="0.56083428859999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="value" red="0.91342798223350252" green="0.50280550267583801" blue="0.50180336524922409" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="highlightedColor">
+                                                <color key="value" red="1" green="0.45815472353026743" blue="0.5411596759980829" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="disabledColor">
+                                                <color key="value" red="0.91342798219999999" green="0.52178262389999996" blue="0.51847553160000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
@@ -2251,9 +2282,10 @@
                     </navigationItem>
                     <connections>
                         <outlet property="costHeartTextField" destination="umF-wS-b4h" id="htZ-lY-cud"/>
-                        <outlet property="costPressureDownTextField" destination="PWs-2E-cuM" id="lzh-sP-gjF"/>
+                        <outlet property="costPressureDownTextField" destination="PWs-2E-cuM" id="87G-Bu-CVy"/>
                         <outlet property="costPressureTopTextField" destination="Per-Cv-m6j" id="yzr-XW-PtY"/>
                         <outlet property="dateInputPressurePicker" destination="naH-rh-8qw" id="jL7-Jj-eDc"/>
+                        <outlet property="saveButton" destination="8EM-Gz-4W6" id="Ykr-Rh-dE2"/>
                         <segue destination="8Go-j4-kGQ" kind="push" identifier="ShowPressure" id="qph-Lx-pOU"/>
                     </connections>
                 </viewController>
