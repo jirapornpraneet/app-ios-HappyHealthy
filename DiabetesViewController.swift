@@ -193,8 +193,6 @@ class DiabetesViewController: UIViewController,UITextFieldDelegate {
         }
     }
     
-
-    
     @IBAction func inputCostSugar(_ sender: Any) {
         let  inputText:String = inputCostSugarTextField.text!
         if inputText == ""{
@@ -202,9 +200,6 @@ class DiabetesViewController: UIViewController,UITextFieldDelegate {
         }else{
             saveButton.isEnabled = true
         }
-        
-        print("TextField did begin editing method called")
-    
     }
 
     func textFieldDidBeginEditing(_ textField: UITextField) {
@@ -214,8 +209,6 @@ class DiabetesViewController: UIViewController,UITextFieldDelegate {
         }else{
             saveButton.isEnabled = true
         }
-    
-        print("TextField did begin editing method called")
     }
     
     func alertInputDataNull(){

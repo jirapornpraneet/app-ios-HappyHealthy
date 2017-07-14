@@ -1744,15 +1744,24 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="47" id="mia-kR-NVs"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                        <color key="tintColor" red="0.79265725610000004" green="0.64996171000000003" blue="0.81572973729999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
+                                        <color key="tintColor" red="0.76558694890000001" green="0.50090187870000003" blue="0.85887146000000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" title="บันทึก"/>
+                                        <state key="disabled" title="บันทึก">
+                                            <color key="titleColor" red="0.83260682139999997" green="0.74424861959999999" blue="0.90402918779999997" alpha="0.55549015410000002" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="color">
-                                                <color key="value" red="0.82493758201599121" green="0.74073529243469238" blue="0.8902287483215332" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="value" red="0.70935887098312378" green="0.59102725982666016" blue="0.8588714599609375" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="highlightedColor">
+                                                <color key="value" red="0.76558694890148016" green="0.50090187869523128" blue="0.85887146000000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="disabledColor">
+                                                <color key="value" red="0.70935887099999995" green="0.59102725980000004" blue="0.85887146000000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
@@ -1875,7 +1884,7 @@
                         <outlet property="dateInputDiabetesPicker" destination="IB2-zF-oDj" id="xCf-sn-U7L"/>
                         <outlet property="inputCostSugarTextField" destination="a3O-I5-tlQ" id="SlY-vF-Fgt"/>
                         <outlet property="peopleDiabetesSegmented" destination="Ocf-7a-2pe" id="MXe-ls-t79"/>
-                        <outlet property="saveButton" destination="nre-uY-Sju" id="yoJ-hp-DW5"/>
+                        <outlet property="saveButton" destination="nre-uY-Sju" id="4as-vg-sec"/>
                         <outlet property="statusDiabetesSegmented" destination="IG6-jm-XKs" id="54e-9b-Zd1"/>
                         <segue destination="Pox-vi-83I" kind="push" identifier="ShowDiabetes" id="2PN-XF-0V4"/>
                     </connections>
