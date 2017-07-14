@@ -105,6 +105,8 @@ class ReportHealthViewController: UIViewController{
             dateDiabetesLabel.text = "วัน-เดือน-ปี"
             costSugarLabel.text = "000"
             alertDiabetesImage.image = nil
+            levelDiabetesLabel.text = ""
+            levelDiabetesLabel.backgroundColor = nil
             return
         }
         getReportDiabetes = dbHelper.getReportDiabetes(datedisease: dateChoose)
@@ -189,6 +191,8 @@ class ReportHealthViewController: UIViewController{
             costGFRLabel.text = "000"
             dateKidneyLabel.text = "วัน-เดือน-ปี"
             alertKidneyImage.image = nil
+            levelKidneyLabel.text = ""
+            levelKidneyLabel.backgroundColor = nil
             return
         }
         getReportKidney = dbHelper.getReportKidney(datedisease: dateChoose)
@@ -229,6 +233,10 @@ class ReportHealthViewController: UIViewController{
             costHeartLabel.text = "000"
             alertPressureImage.image = nil
             alertHeartImage.image = nil
+            levelPresureLabel.text = ""
+            levelHeartLabel.text = ""
+            levelPresureLabel.backgroundColor = nil
+            levelHeartLabel.backgroundColor = nil
             return
         }
         getReportPressure = dbHelper.getReportPressure(datedisease: dateChoose)
