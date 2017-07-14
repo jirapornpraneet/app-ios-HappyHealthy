@@ -3041,9 +3041,12 @@
                                                     <color key="textColor" red="0.73597106329999995" green="0.55951257830000001" blue="0.99993318320000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="calender" translatesAutoresizingMaskIntoConstraints="NO" id="2bh-9q-lDC">
-                                                    <rect key="frame" x="13" y="19" width="49" height="48"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="calender" translatesAutoresizingMaskIntoConstraints="NO" id="2bh-9q-lDC">
+                                                    <rect key="frame" x="13" y="19" width="45" height="45"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="45" id="cxu-Py-DZ7"/>
+                                                        <constraint firstAttribute="width" constant="45" id="zvc-fj-mn5"/>
+                                                    </constraints>
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
