@@ -17,7 +17,8 @@ class ShowPressureViewController: UIViewController {
     var showLineHeartLevelImage:UIImage?
     var costTop:Int?
     var costDown:Int?
-    var imageTextLevelPre:[UIImage] = [UIImage(named: "textlevelPressure1.png")!,UIImage(named: "textlevelPressure2.png")!,UIImage(named: "textlevelPressure3.png")!,UIImage(named: "textlevelPressure4.png")!,UIImage(named: "textlevelPressure5.png")!,UIImage(named: "textlevelPressure6.png")!]
+    var showColorBgLabelPressure:UIColor?
+    var arrayShowColorLevelPressure:[UIColor] = [UIColor(red:0.96, green:0.28, blue:0.28, alpha:1.0),UIColor(red:0.87, green:0.40, blue:0.17, alpha:1.0),UIColor(red:0.92, green:0.55, blue:0.39, alpha:1.0),UIColor(red:0.96, green:0.72, blue:0.62, alpha:1.0),UIColor(red:0.95, green:0.84, blue:0.35, alpha:1.0),UIColor(red:0.50, green:0.93, blue:0.05, alpha:1.0)]
     var imageLineLevelPre:[UIImage] = [UIImage(named: "levelPressure6.png")!,UIImage(named: "levelPressure5.png")!,UIImage(named: "levelPressure4.png")!,UIImage(named: "levelPressure3.png")!,UIImage(named: "levelPressure2.png")!,UIImage(named: "levelPressure1.png")!]
     
     @IBOutlet var lineAlertLevelHeartImage: UIImageView!
@@ -27,10 +28,24 @@ class ShowPressureViewController: UIViewController {
     @IBOutlet var showDatetimeLabel: UILabel!
     @IBOutlet var costPressureTopLabel: UILabel!
     @IBOutlet var costPressureDownLabel: UILabel!
+    @IBOutlet var levelPresureLabel: UILabel!
+    @IBOutlet var levelHeartLabel: UILabel!
     @IBOutlet var alertLevelPressureImage: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         loadAllDataPressure()
+        costPressureTopLabel.layer.masksToBounds = true
+        costPressureTopLabel.layer.cornerRadius = 8
+        costPressureDownLabel.layer.masksToBounds = true
+        costPressureDownLabel.layer.cornerRadius = 8
+        costHeartLabel.layer.masksToBounds = true
+        costHeartLabel.layer.cornerRadius = 8
+        levelPresureLabel.layer.masksToBounds = true
+        levelPresureLabel.layer.cornerRadius = 8
+        levelPresureLabel.textColor = UIColor.white
+        levelHeartLabel.layer.masksToBounds = true
+        levelHeartLabel.layer.cornerRadius = 8
+        levelHeartLabel.textColor = UIColor.white
       // Do any additional setup after loading the view.
     }
     
@@ -42,23 +57,29 @@ class ShowPressureViewController: UIViewController {
         let getPressureDown:Int? = (getPressureTable[0].P_CostPressureDown!)
         
         if getCostHeart! >= 101 {
-            showHeartLevelImage  = UIImage(named: "textlevelHeart5.png")
+            showHeartLevelImage  = UIImage(named: "warning.png")
             showLineHeartLevelImage = UIImage(named: "levelHeart5.png")
+            levelHeartLabel.backgroundColor = UIColor(red:0.96, green:0.28, blue:0.28, alpha:1.0)
         }else if getCostHeart!  >= 85 && getCostHeart!   < 101{
-            showHeartLevelImage  = UIImage(named: "textlevelHeart4.png")
+            showHeartLevelImage  = nil
             showLineHeartLevelImage = UIImage(named: "levelHeart4.png")
+            levelHeartLabel.backgroundColor = UIColor(red:0.87, green:0.40, blue:0.17, alpha:1.0)
         }else if getCostHeart!  >= 70 && getCostHeart!  < 85 {
-            showHeartLevelImage  = UIImage(named: "textlevelHeart3.png")
+            showHeartLevelImage  = nil
             showLineHeartLevelImage = UIImage(named: "levelHeart3.png")
+            levelHeartLabel.backgroundColor = UIColor(red:0.96, green:0.72, blue:0.62, alpha:1.0)
         }else if getCostHeart!  >= 60 && getCostHeart!   < 70 {
-            showHeartLevelImage  = UIImage(named: "textlevelHeart2.png")
+            showHeartLevelImage  = nil
             showLineHeartLevelImage = UIImage(named: "levelHeart2.png")
+            levelHeartLabel.backgroundColor = UIColor(red:0.95, green:0.84, blue:0.35, alpha:1.0)
         }else if getCostHeart!  >= 41 && getCostHeart!   < 60 {
-            showHeartLevelImage  = UIImage(named: "textlevelHeart1.png")
+            showHeartLevelImage  = nil
             showLineHeartLevelImage = UIImage(named: "levelHeart1.png")
+            levelHeartLabel.backgroundColor = UIColor(red:0.50, green:0.93, blue:0.05, alpha:1.0)
         }else{
-            showHeartLevelImage  = UIImage(named: "textlevelHeart5.png")
+            showHeartLevelImage  = UIImage(named: "warning.png")
             showLineHeartLevelImage = UIImage(named: "levelHeart5.png")
+            levelHeartLabel.backgroundColor = UIColor(red:0.96, green:0.28, blue:0.28, alpha:1.0)
         }
         
     
@@ -95,12 +116,28 @@ class ShowPressureViewController: UIViewController {
         }
         
         if costTop! < costDown! {
-            showPressureLevelImage = imageTextLevelPre[costTop!]
+            showColorBgLabelPressure = arrayShowColorLevelPressure[costTop!]
+            levelPresureLabel.backgroundColor = showColorBgLabelPressure
             showLinePressureLevelImage = imageLineLevelPre[costTop!]
+            if costTop == 0 {
+                showPressureLevelImage = UIImage(named: "warning.png")
+                alertLevelPressureImage.image = showPressureLevelImage
+            }else{
+               alertLevelPressureImage.image = nil
+            }
+            
         }else{
-            showPressureLevelImage = imageTextLevelPre[costDown!]
-            showLinePressureLevelImage = imageLineLevelPre[costDown!]
+            showColorBgLabelPressure = arrayShowColorLevelPressure[costDown!]
+            levelPresureLabel.backgroundColor = showColorBgLabelPressure
+              showLinePressureLevelImage = imageLineLevelPre[costDown!]
+            if costDown == 0 {
+                showPressureLevelImage = UIImage(named: "warning.png")
+                alertLevelPressureImage.image = showPressureLevelImage
+            }else{
+                alertLevelPressureImage.image = nil
+            }
         }
+
 
         showDatetimeLabel.text = getPressureTable[0].P_DateTime
         costPressureTopLabel.text = String(format: "%i",(getPressureTable[0].P_CostPressureTop)!)
@@ -110,11 +147,13 @@ class ShowPressureViewController: UIViewController {
         lineAlertLevelPressureImage.image = showLinePressureLevelImage
         alertLevelHeartImage.image = showHeartLevelImage
         lineAlertLevelHeartImage.image = showLineHeartLevelImage
+        levelPresureLabel.text = getPressureTable[0].P_Pressure_Level
+        levelHeartLabel.text = getPressureTable[0].P_HeartRate_Level
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+
 }
