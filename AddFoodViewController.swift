@@ -11,12 +11,12 @@ import UIKit
 class AddFoodViewController: UIViewController,UITextFieldDelegate {
     var insertFoodTable = [FoodTable]()
     var dbHelper = DatabaseHelper()
+    var netUnitnetWeight:String? = "กรัม"
     @IBOutlet var nameFoodTextField: UITextField!
     @IBOutlet var kcalFoodTextField: UITextField!
     @IBOutlet var amountFoodTextField: UITextField!
     @IBOutlet var unitFoodTextField: UITextField!
     @IBOutlet var netWeightFoodTextField: UITextField!
-    @IBOutlet var netUnitFoodTextField: UITextField!
     @IBOutlet var proteinFoodTextField: UITextField!
     @IBOutlet var fatFoodTextField: UITextField!
     @IBOutlet var carbohydrateFoodTextField: UITextField!
@@ -31,7 +31,6 @@ class AddFoodViewController: UIViewController,UITextFieldDelegate {
         self.amountFoodTextField.text = ""
         self.unitFoodTextField.text = ""
         self.netWeightFoodTextField.text = ""
-        self.netUnitFoodTextField.text = ""
         self.proteinFoodTextField.text = ""
         self.fatFoodTextField.text = ""
         self.carbohydrateFoodTextField.text = ""
@@ -44,7 +43,6 @@ class AddFoodViewController: UIViewController,UITextFieldDelegate {
         self.amountFoodTextField.delegate = self
         self.unitFoodTextField.delegate = self
         self.netWeightFoodTextField.delegate = self
-        self.netUnitFoodTextField.delegate = self
         self.proteinFoodTextField.delegate = self
         self.fatFoodTextField.delegate = self
         self.carbohydrateFoodTextField.delegate = self
@@ -89,7 +87,7 @@ class AddFoodViewController: UIViewController,UITextFieldDelegate {
         foodResource.Food_Amount = Int(amountFoodTextField.text!)
         foodResource.Food_Unit = unitFoodTextField.text
         foodResource.Food_Netweight = Double(netWeightFoodTextField.text!)
-        foodResource.Food_NetUnit = netUnitFoodTextField.text!
+        foodResource.Food_NetUnit = netUnitnetWeight
         foodResource.Food_Protein = Double(proteinFoodTextField.text!)
         foodResource.Food_Carbohydrate = Double(carbohydrateFoodTextField.text!)
         foodResource.Food_Fat = Double(fatFoodTextField.text!)
@@ -110,7 +108,6 @@ class AddFoodViewController: UIViewController,UITextFieldDelegate {
         amountFoodTextField.resignFirstResponder()
         unitFoodTextField.resignFirstResponder()
         netWeightFoodTextField.resignFirstResponder()
-        netUnitFoodTextField.resignFirstResponder()
         proteinFoodTextField.resignFirstResponder()
         fatFoodTextField.resignFirstResponder()
         carbohydrateFoodTextField.resignFirstResponder()
