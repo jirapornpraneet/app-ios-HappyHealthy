@@ -12,6 +12,8 @@ class AddFoodViewController: UIViewController,UITextFieldDelegate {
     var insertFoodTable = [FoodTable]()
     var dbHelper = DatabaseHelper()
     var netUnitnetWeight:String? = "กรัม"
+    var nullNutrition:Double? = 0.0
+    var detailFood:String? = ""
     @IBOutlet var nameFoodTextField: UITextField!
     @IBOutlet var kcalFoodTextField: UITextField!
     @IBOutlet var amountFoodTextField: UITextField!
@@ -23,6 +25,7 @@ class AddFoodViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet var sugarFoodTextField: UITextField!
     @IBOutlet var sodiumFoodTextField: UITextField!
     @IBOutlet var detailFoodTextField: UITextField!
+    @IBOutlet weak var saveButton: UIBarButtonItem!
    
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,6 +59,91 @@ class AddFoodViewController: UIViewController,UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func inputNameFood(_ sender: Any) {
+        let foodName = nameFoodTextField.text!
+        let foodKcal = kcalFoodTextField.text!
+        let foodAmount = amountFoodTextField.text!
+        let foodUnit = unitFoodTextField.text!
+        let foodNetWeight = netWeightFoodTextField.text!
+        
+        if  foodName == "" || foodKcal == "" || foodAmount == "" || foodUnit == "" || foodNetWeight == ""{
+            saveButton.isEnabled = false
+        }else{
+            saveButton.isEnabled = true
+        }  
+    }
+    
+    @IBAction func inputAmountFood(_ sender: Any) {
+        let foodName = nameFoodTextField.text!
+        let foodKcal = kcalFoodTextField.text!
+        let foodAmount = amountFoodTextField.text!
+        let foodUnit = unitFoodTextField.text!
+        let foodNetWeight = netWeightFoodTextField.text!
+        
+        if  foodName == "" || foodKcal == "" || foodAmount == "" || foodUnit == "" || foodNetWeight == ""{
+            saveButton.isEnabled = false
+        }else{
+            saveButton.isEnabled = true
+        }
+    }
+    
+    @IBAction func inputUnitFood(_ sender: Any) {
+        let foodName = nameFoodTextField.text!
+        let foodKcal = kcalFoodTextField.text!
+        let foodAmount = amountFoodTextField.text!
+        let foodUnit = unitFoodTextField.text!
+        let foodNetWeight = netWeightFoodTextField.text!
+        
+        if  foodName == "" || foodKcal == "" || foodAmount == "" || foodUnit == "" || foodNetWeight == ""{
+            saveButton.isEnabled = false
+        }else{
+            saveButton.isEnabled = true
+        }
+    }
+    
+
+    @IBAction func inputKcalFood(_ sender: Any) {
+        let foodName = nameFoodTextField.text!
+        let foodKcal = kcalFoodTextField.text!
+        let foodAmount = amountFoodTextField.text!
+        let foodUnit = unitFoodTextField.text!
+        let foodNetWeight = netWeightFoodTextField.text!
+        
+        if  foodName == "" || foodKcal == "" || foodAmount == "" || foodUnit == "" || foodNetWeight == ""{
+            saveButton.isEnabled = false
+        }else{
+            saveButton.isEnabled = true
+        }
+    }
+    
+    @IBAction func inputNetWeightFood(_ sender: Any) {
+        let foodName = nameFoodTextField.text!
+        let foodKcal = kcalFoodTextField.text!
+        let foodAmount = amountFoodTextField.text!
+        let foodUnit = unitFoodTextField.text!
+        let foodNetWeight = netWeightFoodTextField.text!
+        
+        if  foodName == "" || foodKcal == "" || foodAmount == "" || foodUnit == "" || foodNetWeight == ""{
+            saveButton.isEnabled = false
+        }else{
+            saveButton.isEnabled = true
+        }
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        let foodName = nameFoodTextField.text!
+        let foodKcal = kcalFoodTextField.text!
+        let foodAmount = amountFoodTextField.text!
+        let foodUnit = unitFoodTextField.text!
+        let foodNetWeight = netWeightFoodTextField.text!
+        
+        if  foodName == "" || foodKcal == "" || foodAmount == "" || foodUnit == "" || foodNetWeight == ""{
+            saveButton.isEnabled = false
+        }else{
+            saveButton.isEnabled = true
+        }
+    }
+
     @IBAction func saveFood(_ sender: Any) {
         //ShowAlertController
         let alertShow = UIAlertController (title: "ยืนยันการบันทึกข้อมูลอาหาร", message:"คุณแน่ใจใช่ไหม" , preferredStyle: UIAlertControllerStyle.alert)
@@ -88,12 +176,41 @@ class AddFoodViewController: UIViewController,UITextFieldDelegate {
         foodResource.Food_Unit = unitFoodTextField.text
         foodResource.Food_Netweight = Double(netWeightFoodTextField.text!)
         foodResource.Food_NetUnit = netUnitnetWeight
-        foodResource.Food_Protein = Double(proteinFoodTextField.text!)
-        foodResource.Food_Carbohydrate = Double(carbohydrateFoodTextField.text!)
-        foodResource.Food_Fat = Double(fatFoodTextField.text!)
-        foodResource.Food_Sugars = Double(sugarFoodTextField.text!)
-        foodResource.Food_Sodium = Double(sodiumFoodTextField.text!)
-        foodResource.Food_Detail = detailFoodTextField.text
+        if proteinFoodTextField.text == "" {
+            foodResource.Food_Protein = Double(nullNutrition!)
+        }else{
+             foodResource.Food_Protein = Double(proteinFoodTextField.text!)
+        }
+        
+        if carbohydrateFoodTextField.text == "" {
+            foodResource.Food_Carbohydrate = Double(nullNutrition!)
+        }else{
+            foodResource.Food_Carbohydrate = Double(carbohydrateFoodTextField.text!)
+        }
+       
+        if fatFoodTextField.text == "" {
+            foodResource.Food_Fat = Double(nullNutrition!)
+        }else{
+            foodResource.Food_Fat = Double(fatFoodTextField.text!)
+        }
+      
+        if sugarFoodTextField.text == "" {
+            foodResource.Food_Sugars = Double(nullNutrition!)
+        }else{
+            foodResource.Food_Sugars = Double(sugarFoodTextField.text!)
+        }
+      
+        if sodiumFoodTextField.text == "" {
+            foodResource.Food_Sodium = Double(nullNutrition!)
+        }else{
+            foodResource.Food_Sodium = Double(sodiumFoodTextField.text!)
+        }
+        
+        if detailFoodTextField.text == ""{
+            foodResource.Food_Detail = detailFood
+        }else{
+            foodResource.Food_Detail = detailFoodTextField.text
+        }
         dbHelper.insertFoodTable(dataRowFoodTable: foodResource)
     }
     
