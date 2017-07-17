@@ -12,9 +12,12 @@ class UserViewController: UIViewController,UITextFieldDelegate{
     var getUserTable = [UserTable]()
     var getCheckUserTable = [UserTable]()
     var insertDataUser = [UserTable]()
+    var insertDiabetes = [DiabetesTable]()
     var dbHelper = DatabaseHelper()
     var genderList: [String] = ["Male", "Female"]
     var genderName: String = ""
+    var diabetesPeopleList: [String] = ["คนปกติ", "เบาหวาน"]
+    var diabetesPeopleName: String = ""
     var bmrUser:Double?
     var bmiUser:Double?
     var weigthUser: Double?
@@ -34,6 +37,7 @@ class UserViewController: UIViewController,UITextFieldDelegate{
     @IBOutlet var bmrUserLabel: UILabel!
     @IBOutlet var showBmiUserLabel: UILabel!
     @IBOutlet var showImageBmi: UIImageView!
+    @IBOutlet var diabetesSegmentedControl: UISegmentedControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,7 +53,9 @@ class UserViewController: UIViewController,UITextFieldDelegate{
         //genderUser
         let genderSelect: String = self.genderList[self.genderSegmentedControl.selectedSegmentIndex]
         genderName = genderSelect
-
+        //diabeets
+        let diabetesPeopleSelect:String = self.diabetesPeopleList[self.diabetesSegmentedControl.selectedSegmentIndex]
+        diabetesPeopleName = diabetesPeopleSelect
     }
 
        func  loadAllUser(){  
@@ -95,9 +101,16 @@ class UserViewController: UIViewController,UITextFieldDelegate{
         } else {
             genderSegmentedControl.selectedSegmentIndex = 1
         }
-
+        
+        if getUserTable[0].User_Diabetes == "คนปกติ"{
+            diabetesSegmentedControl.selectedSegmentIndex = 0
+        } else {
+            diabetesSegmentedControl.selectedSegmentIndex = 1
         }
-    
+        
+    }
+
+
     @IBAction func selectGenderSegmented(_ sender: Any) {
         switch genderSegmentedControl.selectedSegmentIndex {
         case 0:
@@ -110,6 +123,21 @@ class UserViewController: UIViewController,UITextFieldDelegate{
         let genderSelect: String = self.genderList[self.genderSegmentedControl.selectedSegmentIndex]
         genderName = genderSelect
     }
+    
+    
+    @IBAction func selectPeopleDiabetes(_ sender: Any) {
+        switch diabetesSegmentedControl.selectedSegmentIndex {
+        case 0:
+            diabetesPeopleName = "คนปกติ"
+        case 1:
+            diabetesPeopleName = "เบาหวาน"
+        default:
+            break;
+        }
+        let diabetesPeopleSelect:String = self.diabetesPeopleList[self.diabetesSegmentedControl.selectedSegmentIndex]
+        diabetesPeopleName = diabetesPeopleSelect
+    }
+
     
     @IBAction func saveDataUserButton(_ sender: Any) {
         if ((nameUserTextField.text?.isEqual(""))! || (ageUserTextField.text?.isEqual(""))! || (weightUserTextField.text?.isEqual(""))! || (heightUserTextField.text?.isEqual(""))!){
@@ -154,6 +182,7 @@ class UserViewController: UIViewController,UITextFieldDelegate{
         userResource.User_BMI = Double(bmiUser!)
         userResource.User_BMR = Double(bmrUser!)
         userResource.User_Gender = genderName
+        userResource.User_Diabetes = diabetesPeopleName
         dbHelper.insertUserTable(dataRowUserTable: userResource)
 
     }

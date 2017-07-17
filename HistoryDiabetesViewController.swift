@@ -12,6 +12,7 @@ class HistoryDiabetesViewController: UIViewController,UITableViewDelegate,UITabl
     
     @IBOutlet var HistoryDiabetesTableView: UITableView!
     var getHistoryDiabetesTable = [DiabetesTable]()
+    var getUserTable = [UserTable]()
     var dbHelper = DatabaseHelper()
     var dataDiabetesTable:DiabetesTable?
     var deleteHistory = [DiabetesTable]()
@@ -52,6 +53,7 @@ class HistoryDiabetesViewController: UIViewController,UITableViewDelegate,UITabl
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         getHistoryDiabetesTable = dbHelper.getHistoryDiabetes()
+        getUserTable = dbHelper.getUser()
         deleteId = getHistoryDiabetesTable[indexPath.row].D_Id
         if editingStyle == .delete {
             deleteHistory = dbHelper.deleteHistoryDiabetes(D_Id: deleteId!)

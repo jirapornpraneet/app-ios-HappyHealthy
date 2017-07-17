@@ -13,6 +13,7 @@ class ShowDiabetesViewController: UIViewController {
     var dbHelper = DatabaseHelper()
     var showDiabetesLevelImage:UIImage?
     var showLineDiabetesLevelImage:UIImage?
+    var getUserTable = [UserTable]()
 
     @IBOutlet var lineAlertLevelDiabetesImage: UIImageView!
     @IBOutlet var showDatatimeLabel: UILabel!
@@ -30,7 +31,8 @@ class ShowDiabetesViewController: UIViewController {
         getDiabetesTable = dbHelper.getDiabetes()
         let getCostSuger:Int? = (getDiabetesTable[0].D_CostSugar!)
         let getStatus:String? = (getDiabetesTable[0].D_Status!)
-        let getPeople:String? = (getDiabetesTable[0].D_People!)
+        getUserTable = dbHelper.getUser()
+        let getPeople:String? = (getUserTable[0].User_Diabetes!)
         
         if getPeople == "คนปกติ" {
             if getStatus == "ก่อนอาหาร" {
@@ -84,7 +86,6 @@ class ShowDiabetesViewController: UIViewController {
                 showDiabetesLevelImage = nil
                 showLineDiabetesLevelImage = UIImage(named: "levelDiabetes4.png")
                 levelDiabetesLabel.backgroundColor = UIColor(red:0.96, green:0.28, blue:0.28, alpha:1.0)
-
             }
         }else{
             if getCostSuger! >= 180{
@@ -115,7 +116,6 @@ class ShowDiabetesViewController: UIViewController {
         alertLevelDiabetesImage.image = showDiabetesLevelImage
         lineAlertLevelDiabetesImage.image = showLineDiabetesLevelImage
         levelDiabetesLabel.text = getDiabetesTable[0].D_Level
-        
 
     }
     

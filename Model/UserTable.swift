@@ -17,5 +17,6 @@ class UserTable: NSObject{
     var User_Height:Int?
     var User_BMI:Double?
     var User_BMR:Double?
+    var User_Diabetes:String?
 
 }

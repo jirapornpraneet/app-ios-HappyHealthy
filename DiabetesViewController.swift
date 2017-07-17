@@ -11,9 +11,10 @@ import UIKit
 class DiabetesViewController: UIViewController,UITextFieldDelegate {
     var getDiabetesTable = [DiabetesTable]()
     var insertDataDiabetes = [DiabetesTable]()
+    var getUserTable = [UserTable]()
+    var getCheckUserTable = [UserTable]()
     var dbHelper = DatabaseHelper()
     var diabetesStatusList: [String] = ["ก่อนอาหาร", "หลังอาหาร"]
-    var diabetesPeopleList: [String] = ["ผู้เป็นเบาหวาน", "คนปกติ"]
     var diabetesStatusName: String = ""
     var diabetesPeopleName: String = ""
     var saveDateDiabetes:String = ""
@@ -44,8 +45,6 @@ class DiabetesViewController: UIViewController,UITextFieldDelegate {
         let statusDiabetesSelect: String = self.diabetesStatusList[self.statusDiabetesSegmented.selectedSegmentIndex]
         diabetesStatusName = statusDiabetesSelect
         //DiabetesPeople
-        let peopleDiabetesSelect: String = self.diabetesPeopleList[self.peopleDiabetesSegmented.selectedSegmentIndex]
-        diabetesPeopleName = peopleDiabetesSelect
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -108,7 +107,7 @@ class DiabetesViewController: UIViewController,UITextFieldDelegate {
         }else if costSugar! >= 150 && costSugar! < 180{
             diabetesLevel = "รีบปรึกษาแพทย์ น้ำตาลในเลือดสูง"
         }else if costSugar! >= 110 && costSugar! < 150{
-            diabetesLevel = "ปรึกษาแพทย์ น้ำตาลเในเลือดค่อนข้างสูง"
+            diabetesLevel = "ปรึกษาแพทย์ น้ำตาลในเลือดค่อนข้างสูง"
         }else if costSugar! >= 70 && costSugar! < 110{
             diabetesLevel = "น้ำตาลในเลือดปกติ"
         }else{
@@ -138,22 +137,14 @@ class DiabetesViewController: UIViewController,UITextFieldDelegate {
         diabetesStatusName = statusDiabetesSelect
     }
 
-    @IBAction func selectPeopleDiabetesSegmented(_ sender: Any) {
-        switch statusDiabetesSegmented.selectedSegmentIndex {
-        case 0:
-            diabetesPeopleName = "ผู้เป็นเบาหวาน"
-        case 1:
-            diabetesPeopleName = "คนปกติ"
-        default:
-            break;
+    @IBAction func saveDataDiabetes(_ sender: Any) {
+        getUserTable = dbHelper.getUser()
+        if getUserTable.count == 0 {
+            return
         }
         
-        let peopleDiabetesSelect: String = self.diabetesPeopleList[self.peopleDiabetesSegmented.selectedSegmentIndex]
-        diabetesPeopleName = peopleDiabetesSelect
-    }
-    
-    @IBAction func saveDataDiabetes(_ sender: Any) {
-        inputCostSugarTextField.resignFirstResponder()
+        diabetesPeopleName = getUserTable[0].User_Diabetes!
+        
         if ((inputCostSugarTextField.text?.isEqual(""))!){
             alertInputDataNull()
         }else{
@@ -163,7 +154,7 @@ class DiabetesViewController: UIViewController,UITextFieldDelegate {
                 }else{
                     diabetesLevel = NormalAfter()
                 }
-            }else if diabetesPeopleName == "ผู้เป็นเบาหวาน" {
+            }else if diabetesPeopleName == "เบาหวาน" {
                 if diabetesStatusName == "ก่อนอาหาร"{
                     diabetesLevel = DiabetesBefore()
                 }else{
@@ -224,7 +215,7 @@ class DiabetesViewController: UIViewController,UITextFieldDelegate {
             }else{
                 diabetesLevel = NormalAfter()
             }
-        }else if diabetesPeopleName == "ผู้เป็นเบาหวาน" {
+        }else if diabetesPeopleName == "เบาหวาน" {
             if diabetesStatusName == "ก่อนอาหาร"{
                 diabetesLevel = DiabetesBefore()
             }else{
@@ -235,7 +226,6 @@ class DiabetesViewController: UIViewController,UITextFieldDelegate {
         diabetesUserResource.D_DateTime = saveDateDiabetes
         diabetesUserResource.D_CostSugar = Int(inputCostSugarTextField.text!)
         diabetesUserResource.D_Status = diabetesStatusName
-        diabetesUserResource.D_People = diabetesPeopleName
         diabetesUserResource.D_Level = diabetesLevel
         dbHelper.insertDiabetesTable(dataRowDiabetesTable: diabetesUserResource)
     }

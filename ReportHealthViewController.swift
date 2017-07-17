@@ -10,6 +10,8 @@ import UIKit
 import AAPickerView
 
 class ReportHealthViewController: UIViewController{
+    var getUserTable = [UserTable]()
+    var getCheckUserTable = [UserTable]()
      var getCheckReportDiabetes = [DiabetesTable]()
      var getCheckReportKidney = [KidneyTable]()
      var getCheckReportPressure = [PressureTable]()
@@ -110,10 +112,19 @@ class ReportHealthViewController: UIViewController{
             return
         }
         getReportDiabetes = dbHelper.getReportDiabetes(datedisease: dateChoose)
+        getCheckUserTable = dbHelper.getCheckUser()
+        if getCheckUserTable.count == 0 {
+            return
+        }
+        getUserTable = dbHelper.getUser()
+        if getUserTable.count == 0 {
+            return
+        }
+       
         
         let getCostSuger:Int? = (getReportDiabetes[0].D_CostSugar!)
         let getStatus:String? = (getReportDiabetes[0].D_Status!)
-        let getPeople:String? = (getReportDiabetes[0].D_People!)
+        let getPeople:String? = (getUserTable[0].User_Diabetes!)
       
         if getPeople == "คนปกติ" {
             if getStatus == "ก่อนอาหาร" {

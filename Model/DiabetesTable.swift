@@ -14,5 +14,4 @@ class DiabetesTable: NSObject{
     var D_CostSugar:Int?
     var D_Level:String?
     var D_Status:String?
-    var D_People:String?
 }

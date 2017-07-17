@@ -14,7 +14,6 @@ class HistoryDiabetesTableViewCell: UITableViewCell {
     @IBOutlet var costSugarLabel: UILabel!
     @IBOutlet var levelDiabetesLabel: UILabel!
     @IBOutlet var statusDiabetesLabel: UILabel!
-    @IBOutlet var peopleDiabetesLabel: UILabel!
     @IBOutlet var iconHistoryImage: UIImageView!
     
     var  HistoryDiabetesTableViewCell:DiabetesTable?{
@@ -23,7 +22,6 @@ class HistoryDiabetesTableViewCell: UITableViewCell {
             costSugarLabel.text = String(format: "%i",(HistoryDiabetesTableViewCell?.D_CostSugar)!)
             levelDiabetesLabel.text = HistoryDiabetesTableViewCell?.D_Level
             statusDiabetesLabel.text = HistoryDiabetesTableViewCell?.D_Status
-            peopleDiabetesLabel.text = HistoryDiabetesTableViewCell?.D_People
         }
     }
     override func awakeFromNib() {

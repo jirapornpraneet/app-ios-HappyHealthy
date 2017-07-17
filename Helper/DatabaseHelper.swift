@@ -465,7 +465,6 @@ class DatabaseHelper {
                     rowDiabetesTable.D_CostSugar = row.value(named: "D_CostSugar") as Int
                     rowDiabetesTable.D_Level = row.value(named: "D_Level") as String
                     rowDiabetesTable.D_Status = row.value(named: "D_Status") as String
-                    rowDiabetesTable.D_People = row.value(named: "D_People") as String
                     getDiabetesTable.append(rowDiabetesTable)
                 }
             }
@@ -479,8 +478,8 @@ class DatabaseHelper {
     func insertDiabetesTable(dataRowDiabetesTable: DiabetesTable) {
         try! dbQueue.inDatabase { db in
             do {
-                try db.execute("INSERT INTO Diabetes (D_DateTime,D_CostSugar,D_Level,D_Status,D_People) VALUES (:D_DateTime,:D_CostSugar,:D_Level,:D_Status,:D_People)",
-                               arguments: ["D_DateTime":dataRowDiabetesTable.D_DateTime,"D_CostSugar":dataRowDiabetesTable.D_CostSugar,"D_Level":dataRowDiabetesTable.D_Level,"D_Status":dataRowDiabetesTable.D_Status,"D_People":dataRowDiabetesTable.D_People])
+                try db.execute("INSERT INTO Diabetes (D_DateTime,D_CostSugar,D_Level,D_Status) VALUES (:D_DateTime,:D_CostSugar,:D_Level,:D_Status)",
+                               arguments: ["D_DateTime":dataRowDiabetesTable.D_DateTime,"D_CostSugar":dataRowDiabetesTable.D_CostSugar,"D_Level":dataRowDiabetesTable.D_Level,"D_Status":dataRowDiabetesTable.D_Status])
                 
                 print("Insert Diabetes value")
             } catch {
@@ -502,7 +501,6 @@ class DatabaseHelper {
                     rowDiabetesTable.D_CostSugar = row.value(named: "D_CostSugar") as Int
                     rowDiabetesTable.D_Level = row.value(named: "D_Level") as String
                     rowDiabetesTable.D_Status = row.value(named: "D_Status") as String
-                    rowDiabetesTable.D_People = row.value(named: "D_People") as String
                     getHistoryDiabetesTable.append(rowDiabetesTable)
                 }
             }
@@ -526,7 +524,6 @@ class DatabaseHelper {
                     rowDiabetesTable.D_CostSugar = row.value(named: "D_CostSugar") as Int
                     rowDiabetesTable.D_Level = row.value(named: "D_Level") as String
                     rowDiabetesTable.D_Status = row.value(named: "D_Status") as String
-                    rowDiabetesTable.D_People = row.value(named: "D_People") as String
                     deleteHistoryDiabetesTable.append(rowDiabetesTable)
                 }
             }
@@ -633,7 +630,6 @@ class DatabaseHelper {
                     rowDiabetesTable.D_CostSugar = row.value(named: "D_CostSugar") as Int
                     rowDiabetesTable.D_Level = row.value(named: "D_Level") as String
                     rowDiabetesTable.D_Status = row.value(named: "D_Status") as String
-                    rowDiabetesTable.D_People = row.value(named: "D_People") as String
                     getReportDiabetes.append(rowDiabetesTable)
                 }
             }
@@ -657,7 +653,6 @@ class DatabaseHelper {
                     rowDiabetesTable.D_CostSugar = row.value(named: "D_CostSugar") as Int
                     rowDiabetesTable.D_Level = row.value(named: "D_Level") as String
                     rowDiabetesTable.D_Status = row.value(named: "D_Status") as String
-                    rowDiabetesTable.D_People = row.value(named: "D_People") as String
                     getCheckReportDiabetes.append(rowDiabetesTable)
                 }
             }
@@ -880,6 +875,7 @@ class DatabaseHelper {
                     rowUserTable.User_Height = row.value(named: "User_Height") as Int
                     rowUserTable.User_BMI = row.value(named: "User_BMI") as Double
                     rowUserTable.User_BMR = row.value(named: "User_BMR") as Double
+                    rowUserTable.User_Diabetes = row.value(named: "User_Diabetes") as String
                     getCheckUserTable.append(rowUserTable)
                 }
             }
@@ -907,6 +903,7 @@ class DatabaseHelper {
                     rowUserTable.User_Height = row.value(named: "User_Height") as Int
                     rowUserTable.User_BMI = row.value(named: "User_BMI") as Double
                     rowUserTable.User_BMR = row.value(named: "User_BMR") as Double
+                    rowUserTable.User_Diabetes = row.value(named: "User_Diabetes") as String
                     getUserTable.append(rowUserTable)
                 }
             }
@@ -939,8 +936,8 @@ class DatabaseHelper {
     func insertUserTable(dataRowUserTable: UserTable) {
         try! dbQueue.inDatabase { db in
             do {
-                try db.execute("INSERT INTO User (User_Name,User_Gender,User_Age,User_Weight,User_Height,User_BMI,User_BMR) VALUES (:User_Name,:User_Gender,:User_Age,:User_Weight,:User_Height,:User_BMI,:User_BMR)",
-                               arguments: ["User_Name": dataRowUserTable.User_Name,"User_Gender": dataRowUserTable.User_Gender,"User_Age": dataRowUserTable.User_Age,"User_Weight":dataRowUserTable.User_Weight,"User_Height": dataRowUserTable.User_Height,"User_BMI": dataRowUserTable.User_BMI,"User_BMR": dataRowUserTable.User_BMR])
+                try db.execute("INSERT INTO User (User_Name,User_Gender,User_Age,User_Weight,User_Height,User_BMI,User_BMR,User_Diabetes) VALUES (:User_Name,:User_Gender,:User_Age,:User_Weight,:User_Height,:User_BMI,:User_BMR,:User_Diabetes)",
+                               arguments: ["User_Name": dataRowUserTable.User_Name,"User_Gender": dataRowUserTable.User_Gender,"User_Age": dataRowUserTable.User_Age,"User_Weight":dataRowUserTable.User_Weight,"User_Height": dataRowUserTable.User_Height,"User_BMI": dataRowUserTable.User_BMI,"User_BMR": dataRowUserTable.User_BMR,"User_Diabetes" :dataRowUserTable.User_Diabetes])
                 print("Insert value")
             } catch let error as DatabaseError {
       
