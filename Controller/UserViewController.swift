@@ -57,8 +57,75 @@ class UserViewController: UIViewController,UITextFieldDelegate{
         let diabetesPeopleSelect:String = self.diabetesPeopleList[self.diabetesSegmentedControl.selectedSegmentIndex]
         diabetesPeopleName = diabetesPeopleSelect
     }
+    
+    
+    @IBAction func inputNameUser(_ sender: Any) {
+        let nameUser = nameUserTextField.text!
+        let ageUser = ageUserTextField.text!
+        let weightUser = weightUserTextField.text!
+        let heightUser = heightUserTextField.text!
+        
+        if nameUser == "" || ageUser == "" || weightUser == "" || heightUser  == "" {
+            saveData.isEnabled = false
+        }else{
+            saveData.isEnabled = true
+        }
+    }
 
-       func  loadAllUser(){  
+    @IBAction func inputAgeUser(_ sender: Any) {
+        let nameUser = nameUserTextField.text!
+        let ageUser = ageUserTextField.text!
+        let weightUser = weightUserTextField.text!
+        let heightUser = heightUserTextField.text!
+        
+        if nameUser == "" || ageUser == "" || weightUser == "" || heightUser  == "" {
+            saveData.isEnabled = false
+        }else{
+            saveData.isEnabled = true
+        }
+    }
+    
+    @IBAction func inputWeightUser(_ sender: Any) {
+        let nameUser = nameUserTextField.text!
+        let ageUser = ageUserTextField.text!
+        let weightUser = weightUserTextField.text!
+        let heightUser = heightUserTextField.text!
+        
+        if nameUser == "" || ageUser == "" || weightUser == "" || heightUser  == "" {
+            saveData.isEnabled = false
+        }else{
+            saveData.isEnabled = true
+        }
+    }
+    
+    @IBAction func inputHeightUser(_ sender: Any) {
+        let nameUser = nameUserTextField.text!
+        let ageUser = ageUserTextField.text!
+        let weightUser = weightUserTextField.text!
+        let heightUser = heightUserTextField.text!
+        
+        if nameUser == "" || ageUser == "" || weightUser == "" || heightUser  == "" {
+            saveData.isEnabled = false
+        }else{
+            saveData.isEnabled = true
+        }
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        let nameUser = nameUserTextField.text!
+        let ageUser = ageUserTextField.text!
+        let weightUser = weightUserTextField.text!
+        let heightUser = heightUserTextField.text!
+        
+        if nameUser == "" || ageUser == "" || weightUser == "" || heightUser  == "" {
+            saveData.isEnabled = false
+        }else{
+            saveData.isEnabled = true
+        }
+
+    }
+    
+    func  loadAllUser(){
         getCheckUserTable = dbHelper.getCheckUser()
         if getCheckUserTable.count == 0 {
             return
