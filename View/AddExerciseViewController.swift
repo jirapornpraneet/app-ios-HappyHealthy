@@ -12,13 +12,14 @@ class AddExerciseViewController: UIViewController,UITextFieldDelegate {
 
     var insertExercisTable = [ExerciseTable]()
     var dbHelper = DatabaseHelper()
+    var nullDetailExercise:String? = ""
     @IBOutlet var nameExerciseTextField: UITextField!
     @IBOutlet var kcalExerciseTextField: UITextField!
     @IBOutlet var durationExerciseTextField: UITextField!
     @IBOutlet var diseaseExerciseTextField: UITextField!
     @IBOutlet var detailExerciseTextField: UITextField!
     @IBOutlet var descriptionExerciseTextField: UITextField!
-    
+    @IBOutlet weak var saveButton: UIBarButtonItem!
     override func viewDidLoad() {
         super.viewDidLoad()
          self.nameExerciseTextField.text = ""
@@ -42,6 +43,51 @@ class AddExerciseViewController: UIViewController,UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func inputNameExercise(_ sender: Any) {
+        let exerciseName = nameExerciseTextField.text!
+        let exerciseKcal = kcalExerciseTextField.text!
+        let exerciseDuration = durationExerciseTextField.text!
+        if  exerciseName == "" || exerciseKcal == "" || exerciseDuration == "" {
+            saveButton.isEnabled = false
+        }else{
+            saveButton.isEnabled = true
+        }
+    }
+    
+    @IBAction func inputDurationExercise(_ sender: Any) {
+        let exerciseName = nameExerciseTextField.text!
+        let exerciseKcal = kcalExerciseTextField.text!
+        let exerciseDuration = durationExerciseTextField.text!
+        if  exerciseName == "" || exerciseKcal == "" || exerciseDuration == "" {
+            saveButton.isEnabled = false
+        }else{
+            saveButton.isEnabled = true
+        }
+    }
+    
+    @IBAction func inputKcalExercise(_ sender: Any) {
+        let exerciseName = nameExerciseTextField.text!
+        let exerciseKcal = kcalExerciseTextField.text!
+        let exerciseDuration = durationExerciseTextField.text!
+        if  exerciseName == "" || exerciseKcal == "" || exerciseDuration == "" {
+            saveButton.isEnabled = false
+        }else{
+            saveButton.isEnabled = true
+        }
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        let exerciseName = nameExerciseTextField.text!
+        let exerciseKcal = kcalExerciseTextField.text!
+        let exerciseDuration = durationExerciseTextField.text!
+        
+        if  exerciseName == "" || exerciseKcal == "" || exerciseDuration == "" {
+            saveButton.isEnabled = false
+        }else{
+            saveButton.isEnabled = true
+        }
+    }
+
     @IBAction func saveExercise(_ sender: Any) {
         //ShowAlertController
         let alertShow = UIAlertController (title: "ยืนยันการบันทึกข้อมูลออกกำลังกาย", message:"คุณแน่ใจใช่ไหม" , preferredStyle: UIAlertControllerStyle.alert)
@@ -70,9 +116,23 @@ class AddExerciseViewController: UIViewController,UITextFieldDelegate {
         exerciseResource.Exercise_Name = nameExerciseTextField.text
         exerciseResource.Exercise_Calories = Double(kcalExerciseTextField.text!)
         exerciseResource.Exercise_Duration = Double(durationExerciseTextField.text!)
-        exerciseResource.Exercise_Detail = detailExerciseTextField.text
-        exerciseResource.Exercise_Description = descriptionExerciseTextField.text
-        exerciseResource.Exercise_Disease = diseaseExerciseTextField.text
+        if detailExerciseTextField.text == "" {
+            exerciseResource.Exercise_Detail = nullDetailExercise
+        }else{
+            exerciseResource.Exercise_Detail = detailExerciseTextField.text
+        }
+        
+        if descriptionExerciseTextField.text == "" {
+            exerciseResource.Exercise_Description = nullDetailExercise
+        }else {
+            exerciseResource.Exercise_Description = descriptionExerciseTextField.text
+        }
+       
+        if diseaseExerciseTextField.text == "" {
+            exerciseResource.Exercise_Disease = nullDetailExercise
+        }else{
+            exerciseResource.Exercise_Disease = diseaseExerciseTextField.text
+        }
         dbHelper.insertExerciseTable(dataRowExerciseTable: exerciseResource)
     }
     //Hide KeyBoard when user touches outside keyBoard
