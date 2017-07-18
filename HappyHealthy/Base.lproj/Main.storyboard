@@ -4077,7 +4077,7 @@
                                                     <constraint firstAttribute="width" constant="67" id="dJw-rr-yAq"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                                <color key="textColor" red="0.81520521640777588" green="0.4650515615940094" blue="0.53339868783950806" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="textColor" red="0.88909819160000003" green="0.51468793229999998" blue="0.59016128459999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="เพศ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pbr-b6-7pu">
@@ -4087,7 +4087,7 @@
                                                     <constraint firstAttribute="width" constant="23" id="yEP-zG-wmG"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                                <color key="textColor" red="0.81520521639999999" green="0.4650515616" blue="0.53339868779999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="textColor" red="0.88909819160000003" green="0.51468793229999998" blue="0.59016128459999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="โรคประจำตัว" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JYH-Rc-LkY">
@@ -4097,7 +4097,7 @@
                                                     <constraint firstAttribute="height" constant="21" id="kfz-Kz-Xly"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                                <color key="textColor" red="0.81520521639999999" green="0.4650515616" blue="0.53339868779999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="textColor" red="0.88909819160000003" green="0.51468793229999998" blue="0.59016128459999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="อายุ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RcD-wQ-obE">
@@ -4107,7 +4107,7 @@
                                                     <constraint firstAttribute="height" constant="21" id="yM3-25-b77"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                                <color key="textColor" red="0.81520521639999999" green="0.4650515616" blue="0.53339868779999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="textColor" red="0.88909819160000003" green="0.51468793229999998" blue="0.59016128459999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ปี" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4kb-x2-QwB">
@@ -4117,7 +4117,7 @@
                                                     <constraint firstAttribute="height" constant="13" id="ePF-qp-8JQ"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                                <color key="textColor" red="0.81520521639999999" green="0.4650515616" blue="0.53339868779999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="textColor" red="0.88909819160000003" green="0.51468793229999998" blue="0.59016128459999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="น้ำหนัก" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UyK-Ap-pl0">
@@ -4127,7 +4127,7 @@
                                                     <constraint firstAttribute="height" constant="21" id="CeJ-U8-L0t"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                                <color key="textColor" red="0.81520521639999999" green="0.4650515616" blue="0.53339868779999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="textColor" red="0.88909819160000003" green="0.51468793229999998" blue="0.59016128459999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ส่วนสูง" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pvM-bg-qCo">
@@ -4137,7 +4137,7 @@
                                                     <constraint firstAttribute="width" constant="40" id="rVK-r7-TKY"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                                <color key="textColor" red="0.81520521639999999" green="0.4650515616" blue="0.53339868779999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="textColor" red="0.88909819160000003" green="0.51468793229999998" blue="0.59016128459999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ค่าการเผาพลาญพลังงาน " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gbn-cD-voG">
@@ -4147,7 +4147,7 @@
                                                     <constraint firstAttribute="height" constant="21" id="jNP-ts-qdY"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                                <color key="textColor" red="0.81520521639999999" green="0.4650515616" blue="0.53339868779999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="textColor" red="0.88909819160000003" green="0.51468793229999998" blue="0.59016128459999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ค่าดัชนีมวลกาย" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K1a-0f-vOB">
@@ -4157,7 +4157,7 @@
                                                     <constraint firstAttribute="width" constant="96" id="cDR-2k-msr"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                                <color key="textColor" red="0.81520521639999999" green="0.4650515616" blue="0.53339868779999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="textColor" red="0.88909819160000003" green="0.51468793229999998" blue="0.59016128459999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x7Q-Pp-gQp">
@@ -4183,7 +4183,7 @@
                                                     <segment title="ชาย"/>
                                                     <segment title="หญิง"/>
                                                 </segments>
-                                                <color key="tintColor" red="0.81520521639999999" green="0.4650515616" blue="0.53339868779999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="tintColor" red="0.88909819162436543" green="0.51468793234906385" blue="0.59016128456699535" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <connections>
                                                     <action selector="selectGenderSegmented:" destination="SzF-XI-NuK" eventType="valueChanged" id="FJ6-u0-Vuq"/>
                                                 </connections>
@@ -4198,7 +4198,7 @@
                                                     <segment title="คนปกติ"/>
                                                     <segment title="เบาหวาน"/>
                                                 </segments>
-                                                <color key="tintColor" red="0.81520521639999999" green="0.4650515616" blue="0.53339868779999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="tintColor" red="0.88909819160000003" green="0.51468793229999998" blue="0.59016128459999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <connections>
                                                     <action selector="selectPeopleDiabetes:" destination="SzF-XI-NuK" eventType="valueChanged" id="Zit-wv-RSA"/>
                                                 </connections>
@@ -4275,7 +4275,7 @@
                                                     <constraint firstAttribute="height" constant="21" id="oqY-rS-rkW"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                                <color key="textColor" red="0.81520521639999999" green="0.4650515616" blue="0.53339868779999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="textColor" red="0.88909819160000003" green="0.51468793229999998" blue="0.59016128459999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="กก." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xKn-y6-8L9">
@@ -4285,7 +4285,7 @@
                                                     <constraint firstAttribute="height" constant="14" id="XiJ-9e-rXh"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                                <color key="textColor" red="0.81520521639999999" green="0.4650515616" blue="0.53339868779999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="textColor" red="0.88909819160000003" green="0.51468793229999998" blue="0.59016128459999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ซม." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eje-YG-tea">
@@ -4295,7 +4295,7 @@
                                                     <constraint firstAttribute="height" constant="14" id="ipX-vh-Fsu"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                                <color key="textColor" red="0.81520521639999999" green="0.4650515616" blue="0.53339868779999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="textColor" red="0.88909819160000003" green="0.51468793229999998" blue="0.59016128459999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nameUser" translatesAutoresizingMaskIntoConstraints="NO" id="dqp-xu-qyw">
@@ -4347,11 +4347,11 @@
                                                     <constraint firstAttribute="height" constant="21" id="vrU-Jq-5O5"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                                <color key="textColor" red="0.81520521639999999" green="0.4650515616" blue="0.53339868779999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="textColor" red="0.88909819160000003" green="0.51468793229999998" blue="0.59016128459999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.99646556379999995" green="0.98180995754808253" blue="0.97836165805664677" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="1" green="0.97948136679999998" blue="0.96338215910000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="U1R-xn-Pdo" firstAttribute="baseline" secondItem="RcD-wQ-obE" secondAttribute="baseline" id="0K4-Tw-SZX"/>
                                             <constraint firstItem="Cx1-qJ-MTA" firstAttribute="top" secondItem="Gbn-cD-voG" secondAttribute="bottom" constant="10" id="0Un-WS-ave"/>
