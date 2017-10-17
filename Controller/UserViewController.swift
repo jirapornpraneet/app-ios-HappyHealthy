@@ -41,20 +41,20 @@ class UserViewController: UIViewController,UITextFieldDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.nameUserTextField.text = ""
-        self.ageUserTextField.text = ""
-        self.weightUserTextField.text = ""
-        self.heightUserTextField.text = ""
+        nameUserTextField.text = ""
+        ageUserTextField.text = ""
+        weightUserTextField.text = ""
+        heightUserTextField.text = ""
         //set the delegate
-        self.nameUserTextField.delegate = self
-        self.ageUserTextField.delegate = self
-        self.weightUserTextField.delegate = self
-        self.heightUserTextField.delegate = self
+        nameUserTextField.delegate = self
+        ageUserTextField.delegate = self
+        weightUserTextField.delegate = self
+        heightUserTextField.delegate = self
         //genderUser
-        let genderSelect: String = self.genderList[self.genderSegmentedControl.selectedSegmentIndex]
+        let genderSelect: String = genderList[genderSegmentedControl.selectedSegmentIndex]
         genderName = genderSelect
         //diabeets
-        let diabetesPeopleSelect:String = self.diabetesPeopleList[self.diabetesSegmentedControl.selectedSegmentIndex]
+        let diabetesPeopleSelect:String = diabetesPeopleList[diabetesSegmentedControl.selectedSegmentIndex]
         diabetesPeopleName = diabetesPeopleSelect
     }
     
@@ -187,7 +187,7 @@ class UserViewController: UIViewController,UITextFieldDelegate{
         default:
             break;
         }
-        let genderSelect: String = self.genderList[self.genderSegmentedControl.selectedSegmentIndex]
+        let genderSelect: String = genderList[genderSegmentedControl.selectedSegmentIndex]
         genderName = genderSelect
     }
     
@@ -201,7 +201,7 @@ class UserViewController: UIViewController,UITextFieldDelegate{
         default:
             break;
         }
-        let diabetesPeopleSelect:String = self.diabetesPeopleList[self.diabetesSegmentedControl.selectedSegmentIndex]
+        let diabetesPeopleSelect:String = diabetesPeopleList[diabetesSegmentedControl.selectedSegmentIndex]
         diabetesPeopleName = diabetesPeopleSelect
     }
 
