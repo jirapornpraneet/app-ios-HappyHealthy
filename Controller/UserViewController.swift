@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UserViewController: UIViewController,UITextFieldDelegate{
+class UserViewController: UIViewController,UITextFieldDelegate, UIScrollViewDelegate{
     var getUserTable = [UserTable]()
     var getCheckUserTable = [UserTable]()
     var insertDataUser = [UserTable]()
@@ -39,6 +39,7 @@ class UserViewController: UIViewController,UITextFieldDelegate{
     @IBOutlet var showImageBmi: UIImageView!
     @IBOutlet var diabetesSegmentedControl: UISegmentedControl!
     
+    @IBOutlet weak var scrollView: UIScrollView!
     override func viewDidLoad() {
         super.viewDidLoad()
         nameUserTextField.text = ""
@@ -50,79 +51,64 @@ class UserViewController: UIViewController,UITextFieldDelegate{
         ageUserTextField.delegate = self
         weightUserTextField.delegate = self
         heightUserTextField.delegate = self
+        scrollView.delegate = self
         //genderUser
         let genderSelect: String = genderList[genderSegmentedControl.selectedSegmentIndex]
         genderName = genderSelect
         //diabeets
         let diabetesPeopleSelect:String = diabetesPeopleList[diabetesSegmentedControl.selectedSegmentIndex]
         diabetesPeopleName = diabetesPeopleSelect
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        scrollView.addGestureRecognizer(tap)
     }
     
+    func setsaveDataButtonIsEnabled() {
+        let editTexts = [nameUserTextField, ageUserTextField, weightUserTextField, heightUserTextField]
+        let emptyCount = editTexts
+            .filter { (textField) -> Bool in
+                textField?.text == ""
+        }
+            .count
+        saveData.isEnabled = emptyCount == 0
+    }
     
     @IBAction func inputNameUser(_ sender: Any) {
-        let nameUser = nameUserTextField.text!
-        let ageUser = ageUserTextField.text!
-        let weightUser = weightUserTextField.text!
-        let heightUser = heightUserTextField.text!
-        
-        if nameUser == "" || ageUser == "" || weightUser == "" || heightUser  == "" {
-            saveData.isEnabled = false
-        }else{
-            saveData.isEnabled = true
-        }
+        setsaveDataButtonIsEnabled()
     }
 
     @IBAction func inputAgeUser(_ sender: Any) {
-        let nameUser = nameUserTextField.text!
-        let ageUser = ageUserTextField.text!
-        let weightUser = weightUserTextField.text!
-        let heightUser = heightUserTextField.text!
-        
-        if nameUser == "" || ageUser == "" || weightUser == "" || heightUser  == "" {
-            saveData.isEnabled = false
-        }else{
-            saveData.isEnabled = true
-        }
+        setsaveDataButtonIsEnabled()
     }
     
     @IBAction func inputWeightUser(_ sender: Any) {
-        let nameUser = nameUserTextField.text!
-        let ageUser = ageUserTextField.text!
-        let weightUser = weightUserTextField.text!
-        let heightUser = heightUserTextField.text!
-        
-        if nameUser == "" || ageUser == "" || weightUser == "" || heightUser  == "" {
-            saveData.isEnabled = false
-        }else{
-            saveData.isEnabled = true
-        }
+        setsaveDataButtonIsEnabled()
     }
     
     @IBAction func inputHeightUser(_ sender: Any) {
-        let nameUser = nameUserTextField.text!
-        let ageUser = ageUserTextField.text!
-        let weightUser = weightUserTextField.text!
-        let heightUser = heightUserTextField.text!
-        
-        if nameUser == "" || ageUser == "" || weightUser == "" || heightUser  == "" {
-            saveData.isEnabled = false
-        }else{
-            saveData.isEnabled = true
-        }
+        setsaveDataButtonIsEnabled()
     }
     
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        let nameUser = nameUserTextField.text!
-        let ageUser = ageUserTextField.text!
-        let weightUser = weightUserTextField.text!
-        let heightUser = heightUserTextField.text!
-        
-        if nameUser == "" || ageUser == "" || weightUser == "" || heightUser  == "" {
-            saveData.isEnabled = false
-        }else{
-            saveData.isEnabled = true
+   //Hide KeyBoard when user touches outside keyBoard
+    
+    func dismissKeyboard() {
+        scrollView.endEditing(true)
+    }
+    
+    //Presses return key
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == nameUserTextField {
+            nameUserTextField.becomeFirstResponder()
+        } else if textField == ageUserTextField {
+            ageUserTextField.becomeFirstResponder()
+        } else if textField == weightUserTextField {
+            weightUserTextField.becomeFirstResponder()
+        } else if textField == heightUserTextField {
+            heightUserTextField.becomeFirstResponder()
         }
-
+        
+        return true
     }
     
     func  loadAllUser(){
@@ -207,14 +193,7 @@ class UserViewController: UIViewController,UITextFieldDelegate{
 
     
     @IBAction func saveDataUserButton(_ sender: Any) {
-        if ((nameUserTextField.text?.isEqual(""))! || (ageUserTextField.text?.isEqual(""))! || (weightUserTextField.text?.isEqual(""))! || (heightUserTextField.text?.isEqual(""))!){
-            alertInputDataNull()
-        }else{
-            alertSucceed()
-            }
-        }
-    
-    func alertSucceed()  {
+        dismissKeyboard()
         let alertShow = UIAlertController (title: "ยืนยันการบันทึกข้อมูลผู้ใช้งาน", message:"คุณแน่ใจใช่ไหม" , preferredStyle: UIAlertControllerStyle.alert)
         alertShow.addAction(UIAlertAction(title: "บันทึก" , style: UIAlertActionStyle.default, handler: { (action) in
             alertShow.dismiss(animated: true, completion: nil)
@@ -259,29 +238,10 @@ class UserViewController: UIViewController,UITextFieldDelegate{
         alertShowSave.addAction(UIAlertAction(title: "บันทึก" , style: UIAlertActionStyle.default, handler:nil))
         self.present(alertShowSave, animated: true, completion: nil)
     }
-    
-    func alertInputDataNull(){
-        let alertShowSave = UIAlertController (title: "กรุณาใส่ข้อมูลผู้ใช้งาน", message:"คุณต้องใส่ข้อมูลให้ครบก่อนทำการบันทึก" , preferredStyle: UIAlertControllerStyle.alert)
-        alertShowSave.addAction(UIAlertAction(title: "ตกลง" , style: UIAlertActionStyle.default, handler:nil))
-        self.present(alertShowSave, animated: true, completion: nil)
-    }
-    
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    //Hide KeyBoard when user touches outside keyBoard
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
-    }
-    //Presses return key
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        nameUserTextField.resignFirstResponder()
-        ageUserTextField.resignFirstResponder()
-        weightUserTextField.resignFirstResponder()
-        heightUserTextField.resignFirstResponder()
-        return true
     }
     
     override func viewDidAppear(_ animated: Bool) {
