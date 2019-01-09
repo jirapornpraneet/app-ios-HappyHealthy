@@ -23,14 +23,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let databasePath = documentsPath.appendingPathComponent("HappyHealthy_Sqlite.db")
         // Delete 'hello.swift' file
         
-//        do {
-//            try fileManager.removeItem(atPath: databasePath)
-//        }
-//        catch let error as NSError {
-//            print("Ooops! Something went wrong: \(error)")
-//        }
-//        
-//        print(" xx = %@", try? fileManager.contentsOfDirectory(atPath: documentsPath as String))
+        do {
+            try fileManager.removeItem(atPath: databasePath)
+        }
+        catch let error as NSError {
+            print("Ooops! Something went wrong: \(error)")
+        }
+        
+        print(" xx = %@", try? fileManager.contentsOfDirectory(atPath: documentsPath as String))
 
         
         CheckFileisExistOrNot(strPath: databasePath as String)

@@ -14,6 +14,14 @@ DEPENDENCIES:
   - IQKeyboardManagerSwift (~> 4.0.10)
   - SwiftyButton (~> 0.6.0)
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AAPickerView
+    - GRDB.swift
+    - ImageSlideshow
+    - IQKeyboardManagerSwift
+    - SwiftyButton
+
 SPEC CHECKSUMS:
   AAPickerView: 6766b83b3401d117c78cb4efb1cf4256a659d6a9
   GRDB.swift: 58dd10ae08200ce68434e025ca454b8b79fc3c0d
@@ -21,6 +29,6 @@ SPEC CHECKSUMS:
   IQKeyboardManagerSwift: 75ba21a23794a1e6b6fe6d9a267ea17f80e06771
   SwiftyButton: 4c9b61c499f172971a1b8c2eebbbdc20a26d8a08
 
-PODFILE CHECKSUM: 7cfe01b0cac7463c98b7f43d8144ab5998bd9ad5
+PODFILE CHECKSUM: 09470bc8f69aa02bc3982008637677a83effcb63
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.5.3

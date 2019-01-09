@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		33BC6E677973EF3E00480AC8 /* Pods_defaults_HappyHealthy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F9075C897CD0B8922E87410 /* Pods_defaults_HappyHealthy.framework */; };
 		AB14F21B1F1488C100781A46 /* InstructionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB14F21A1F1488C100781A46 /* InstructionViewController.swift */; };
 		ABB2FF231F0A14EE00F8FBEC /* HistorySumFoodTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB2FF221F0A14EE00F8FBEC /* HistorySumFoodTable.swift */; };
 		ABB2FF261F0A1DEC00F8FBEC /* ReportFoodandExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB2FF251F0A1DEC00F8FBEC /* ReportFoodandExercise.swift */; };
@@ -17,7 +18,6 @@
 		ABD62F051F0B8FD2001C2ABA /* listExerciseHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD62F041F0B8FD2001C2ABA /* listExerciseHistoryViewController.swift */; };
 		ABD62F071F0B8FF1001C2ABA /* DetailExerciseHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD62F061F0B8FF1001C2ABA /* DetailExerciseHistoryTableViewCell.swift */; };
 		ABD62F091F0B9284001C2ABA /* ListExerciseHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD62F081F0B9284001C2ABA /* ListExerciseHistory.swift */; };
-		D7157CB9367F23D3C3930B42 /* Pods_HappyHealthy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66708A232800003B100801A5 /* Pods_HappyHealthy.framework */; };
 		FC2BE1EA1EF0E63500CBF9FE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2BE1E91EF0E63500CBF9FE /* HomeViewController.swift */; };
 		FC5231A71EF511800067E0C0 /* ExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC52319E1EF511800067E0C0 /* ExerciseViewController.swift */; };
 		FC5231A81EF511800067E0C0 /* DatabaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5231A01EF511800067E0C0 /* DatabaseHelper.swift */; };
@@ -49,8 +49,6 @@
 		FC7E62771EEE35DA0065F6C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC7E62751EEE35DA0065F6C2 /* Main.storyboard */; };
 		FC7E62791EEE35DA0065F6C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC7E62781EEE35DA0065F6C2 /* Assets.xcassets */; };
 		FC7E627C1EEE35DA0065F6C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC7E627A1EEE35DA0065F6C2 /* LaunchScreen.storyboard */; };
-		FC7E62871EEE35DA0065F6C2 /* HappyHealthyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7E62861EEE35DA0065F6C2 /* HappyHealthyTests.swift */; };
-		FC7E62921EEE35DA0065F6C2 /* HappyHealthyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7E62911EEE35DA0065F6C2 /* HappyHealthyUITests.swift */; };
 		FC9924001F00AC3000CBF363 /* HistoryKidneyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9923FF1F00AC3000CBF363 /* HistoryKidneyViewController.swift */; };
 		FC9924021F00AC4200CBF363 /* HistoryKidneyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9924011F00AC4200CBF363 /* HistoryKidneyTableViewCell.swift */; };
 		FC9924041F00B92F00CBF363 /* HistoryPressureTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9924031F00B92F00CBF363 /* HistoryPressureTableViewCell.swift */; };
@@ -58,23 +56,6 @@
 		FC9924081F00C19C00CBF363 /* HistoryDiabetesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9924071F00C19C00CBF363 /* HistoryDiabetesViewController.swift */; };
 		FC99240A1F00C1B400CBF363 /* HistoryDiabetesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9924091F00C1B400CBF363 /* HistoryDiabetesTableViewCell.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		FC7E62831EEE35DA0065F6C2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FC7E62661EEE35DA0065F6C2 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FC7E626D1EEE35DA0065F6C2;
-			remoteInfo = HappyHealthy;
-		};
-		FC7E628E1EEE35DA0065F6C2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FC7E62661EEE35DA0065F6C2 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FC7E626D1EEE35DA0065F6C2;
-			remoteInfo = HappyHealthy;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		FCD9F7731EF3F37C0067BBFF /* Embed Frameworks */ = {
@@ -91,6 +72,8 @@
 
 /* Begin PBXFileReference section */
 		66708A232800003B100801A5 /* Pods_HappyHealthy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HappyHealthy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F9075C897CD0B8922E87410 /* Pods_defaults_HappyHealthy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_defaults_HappyHealthy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E0CB957A3711394C6D61CA5 /* Pods-defaults-HappyHealthy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-defaults-HappyHealthy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-defaults-HappyHealthy/Pods-defaults-HappyHealthy.debug.xcconfig"; sourceTree = "<group>"; };
 		8C20B913DE92550432902952 /* Pods-HappyHealthy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HappyHealthy.release.xcconfig"; path = "Pods/Target Support Files/Pods-HappyHealthy/Pods-HappyHealthy.release.xcconfig"; sourceTree = "<group>"; };
 		8F8188C3D3AE417086977A70 /* Pods-HappyHealthy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HappyHealthy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HappyHealthy/Pods-HappyHealthy.debug.xcconfig"; sourceTree = "<group>"; };
 		AB14F21A1F1488C100781A46 /* InstructionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InstructionViewController.swift; path = ../InstructionViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +86,7 @@
 		ABD62F041F0B8FD2001C2ABA /* listExerciseHistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = listExerciseHistoryViewController.swift; sourceTree = "<group>"; };
 		ABD62F061F0B8FF1001C2ABA /* DetailExerciseHistoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailExerciseHistoryTableViewCell.swift; sourceTree = "<group>"; };
 		ABD62F081F0B9284001C2ABA /* ListExerciseHistory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListExerciseHistory.swift; sourceTree = "<group>"; };
+		E8A9C308BCADA3A8C7281133 /* Pods-defaults-HappyHealthy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-defaults-HappyHealthy.release.xcconfig"; path = "Pods/Target Support Files/Pods-defaults-HappyHealthy/Pods-defaults-HappyHealthy.release.xcconfig"; sourceTree = "<group>"; };
 		FC2BE1E91EF0E63500CBF9FE /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		FC52319E1EF511800067E0C0 /* ExerciseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExerciseViewController.swift; path = ../Controller/ExerciseViewController.swift; sourceTree = "<group>"; };
 		FC5231A01EF511800067E0C0 /* DatabaseHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseHelper.swift; sourceTree = "<group>"; };
@@ -136,10 +120,8 @@
 		FC7E62781EEE35DA0065F6C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC7E627B1EEE35DA0065F6C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC7E627D1EEE35DA0065F6C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FC7E62821EEE35DA0065F6C2 /* HappyHealthyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HappyHealthyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC7E62861EEE35DA0065F6C2 /* HappyHealthyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappyHealthyTests.swift; sourceTree = "<group>"; };
 		FC7E62881EEE35DA0065F6C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FC7E628D1EEE35DA0065F6C2 /* HappyHealthyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HappyHealthyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC7E62911EEE35DA0065F6C2 /* HappyHealthyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappyHealthyUITests.swift; sourceTree = "<group>"; };
 		FC7E62931EEE35DA0065F6C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC9923FF1F00AC3000CBF363 /* HistoryKidneyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryKidneyViewController.swift; sourceTree = "<group>"; };
@@ -155,21 +137,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D7157CB9367F23D3C3930B42 /* Pods_HappyHealthy.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FC7E627F1EEE35DA0065F6C2 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FC7E628A1EEE35DA0065F6C2 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				33BC6E677973EF3E00480AC8 /* Pods_defaults_HappyHealthy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,6 +149,8 @@
 			children = (
 				8F8188C3D3AE417086977A70 /* Pods-HappyHealthy.debug.xcconfig */,
 				8C20B913DE92550432902952 /* Pods-HappyHealthy.release.xcconfig */,
+				7E0CB957A3711394C6D61CA5 /* Pods-defaults-HappyHealthy.debug.xcconfig */,
+				E8A9C308BCADA3A8C7281133 /* Pods-defaults-HappyHealthy.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -189,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				66708A232800003B100801A5 /* Pods_HappyHealthy.framework */,
+				6F9075C897CD0B8922E87410 /* Pods_defaults_HappyHealthy.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -332,8 +303,6 @@
 			isa = PBXGroup;
 			children = (
 				FC7E626E1EEE35DA0065F6C2 /* HappyHealthy.app */,
-				FC7E62821EEE35DA0065F6C2 /* HappyHealthyTests.xctest */,
-				FC7E628D1EEE35DA0065F6C2 /* HappyHealthyUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -383,7 +352,6 @@
 				FC7E626C1EEE35DA0065F6C2 /* Resources */,
 				FCD9F7731EF3F37C0067BBFF /* Embed Frameworks */,
 				48CC94FCA9D5D959BB3B753B /* [CP] Embed Pods Frameworks */,
-				879F7976E799D242FB52AD3F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -393,42 +361,6 @@
 			productName = HappyHealthy;
 			productReference = FC7E626E1EEE35DA0065F6C2 /* HappyHealthy.app */;
 			productType = "com.apple.product-type.application";
-		};
-		FC7E62811EEE35DA0065F6C2 /* HappyHealthyTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FC7E62991EEE35DA0065F6C2 /* Build configuration list for PBXNativeTarget "HappyHealthyTests" */;
-			buildPhases = (
-				FC7E627E1EEE35DA0065F6C2 /* Sources */,
-				FC7E627F1EEE35DA0065F6C2 /* Frameworks */,
-				FC7E62801EEE35DA0065F6C2 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				FC7E62841EEE35DA0065F6C2 /* PBXTargetDependency */,
-			);
-			name = HappyHealthyTests;
-			productName = HappyHealthyTests;
-			productReference = FC7E62821EEE35DA0065F6C2 /* HappyHealthyTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		FC7E628C1EEE35DA0065F6C2 /* HappyHealthyUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FC7E629C1EEE35DA0065F6C2 /* Build configuration list for PBXNativeTarget "HappyHealthyUITests" */;
-			buildPhases = (
-				FC7E62891EEE35DA0065F6C2 /* Sources */,
-				FC7E628A1EEE35DA0065F6C2 /* Frameworks */,
-				FC7E628B1EEE35DA0065F6C2 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				FC7E628F1EEE35DA0065F6C2 /* PBXTargetDependency */,
-			);
-			name = HappyHealthyUITests;
-			productName = HappyHealthyUITests;
-			productReference = FC7E628D1EEE35DA0065F6C2 /* HappyHealthyUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -444,18 +376,6 @@
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = 3266WF6C2V;
 						ProvisioningStyle = Automatic;
-					};
-					FC7E62811EEE35DA0065F6C2 = {
-						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = TAG5S52MXM;
-						ProvisioningStyle = Automatic;
-						TestTargetID = FC7E626D1EEE35DA0065F6C2;
-					};
-					FC7E628C1EEE35DA0065F6C2 = {
-						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = TAG5S52MXM;
-						ProvisioningStyle = Automatic;
-						TestTargetID = FC7E626D1EEE35DA0065F6C2;
 					};
 				};
 			};
@@ -473,8 +393,6 @@
 			projectRoot = "";
 			targets = (
 				FC7E626D1EEE35DA0065F6C2 /* HappyHealthy */,
-				FC7E62811EEE35DA0065F6C2 /* HappyHealthyTests */,
-				FC7E628C1EEE35DA0065F6C2 /* HappyHealthyUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -491,20 +409,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FC7E62801EEE35DA0065F6C2 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FC7E628B1EEE35DA0065F6C2 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -514,13 +418,24 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-defaults-HappyHealthy/Pods-defaults-HappyHealthy-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AAPickerView/AAPickerView.framework",
+				"${BUILT_PRODUCTS_DIR}/GRDB.swift/GRDB.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/ImageSlideshow/ImageSlideshow.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyButton/SwiftyButton.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AAPickerView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRDB.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ImageSlideshow.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyButton.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HappyHealthy/Pods-HappyHealthy-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-defaults-HappyHealthy/Pods-defaults-HappyHealthy-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		553E15EB27A079DA773B9D68 /* [CP] Check Pods Manifest.lock */ = {
@@ -529,28 +444,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-defaults-HappyHealthy-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		879F7976E799D242FB52AD3F /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HappyHealthy/Pods-HappyHealthy-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -606,36 +509,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FC7E627E1EEE35DA0065F6C2 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FC7E62871EEE35DA0065F6C2 /* HappyHealthyTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FC7E62891EEE35DA0065F6C2 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FC7E62921EEE35DA0065F6C2 /* HappyHealthyUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		FC7E62841EEE35DA0065F6C2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FC7E626D1EEE35DA0065F6C2 /* HappyHealthy */;
-			targetProxy = FC7E62831EEE35DA0065F6C2 /* PBXContainerItemProxy */;
-		};
-		FC7E628F1EEE35DA0065F6C2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FC7E626D1EEE35DA0065F6C2 /* HappyHealthy */;
-			targetProxy = FC7E628E1EEE35DA0065F6C2 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		FC7E62751EEE35DA0065F6C2 /* Main.storyboard */ = {
@@ -754,7 +628,7 @@
 		};
 		FC7E62971EEE35DA0065F6C2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8F8188C3D3AE417086977A70 /* Pods-HappyHealthy.debug.xcconfig */;
+			baseConfigurationReference = 7E0CB957A3711394C6D61CA5 /* Pods-defaults-HappyHealthy.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -770,7 +644,7 @@
 		};
 		FC7E62981EEE35DA0065F6C2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8C20B913DE92550432902952 /* Pods-HappyHealthy.release.xcconfig */;
+			baseConfigurationReference = E8A9C308BCADA3A8C7281133 /* Pods-defaults-HappyHealthy.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -781,64 +655,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.HappyHealthy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-			};
-			name = Release;
-		};
-		FC7E629A1EEE35DA0065F6C2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = TAG5S52MXM;
-				INFOPLIST_FILE = HappyHealthyTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.HappyHealthyTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HappyHealthy.app/HappyHealthy";
-			};
-			name = Debug;
-		};
-		FC7E629B1EEE35DA0065F6C2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = TAG5S52MXM;
-				INFOPLIST_FILE = HappyHealthyTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.HappyHealthyTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HappyHealthy.app/HappyHealthy";
-			};
-			name = Release;
-		};
-		FC7E629D1EEE35DA0065F6C2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = TAG5S52MXM;
-				INFOPLIST_FILE = HappyHealthyUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.HappyHealthyUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = HappyHealthy;
-			};
-			name = Debug;
-		};
-		FC7E629E1EEE35DA0065F6C2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = TAG5S52MXM;
-				INFOPLIST_FILE = HappyHealthyUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.HappyHealthyUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = HappyHealthy;
 			};
 			name = Release;
 		};
@@ -859,24 +675,6 @@
 			buildConfigurations = (
 				FC7E62971EEE35DA0065F6C2 /* Debug */,
 				FC7E62981EEE35DA0065F6C2 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		FC7E62991EEE35DA0065F6C2 /* Build configuration list for PBXNativeTarget "HappyHealthyTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FC7E629A1EEE35DA0065F6C2 /* Debug */,
-				FC7E629B1EEE35DA0065F6C2 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		FC7E629C1EEE35DA0065F6C2 /* Build configuration list for PBXNativeTarget "HappyHealthyUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FC7E629D1EEE35DA0065F6C2 /* Debug */,
-				FC7E629E1EEE35DA0065F6C2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
